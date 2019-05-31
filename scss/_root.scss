@@ -1,0 +1,7 @@
+:root {
+  @each $color, $value in $theme-colors {
+    --#{$color}: #{$value};
+  }
+
+  --font-family-base: #{inspect($font-family-base)};
+}

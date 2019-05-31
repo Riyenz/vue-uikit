@@ -1,4 +1,4 @@
-# uikit
+# UIKit Vue Components
 
 ## Project setup
 ```

@@ -1,0 +1,57 @@
+.eduk-btn {
+  min-height: $btn-min-height;
+  min-width: $btn-min-width;
+  border: $border-width solid $border-color;
+  border-radius: $border-radius;
+  cursor: pointer;
+  @include font($font-family-base, $font-size-base, $btn-font-weight);
+  padding: $padding-y $padding-x;
+
+  &.disabled {
+    background-color: $gray-100;
+    color: $gray-500;
+    border-color: $gray-200;
+    pointer-events: none;
+  }
+}
+
+/** Button Variants */
+@each $color,
+$value in $theme-colors {
+  /** Basic */
+  .eduk-btn-#{$color} {
+    border-color: darken($value, 5%);
+    background-color: $value;
+    color: color-yiq($value);
+
+    &:hover,
+    &:focus {
+      background-color: darken($value, 5%);
+      border-color: darken($value, 10%);
+    }
+  }
+
+  /** Outline */
+  .eduk-btn-#{$color}--outline {
+    border-color: darken($value, 5%);
+    background-color: transparent;
+    color: $value;
+
+    &:hover,
+    &:focus {
+      background-color: darken($value, 5%);
+      border-color: darken($value, 10%);
+      color: color-yiq($value);
+    }
+  }
+}
+
+/** Button Sizes */
+.eduk-btn--sm {
+  @include button-size($btn-min-width-sm, $btn-min-height-sm, $font-size-sm, $border-radius);
+}
+
+.eduk-btn--lg {
+  @include button-size($btn-min-width-lg, $btn-min-height-lg, $font-size-lg, $border-radius);
+}
+
