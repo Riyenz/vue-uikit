@@ -1,6 +1,6 @@
 <template>
   <div class="outline-buttons">
-    <h3 class="text-muted">Outline Buttons</h3>
+    <h3 class="eduk-text-muted">Outline Buttons</h3>
     <p>
       The standard button for most use cases. Also used as a Secondary Button.
     </p>
@@ -44,19 +44,12 @@
 </template>
 
 <script>
-import btnMixin from '@/UIKit/Btn/btnMixin';
+import Btn from '@/UIKit/Btn/Btn.vue';
 
 export default {
   name: 'PrimaryButtons',
-  mixins: [btnMixin],
+  components: {
+    Btn,
+  },
 };
 </script>
-
-<style lang="scss" scoped>
-.demo-buttons {
-  &__container * {
-    margin-right: 3px;
-    margin-bottom: 3px;
-  }
-}
-</style>

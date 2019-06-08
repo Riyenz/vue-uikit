@@ -1,39 +1,49 @@
 <template>
-  <div class="demo">
-    <div class="demo__sidebar">
-      <h1>Sidebar</h1>
-    </div>
-    <div class="demo__container">
-      <DemoButtons/>
-    </div>
-  </div>
+  <Container class="demo">
+    <Row class="demo__section">
+      <Column>
+        <DemoButtons/>
+      </Column>
+    </Row>
+    <Row class="demo__section">
+      <Column>
+      <DemoModals/>
+      </Column>
+    </Row>
+    <Row class="demo__section">
+      <Column>
+      <DemoGrids/>
+      </Column>
+    </Row>
+  </Container>
 </template>
 
 <script>
+import Container from '@/UIKit/Grid/Container.vue';
+import Row from '@/UIKit/Grid/Row.vue';
+import Column from '@/UIKit/Grid/Column.vue';
+
 import DemoButtons from '@/views/pages/DemoButtons/index.vue';
+import DemoModals from '@/views/pages/DemoModals/index.vue';
+import DemoGrids from '@/views/pages/DemoGrids/index.vue';
 
 export default {
   name: 'Demo',
   components: {
+    Container,
+    Row,
+    Column,
     DemoButtons,
+    DemoModals,
+    DemoGrids,
   },
 };
 </script>
 
 <style scoped lang="scss">
 .demo {
-  display: flex;
-  height: 100%;
-  width: 100%;
-
-  &__sidebar {
-    padding: 20px 30px;
-    min-width: 300px;
-    background-color: gray;
-  }
-  &__container {
-    padding: 20px 30px;
-    flex: 1;
+  &__section {
+    margin-top: 50px;
   }
 }
 </style>

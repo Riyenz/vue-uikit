@@ -16,3 +16,9 @@
     @content;
   }
 }
+
+@mixin active {
+  &:active {
+    @content;
+  }
+}

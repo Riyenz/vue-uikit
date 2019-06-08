@@ -49,6 +49,10 @@ export default {
         return true;
       },
     },
+    noMargin: {
+      type: Boolean,
+      default: false,
+    },
   },
   computed: {
     btnClass() {
@@ -56,8 +60,9 @@ export default {
       const outline = this.outline ? '--outline' : '';
       const disabled = this.disabled ? 'disabled' : '';
       const size = this.size ? `eduk-btn--${this.size}` : '';
+      const margin = this.noMargin ? '' : 'eduk-m-1';
 
-      return `eduk-btn ${variant}${outline} ${size} ${disabled}`;
+      return `eduk-btn ${variant}${outline} ${size} ${margin} ${disabled}`;
     },
   },
 };

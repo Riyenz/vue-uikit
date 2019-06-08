@@ -1,17 +1,23 @@
 .eduk-btn {
   min-height: $btn-min-height;
   min-width: $btn-min-width;
+  max-height: $btn-min-height;
   border: $border-width solid $border-color;
   border-radius: $border-radius;
   cursor: pointer;
   @include font($font-family-base, $font-size-base, $btn-font-weight);
-  padding: $padding-y $padding-x;
+  padding: $btn-padding-y $btn-padding-x;
 
   &.disabled {
     background-color: $gray-100;
     color: $gray-500;
     border-color: $gray-200;
     pointer-events: none;
+  }
+
+  /** Remove dot border from mozilla when clicked */
+  &::-moz-focus-inner {
+    border: 0;
   }
 }
 
@@ -20,28 +26,36 @@
 $value in $theme-colors {
   /** Basic */
   .eduk-btn-#{$color} {
-    border-color: darken($value, 5%);
+    border-color: darken($value, $hover-darken-percentage);
     background-color: $value;
     color: color-yiq($value);
 
-    &:hover,
-    &:focus {
-      background-color: darken($value, 5%);
-      border-color: darken($value, 10%);
+    @include hover-focus {
+      background-color: darken($value, $hover-darken-percentage);
+      border-color: darken($value, $hover-darken-percentage * 2);
+    }
+
+    @include active {
+      box-shadow: inset 0px 0px 5px darken($value, $hover-darken-percentage + 10%);
+      color: darken($value, $hover-darken-percentage + 20%);
     }
   }
 
   /** Outline */
   .eduk-btn-#{$color}--outline {
-    border-color: darken($value, 5%);
+    border-color: darken($value, $hover-darken-percentage);
     background-color: transparent;
     color: $value;
 
-    &:hover,
-    &:focus {
-      background-color: darken($value, 5%);
-      border-color: darken($value, 10%);
+    @include hover-focus {
+      background-color: darken($value, $hover-darken-percentage);
+      border-color: darken($value, $hover-darken-percentage * 2);
       color: color-yiq($value);
+    }
+
+    @include active {
+      box-shadow: inset 0px 0px 5px darken($value, $hover-darken-percentage + 10%);
+      color: darken($value, $hover-darken-percentage + 20%);
     }
   }
 }
@@ -52,6 +66,6 @@ $value in $theme-colors {
 }
 
 .eduk-btn--lg {
-  @include button-size($btn-min-width-lg, $btn-min-height-lg, $font-size-lg, $border-radius);
+  @include button-size($btn-min-width-lg, $btn-min-height-lg, $font-size-base, $border-radius);
 }
 

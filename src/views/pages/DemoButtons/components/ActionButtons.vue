@@ -1,6 +1,6 @@
 <template>
   <div class="primary-buttons">
-    <h3 class="text-muted">Action Buttons</h3>
+    <h3 class="eduk-text-muted">Action Buttons</h3>
     <p>
       To draw attention to an action on an application form,
       or highlight the strongest call to action on a page.
@@ -16,7 +16,6 @@
       <Btn text="Warning" variant="warning"/>
       <Btn text="Light" variant="light"/>
       <Btn text="Dark" variant="dark"/>
-      <Btn text="Disabled" disabled/>
       <pre class="code">
         <label>Vue</label>
         <code class="language-html">
@@ -48,19 +47,12 @@
 </template>
 
 <script>
-import btnMixin from '@/UIKit/Btn/btnMixin';
+import Btn from '@/UIKit/Btn/Btn.vue';
 
 export default {
   name: 'ActionButtons',
-  mixins: [btnMixin],
+  components: {
+    Btn,
+  },
 };
 </script>
-
-<style lang="scss" scoped>
-.demo-buttons {
-  &__container * {
-    margin-right: 3px;
-    margin-bottom: 3px;
-  }
-}
-</style>

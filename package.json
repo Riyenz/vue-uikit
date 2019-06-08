@@ -9,6 +9,9 @@
   },
   "main": "src/plugin.js",
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.18",
+    "@fortawesome/free-solid-svg-icons": "^5.8.2",
+    "@fortawesome/vue-fontawesome": "^0.1.6",
     "core-js": "^2.6.5",
     "prismjs": "^1.16.0",
     "vue": "^2.6.10",

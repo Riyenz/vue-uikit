@@ -1,10 +1,12 @@
 <template>
   <div class="demo-buttons">
     <h1>Buttons</h1>
-    <ActionButtons/>
-    <OutlineButtons/>
-    <SizeButtons/>
-    <DisabledButtons/>
+    <div class="demo-buttons__container">
+      <ActionButtons/>
+      <OutlineButtons/>
+      <SizeButtons/>
+      <DisabledButtons/>
+    </div>
   </div>
 </template>
 
@@ -27,7 +29,7 @@ export default {
 <style lang="scss" scoped>
 .demo-buttons {
   &__container * {
-    margin-right: 3px;
+    margin-top: 50px;
   }
 }
 </style>

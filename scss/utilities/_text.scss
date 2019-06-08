@@ -2,10 +2,10 @@
 
 // Alignment
 
-.text-justify  { text-align: justify !important; }
-.text-wrap     { white-space: normal !important; }
-.text-nowrap   { white-space: nowrap !important; }
-.text-truncate { @include text-truncate; }
+.eduk-text-justify  { text-align: justify !important; }
+.eduk-text-wrap     { white-space: normal !important; }
+.eduk-text-nowrap   { white-space: nowrap !important; }
+.eduk-text-truncate { @include text-truncate; }
 
 // Responsive alignment
 
@@ -13,17 +13,17 @@
   @include media-breakpoint-up($breakpoint) {
     $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
 
-    .text#{$infix}-left   { text-align: left !important; }
-    .text#{$infix}-right  { text-align: right !important; }
-    .text#{$infix}-center { text-align: center !important; }
+    .eduk-text#{$infix}-left   { text-align: left !important; }
+    .eduk-text#{$infix}-right  { text-align: right !important; }
+    .eduk-text#{$infix}-center { text-align: center !important; }
   }
 }
 
 // Transformation
 
-.text-lowercase  { text-transform: lowercase !important; }
-.text-uppercase  { text-transform: uppercase !important; }
-.text-capitalize { text-transform: capitalize !important; }
+.eduk-text-lowercase  { text-transform: lowercase !important; }
+.eduk-text-uppercase  { text-transform: uppercase !important; }
+.eduk-text-capitalize { text-transform: capitalize !important; }
 
 // Weight and italics
 
@@ -36,25 +36,25 @@
 
 // Contextual colors
 
-.text-white { color: $white !important; }
+.eduk-text-white { color: $white !important; }
 
 @each $color, $value in $theme-colors {
-  @include text-emphasis-variant(".text-#{$color}", $value);
+  @include text-emphasis-variant(".eduk-text-#{$color}", $value);
 }
 
-.text-body { color: $body-color !important; }
-.text-muted { color: $text-muted !important; }
+.eduk-text-body { color: $body-color !important; }
+.eduk-text-muted { color: $text-muted !important; }
 
-.text-black-50 { color: rgba($black, .5) !important; }
-.text-white-50 { color: rgba($white, .5) !important; }
+.eduk-text-black-50 { color: rgba($black, .5) !important; }
+.eduk-text-white-50 { color: rgba($white, .5) !important; }
 
-.text-decoration-none { text-decoration: none !important; }
+.eduk-text-decoration-none { text-decoration: none !important; }
 
-.text-break {
+.eduk-text-break {
   word-break: break-word !important; // IE & < Edge 18
   overflow-wrap: break-word !important;
 }
 
 // Reset
 
-.text-reset { color: inherit !important; }
+.eduk-text-reset { color: inherit !important; }

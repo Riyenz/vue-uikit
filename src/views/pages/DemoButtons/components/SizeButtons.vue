@@ -1,6 +1,6 @@
 <template>
   <div class="primary-buttons">
-    <h3 class="text-muted">Sizes</h3>
+    <h3 class="eduk-text-muted">Sizes</h3>
     <div class="demo-buttons__container">
       <Btn text="Small" size="sm"/>
       <Btn text="Default"/>
@@ -26,19 +26,12 @@
 </template>
 
 <script>
-import btnMixin from '@/UIKit/Btn/btnMixin';
+import Btn from '@/UIKit/Btn/Btn.vue';
 
 export default {
   name: 'SizeButtons',
-  mixins: [btnMixin],
+  components: {
+    Btn,
+  },
 };
 </script>
-
-<style lang="scss" scoped>
-.demo-buttons {
-  &__container * {
-    margin-right: 3px;
-    margin-bottom: 3px;
-  }
-}
-</style>

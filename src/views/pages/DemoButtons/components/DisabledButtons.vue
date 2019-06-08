@@ -1,6 +1,6 @@
 <template>
   <div class="primary-buttons">
-    <h3 class="text-muted">Disabled</h3>
+    <h3 class="eduk-text-muted">Disabled</h3>
     <div class="demo-buttons__container">
       <Btn text="Disabled" disabled/>
       <pre class="code">
@@ -20,19 +20,12 @@
 </template>
 
 <script>
-import btnMixin from '@/UIKit/Btn/btnMixin';
+import Btn from '@/UIKit/Btn/Btn.vue';
 
 export default {
   name: 'DisabledButtons',
-  mixins: [btnMixin],
+  components: {
+    Btn,
+  },
 };
 </script>
-
-<style lang="scss" scoped>
-.demo-buttons {
-  &__container * {
-    margin-right: 3px;
-    margin-bottom: 3px;
-  }
-}
-</style>

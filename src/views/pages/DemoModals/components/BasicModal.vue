@@ -1,0 +1,84 @@
+<template>
+  <div class="basic-modal">
+    <h3 class="eduk-text-muted">Basic Modal</h3>
+    <Btn text="Show Modal" noMargin @click.native="showModal"/>
+    <Modal ref="basicModal" :title="modalTitle">
+      <template v-slot:content>
+        <h3>Here might be a content title</h3>
+        <p>
+          Cillum commodo quis ut laboris aliquip et non Lorem fugiat.
+          Laborum minim esse ad proident proident eiusmod nostrud aliqua
+          elit. Id id eu cupidatat aliquip magna amet magna nisi non in
+          et nisi. Dolor laboris enim incididunt tempor veniam. Ex aliquip
+          dolor consectetur officia elit.
+        </p>
+      </template>
+    </Modal>
+
+    <pre class="code">
+      <label>Vue</label>
+      <code class="language-html">
+        &lt;Modal ref=&quot;basicModal&quot; :title=&quot;modalTitle&quot;&gt;
+          &lt;template v-slot:content&gt;
+            &lt;h3&gt;Here might be a content title&lt;/h3&gt;
+            &lt;p&gt;
+              Cillum commodo quis ut laboris aliquip et non Lorem fugiat.
+              Laborum minim esse ad proident proident eiusmod nostrud
+              aliqua elit. Id id eu cupidatat aliquip magna amet magna
+              nisi non in et nisi. Dolor laboris enim incididunt tempor
+              veniam. Ex aliquip dolor consectetur officia elit.
+            &lt;/p&gt;
+          &lt;/template&gt;
+        &lt;/Modal&gt;
+      </code>
+    </pre>
+    <pre class="code">
+      <label>Vanilla</label>
+      <code class="language-html">
+        &#x3C;div class=&#x22;eduk-modal show&#x22;&#x3E;
+          &#x3C;div class=&#x22;eduk-modal__container&#x22;&#x3E;
+            &#x3C;div class=&#x22;eduk-modal__content&#x22;&#x3E;
+              &#x3C;section class=&#x22;eduk-modal__header&#x22;&#x3E;
+                &#x3C;h2 class=&#x22;eduk-modal__header-title&#x22;&#x3E;Basic Modal&#x3C;/h2&#x3E;
+                &#x3C;i class=&#x22;fas fa-times&#x22;&#x3E;&#x3C;/i&#x3E;
+              &#x3C;/section&#x3E;
+              &#x3C;section class=&#x22;eduk-modal__body&#x22;&#x3E;
+                &#x3C;h3&#x3E;Here might be a content title&#x3C;/h3&#x3E;
+                &#x3C;p&#x3E;
+                  Cillum commodo quis ut laboris aliquip et non Lorem fugiat.
+                  Laborum minim esse ad proident proident eiusmod nostrud aliqua
+                  elit. Id id eu cupidatat aliquip magna amet magna nisi non in
+                  et nisi. Dolor laboris enim incididunt tempor veniam. Ex aliquip
+                  dolor consectetur officia elit.
+                &#x3C;/p&#x3E;
+              &#x3C;/section&#x3E;
+            &#x3C;/div&#x3E;
+          &#x3C;/div&#x3E;
+        &#x3C;/div&#x3E;
+      </code>
+    </pre>
+  </div>
+</template>
+
+<script>
+import Modal from '@/UIKit/Modal/Modal.vue';
+import Btn from '@/UIKit/Btn/Btn.vue';
+
+export default {
+  name: 'BasicModal',
+  components: {
+    Modal,
+    Btn,
+  },
+  data() {
+    return {
+      modalTitle: 'Basic Modal',
+    };
+  },
+  methods: {
+    showModal() {
+      this.$refs.basicModal.show();
+    },
+  },
+};
+</script>

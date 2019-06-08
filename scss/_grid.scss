@@ -1,8 +1,14 @@
-.container-fluid {
+.eduk-container-fluid {
   @include make-container();
 }
 
-.container {
+.eduk-container {
   @include make-container();
   @include make-container-max-widths();
 }
+
+.eduk-row {
+  @include make-row();
+}
+
+@include make-grid-columns();
