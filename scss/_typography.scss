@@ -1,0 +1,95 @@
+// stylelint-disable declaration-no-important, selector-list-comma-newline-after
+
+.eduk-head,
+.eduk-h1,
+.eduk-h2,
+.eduk-h3,
+.eduk-h4,
+.eduk-h5,
+.eduk-h6 {
+  margin-top: -5px;
+  margin-bottom: $headings-margin-bottom;
+  font-family: $headings-font-family;
+  font-weight: $headings-font-weight;
+  line-height: $headings-line-height;
+  color: $headings-color;
+}
+
+h1.eduk-head,
+.eduk-h1 {
+  @include font-size($h1-font-size);
+}
+
+h2.eduk-head,
+.eduk-h2 {
+  @include font-size($h2-font-size);
+}
+
+h3.eduk-head,
+.eduk-h3 {
+  @include font-size($h3-font-size);
+}
+
+h4.eduk-head,
+.eduk-h4 {
+  @include font-size($h4-font-size);
+}
+
+h5.eduk-head,
+.eduk-h5 {
+  @include font-size($h5-font-size);
+}
+
+h6.eduk-head,
+.eduk-h6 {
+  @include font-size($h6-font-size);
+}
+
+.eduk-text {
+  margin-top: 0;
+  margin-bottom: $p-margin-bottom;
+  @include font-size($p-font-size);
+}
+
+@include media-breakpoint-down(sm) {
+  h1.eduk-head,
+  .eduk-h1 {
+    @include font-size($h1-font-size-mobile);
+  }
+  
+  h2.eduk-head,
+  .eduk-h2 {
+    @include font-size($h2-font-size-mobile);
+  }
+  
+  h3.eduk-head,
+  .eduk-h3 {
+    @include font-size($h3-font-size-mobile);
+  }
+  
+  h4.eduk-head,
+  .eduk-h4 {
+    @include font-size($h4-font-size-mobile);
+  }
+  
+  h5.eduk-head,
+  .eduk-h5 {
+    @include font-size($h5-font-size-mobile);
+  }
+  
+  h6.eduk-head,
+  .eduk-h6 {
+    @include font-size($h6-font-size-mobile);
+  }
+
+  .eduk-text {
+    @include font-size($p-font-size);
+  }
+
+  .eduk-text-sm {
+    &--mobile {
+      font-size: $small-font-size !important;
+      line-height: 1.38;
+    }
+  }
+}

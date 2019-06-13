@@ -13,6 +13,10 @@ module.exports = {
     'max-len': ['error', {
       code: 150,
     }],
+    'no-multiple-empty-lines': [1, {
+      max: 1,
+    }],
+    indent: ['error', 2],
   },
   parserOptions: {
     parser: 'babel-eslint',

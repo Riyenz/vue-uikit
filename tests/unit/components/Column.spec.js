@@ -10,7 +10,6 @@ const colSizes = ['sm', 'md', 'lg', 'xl'];
 const defaultSlot = document.createElement('i');
 defaultSlot.id = 'testDefault';
 
-
 describe('Column.vue', () => {
   it('renders default slot when passed', () => {
     const wrapper = shallowMount(Column, {

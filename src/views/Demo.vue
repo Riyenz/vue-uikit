@@ -7,12 +7,17 @@
     </Row>
     <Row class="demo__section">
       <Column>
-      <DemoModals/>
+        <DemoModals/>
       </Column>
     </Row>
     <Row class="demo__section">
       <Column>
-      <DemoGrids/>
+        <DemoAlerts/>
+      </Column>
+    </Row>
+    <Row class="demo__section">
+      <Column>
+        <DemoGrids/>
       </Column>
     </Row>
   </Container>
@@ -26,6 +31,7 @@ import Column from '@/UIKit/Grid/Column.vue';
 import DemoButtons from '@/views/pages/DemoButtons/index.vue';
 import DemoModals from '@/views/pages/DemoModals/index.vue';
 import DemoGrids from '@/views/pages/DemoGrids/index.vue';
+import DemoAlerts from '@/views/pages/DemoAlerts/index.vue';
 
 export default {
   name: 'Demo',
@@ -35,6 +41,7 @@ export default {
     Column,
     DemoButtons,
     DemoModals,
+    DemoAlerts,
     DemoGrids,
   },
 };

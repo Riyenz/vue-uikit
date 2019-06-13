@@ -15,7 +15,6 @@ body.eduk-modal-open {
   color: $modal-content-text-color;
   z-index: 1050;
   visibility: hidden;
-  
   &.show {
     visibility: visible;
   }
@@ -25,16 +24,18 @@ body.eduk-modal-open {
     align-items: flex-start;
   }
 
-  &__content {
+  &__main {
     display: flex;
     flex-direction: column;
     position: relative;
-    @include min-size($modal-min-height, $modal-min-width);
-    @include max-size($modal-max-height, $modal-max-width);
     overflow-y: auto;
-    border-radius: $border-radius;
-    margin: 0 10px;
-    background-color: $body-bg;
+    background-color: $white;
+  }
+
+  &__title {
+    &--mobile {
+      display: none;
+    }
   }
 
   &__sub {
@@ -45,15 +46,20 @@ body.eduk-modal-open {
       display: flex;
     }
   }
+
   &__sub-content {
     display: flex;
     flex-direction: column;
-    position: relative;
     width: 300px;
-    border-radius: 0.3em;
     background-color: #fff;
     padding: $modal-padding-y $modal-padding-x;
   }
+
+  &__sub-actions {
+    display: flex;
+    flex-direction: column;
+  }
+
   &__sub-close {
     display: flex;
     margin-top: 20px;
@@ -61,9 +67,11 @@ body.eduk-modal-open {
     justify-content: center;
     color: $white;
     cursor: pointer;
+
     @include hover() {
       color: darken($white, $emphasized-link-hover-darken-percentage)
     }
+
     :last-child {
       margin-top: 2px;
       margin-left: 10px;
@@ -74,33 +82,60 @@ body.eduk-modal-open {
     display: flex;
     align-items: center;
     color: $modal-header-color;
-    position: sticky;
-    top: 0;
-    background: $gray-100;
     padding: $modal-padding-y $modal-padding-x;
-    box-shadow: 0 2px 4px 0 $gray-300 + CC;
-
-    /** this modifier is used if there's no given header title */
-    &--slim {
-      padding: $modal-padding-y $modal-padding-x 0;
-      box-shadow: unset;
-    }
   }
+
   &__header-title {
     flex: 1;
-    margin: 0;
   }
+
   &__header-close {
     margin-left: auto;
+    cursor: pointer;
+
     @include hover {
       color: darken($gray-900, 5%) !important;
-      cursor: pointer;
     }
+  }
+
+  &__navbar {
+    display: none;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    padding: $modal-padding-y $modal-padding-x;
+  }
+
+  &__navbar-logo {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+
+    img {
+      height: 32px;
+    }
+  }
+
+  &__navbar-back {
+    position: absolute;
+    float: left;
+    margin-right: auto;
+    cursor: pointer;
+
+    @include hover {
+      color: darken($gray-900, 5%) !important;
+    }
+  }
+
+  &__content {
+    display: flex;
+    overflow-y: auto;
+    flex-direction: column;
   }
 
   &__body {
     padding: $modal-padding-y $modal-padding-x 0;
-    overflow: auto;
+
     &:after {
       content: "";
       display: block;
@@ -109,10 +144,162 @@ body.eduk-modal-open {
   }
 
   &__footer {
-    flex: 1;
     padding: $modal-padding-y $modal-padding-x;
     display: flex;
     flex-direction: row-reverse;
     align-items: flex-end;
+  }
+
+  &__sub-mask {
+    display: none;
+    background-color: $gray-900 + CC;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    &.show {
+      display: block;
+    }
+  }
+
+  &__sub-top {
+    display: none;
+    justify-content: center;
+  }
+
+  &__sub-top-line {
+    display: none;
+    cursor: pointer;
+    margin-top: -5px;
+    padding-bottom: 15px;
+
+    &.show {
+      display: block;
+    }
+  }
+
+  &__sub-top-down {
+    display: none;
+    cursor: pointer;
+    color: $gray-500;
+    margin-top: -40px;
+    position: absolute;
+
+    @include hover {
+      color: darken($gray-500, 5%);
+    }
+
+    &.show {
+      display: block;
+    }
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .eduk-modal {
+    align-items: flex-start;
+
+    &__title {
+      &--mobile {
+        display: block;
+      }
+    }
+
+    &__navbar {
+      display: flex;
+      box-shadow: 0 2px 4px 0 $modal-box-shadow + CC;
+    }
+
+    &__header {
+      display: none;
+    }
+
+    &__container {
+      flex-direction: column;
+      height: 100%;
+    }
+
+    &__main {
+      margin: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    &__content {
+      overflow: hidden;
+    }
+
+    &__body {
+      overflow-y: auto;
+    }
+
+    &__footer {
+      bottom: 0;
+      position: sticky;
+      box-shadow: 0 2px 12px 0 $modal-box-shadow + CC;
+
+      /** Special Case */
+      .eduk-btn {
+        flex: 1;
+        @include button-size($btn-min-width-lg, $btn-min-height-lg, $font-size-base, $border-radius);
+      }
+    }
+
+    &__sub {
+      box-shadow: 0 2px 12px 0 $modal-sub-box-shadow + CC;
+      margin: 0;
+      z-index: 1;
+    }
+
+    &__sub-content {
+      width: 100%;
+      z-index: 1;
+    }
+
+    &__sub-close {
+      display: none;
+    }
+
+    &__sub-actions {
+      display: none;
+      padding-top: $spacer;
+
+      &.expand {
+        display: flex;
+      }
+    }
+
+    &__sub-top {
+      display: flex;
+    }
+  }
+}
+
+@include media-breakpoint-up(sm) {
+  .eduk-modal {
+    &__header {
+      position: sticky;
+      top: 0;
+      box-shadow: 0 2px 4px 0 $modal-box-shadow + CC;
+    }
+
+    &__main {
+      border-radius: $border-radius;
+      margin: 0 10px;
+      @include min-size($modal-min-height, $modal-min-width);
+      @include max-size($modal-max-height, $modal-max-width);
+    }
+
+    &__sub-content {
+      border-radius: $border-radius;
+    }
+
+    &__sub-actions {
+      border-top: 1px solid $hr-color;
+      margin-top: $spacer * 1.5;
+      padding-top: $spacer * 1.5;
+    }
   }
 }

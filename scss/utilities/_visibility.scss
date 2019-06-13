@@ -1,0 +1,21 @@
+@include media-breakpoint-down(sm) {
+  .d {
+    &--desktop {
+      display: none !important;
+    }
+    &--mobile {
+      display: flex !important;
+    }
+  }
+}
+
+@include media-breakpoint-up(sm) {
+  .d {
+    &--desktop {
+      display: flex !important;
+    }
+    &--mobile {
+      display: none !important;
+    }
+  }
+}

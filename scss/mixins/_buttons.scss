@@ -2,6 +2,6 @@
 @mixin button-size($min-width, $min-height, $font-size, $border-radius) {
   min-width: $min-width;
   min-height: $min-height;
-  font-size: $font-size;
   border-radius: $border-radius;
+  @include font-size($font-size);
 }

@@ -19,4 +19,17 @@ describe('Row.vue', () => {
       expect.fail('can\'t found slot default');
     }
   });
+
+  it('adds a .eduk-no-gutters class when props noGutters is provided', () => {
+    const wrapper = shallowMount(Row, {
+      slots: {
+        default: defaultSlot.outerHTML,
+      },
+      propsData: {
+        noGutters: true,
+      },
+    });
+
+    expect(wrapper.classes('eduk-no-gutters')).to.equal(true);
+  });
 });

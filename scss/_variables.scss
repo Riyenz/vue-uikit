@@ -22,7 +22,7 @@ $grays: map-merge(("100": $gray-100,
     "900": $gray-900),
   $grays);
 
-$primary: #f3773b;
+$primary: #FF7301;
 $secondary: #0E9BE4;
 $tertiary: #5d5d5d;
 $success: #28a745;
@@ -83,6 +83,7 @@ $font-weight-base: $font-weight-normal;
 $font-size-base: 16px;
 $font-size-lg: $font-size-base * 1.25;
 $font-size-sm: $font-size-base * .875;
+$small-font-size: 13px;
 
 $line-height-base: 1.5;
 $letter-spacing-base: .25px;
@@ -105,22 +106,15 @@ $btn-disabled-color: $gray-500;
 $btn-padding-y: $padding-y * 0.4;
 $btn-padding-x: $padding-x * 3;
 
-/** Modal Variables */
-$modal-padding-y: $padding-y * 3;
-$modal-padding-x: $padding-x * 3;
-$modal-header-color: $gray-800;
-$modal-content-text-color: $gray-700;
-$modal-min-height: 200px;
-$modal-min-width: 420px;
-$modal-max-height: 630px;
-$modal-max-width: 575px;
-
 $yiq-contrasted-threshold: 150;
 $yiq-text-dark: $gray-900;
 $yiq-text-light: $white;
 
 $grid-columns: 12;
 $grid-gutter-width: 30px;
+
+$desktop: 960px;
+$mobile: 720px;
 
 $container-max-widths: (sm: 540px,
   md: 720px,
@@ -133,6 +127,44 @@ $grid-breakpoints: (xs: 0,
   lg: 992px,
   xl: 1200px);
 
+/** Typography Variables */
+$h1-font-size: $font-size-base * 2;
+$h2-font-size: $font-size-base * 1.5;
+$h3-font-size: $font-size-base * 1.375;
+$h4-font-size: $font-size-base * 1.250;
+$h5-font-size: $font-size-base * 1.125;
+$h6-font-size: $font-size-base;
+$p-font-size: $font-size-base;
+
+$font-size-mobile: 14px;
+$h1-font-size-mobile: $font-size-mobile * 2;
+$h2-font-size-mobile: $font-size-mobile * 1.5;
+$h3-font-size-mobile: $font-size-mobile * 1.375;
+$h4-font-size-mobile: $font-size-mobile * 1.250;
+$h5-font-size-mobile: $font-size-mobile * 1.125;
+$h6-font-size-mobile: $font-size-mobile;
+$p-font-size-mobile: $font-size-mobile;
+
 $headings-margin-bottom: $spacer / 2;
+$p-margin-bottom: $spacer / 2;
+$headings-font-family: $font-family-base;
+$headings-font-weight: $font-weight-bold;
+$headings-line-height: $line-height-base;
+$headings-color: $gray-800;
 
 $hr-color: $gray-400;
+
+/** Modal Variables */
+$modal-padding-y: $padding-y * 3;
+$modal-padding-x: $padding-x * 3;
+$modal-header-color: $headings-color;
+$modal-content-text-color: $gray-700;
+$modal-min-height: 200px;
+$modal-min-width: 420px;
+$modal-max-height: 630px;
+$modal-max-width: 575px;
+$modal-box-shadow: $gray-300;
+$modal-sub-box-shadow: $gray-500;
+
+$alert-min-height: 200px;
+$alert-min-width: 200px;

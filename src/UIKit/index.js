@@ -4,6 +4,10 @@ export { TEXT_IS_REQUIRED, VARIANT_DOESNT_EXISTS, SIZE_DOESNT_EXISTS } from './B
 
 /** Modal Component */
 export { default as Modal } from './Modal/Modal.vue';
+export { DEFAULT_SUB_CLOSE_TEXT, FREEZE_BODY_CLASS } from './Modal/config';
+
+/** Modal Component */
+export { default as Alert } from './Alert/Alert.vue';
 
 /** Grid Component */
 export { default as Container } from './Grid/Container.vue';

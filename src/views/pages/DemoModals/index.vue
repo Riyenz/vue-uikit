@@ -5,7 +5,6 @@
       <BasicModal/>
       <ModalWithActions/>
       <LongModal/>
-      <MessageOnlyModal/>
       <ModalWithSub/>
     </div>
   </div>
@@ -15,7 +14,6 @@
 import BasicModal from './components/BasicModal.vue';
 import ModalWithActions from './components/ModalWithActions.vue';
 import LongModal from './components/LongModal.vue';
-import MessageOnlyModal from './components/MessageOnlyModal.vue';
 import ModalWithSub from './components/ModalWithSub.vue';
 
 export default {
@@ -24,7 +22,6 @@ export default {
     BasicModal,
     ModalWithActions,
     LongModal,
-    MessageOnlyModal,
     ModalWithSub,
   },
 };

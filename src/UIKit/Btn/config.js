@@ -27,7 +27,6 @@ export const AVAILABLE_SIZES = [
 ];
 export const SIZE_DOESNT_EXISTS = `${APP_NAME} ${COMPONENT_NAME}: prop 'size' provided doesn't exists`;
 
-
 export default {
   AVAILABLE_VARIANTS,
   VARIANT_DOESNT_EXISTS,
