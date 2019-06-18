@@ -10,7 +10,7 @@
             @click="hide"
           />
           <span class="eduk-modal__navbar-logo">
-            <img :src="navLogo" alt>
+            <img :src="navLogo || defaultLogo">
           </span>
         </section>
         <section class="eduk-modal__header">
@@ -28,22 +28,20 @@
         </section>
       </div>
       <div :class="subClass" v-if="hasSub">
-        <div id="subMask" :class="subMaskClass"></div>
+        <div :class="subMaskClass"></div>
         <div class="eduk-modal__sub-content">
           <div class="eduk-modal__sub-top">
             <img
-              id="expandIcon"
               :class="expandIconClass"
-              src="/assets/icons/horizontal-line.png"
+              :src="horizontalLineIcon"
               @click="expandSubActions">
             <img
-              id="shrinkIcon"
               :class="shrinkIconClass"
-              src="/assets/icons/chevron-down.png"
+              :src="chevronDownIcon"
               @click="shrinkSubActions">
           </div>
           <slot name="subContent"></slot>
-          <div id="subActions" :class="subActionsClass" v-if="hasSubActions">
+          <div :class="subActionsClass" v-if="hasSubActions">
             <slot name="subActions"></slot>
           </div>
         </div>
@@ -60,10 +58,14 @@
 import {
   DEFAULT_SUB_CLOSE_TEXT,
   FREEZE_BODY_CLASS,
-  DEFAULT_NAVBAR_LOGO,
   EXPAND_CLASS,
   SHOW_CLASS,
 } from './config';
+
+import CHEVRON_DOWN_ICON from '@/assets/icons/chevron-down.png';
+import HORIZONTAL_LINE_ICON from '@/assets/icons/horizontal-line.png';
+
+import ModalService from './ModalService';
 
 export default {
   name: 'Modal',
@@ -73,15 +75,23 @@ export default {
     },
     navLogo: {
       type: String,
-      default: DEFAULT_NAVBAR_LOGO,
     },
     closeSubText: {
       type: String,
       default: DEFAULT_SUB_CLOSE_TEXT,
     },
+    chevronDownIcon: {
+      type: String,
+      default: CHEVRON_DOWN_ICON,
+    },
+    horizontalLineIcon: {
+      type: String,
+      default: HORIZONTAL_LINE_ICON,
+    },
   },
   data() {
     return {
+      defaultLogo: ModalService.getDefaultLogo(),
       isShown: false,
       isSubShown: true,
       body: document.getElementsByTagName('body')[0],

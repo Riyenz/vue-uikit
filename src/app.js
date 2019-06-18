@@ -1,30 +1,18 @@
-import Vue from 'vue';
+import './settings';
 
-/** Font Awesome Start */
-import { library } from '@fortawesome/fontawesome-svg-core';
-import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
-import { faTimes } from '@fortawesome/free-solid-svg-icons';
-/** Font Awesome End */
+/** Button Component */
+export { default as Btn } from '@/UIKit/Btn/Btn.vue';
+export { TEXT_IS_REQUIRED, VARIANT_DOESNT_EXISTS, SIZE_DOESNT_EXISTS } from '@/UIKit/Btn/config';
 
-/** UIKit Start */
-import '../scss/uikit.scss';
+/** Modal Component */
+export { default as Modal } from '@/UIKit/Modal/Modal.vue';
+export { default as ModalService } from '@/UIKit/Modal/ModalService';
+export { DEFAULT_SUB_CLOSE_TEXT, FREEZE_BODY_CLASS } from '@/UIKit/Modal/config';
 
-import {
-  Btn,
-  Modal,
-  Container,
-  Row,
-  Column,
-} from './UIKit';
+/** Alert Component */
+export { default as Alert } from '@/UIKit/Alert/Alert.vue';
 
-library.add(faTimes);
-Vue.component('font-awesome-icon', FontAwesomeIcon);
-
-export {
-  Btn,
-  Modal,
-  Container,
-  Row,
-  Column,
-};
-/** UIKit End */
+/** Grid Component */
+export { default as Container } from '@/UIKit/Grid/Container.vue';
+export { default as Row } from '@/UIKit/Grid/Row.vue';
+export { default as Column } from '@/UIKit/Grid/Column.vue';

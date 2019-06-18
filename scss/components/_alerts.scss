@@ -40,13 +40,16 @@
     padding: $modal-padding-y $modal-padding-x;
     box-shadow: 0 2px 4px 0 $modal-box-shadow + CC;
   }
+
   &__header-title {
     flex: 1;
   }
+
   &__header-close {
     display: none;
     margin-left: auto;
     cursor: pointer;
+
     @include hover {
       color: darken($gray-900, 5%) !important;
     }
@@ -56,7 +59,8 @@
     flex: 1;
     padding: $modal-padding-y $modal-padding-x 0;
     overflow: auto;
-    &:after {
+
+    &::after {
       content: "";
       display: block;
       padding-bottom: $modal-padding-y;
@@ -77,8 +81,9 @@
       min-width: 90vw;
       max-width: 90vw;
     }
+
     &__actions {
-      display: flex
+      display: flex;
     }
   }
 }
@@ -86,7 +91,7 @@
 @include media-breakpoint-up(sm) {
   .eduk-alert {
     &__header-close {
-      display: block
+      display: block;
     }
   }
 }

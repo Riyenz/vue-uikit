@@ -1,28 +1,16 @@
+import './settings';
+
 import Vue from 'vue';
 import VuePrism from 'vue-prism';
 
 import 'prismjs/themes/prism.css';
-import '../scss/uikit.scss';
-
-import {
-  library,
-} from '@fortawesome/fontawesome-svg-core';
-import {
-  FontAwesomeIcon,
-} from '@fortawesome/vue-fontawesome';
-import {
-  faTimes,
-  faChevronLeft,
-  faChevronDown,
-  faWindowMinimize,
-} from '@fortawesome/free-solid-svg-icons';
 
 import router from './router';
 import App from './App.vue';
 
-library.add(faTimes, faChevronLeft, faChevronDown, faWindowMinimize);
+import ModalService from '@/UIKit/Modal/ModalService';
 
-Vue.component('font-awesome-icon', FontAwesomeIcon);
+ModalService.setDefaultLogo('/assets/img/eduk-navbar-logo.png');
 
 Vue.config.productionTip = false;
 

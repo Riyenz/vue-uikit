@@ -1,6 +1,6 @@
 import { expect } from 'chai';
 import { shallowMount } from '@vue/test-utils';
-import { Column } from '@/UIKit';
+import Column from '@/UIKit/Grid/Column.vue';
 
 const colClass = 'eduk-col';
 const offClass = 'eduk-offset';

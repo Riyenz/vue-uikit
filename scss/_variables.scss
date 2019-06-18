@@ -11,19 +11,21 @@ $gray-900: #212529;
 $black: #000;
 
 $grays: ();
-$grays: map-merge(("100": $gray-100,
-    "200": $gray-200,
-    "300": $gray-300,
-    "400": $gray-400,
-    "500": $gray-500,
-    "600": $gray-600,
-    "700": $gray-700,
-    "800": $gray-800,
-    "900": $gray-900),
-  $grays);
+$grays: map-merge(
+  ("100": $gray-100,
+  "200": $gray-200,
+  "300": $gray-300,
+  "400": $gray-400,
+  "500": $gray-500,
+  "600": $gray-600,
+  "700": $gray-700,
+  "800": $gray-800,
+  "900": $gray-900),
+  $grays
+);
 
-$primary: #FF7301;
-$secondary: #0E9BE4;
+$primary: #ff7301;
+$secondary: #0e9be4;
 $tertiary: #5d5d5d;
 $success: #28a745;
 $info: #17a2b8;
@@ -33,36 +35,40 @@ $light: $gray-300;
 $dark: $gray-800;
 
 $theme-colors: ();
-$theme-colors: map-merge(("primary": $primary,
-    "secondary": $secondary,
-    "tertiary": $tertiary,
-    "success": $success,
-    "info": $info,
-    "warning": $warning,
-    "danger": $danger,
-    "light": $light,
-    "dark": $dark),
-  $theme-colors);
+$theme-colors: map-merge(
+  ("primary": $primary,
+  "secondary": $secondary,
+  "tertiary": $tertiary,
+  "success": $success,
+  "info": $info,
+  "warning": $warning,
+  "danger": $danger,
+  "light": $light,
+  "dark": $dark),
+  $theme-colors
+);
 
 $spacer: 1rem;
 $spacers: ();
 
-$spacers: map-merge((0: 0,
-    1: ($spacer * .25),
-    2: ($spacer * .5),
-    3: $spacer,
-    4: ($spacer * 1.5),
-    5: ($spacer * 3)),
-  $spacers);
+$spacers: map-merge(
+  (0: 0,
+  1: ($spacer * 0.25),
+  2: ($spacer * 0.5),
+  3: $spacer,
+  4: ($spacer * 1.5),
+  5: ($spacer * 3)),
+  $spacers
+);
 
 $border-width: 1px;
 $border-color: $gray-300;
 $border-radius: 5px;
 
-$padding-y: .375rem;
-$padding-x: .375rem;
+$padding-y: 0.375rem;
+$padding-x: 0.375rem;
 
-$margin-y: .375rem;
+$margin-y: 0.375rem;
 $margin-x: 1.5rem;
 
 $body-color: $gray-900;
@@ -77,16 +83,16 @@ $font-weight-bolder: bolder;
 
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700&display=swap');
 $font-family-base: 'Source Sans Pro',
-sans-serif;
+  sans-serif;
 $font-weight-base: $font-weight-normal;
 
 $font-size-base: 16px;
 $font-size-lg: $font-size-base * 1.25;
-$font-size-sm: $font-size-base * .875;
+$font-size-sm: $font-size-base * 0.875;
 $small-font-size: 13px;
 
 $line-height-base: 1.5;
-$letter-spacing-base: .25px;
+$letter-spacing-base: 0.25px;
 
 $text-muted: $gray-600;
 
@@ -117,21 +123,21 @@ $desktop: 960px;
 $mobile: 720px;
 
 $container-max-widths: (sm: 540px,
-  md: 720px,
-  lg: 960px,
-  xl: 1140px);
+md: 720px,
+lg: 960px,
+xl: 1140px);
 
 $grid-breakpoints: (xs: 0,
-  sm: 576px,
-  md: 768px,
-  lg: 992px,
-  xl: 1200px);
+sm: 576px,
+md: 768px,
+lg: 992px,
+xl: 1200px);
 
 /** Typography Variables */
 $h1-font-size: $font-size-base * 2;
 $h2-font-size: $font-size-base * 1.5;
 $h3-font-size: $font-size-base * 1.375;
-$h4-font-size: $font-size-base * 1.250;
+$h4-font-size: $font-size-base * 1.25;
 $h5-font-size: $font-size-base * 1.125;
 $h6-font-size: $font-size-base;
 $p-font-size: $font-size-base;
@@ -140,7 +146,7 @@ $font-size-mobile: 14px;
 $h1-font-size-mobile: $font-size-mobile * 2;
 $h2-font-size-mobile: $font-size-mobile * 1.5;
 $h3-font-size-mobile: $font-size-mobile * 1.375;
-$h4-font-size-mobile: $font-size-mobile * 1.250;
+$h4-font-size-mobile: $font-size-mobile * 1.25;
 $h5-font-size-mobile: $font-size-mobile * 1.125;
 $h6-font-size-mobile: $font-size-mobile;
 $p-font-size-mobile: $font-size-mobile;

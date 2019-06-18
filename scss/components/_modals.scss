@@ -15,6 +15,7 @@ body.eduk-modal-open {
   color: $modal-content-text-color;
   z-index: 1050;
   visibility: hidden;
+
   &.show {
     visibility: visible;
   }
@@ -42,6 +43,7 @@ body.eduk-modal-open {
     display: none;
     flex-direction: column;
     margin: 0 10px;
+
     &.show {
       display: flex;
     }
@@ -69,7 +71,7 @@ body.eduk-modal-open {
     cursor: pointer;
 
     @include hover() {
-      color: darken($white, $emphasized-link-hover-darken-percentage)
+      color: darken($white, $emphasized-link-hover-darken-percentage);
     }
 
     :last-child {
@@ -136,7 +138,7 @@ body.eduk-modal-open {
   &__body {
     padding: $modal-padding-y $modal-padding-x 0;
 
-    &:after {
+    &::after {
       content: "";
       display: block;
       padding-bottom: $modal-padding-y;
@@ -243,6 +245,7 @@ body.eduk-modal-open {
       /** Special Case */
       .eduk-btn {
         flex: 1;
+
         @include button-size($btn-min-width-lg, $btn-min-height-lg, $font-size-base, $border-radius);
       }
     }
@@ -251,6 +254,7 @@ body.eduk-modal-open {
       box-shadow: 0 2px 12px 0 $modal-sub-box-shadow + CC;
       margin: 0;
       z-index: 1;
+      width: 100%;
     }
 
     &__sub-content {
@@ -288,6 +292,7 @@ body.eduk-modal-open {
     &__main {
       border-radius: $border-radius;
       margin: 0 10px;
+
       @include min-size($modal-min-height, $modal-min-width);
       @include max-size($modal-max-height, $modal-max-width);
     }

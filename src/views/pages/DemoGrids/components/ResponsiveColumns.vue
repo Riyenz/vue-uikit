@@ -93,7 +93,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.responsive-columns{
+.responsive-columns {
   &__sample {
     border: 1px dotted black;
     height: 50px;

@@ -1,8 +1,9 @@
 import { expect } from 'chai';
 import { shallowMount } from '@vue/test-utils';
+import Btn from '@/UIKit/Btn/Btn.vue';
 import {
-  Btn, TEXT_IS_REQUIRED, VARIANT_DOESNT_EXISTS, SIZE_DOESNT_EXISTS,
-} from '@/UIKit';
+  TEXT_IS_REQUIRED, VARIANT_DOESNT_EXISTS, SIZE_DOESNT_EXISTS,
+} from '@/UIKit/Btn/config';
 
 const btnProps = {
   text: 'Submit',

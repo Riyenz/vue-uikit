@@ -108,7 +108,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.grid-columns{
+.grid-columns {
   &__sample {
     border: 1px dotted black;
     height: 50px;

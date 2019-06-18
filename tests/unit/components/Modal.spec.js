@@ -1,8 +1,6 @@
 import { expect } from 'chai';
 import { shallowMount } from '@vue/test-utils';
-import {
-  Modal,
-} from '@/UIKit';
+import Modal from '@/UIKit/Modal/Modal.vue';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 
 const slots = {

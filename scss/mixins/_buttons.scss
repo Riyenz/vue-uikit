@@ -3,5 +3,6 @@
   min-width: $min-width;
   min-height: $min-height;
   border-radius: $border-radius;
+
   @include font-size($font-size);
 }

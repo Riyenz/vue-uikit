@@ -2,9 +2,12 @@
 
 // Alignment
 
-.eduk-text-justify  { text-align: justify !important; }
-.eduk-text-wrap     { white-space: normal !important; }
-.eduk-text-nowrap   { white-space: nowrap !important; }
+.eduk-text-justify { text-align: justify !important; }
+
+.eduk-text-wrap { white-space: normal !important; }
+
+.eduk-text-nowrap { white-space: nowrap !important; }
+
 .eduk-text-truncate { @include text-truncate; }
 
 // Responsive alignment
@@ -13,26 +16,35 @@
   @include media-breakpoint-up($breakpoint) {
     $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
 
-    .eduk-text#{$infix}-left   { text-align: left !important; }
-    .eduk-text#{$infix}-right  { text-align: right !important; }
+    .eduk-text#{$infix}-left { text-align: left !important; }
+
+    .eduk-text#{$infix}-right { text-align: right !important; }
+
     .eduk-text#{$infix}-center { text-align: center !important; }
   }
 }
 
 // Transformation
 
-.eduk-text-lowercase  { text-transform: lowercase !important; }
-.eduk-text-uppercase  { text-transform: uppercase !important; }
+.eduk-text-lowercase { text-transform: lowercase !important; }
+
+.eduk-text-uppercase { text-transform: uppercase !important; }
+
 .eduk-text-capitalize { text-transform: capitalize !important; }
 
 // Weight and italics
 
-.font-weight-light   { font-weight: $font-weight-light !important; }
+.font-weight-light { font-weight: $font-weight-light !important; }
+
 .font-weight-lighter { font-weight: $font-weight-lighter !important; }
-.font-weight-normal  { font-weight: $font-weight-normal !important; }
-.font-weight-bold    { font-weight: $font-weight-bold !important; }
-.font-weight-bolder  { font-weight: $font-weight-bolder !important; }
-.font-italic         { font-style: italic !important; }
+
+.font-weight-normal { font-weight: $font-weight-normal !important; }
+
+.font-weight-bold { font-weight: $font-weight-bold !important; }
+
+.font-weight-bolder { font-weight: $font-weight-bolder !important; }
+
+.font-italic { font-style: italic !important; }
 
 // Contextual colors
 
@@ -43,10 +55,12 @@
 }
 
 .eduk-text-body { color: $body-color !important; }
+
 .eduk-text-muted { color: $text-muted !important; }
 
-.eduk-text-black-50 { color: rgba($black, .5) !important; }
-.eduk-text-white-50 { color: rgba($white, .5) !important; }
+.eduk-text-black-50 { color: rgba($black, 0.5) !important; }
+
+.eduk-text-white-50 { color: rgba($white, 0.5) !important; }
 
 .eduk-text-decoration-none { text-decoration: none !important; }
 

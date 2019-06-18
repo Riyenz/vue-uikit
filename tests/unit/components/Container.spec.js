@@ -1,6 +1,6 @@
 import { expect } from 'chai';
 import { shallowMount } from '@vue/test-utils';
-import { Container } from '@/UIKit';
+import Container from '@/UIKit/Grid/Container.vue';
 
 const defaultSlot = document.createElement('i');
 defaultSlot.id = 'testDefault';
