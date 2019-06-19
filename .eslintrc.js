@@ -2,17 +2,19 @@ module.exports = {
   root: true,
   env: {
     node: true,
+    mocha: true,
   },
   extends: [
     'plugin:vue/essential',
     '@vue/airbnb',
   ],
   rules: {
-    'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
-    'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
+    'no-console': 'error',
+    'no-debugger': 'error',
     'max-len': ['error', {
       code: 150,
     }],
+    'class-methods-use-this': 'off',
     'no-multiple-empty-lines': [1, {
       max: 1,
     }],

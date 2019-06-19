@@ -1,0 +1,21 @@
+<template>
+  <div :class="{{ toLowerCase scopeName }}Class">
+    /** do something here */
+  </div>
+</template>
+
+<script>
+import { {{ toUpperCase scopeName }}_CLASS_NAME } from './{{ scopeName }}.config';
+
+export default {
+  name: '{{ scopeName }}',
+  props: {},
+  computed: {
+    {{ toLowerCase scopeName }}Class() {
+      return {
+        [{{ toUpperCase scopeName }}_CLASS_NAME]: true,
+      };
+    },
+  },
+};
+</script>

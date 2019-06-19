@@ -26,11 +26,3 @@ export const AVAILABLE_SIZES = [
   'lg',
 ];
 export const SIZE_DOESNT_EXISTS = `${APP_NAME} ${COMPONENT_NAME}: prop 'size' provided doesn't exists`;
-
-export default {
-  AVAILABLE_VARIANTS,
-  VARIANT_DOESNT_EXISTS,
-  TEXT_IS_REQUIRED,
-  AVAILABLE_SIZES,
-  SIZE_DOESNT_EXISTS,
-};

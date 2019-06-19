@@ -8,7 +8,8 @@
     "lint:css": "stylelint '**/*.vue' '**/*.scss' --syntax scss",
     "test:unit": "vue-cli-service test:unit",
     "build:lib": "vue-cli-service build --target lib --name uikit --formats umd-min src/app.js",
-    "build": "vue-cli-service build"
+    "build": "vue-cli-service build",
+    "g:c": "node src/core/generator generate component"
   },
   "main": "dist/uikit.umd.min.js",
   "dependencies": {
@@ -19,7 +20,8 @@
     "prismjs": "^1.16.0",
     "vue": "^2.6.10",
     "vue-prism": "^1.0.5",
-    "vue-router": "^3.0.3"
+    "vue-router": "^3.0.3",
+    "handlebars": "^4.1.2"
   },
   "devDependencies": {
     "@mapbox/stylelint-processor-arbitrary-tags": "^0.2.0",
