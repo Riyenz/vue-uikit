@@ -4,7 +4,7 @@
   "private": false,
   "scripts": {
     "serve": "vue-cli-service serve --port=8880",
-    "lint": "vue-cli-service lint --fix",
+    "lint": "vue-cli-service lint",
     "lint:css": "stylelint '**/*.vue' '**/*.scss' --syntax scss",
     "test:unit": "vue-cli-service test:unit",
     "build:lib": "vue-cli-service build --target lib --name uikit --formats umd-min src/app.js",
@@ -24,6 +24,8 @@
     "handlebars": "^4.1.2"
   },
   "devDependencies": {
+    "@commitlint/cli": "^8.0.0",
+    "@commitlint/config-conventional": "^8.0.0",
     "@mapbox/stylelint-processor-arbitrary-tags": "^0.2.0",
     "@vue/cli-plugin-babel": "^3.7.0",
     "@vue/cli-plugin-eslint": "^3.7.0",
@@ -36,6 +38,7 @@
     "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.0.0",
     "file-loader": "^4.0.0",
+    "husky": "^2.4.1",
     "node-sass": "^4.9.0",
     "sass-loader": "^7.1.0",
     "stylelint": "^10.1.0",
