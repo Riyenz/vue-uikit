@@ -8,7 +8,7 @@ import 'prismjs/themes/prism.css';
 import router from './router';
 import App from './App.vue';
 
-import ModalService from '@/UIKit/Modal/ModalService';
+import ModalService from '@/UIKit/Modal/Modal.service';
 
 ModalService.setDefaultLogo('/assets/img/eduk-navbar-logo.png');
 

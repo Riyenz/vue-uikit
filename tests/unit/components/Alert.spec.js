@@ -1,6 +1,7 @@
 import { expect } from 'chai';
 import { shallowMount } from '@vue/test-utils';
-import Alert from '@/UIKit/Alert/Alert.vue';
+import Alert from '@/UIKit/Alert/Alert.component.vue';
+import { SHOW_CLASS } from '@/UIKit/config';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 
 const slots = {
@@ -34,18 +35,18 @@ describe('Alert.vue', () => {
     }
   });
 
-  it('adds a .show class when show method is called', () => {
+  it(`adds a .${SHOW_CLASS} class when show method is called`, () => {
     const wrapper = shallowMount(Alert, AlertProperties);
     wrapper.vm.show();
 
-    expect(wrapper.classes('show')).to.equal(true);
+    expect(wrapper.classes(SHOW_CLASS)).to.equal(true);
   });
 
-  it('remove .show class when hide method is called', () => {
+  it(`remove .${SHOW_CLASS} class when hide method is called`, () => {
     const wrapper = shallowMount(Alert, AlertProperties);
     wrapper.vm.show();
 
     wrapper.vm.hide();
-    expect(wrapper.classes('show')).to.equal(false);
+    expect(wrapper.classes(SHOW_CLASS)).to.equal(false);
   });
 });

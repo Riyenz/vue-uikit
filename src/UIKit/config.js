@@ -1,5 +1,2 @@
 export const APP_NAME = 'UIKit';
-
-export default {
-  APP_NAME,
-};
+export const SHOW_CLASS = 'eduk-u-show';

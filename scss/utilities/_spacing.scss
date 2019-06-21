@@ -8,25 +8,25 @@
 
     @each $prop, $abbrev in (margin: m, padding: p) {
       @each $size, $length in $spacers {
-        .eduk-#{$abbrev}#{$infix}-#{$size} { #{$prop}: $length !important; }
+        .eduk-u-#{$abbrev}#{$infix}-#{$size} { #{$prop}: $length !important; }
 
-        .eduk-#{$abbrev}t#{$infix}-#{$size},
-        .eduk-#{$abbrev}y#{$infix}-#{$size} {
+        .eduk-u-#{$abbrev}t#{$infix}-#{$size},
+        .eduk-u-#{$abbrev}y#{$infix}-#{$size} {
           #{$prop}-top: $length !important;
         }
 
-        .eduk-#{$abbrev}r#{$infix}-#{$size},
-        .eduk-#{$abbrev}x#{$infix}-#{$size} {
+        .eduk-u-#{$abbrev}r#{$infix}-#{$size},
+        .eduk-u-#{$abbrev}x#{$infix}-#{$size} {
           #{$prop}-right: $length !important;
         }
 
-        .eduk-#{$abbrev}b#{$infix}-#{$size},
-        .eduk-#{$abbrev}y#{$infix}-#{$size} {
+        .eduk-u-#{$abbrev}b#{$infix}-#{$size},
+        .eduk-u-#{$abbrev}y#{$infix}-#{$size} {
           #{$prop}-bottom: $length !important;
         }
 
-        .eduk-#{$abbrev}l#{$infix}-#{$size},
-        .eduk-#{$abbrev}x#{$infix}-#{$size} {
+        .eduk-u-#{$abbrev}l#{$infix}-#{$size},
+        .eduk-u-#{$abbrev}x#{$infix}-#{$size} {
           #{$prop}-left: $length !important;
         }
       }
@@ -35,50 +35,50 @@
     // Negative margins (e.g., where `.eduk-mb-n1` is negative version of `.eduk-mb-1`)
     @each $size, $length in $spacers {
       @if $size != 0 {
-        .eduk-m#{$infix}-n#{$size} { margin: -$length !important; }
+        .eduk-u-m#{$infix}-n#{$size} { margin: -$length !important; }
 
-        .eduk-mt#{$infix}-n#{$size},
-        .eduk-my#{$infix}-n#{$size} {
+        .eduk-u-mt#{$infix}-n#{$size},
+        .eduk-u-my#{$infix}-n#{$size} {
           margin-top: -$length !important;
         }
 
-        .eduk-mr#{$infix}-n#{$size},
-        .eduk-mx#{$infix}-n#{$size} {
+        .eduk-u-mr#{$infix}-n#{$size},
+        .eduk-u-mx#{$infix}-n#{$size} {
           margin-right: -$length !important;
         }
 
-        .eduk-mb#{$infix}-n#{$size},
-        .eduk-my#{$infix}-n#{$size} {
+        .eduk-u-mb#{$infix}-n#{$size},
+        .eduk-u-my#{$infix}-n#{$size} {
           margin-bottom: -$length !important;
         }
 
-        .eduk-ml#{$infix}-n#{$size},
-        .eduk-mx#{$infix}-n#{$size} {
+        .eduk-u-ml#{$infix}-n#{$size},
+        .eduk-u-mx#{$infix}-n#{$size} {
           margin-left: -$length !important;
         }
       }
     }
 
     // Some special margin utils
-    .eduk-m#{$infix}-auto { margin: auto !important; }
+    .eduk-u-m#{$infix}-auto { margin: auto !important; }
 
-    .eduk-mt#{$infix}-auto,
-    .eduk-my#{$infix}-auto {
+    .eduk-u-mt#{$infix}-auto,
+    .eduk-u-my#{$infix}-auto {
       margin-top: auto !important;
     }
 
-    .eduk-mr#{$infix}-auto,
-    .eduk-mx#{$infix}-auto {
+    .eduk-u-mr#{$infix}-auto,
+    .eduk-u-mx#{$infix}-auto {
       margin-right: auto !important;
     }
 
-    .eduk-mb#{$infix}-auto,
-    .eduk-my#{$infix}-auto {
+    .eduk-u-mb#{$infix}-auto,
+    .eduk-u-my#{$infix}-auto {
       margin-bottom: auto !important;
     }
 
-    .eduk-ml#{$infix}-auto,
-    .eduk-mx#{$infix}-auto {
+    .eduk-u-ml#{$infix}-auto,
+    .eduk-u-mx#{$infix}-auto {
       margin-left: auto !important;
     }
   }

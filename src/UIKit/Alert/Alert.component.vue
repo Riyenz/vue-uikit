@@ -3,7 +3,7 @@
     <div class="eduk-alert__container">
       <div class="eduk-alert__content">
         <section class="eduk-alert__header">
-          <h2 class="eduk-head eduk-alert__header-title eduk-mb-0">{{ title }}</h2>
+          <h2 class="eduk-head eduk-alert__header-title eduk-u-mb-0">{{ title }}</h2>
           <font-awesome-icon class="eduk-alert__header-close" icon="times" size="lg" @click="hide"/>
         </section>
         <section class="eduk-alert__body">
@@ -23,7 +23,11 @@
 </template>
 
 <script>
-import Btn from '@/UIKit/Btn/Btn.vue';
+import {
+  SHOW_CLASS,
+} from '../config';
+import { ALERT_CLASS_NAME } from './Alert.config';
+import Btn from '@/UIKit/Btn/Btn.component.vue';
 
 export default {
   name: 'Alert',
@@ -43,8 +47,8 @@ export default {
   computed: {
     alertClass() {
       return {
-        'eduk-alert': true,
-        show: this.isShown,
+        [ALERT_CLASS_NAME]: true,
+        [SHOW_CLASS]: this.isShown,
       };
     },
   },

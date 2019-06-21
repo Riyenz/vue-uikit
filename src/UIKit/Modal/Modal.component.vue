@@ -14,7 +14,7 @@
           </span>
         </section>
         <section class="eduk-modal__header">
-          <h2 class="eduk-head eduk-modal__header-title eduk-mb-0">{{ title }}</h2>
+          <h2 class="eduk-head eduk-modal__header-title eduk-u-mb-0">{{ title }}</h2>
           <font-awesome-icon class="eduk-modal__header-close" icon="times" size="lg" @click="hide"/>
         </section>
         <section class="eduk-modal__content">
@@ -56,16 +56,19 @@
 
 <script>
 import {
+  MODAL_CLASS_NAME,
   DEFAULT_SUB_CLOSE_TEXT,
   FREEZE_BODY_CLASS,
-  EXPAND_CLASS,
+} from './Modal.config';
+
+import {
   SHOW_CLASS,
-} from './config';
+} from '../config';
 
 import CHEVRON_DOWN_ICON from '@/assets/icons/chevron-down.png';
 import HORIZONTAL_LINE_ICON from '@/assets/icons/horizontal-line.png';
 
-import ModalService from './ModalService';
+import ModalService from './Modal.service';
 
 export default {
   name: 'Modal',
@@ -110,20 +113,20 @@ export default {
     },
     modalClass() {
       return {
-        'eduk-modal': true,
-        show: this.isShown,
+        [MODAL_CLASS_NAME]: true,
+        [SHOW_CLASS]: this.isShown,
       };
     },
     subClass() {
       return {
         'eduk-modal__sub': true,
-        show: this.isSubShown,
+        [SHOW_CLASS]: this.isSubShown,
       };
     },
     subActionsClass() {
       return {
         'eduk-modal__sub-actions': true,
-        [EXPAND_CLASS]: this.isSubActionsExpand,
+        [SHOW_CLASS]: this.isSubActionsExpand,
       };
     },
     shrinkIconClass() {

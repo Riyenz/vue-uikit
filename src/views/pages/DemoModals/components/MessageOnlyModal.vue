@@ -1,6 +1,6 @@
 <template>
   <div class="basic-modal">
-    <h3 class="eduk-text-muted">Message Only Modal</h3>
+    <h3 class="eduk-u-text-muted">Message Only Modal</h3>
     <Btn text="Show Modal" noMargin @click.native="showModal"/>
     <Modal ref="messageModal" :isShown="true">
       <template v-slot:content>
@@ -40,8 +40,8 @@
 </template>
 
 <script>
-import Modal from '@/UIKit/Modal/Modal.vue';
-import Btn from '@/UIKit/Btn/Btn.vue';
+import Modal from '@/UIKit/Modal/Modal.component.vue';
+import Btn from '@/UIKit/Btn/Btn.component.vue';
 
 export default {
   name: 'MessageOnlyModal',

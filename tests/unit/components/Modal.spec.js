@@ -1,6 +1,7 @@
 import { expect } from 'chai';
 import { shallowMount } from '@vue/test-utils';
-import Modal from '@/UIKit/Modal/Modal.vue';
+import Modal from '@/UIKit/Modal/Modal.component.vue';
+import { SHOW_CLASS } from '@/UIKit/config';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 
 const slots = {
@@ -68,11 +69,11 @@ describe('Modal.vue', () => {
     }
   });
 
-  it('adds a .show class when show method is called', () => {
+  it(`adds a .${SHOW_CLASS} class when show method is called`, () => {
     const wrapper = shallowMount(Modal, modalProperties);
     wrapper.vm.show();
 
-    expect(wrapper.classes('show')).to.equal(true);
+    expect(wrapper.classes(SHOW_CLASS)).to.equal(true);
   });
 
   it('freezes the body element when modal is shown', () => {
@@ -83,12 +84,12 @@ describe('Modal.vue', () => {
     expect(body.classList.contains('eduk-modal-open')).to.equal(true);
   });
 
-  it('remove .show class when hide method is called', () => {
+  it(`remove .${SHOW_CLASS} class when hide method is called`, () => {
     const wrapper = shallowMount(Modal, modalProperties);
     wrapper.vm.show();
 
     wrapper.vm.hide();
-    expect(wrapper.classes('show')).to.equal(false);
+    expect(wrapper.classes(SHOW_CLASS)).to.equal(false);
   });
 
   it('unfreezes the body element when modal is hidden', () => {

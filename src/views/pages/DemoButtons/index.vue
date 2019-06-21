@@ -1,6 +1,6 @@
 <template>
   <div class="demo-buttons">
-    <h1>Buttons</h1>
+    <h1 class="eduk-head">Buttons</h1>
     <div class="demo-buttons__container">
       <ActionButtons/>
       <OutlineButtons/>

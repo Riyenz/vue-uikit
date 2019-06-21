@@ -1,16 +1,16 @@
 <template>
   <div class="long-modal">
-    <h3 class="eduk-text-muted">Long Modal</h3>
+    <h3 class="eduk-u-text-muted">Long Modal</h3>
     <Btn text="Show Modal" noMargin @click.native="showModal"/>
     <Modal ref="longModal" :title="modalTitle">
       <template v-slot:content>
-        <h3>Here might be a content title</h3>
-        <p>
+        <h3 class="eduk-head">Here might be a content title</h3>
+        <p class="eduk-text">
           Cupidatat laborum deserunt ipsum quis commodo.
           Duis est adipisicing aute irure aliqua dolor.
           Nostrud officia duis aliquip enim labore amet.
         </p>
-        <p>
+        <p class="eduk-text">
           Cillum irure ipsum mollit dolore. Eiusmod amet
           laborum fugiat fugiat tempor adipisicing anim in.
           Eiusmod duis sunt tempor sint laboris officia qui.
@@ -20,13 +20,13 @@
           nostrud pariatur. Occaecat dolor exercitation
           occaecat ea adipisicing elit proident in ad occaecat.
         </p>
-        <p>
+        <p class="eduk-text">
           Qui reprehenderit fugiat amet consequat id
           deserunt velit. Aute aliquip tempor Lorem dolor
           nulla ut. Exercitation eiusmod proident ea Lorem
           voluptate est voluptate do aliquip.
         </p>
-        <p>
+        <p class="eduk-text">
           Laborum anim velit nostrud nisi cillum consectetur
           velit voluptate laborum id. Reprehenderit ullamco id
           dolore adipisicing. Enim tempor ut velit mollit
@@ -39,7 +39,7 @@
           consectetur exercitation nulla anim fugiat dolor
           ad occaecat laboris.
         </p>
-        <p>
+        <p class="eduk-text">
           Qui reprehenderit fugiat amet consequat id
           deserunt velit. Aute aliquip tempor Lorem dolor
           nulla ut. Exercitation eiusmod proident ea Lorem
@@ -53,13 +53,13 @@
       <code class="language-html">
         &#x3C;Modal ref=&#x22;longModal&#x22; :title=&#x22;modalTitle&#x22;&#x3E;
           &#x3C;template v-slot:content&#x3E;
-            &#x3C;h3&#x3E;Here might be a content title&#x3C;/h3&#x3E;
-            &#x3C;p&#x3E;
+            &#x3C;h3 class=&#x22;eduk-head&#x22;&#x3E;Here might be a content title&#x3C;/h3&#x3E;
+            &#x3C;p class=&#x22;eduk-text&#x22;&#x3E;
               Cupidatat laborum deserunt ipsum quis commodo.
               Duis est adipisicing aute irure aliqua dolor.
               Nostrud officia duis aliquip enim labore amet.
             &#x3C;/p&#x3E;
-            &#x3C;p&#x3E;
+            &#x3C;p class=&#x22;eduk-text&#x22;&#x3E;
               Cillum irure ipsum mollit dolore. Eiusmod amet
               laborum fugiat fugiat tempor adipisicing anim in.
               Eiusmod duis sunt tempor sint laboris officia qui.
@@ -69,13 +69,13 @@
               nostrud pariatur. Occaecat dolor exercitation
               occaecat ea adipisicing elit proident in ad occaecat.
             &#x3C;/p&#x3E;
-            &#x3C;p&#x3E;
+            &#x3C;p class=&#x22;eduk-text&#x22;&#x3E;
               Qui reprehenderit fugiat amet consequat id
               deserunt velit. Aute aliquip tempor Lorem dolor
               nulla ut. Exercitation eiusmod proident ea Lorem
               voluptate est voluptate do aliquip.
             &#x3C;/p&#x3E;
-            &#x3C;p&#x3E;
+            &#x3C;p class=&#x22;eduk-text&#x22;&#x3E;
               Laborum anim velit nostrud nisi cillum consectetur
               velit voluptate laborum id. Reprehenderit ullamco id
               dolore adipisicing. Enim tempor ut velit mollit
@@ -88,7 +88,7 @@
               consectetur exercitation nulla anim fugiat dolor
               ad occaecat laboris.
             &#x3C;/p&#x3E;
-            &#x3C;p&#x3E;
+            &#x3C;p class=&#x22;eduk-text&#x22;&#x3E;
               Qui reprehenderit fugiat amet consequat id
               deserunt velit. Aute aliquip tempor Lorem dolor
               nulla ut. Exercitation eiusmod proident ea Lorem
@@ -111,19 +111,19 @@
                   &#x3C;/span&#x3E;
                 &#x3C;/section&#x3E;
                 &#x3C;section class=&#x22;eduk-modal__header&#x22;&#x3E;
-                  &#x3C;h2 class=&#x22;eduk-head eduk-modal__header-title eduk-mb-0&#x22;&#x3E;Basic Modal&#x3C;/h2&#x3E;
+                  &#x3C;h2 class=&#x22;eduk-head eduk-modal__header-title eduk-u-mb-0&#x22;&#x3E;Basic Modal&#x3C;/h2&#x3E;
                   &#x3C;i class=&#x22;eduk-modal__header-close fas fa-times fa-lg&#x22;&#x3E;&#x3C;/i&#x3E;
                 &#x3C;/section&#x3E;
                 &#x3C;section class=&#x22;eduk-modal__content&#x22;&#x3E;
                   &#x3C;section class=&#x22;eduk-modal__body&#x22;&#x3E;
                     &#x3C;h2 class=&#x22;eduk-modal__title eduk-modal__title--mobile&#x22;&#x3E;Basic Modal&#x3C;/h2&#x3E;
-                    &#x3C;h3&#x3E;Here might be a content title&#x3C;/h3&#x3E;
-                    &#x3C;p&#x3E;
+                    &#x3C;h3 class=&#x22;eduk-head&#x22;&#x3E;Here might be a content title&#x3C;/h3&#x3E;
+                    &#x3C;p class=&#x22;eduk-text&#x22;&#x3E;
                       Cupidatat laborum deserunt ipsum quis commodo.
                       Duis est adipisicing aute irure aliqua dolor.
                       Nostrud officia duis aliquip enim labore amet.
                     &#x3C;/p&#x3E;
-                    &#x3C;p&#x3E;
+                    &#x3C;p class=&#x22;eduk-text&#x22;&#x3E;
                       Cillum irure ipsum mollit dolore. Eiusmod amet
                       laborum fugiat fugiat tempor adipisicing anim in.
                       Eiusmod duis sunt tempor sint laboris officia qui.
@@ -133,13 +133,13 @@
                       nostrud pariatur. Occaecat dolor exercitation
                       occaecat ea adipisicing elit proident in ad occaecat.
                     &#x3C;/p&#x3E;
-                    &#x3C;p&#x3E;
+                    &#x3C;p class=&#x22;eduk-text&#x22;&#x3E;
                       Qui reprehenderit fugiat amet consequat id
                       deserunt velit. Aute aliquip tempor Lorem dolor
                       nulla ut. Exercitation eiusmod proident ea Lorem
                       voluptate est voluptate do aliquip.
                     &#x3C;/p&#x3E;
-                    &#x3C;p&#x3E;
+                    &#x3C;p class=&#x22;eduk-text&#x22;&#x3E;
                       Laborum anim velit nostrud nisi cillum consectetur
                       velit voluptate laborum id. Reprehenderit ullamco id
                       dolore adipisicing. Enim tempor ut velit mollit
@@ -152,7 +152,7 @@
                       consectetur exercitation nulla anim fugiat dolor
                       ad occaecat laboris.
                     &#x3C;/p&#x3E;
-                    &#x3C;p&#x3E;
+                    &#x3C;p class=&#x22;eduk-text&#x22;&#x3E;
                       Qui reprehenderit fugiat amet consequat id
                       deserunt velit. Aute aliquip tempor Lorem dolor
                       nulla ut. Exercitation eiusmod proident ea Lorem
@@ -169,8 +169,8 @@
 </template>
 
 <script>
-import Modal from '@/UIKit/Modal/Modal.vue';
-import Btn from '@/UIKit/Btn/Btn.vue';
+import Modal from '@/UIKit/Modal/Modal.component.vue';
+import Btn from '@/UIKit/Btn/Btn.component.vue';
 
 export default {
   name: 'LongModal',

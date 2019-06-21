@@ -1,6 +1,6 @@
 <template>
   <div class="demo-modals">
-    <h1>Modals</h1>
+    <h1 class="eduk-head">Modals</h1>
     <div class="demo-modals__container">
       <BasicModal/>
       <ModalWithActions/>

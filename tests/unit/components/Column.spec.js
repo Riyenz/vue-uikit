@@ -1,6 +1,6 @@
 import { expect } from 'chai';
 import { shallowMount } from '@vue/test-utils';
-import Column from '@/UIKit/Grid/Column.vue';
+import Column from '@/UIKit/Grid/Column.component.vue';
 
 const colClass = 'eduk-col';
 const offClass = 'eduk-offset';
@@ -10,7 +10,7 @@ const colSizes = ['sm', 'md', 'lg', 'xl'];
 const defaultSlot = document.createElement('i');
 defaultSlot.id = 'testDefault';
 
-describe('Column.vue', () => {
+describe('Column.component.vue', () => {
   it('renders default slot when passed', () => {
     const wrapper = shallowMount(Column, {
       slots: {

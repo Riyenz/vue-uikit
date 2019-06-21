@@ -1,6 +1,6 @@
 <template>
   <div class="primary-buttons">
-    <h3 class="eduk-text-muted">Sizes</h3>
+    <h3 class="eduk-u-text-muted">Sizes</h3>
     <div class="demo-buttons__container">
       <Btn text="Small" size="sm"/>
       <Btn text="Default"/>
@@ -26,7 +26,7 @@
 </template>
 
 <script>
-import Btn from '@/UIKit/Btn/Btn.vue';
+import Btn from '@/UIKit/Btn/Btn.component.vue';
 
 export default {
   name: 'SizeButtons',

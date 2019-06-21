@@ -1,11 +1,11 @@
 import { expect } from 'chai';
 import { shallowMount } from '@vue/test-utils';
-import Container from '@/UIKit/Grid/Container.vue';
+import Container from '@/UIKit/Grid/Container.component.vue';
 
 const defaultSlot = document.createElement('i');
 defaultSlot.id = 'testDefault';
 
-describe('Container.vue', () => {
+describe('Container.component.vue', () => {
   it('renders default slot when passed', () => {
     const wrapper = shallowMount(Container, {
       slots: {

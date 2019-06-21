@@ -1,9 +1,9 @@
 import { expect } from 'chai';
 import { shallowMount } from '@vue/test-utils';
-import Btn from '@/UIKit/Btn/Btn.vue';
+import Btn from '@/UIKit/Btn/Btn.component.vue';
 import {
   TEXT_IS_REQUIRED, VARIANT_DOESNT_EXISTS, SIZE_DOESNT_EXISTS,
-} from '@/UIKit/Btn/config';
+} from '@/UIKit/Btn/Btn.config';
 
 const btnProps = {
   text: 'Submit',
@@ -38,7 +38,7 @@ describe('Btn.vue', () => {
     expect(wrapper.classes('disabled')).to.equal(true);
   });
 
-  it('adds an --outline modifier when props outline is equals true', () => {
+  it('adds an -outline modifier when props outline is equals true', () => {
     const wrapper = shallowMount(Btn, {
       propsData: {
         ...btnProps,
@@ -46,7 +46,7 @@ describe('Btn.vue', () => {
       },
     });
 
-    expect(wrapper.classes(`eduk-btn-${btnProps.variant}--outline`)).to.equal(true);
+    expect(wrapper.classes(`eduk-btn-${btnProps.variant}-outline`)).to.equal(true);
   });
 
   it('adds a --{size} modifier when props size is provided', () => {

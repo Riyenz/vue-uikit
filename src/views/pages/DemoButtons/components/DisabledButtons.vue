@@ -1,6 +1,6 @@
 <template>
   <div class="primary-buttons">
-    <h3 class="eduk-text-muted">Disabled</h3>
+    <h3 class="eduk-u-text-muted">Disabled</h3>
     <div class="demo-buttons__container">
       <Btn text="Disabled" disabled/>
       <pre class="code">
@@ -20,7 +20,7 @@
 </template>
 
 <script>
-import Btn from '@/UIKit/Btn/Btn.vue';
+import Btn from '@/UIKit/Btn/Btn.component.vue';
 
 export default {
   name: 'DisabledButtons',

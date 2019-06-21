@@ -1,6 +1,6 @@
 <template>
   <div class="responsive-columns">
-    <h3 class="eduk-text-muted">Responsive Columns</h3>
+    <h3 class="eduk-u-text-muted">Responsive Columns</h3>
     <Container fluid>
       <Row>
         <Column class="responsive-columns__sample" :cols="12" :colsmd="6">
@@ -78,9 +78,9 @@
 </template>
 
 <script>
-import Container from '@/UIKit/Grid/Container.vue';
-import Row from '@/UIKit/Grid/Row.vue';
-import Column from '@/UIKit/Grid/Column.vue';
+import Container from '@/UIKit/Grid/Container.component.vue';
+import Row from '@/UIKit/Grid/Row.component.vue';
+import Column from '@/UIKit/Grid/Column.component.vue';
 
 export default {
   name: 'ResponsiveColumns',

@@ -1,5 +1,5 @@
 .eduk-alert {
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
   background-color: $gray-900 + CC;
@@ -10,11 +10,6 @@
   height: 100%;
   color: $modal-content-text-color;
   z-index: 1050;
-  visibility: hidden;
-
-  &.show {
-    visibility: visible;
-  }
 
   &__container {
     display: flex;

@@ -10,6 +10,12 @@ npm install
 npm run serve
 ```
 
+### Generates a new Component
+Use this command when creating new component.
+```
+npm run g:c <Component>
+```
+
 ### Compiles and minifies for demo page
 ```
 npm run build
@@ -30,3 +36,7 @@ npm run lint:css
 ```
 npm run test:unit
 ```
+### Must read files
+* Commit Convention: https://github.com/EdukasyonPH/uikit-vue-components/blob/dev/.github/COMMIT_CONVENTION.md
+* Javascript Style Guide: https://github.com/EdukasyonPH/uikit-vue-components/blob/dev/.github/JAVASCRIPT_STYLE_GUIDE.md
+* Component Generator: https://github.com/EdukasyonPH/uikit-vue-components/tree/dev/src/core/generator

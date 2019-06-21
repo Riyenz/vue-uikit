@@ -1,11 +1,11 @@
 import { expect } from 'chai';
 import { shallowMount } from '@vue/test-utils';
-import Row from '@/UIKit/Grid/Row.vue';
+import Row from '@/UIKit/Grid/Row.component.vue';
 
 const defaultSlot = document.createElement('i');
 defaultSlot.id = 'testDefault';
 
-describe('Row.vue', () => {
+describe('Row.component.vue', () => {
   it('renders default slot when passed', () => {
     const wrapper = shallowMount(Row, {
       slots: {

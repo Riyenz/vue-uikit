@@ -24,7 +24,8 @@ it would output the following.
 ```
 > node src/core/generator generate component "Badge"
 
-Generator: creating Badge files in src/UIKit/Badge.
- created  Badge.component.vue
- created  Badge.config.js
+ created  src/UIKit/Badge/Badge.component.vue
+ created  src/UIKit/Badge/Badge.config.js
+ created  tests/unit/components/Badge.spec.js
+ created  scss/components/_badges.scss
 ```

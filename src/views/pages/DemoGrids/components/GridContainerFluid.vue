@@ -1,6 +1,6 @@
 <template>
   <div class="grid-container-fluid">
-    <h3 class="eduk-text-muted eduk-mt-5">Container Fluid</h3>
+    <h3 class="eduk-u-text-muted eduk-u-mt-5">Container Fluid</h3>
     <Container fluid class="grid-container__sample"></Container>
     <pre class="code">
       <label>Vue</label>
@@ -22,7 +22,7 @@
 </template>
 
 <script>
-import Container from '@/UIKit/Grid/Container.vue';
+import Container from '@/UIKit/Grid/Container.component.vue';
 
 export default {
   name: 'GridContainerFluid',

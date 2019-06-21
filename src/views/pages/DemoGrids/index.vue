@@ -1,6 +1,6 @@
 <template>
   <div class="demo-grids">
-    <h1>Grids</h1>
+    <h1 class="eduk-head">Grids</h1>
     <div class="demo-grids__container">
       <GridContainer/>
       <GridContainerFluid/>

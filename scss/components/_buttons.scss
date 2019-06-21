@@ -42,7 +42,7 @@
   }
 
   /** Outline */
-  .eduk-btn-#{$color}--outline {
+  .eduk-btn-#{$color}-outline {
     border-color: darken($value, $hover-darken-percentage);
     background-color: transparent;
     color: $value;

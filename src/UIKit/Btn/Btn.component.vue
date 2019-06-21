@@ -9,7 +9,9 @@ import {
   TEXT_IS_REQUIRED,
   SIZE_DOESNT_EXISTS,
   AVAILABLE_SIZES,
-} from './config';
+  BTN_CLASS_NAME,
+  BTN_CLASS_DISABLED,
+} from './Btn.config';
 
 export default {
   name: 'Btn',
@@ -57,12 +59,17 @@ export default {
   computed: {
     btnClass() {
       const variant = `eduk-btn-${this.variant}`;
-      const outline = this.outline ? '--outline' : '';
-      const disabled = this.disabled ? 'disabled' : '';
+      const outline = this.outline ? `eduk-btn-${this.variant}-outline` : '';
       const size = this.size ? `eduk-btn--${this.size}` : '';
-      const margin = this.noMargin ? '' : 'eduk-m-1';
 
-      return `eduk-btn ${variant}${outline} ${size} ${margin} ${disabled}`;
+      return {
+        [BTN_CLASS_NAME]: true,
+        [BTN_CLASS_DISABLED]: this.disabled,
+        [variant]: !this.outline,
+        [outline]: this.outline,
+        [size]: this.size,
+        'eduk-u-m-1': !this.noMargin,
+      };
     },
   },
 };

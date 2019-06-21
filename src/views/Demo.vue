@@ -24,9 +24,9 @@
 </template>
 
 <script>
-import Container from '@/UIKit/Grid/Container.vue';
-import Row from '@/UIKit/Grid/Row.vue';
-import Column from '@/UIKit/Grid/Column.vue';
+import Container from '@/UIKit/Grid/Container.component.vue';
+import Row from '@/UIKit/Grid/Row.component.vue';
+import Column from '@/UIKit/Grid/Column.component.vue';
 
 import DemoButtons from '@/views/pages/DemoButtons/index.vue';
 import DemoModals from '@/views/pages/DemoModals/index.vue';

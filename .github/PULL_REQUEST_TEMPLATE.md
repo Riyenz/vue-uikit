@@ -1,11 +1,11 @@
-<!-- Add ticket number below and its URL using [TICKET-001](URL) -->
-## Jira Ticket: [WEBAPP-XXX](https://edukasyonph.atlassian.net/browse/)
+<!-- Add ticket number below and its URL using [UIKIT-101](URL) -->
+## Jira Ticket: [UIKIT-XXX](https://edukasyonph.atlassian.net/browse/)
 
 
 ## PR Checklist
 Please check if your PR fulfills the following requirements:
 
-- [ ] The commit message follows our guidelines: ...
+- [ ] The commit message follows our guidelines: https://github.com/EdukasyonPH/uikit-vue-components/blob/dev/.github/COMMIT_CONVENTION.md
 - [ ] Tests for the changes have been added (for bug fixes / features)
 - [ ] Docs/Demo have been added / updated (for bug fixes / features)
 
@@ -32,6 +32,11 @@ What kind of change does this PR introduce?
 
 ## What is the new behavior?
 
+
+## Does this PR introduce a breaking change?
+
+- [ ] Yes
+- [ ] No
 
 ## Other information
 

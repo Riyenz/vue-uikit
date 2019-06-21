@@ -1,6 +1,6 @@
 <template>
   <div class="primary-buttons">
-    <h3 class="eduk-text-muted">Action Buttons</h3>
+    <h3 class="eduk-u-text-muted">Action Buttons</h3>
     <p>
       To draw attention to an action on an application form,
       or highlight the strongest call to action on a page.
@@ -47,7 +47,7 @@
 </template>
 
 <script>
-import Btn from '@/UIKit/Btn/Btn.vue';
+import Btn from '@/UIKit/Btn/Btn.component.vue';
 
 export default {
   name: 'ActionButtons',

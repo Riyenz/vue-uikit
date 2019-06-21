@@ -1,6 +1,6 @@
 <template>
   <div class="outline-buttons">
-    <h3 class="eduk-text-muted">Outline Buttons</h3>
+    <h3 class="eduk-u-text-muted">Outline Buttons</h3>
     <p>
       The standard button for most use cases. Also used as a Secondary Button.
     </p>
@@ -29,14 +29,14 @@
       <pre class="code">
         <label>Vanilla</label>
         <code class="language-html">
-          &lt;button class=&quot;eduk-btn eduk-btn-primary--outline&quot;&gt;Primary&lt;/button&gt;
-          &lt;button class=&quot;eduk-btn eduk-btn-secondary--outline&quot;&gt;Secondary&lt;/button&gt;
-          &lt;button class=&quot;eduk-btn eduk-btn-tertiary--outline&quot;&gt;Tertiary&lt;/button&gt;
-          &lt;button class=&quot;eduk-btn eduk-btn-success--outline&quot;&gt;Success&lt;/button&gt;
-          &lt;button class=&quot;eduk-btn eduk-btn-danger--outline&quot;&gt;Danger&lt;/button&gt;
-          &lt;button class=&quot;eduk-btn eduk-btn-warning--outline&quot;&gt;Warning&lt;/button&gt;
-          &lt;button class=&quot;eduk-btn eduk-btn-light--outline&quot;&gt;Light&lt;/button&gt;
-          &lt;button class=&quot;eduk-btn eduk-btn-dark--outline&quot;&gt;Dark&lt;/button&gt;
+          &lt;button class=&quot;eduk-btn eduk-btn-primary-outline&quot;&gt;Primary&lt;/button&gt;
+          &lt;button class=&quot;eduk-btn eduk-btn-secondary-outline&quot;&gt;Secondary&lt;/button&gt;
+          &lt;button class=&quot;eduk-btn eduk-btn-tertiary-outline&quot;&gt;Tertiary&lt;/button&gt;
+          &lt;button class=&quot;eduk-btn eduk-btn-success-outline&quot;&gt;Success&lt;/button&gt;
+          &lt;button class=&quot;eduk-btn eduk-btn-danger-outline&quot;&gt;Danger&lt;/button&gt;
+          &lt;button class=&quot;eduk-btn eduk-btn-warning-outline&quot;&gt;Warning&lt;/button&gt;
+          &lt;button class=&quot;eduk-btn eduk-btn-light-outline&quot;&gt;Light&lt;/button&gt;
+          &lt;button class=&quot;eduk-btn eduk-btn-dark-outline&quot;&gt;Dark&lt;/button&gt;
         </code>
       </pre>
     </div>
@@ -44,7 +44,7 @@
 </template>
 
 <script>
-import Btn from '@/UIKit/Btn/Btn.vue';
+import Btn from '@/UIKit/Btn/Btn.component.vue';
 
 export default {
   name: 'PrimaryButtons',
