@@ -6,7 +6,7 @@ const ComponentBuilder = require('./models/componentBuilder');
 const StringHelper = require('./models/stringHelper');
 
 const {
-  requiredOptions, argIndex, acceptedExtension, componentSettings,
+  requiredOptions, argIndex, acceptedExtension, componentSettings, appPath,
 } = require('./config');
 
 if (process.argv.length < 5) {
@@ -98,5 +98,19 @@ const cptTestBlueprints = fs
     'created',
     '\x1b[36m',
     `${bp.dest}/${bp.fileName}`,
+  );
+});
+
+fs.appendFile(appPath, `
+/** ${SCOPE_NAME} Component */
+export { default as ${SCOPE_NAME} } from '@/UIKit/${SCOPE_NAME}/${SCOPE_NAME}.component.vue';
+`, (err) => {
+  if (err) throw err;
+
+  console.log(
+    '\x1b[32m',
+    'updated',
+    '\x1b[36m',
+    appPath,
   );
 });

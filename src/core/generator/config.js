@@ -1,4 +1,5 @@
 module.exports = {
+  appPath: 'src/app.js',
   blueprintsFolderPath: 'blueprints',
   acceptedExtension: '.hbs',
   requiredOptions: ['action', 'scope', 'name'],

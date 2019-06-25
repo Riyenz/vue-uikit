@@ -39,4 +39,5 @@ npm run test:unit
 ### Must read files
 * Commit Convention: https://github.com/EdukasyonPH/uikit-vue-components/blob/dev/.github/COMMIT_CONVENTION.md
 * Javascript Style Guide: https://github.com/EdukasyonPH/uikit-vue-components/blob/dev/.github/JAVASCRIPT_STYLE_GUIDE.md
+* CSS Style Guide: https://github.com/EdukasyonPH/uikit-vue-components/blob/dev/.github/CSS_STYLE_GUIDE.md
 * Component Generator: https://github.com/EdukasyonPH/uikit-vue-components/tree/dev/src/core/generator

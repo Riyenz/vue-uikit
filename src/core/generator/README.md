@@ -28,4 +28,5 @@ it would output the following.
  created  src/UIKit/Badge/Badge.config.js
  created  tests/unit/components/Badge.spec.js
  created  scss/components/_badges.scss
+ updated  src/app.js
 ```
