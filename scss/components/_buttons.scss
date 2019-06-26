@@ -24,6 +24,8 @@
 /** Button Variants */
 @each $color,
   $value in $theme-colors {
+  /** TODO: [UIKIT-40] Change color from element to modifiers */
+
   /** Basic */
   .eduk-btn-#{$color} {
     border-color: darken($value, $hover-darken-percentage);

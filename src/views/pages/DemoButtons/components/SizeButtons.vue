@@ -2,15 +2,15 @@
   <div class="primary-buttons">
     <h3 class="eduk-u-text-muted">Sizes</h3>
     <div class="demo-buttons__container">
-      <Btn text="Small" size="sm"/>
-      <Btn text="Default"/>
-      <Btn text="Large" size="lg"/>
+      <Btn size="sm">Small</Btn>
+      <Btn>Default</Btn>
+      <Btn size="lg">Large</Btn>
       <pre class="code">
         <label>Vue</label>
         <code class="language-html">
-          &lt;Btn text=&quot;Small&quot; size=&quot;sm&quot;/&gt;
-          &lt;Btn text=&quot;Default&quot;/&gt;
-          &lt;Btn text=&quot;Large&quot; size=&quot;lg&quot;/&gt;
+          &#x3C;Btn size=&#x22;sm&#x22;&#x3E;Small&#x3C;/Btn&#x3E;
+          &#x3C;Btn&#x3E;Default&#x3C;/Btn&#x3E;
+          &#x3C;Btn size=&#x22;lg&#x22;&#x3E;Large&#x3C;/Btn&#x3E;
         </code>
       </pre>
       <pre class="code">

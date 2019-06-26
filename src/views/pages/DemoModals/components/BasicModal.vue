@@ -1,7 +1,8 @@
 <template>
   <div class="basic-modal">
     <h3 class="eduk-u-text-muted">Basic Modal</h3>
-    <Btn text="Show Modal" noMargin @click.native="showModal"/>
+    <Btn noMargin @click.native="showModal">Show Alert</Btn>
+
     <Modal ref="basicModal" :title="modalTitle">
       <template v-slot:content>
         <h3 class="eduk-head">Here might be a content title</h3>

@@ -2,94 +2,91 @@ import { expect } from 'chai';
 import { shallowMount } from '@vue/test-utils';
 import Btn from '@/UIKit/Btn/Btn.component.vue';
 import {
-  TEXT_IS_REQUIRED, VARIANT_DOESNT_EXISTS, SIZE_DOESNT_EXISTS,
+  VARIANT_DOESNT_EXISTS, SIZE_DOESNT_EXISTS, BTN_CLASS_NAME, BTN_CLASS_DISABLED,
 } from '@/UIKit/Btn/Btn.config';
+import { DEFAULT_VARIANT } from '@/UIKit/config';
 
 const btnProps = {
-  text: 'Submit',
   variant: 'primary',
 };
+const btnSlots = {
+  default: 'Submit',
+};
+const btnProperties = {
+  slots: btnSlots,
+  propsData: btnProps,
+};
 
-describe('Btn.vue', () => {
-  it('renders props text when passed', () => {
+describe('Btn.component.vue', () => {
+  it('renders default slot when passed', () => {
+    const defaultSlot = document.createElement('i');
+    defaultSlot.id = 'testDefault';
     const wrapper = shallowMount(Btn, {
-      propsData: btnProps,
+      slots: {
+        default: defaultSlot.outerHTML,
+      },
     });
 
-    expect(wrapper.text()).to.includes(btnProps.text);
+    try {
+      expect(wrapper.find(`#${defaultSlot.id}`).is(`#${defaultSlot.id}`)).to.equal(true);
+    } catch (err) {
+      expect.fail('can\'t found slot default');
+    }
   });
 
   it('adds a button class of the specified props variant', () => {
-    const wrapper = shallowMount(Btn, {
-      propsData: btnProps,
-    });
+    const wrapper = shallowMount(Btn, btnProperties);
 
-    expect(wrapper.classes(`eduk-btn-${btnProps.variant}`)).to.equal(true);
+    expect(wrapper.classes(`${BTN_CLASS_NAME}-${btnProperties.propsData.variant}`)).to.equal(true);
   });
 
-  it('adds a .disabled class when props disabled is equals true', () => {
+  it(`adds a .${BTN_CLASS_DISABLED} class when props disabled is equals true`, () => {
     const wrapper = shallowMount(Btn, {
+      ...btnProperties,
       propsData: {
-        ...btnProps,
         disabled: true,
       },
     });
 
-    expect(wrapper.classes('disabled')).to.equal(true);
+    expect(wrapper.classes(BTN_CLASS_DISABLED)).to.equal(true);
   });
 
   it('adds an -outline modifier when props outline is equals true', () => {
     const wrapper = shallowMount(Btn, {
+      ...btnProperties,
       propsData: {
-        ...btnProps,
         outline: true,
       },
     });
 
-    expect(wrapper.classes(`eduk-btn-${btnProps.variant}-outline`)).to.equal(true);
+    expect(wrapper.classes(`${BTN_CLASS_NAME}-${btnProps.variant}-outline`)).to.equal(true);
   });
 
   it('adds a --{size} modifier when props size is provided', () => {
     const size = 'sm';
     const wrapper = shallowMount(Btn, {
+      ...btnProperties,
       propsData: {
-        ...btnProps,
         size,
       },
     });
 
-    expect(wrapper.classes(`eduk-btn--${size}`)).to.equal(true);
+    expect(wrapper.classes(`${BTN_CLASS_NAME}--${size}`)).to.equal(true);
   });
 
   it('primary should be default the variant when no props variant provided', () => {
     const wrapper = shallowMount(Btn, {
-      propsData: {
-        text: btnProps.text,
-      },
+      slots: btnSlots,
     });
 
-    expect(wrapper.classes('eduk-btn-primary')).to.equal(true);
-  });
-
-  it('throws a TEXT_IS_REQUIRED error if props text is empty', () => {
-    try {
-      shallowMount(Btn, {
-        propsData: {
-          ...btnProps,
-          text: '',
-        },
-      });
-      expect.fail();
-    } catch (error) {
-      expect(error.message).to.equal(TEXT_IS_REQUIRED);
-    }
+    expect(wrapper.classes(`${BTN_CLASS_NAME}-${DEFAULT_VARIANT}`)).to.equal(true);
   });
 
   it('throws a VARIANT_DOESNT_EXISTS error if props variant is not available', () => {
     try {
       shallowMount(Btn, {
+        ...btnProperties,
         propsData: {
-          ...btnProps,
           variant: 'applepie',
         },
       });
@@ -102,8 +99,8 @@ describe('Btn.vue', () => {
   it('throws a SIZE_DOESNT_EXISTS error if props size is not available', () => {
     try {
       shallowMount(Btn, {
+        ...btnProperties,
         propsData: {
-          ...btnProps,
           size: 'xl',
         },
       });

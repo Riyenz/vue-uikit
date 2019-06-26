@@ -31,6 +31,7 @@ module.exports = {
         'dependency',
         'config',
         'wip',
+        'stop',
       ],
     ],
   },

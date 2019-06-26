@@ -20,6 +20,11 @@
         <DemoGrids/>
       </Column>
     </Row>
+    <Row class="demo__section">
+      <Column>
+        <DemoBadges/>
+      </Column>
+    </Row>
   </Container>
 </template>
 
@@ -32,6 +37,7 @@ import DemoButtons from '@/views/pages/DemoButtons/index.vue';
 import DemoModals from '@/views/pages/DemoModals/index.vue';
 import DemoGrids from '@/views/pages/DemoGrids/index.vue';
 import DemoAlerts from '@/views/pages/DemoAlerts/index.vue';
+import DemoBadges from '@/views/pages/DemoBadges/index.vue';
 
 export default {
   name: 'Demo',
@@ -43,12 +49,15 @@ export default {
     DemoModals,
     DemoAlerts,
     DemoGrids,
+    DemoBadges,
   },
 };
 </script>
 
 <style scoped lang="scss">
 .demo {
+  padding-bottom: 3rem;
+
   &__section {
     margin-top: 50px;
   }

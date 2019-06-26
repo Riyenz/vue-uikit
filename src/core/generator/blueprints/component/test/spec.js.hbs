@@ -4,9 +4,9 @@ import {{ scopeName }} from '@/UIKit/{{ scopeName }}/{{ scopeName }}.component.v
 import { {{ toUpperCase scopeName }}_CLASS_NAME } from '@/UIKit/{{ scopeName }}/{{ scopeName }}.config';
 
 describe('{{ scopeName }}.component.vue', () => {
-  it('adds a .eduk-no-gutters class when props noGutters is provided', () => {
+  it(`adds a .${ {{ toUpperCase scopeName }}_CLASS_NAME } class on init`, () => {
     const wrapper = shallowMount({{ scopeName }});
 
-    expect(wrapper.find(`.${ {{ toUpperCase scopeName }}_CLASS_NAME }`).exists()).toBe(true);
+    expect(wrapper.find(`.${ {{ toUpperCase scopeName }}_CLASS_NAME }`).exists()).to.equal(true);
   });
 });

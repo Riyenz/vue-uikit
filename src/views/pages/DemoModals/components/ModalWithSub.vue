@@ -1,7 +1,7 @@
 <template>
   <div class="modal-w-sub">
     <h3 class="eduk-u-text-muted">{{ modalTitle }}</h3>
-    <Btn text="Show Modal" noMargin @click.native="showModal"/>
+    <Btn noMargin @click.native="showModal">Show Alert</Btn>
     <Modal ref="modalSub" :title="modalTitle">
       <template v-slot:content>
         <h3 class="eduk-head">Here might be a content title</h3>
@@ -48,8 +48,8 @@
         </Row>
       </template>
       <template v-slot:subActions>
-        <Btn text="Apply to this school" size="lg"/>
-        <Btn text="Message School" variant="tertiary" size="lg" outline/>
+        <Btn size="lg">Apply to this school</Btn>
+        <Btn variant="tertiary" size="lg" outline>Message School</Btn>
       </template>
     </Modal>
 
@@ -102,8 +102,8 @@
             &#x3C;/Row&#x3E;
           &#x3C;/template&#x3E;
           &#x3C;template v-slot:subActions&#x3E;
-            &#x3C;Btn text=&#x22;Apply to this school&#x22; size=&#x22;lg&#x22;/&#x3E;
-            &#x3C;Btn text=&#x22;Message School&#x22; variant=&#x22;tertiary&#x22; size=&#x22;lg&#x22; outline/&#x3E;
+            &#x3C;Btn size=&#x22;lg&#x22;&#x3E;Apply to this school&#x3C;/Btn&#x3E;
+            &#x3C;Btn variant=&#x22;tertiary&#x22; size=&#x22;lg&#x22; outline&#x3E;Message School&#x3C;/Btn&#x3E;
           &#x3C;/template&#x3E;
         &#x3C;/Modal&#x3E;
       </code>

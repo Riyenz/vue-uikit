@@ -5,25 +5,25 @@
       The standard button for most use cases. Also used as a Secondary Button.
     </p>
     <div class="demo-buttons__container">
-      <Btn text="Primary" outline/>
-      <Btn text="Secondary" variant="secondary" outline/>
-      <Btn text="Tertiary" variant="tertiary" outline/>
-      <Btn text="Success" variant="success" outline/>
-      <Btn text="Danger" variant="danger" outline/>
-      <Btn text="Warning" variant="warning" outline/>
-      <Btn text="Light" variant="light" outline/>
-      <Btn text="Dark" variant="dark" outline/>
+      <Btn outline>Primary</Btn>
+      <Btn variant="secondary" outline>Secondary</Btn>
+      <Btn variant="tertiary" outline>Tertiary</Btn>
+      <Btn variant="success" outline>Success</Btn>
+      <Btn variant="danger" outline>Danger</Btn>
+      <Btn variant="warning" outline>Warning</Btn>
+      <Btn variant="light" outline>Light</Btn>
+      <Btn variant="dark" outline>Dark</Btn>
       <pre class="code">
         <label>Vue</label>
         <code class="language-html">
-          &lt;Btn text=&quot;Primary&quot; outline/&gt;
-          &lt;Btn text=&quot;Secondary&quot; variant=&quot;secondary&quot; outline/&gt;
-          &lt;Btn text=&quot;Tertiary&quot; variant=&quot;tertiary&quot; outline/&gt;
-          &lt;Btn text=&quot;Success&quot; variant=&quot;success&quot; outline/&gt;
-          &lt;Btn text=&quot;Danger&quot; variant=&quot;danger&quot; outline/&gt;
-          &lt;Btn text=&quot;Warning&quot; variant=&quot;warning&quot; outline/&gt;
-          &lt;Btn text=&quot;Light&quot; variant=&quot;light&quot; outline/&gt;
-          &lt;Btn text=&quot;Dark&quot; variant=&quot;dark&quot; outline/&gt;
+          &#x3C;Btn outline&#x3E;Primary&#x3C;/Btn&#x3E;
+          &#x3C;Btn variant=&#x22;secondary&#x22; outline&#x3E;Secondary&#x3C;/Btn&#x3E;
+          &#x3C;Btn variant=&#x22;tertiary&#x22; outline&#x3E;Tertiary&#x3C;/Btn&#x3E;
+          &#x3C;Btn variant=&#x22;success&#x22; outline&#x3E;Success&#x3C;/Btn&#x3E;
+          &#x3C;Btn variant=&#x22;danger&#x22; outline&#x3E;Danger&#x3C;/Btn&#x3E;
+          &#x3C;Btn variant=&#x22;warning&#x22; outline&#x3E;Warning&#x3C;/Btn&#x3E;
+          &#x3C;Btn variant=&#x22;light&#x22; outline&#x3E;Light&#x3C;/Btn&#x3E;
+          &#x3C;Btn variant=&#x22;dark&#x22; outline&#x3E;Dark&#x3C;/Btn&#x3E;
         </code>
       </pre>
       <pre class="code">

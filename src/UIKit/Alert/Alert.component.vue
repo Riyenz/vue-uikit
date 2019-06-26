@@ -11,11 +11,10 @@
         </section>
         <section class="eduk-alert__actions">
           <Btn
-            text="OK"
             variant="tertiary"
             size="lg"
             outline
-            @click.native="hide"/>
+            @click.native="hide">OK</Btn>
         </section>
       </div>
     </div>

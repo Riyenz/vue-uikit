@@ -1,0 +1,34 @@
+.eduk-badge {
+  display: inline-block;
+  padding: $badge-padding-y $badge-padding-x;
+  font-weight: $badge-font-weight;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  cursor: default;
+  @include font-size($badge-font-size);
+  @include border-radius($badge-border-radius);
+  @include transition($badge-transition);
+
+  @at-root a#{&} {
+    @include hover-focus {
+      text-decoration: none;
+    }
+  }
+
+  &:empty {
+    height: 12px;
+    @include border-radius($badge-dot-border-radius);
+  }
+}
+
+// Colors
+//
+// Contextual variations (linked badges get darker on :hover).
+
+@each $color, $value in $theme-colors {
+  .eduk-badge-#{$color} {
+    @include badge-variant($value);
+  }
+}

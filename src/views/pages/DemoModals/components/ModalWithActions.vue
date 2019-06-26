@@ -1,7 +1,7 @@
 <template>
   <div class="basic-modal">
     <h3 class="eduk-u-text-muted">{{ modalTitle }}</h3>
-    <Btn text="Show Modal" noMargin @click.native="showModal"/>
+    <Btn noMargin @click.native="showModal">Show Alert</Btn>
     <Modal ref="modalActions" :title="modalTitle">
       <template v-slot:content>
         <h3 class="eduk-head">Here might be a content title</h3>
@@ -14,8 +14,8 @@
         </p>
       </template>
       <template v-slot:footer>
-        <Btn text="OK" @click.native="hideModal"/>
-        <Btn text="Cancel" variant="tertiary" outline @click.native="hideModal"/>
+        <Btn @click.native="hideModal">OK</Btn>
+        <Btn variant="tertiary" outline @click.native="hideModal">Cancel</Btn>
       </template>
     </Modal>
 
@@ -34,8 +34,8 @@
             &#x3C;/p&#x3E;
           &#x3C;/template&#x3E;
           &#x3C;template v-slot:footer&#x3E;
-            &#x3C;Btn text=&#x22;OK&#x22; @click.native=&#x22;hideModal&#x22;/&#x3E;
-            &#x3C;Btn text=&#x22;Cancel&#x22; variant=&#x22;tertiary&#x22; outline @click.native=&#x22;hideModal&#x22;/&#x3E;
+            &#x3C;Btn @click.native=&#x22;hideModal&#x22;&#x3E;OK&#x3C;/Btn&#x3E;
+            &#x3C;Btn variant=&#x22;tertiary&#x22; outline @click.native=&#x22;hideModal&#x22;&#x3E;Cancel&#x3C;/Btn&#x3E;
           &#x3C;/template&#x3E;
         &#x3C;/Modal&#x3E;
       </code>

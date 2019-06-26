@@ -2,7 +2,7 @@
   <div class="demo-alert">
     <h1 class="eduk-head">Alerts</h1>
     <h3 class="eduk-u-text-muted">Basic Alert</h3>
-    <Btn text="Show Alert" noMargin @click.native="showAlert"/>
+    <Btn noMargin @click.native="showAlert">Show Alert</Btn>
     <Alert ref="alert" title="Alerts">
       Do! ullamco Lorem occaecat tempor incididunt nulla adipisicing.
     </Alert>

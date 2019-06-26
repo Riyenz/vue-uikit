@@ -1,7 +1,7 @@
 <template>
   <div class="basic-modal">
     <h3 class="eduk-u-text-muted">Message Only Modal</h3>
-    <Btn text="Show Modal" noMargin @click.native="showModal"/>
+    <Btn noMargin @click.native="showModal">Show Alert</Btn>
     <Modal ref="messageModal" :isShown="true">
       <template v-slot:content>
         Fugiat ad proident elit nostrud amet occaecat est.

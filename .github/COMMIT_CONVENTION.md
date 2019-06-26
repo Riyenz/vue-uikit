@@ -30,6 +30,7 @@ All Commit Messages **must** meet the company standards:
 | `build`       | for packaging or bundling commit |
 | `release`     | for publishing commit |
 | `wip`         | for work in progress commit |
+| `stop`        | end doing something e.g. removing a feature |
 | `ci`          | for command line changes like git, npm |
 | `revert`      | revert from the previous commit |
 | `style`       | for commits that do not affect the meaning of the code like white spaces and missing semi colons |

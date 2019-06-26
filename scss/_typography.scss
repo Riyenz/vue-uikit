@@ -48,6 +48,7 @@ h6.eduk-head,
 .eduk-text {
   margin-top: 0;
   margin-bottom: $p-margin-bottom;
+  color: $text-color;
 
   @include font-size($p-font-size);
 }

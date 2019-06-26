@@ -2,11 +2,11 @@
   <div class="primary-buttons">
     <h3 class="eduk-u-text-muted">Disabled</h3>
     <div class="demo-buttons__container">
-      <Btn text="Disabled" disabled/>
+      <Btn disabled>Disabled</Btn>
       <pre class="code">
         <label>Vue</label>
         <code class="language-html">
-          &lt;Btn text=&quot;Disabled&quot; disabled/&gt;
+          &#x3C;Btn disabled&#x3E;Disabled&#x3C;/Btn&#x3E;
         </code>
       </pre>
       <pre class="code">

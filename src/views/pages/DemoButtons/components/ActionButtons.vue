@@ -8,25 +8,25 @@
       Not every screen requires a primary button.
     </p>
     <div class="demo-buttons__container">
-      <Btn text="Primary"/>
-      <Btn text="Secondary" variant="secondary"/>
-      <Btn text="Tertiary" variant="tertiary"/>
-      <Btn text="Success" variant="success"/>
-      <Btn text="Danger" variant="danger"/>
-      <Btn text="Warning" variant="warning"/>
-      <Btn text="Light" variant="light"/>
-      <Btn text="Dark" variant="dark"/>
+      <Btn>Primary</Btn>
+      <Btn variant="secondary">Secondary</Btn>
+      <Btn variant="tertiary">Tertiary</Btn>
+      <Btn variant="success">Success</Btn>
+      <Btn variant="danger">Danger</Btn>
+      <Btn variant="warning">Warning</Btn>
+      <Btn variant="light">Light</Btn>
+      <Btn variant="dark">Dark</Btn>
       <pre class="code">
         <label>Vue</label>
         <code class="language-html">
-          &lt;Btn text=&quot;Primary&quot;/&gt;
-          &lt;Btn text=&quot;Secondary&quot; variant=&quot;secondary&quot;/&gt;
-          &lt;Btn text=&quot;Tertiary&quot; variant=&quot;tertiary&quot;/&gt;
-          &lt;Btn text=&quot;Success&quot; variant=&quot;success&quot;/&gt;
-          &lt;Btn text=&quot;Danger&quot; variant=&quot;danger&quot;/&gt;
-          &lt;Btn text=&quot;Warning&quot; variant=&quot;warning&quot;/&gt;
-          &lt;Btn text=&quot;Light&quot; variant=&quot;light&quot;/&gt;
-          &lt;Btn text=&quot;Dark&quot; variant=&quot;dark&quot;/&gt;
+          &#x3C;Btn&#x3E;Primary&#x3C;/Btn&#x3E;
+          &#x3C;Btn variant=&#x22;secondary&#x22;&#x3E;Secondary&#x3C;/Btn&#x3E;
+          &#x3C;Btn variant=&#x22;tertiary&#x22;&#x3E;Tertiary&#x3C;/Btn&#x3E;
+          &#x3C;Btn variant=&#x22;success&#x22;&#x3E;Success&#x3C;/Btn&#x3E;
+          &#x3C;Btn variant=&#x22;danger&#x22;&#x3E;Danger&#x3C;/Btn&#x3E;
+          &#x3C;Btn variant=&#x22;warning&#x22;&#x3E;Warning&#x3C;/Btn&#x3E;
+          &#x3C;Btn variant=&#x22;light&#x22;&#x3E;Light&#x3C;/Btn&#x3E;
+          &#x3C;Btn variant=&#x22;dark&#x22;&#x3E;Dark&#x3C;/Btn&#x3E;
         </code>
       </pre>
       <pre class="code">

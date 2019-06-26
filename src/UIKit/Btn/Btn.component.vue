@@ -1,34 +1,29 @@
 <template>
-  <button :class="btnClass">{{ text }}</button>
+  <button :class="btnClass">
+    <slot></slot>
+  </button>
 </template>
 
 <script>
 import {
-  AVAILABLE_VARIANTS,
   VARIANT_DOESNT_EXISTS,
-  TEXT_IS_REQUIRED,
   SIZE_DOESNT_EXISTS,
   AVAILABLE_SIZES,
   BTN_CLASS_NAME,
   BTN_CLASS_DISABLED,
 } from './Btn.config';
 
+import {
+  DEFAULT_VARIANT,
+  AVAILABLE_VARIANTS,
+} from '@/UIKit/config';
+
 export default {
   name: 'Btn',
   props: {
-    text: {
-      type: String,
-      required: true,
-      validator(value) {
-        if (!value) {
-          throw new Error(TEXT_IS_REQUIRED);
-        }
-        return true;
-      },
-    },
     variant: {
       type: String,
-      default: AVAILABLE_VARIANTS[0],
+      default: DEFAULT_VARIANT,
       validator(value) {
         if (!AVAILABLE_VARIANTS.includes(value)) {
           throw new Error(VARIANT_DOESNT_EXISTS);
@@ -58,9 +53,9 @@ export default {
   },
   computed: {
     btnClass() {
-      const variant = `eduk-btn-${this.variant}`;
-      const outline = this.outline ? `eduk-btn-${this.variant}-outline` : '';
-      const size = this.size ? `eduk-btn--${this.size}` : '';
+      const variant = `${BTN_CLASS_NAME}-${this.variant}`;
+      const outline = this.outline ? `${BTN_CLASS_NAME}-${this.variant}-outline` : '';
+      const size = this.size ? `${BTN_CLASS_NAME}--${this.size}` : '';
 
       return {
         [BTN_CLASS_NAME]: true,
