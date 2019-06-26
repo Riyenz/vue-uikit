@@ -1,35 +1,41 @@
 <template>
-  <div class="demo-buttons">
-    <h1 class="eduk-head">Buttons</h1>
-    <div class="demo-buttons__container">
-      <ActionButtons/>
-      <OutlineButtons/>
-      <SizeButtons/>
-      <DisabledButtons/>
-    </div>
-  </div>
+  <TabContent :selected="selectedTab" @change="onTabChange">
+    <template slot="design">
+      <Design />
+    </template>
+    <template slot="code">
+      <Code />
+    </template>
+    <template slot="quicklinks">
+      <Quicklinks/>
+    </template>
+  </TabContent>
 </template>
 
 <script>
-import {
-  ActionButtons, OutlineButtons, SizeButtons, DisabledButtons,
-} from './components';
+import TabContent from '@/views/components/TabContent/index.vue';
+import Code from './components/Code.vue';
+import Design from './components/Design.vue';
+import Quicklinks from './components/Quicklinks.vue';
 
 export default {
   name: 'DemoButtons',
+  props: {
+    selectedTab: {
+      type: Number,
+      default: 0,
+    },
+  },
   components: {
-    ActionButtons,
-    OutlineButtons,
-    SizeButtons,
-    DisabledButtons,
+    TabContent,
+    Code,
+    Design,
+    Quicklinks,
+  },
+  methods: {
+    onTabChange(tabIndex) {
+      this.$emit('tabChange', tabIndex);
+    },
   },
 };
 </script>
-
-<style lang="scss" scoped>
-.demo-buttons {
-  &__container * {
-    margin-top: 50px;
-  }
-}
-</style>
