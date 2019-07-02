@@ -11,13 +11,19 @@ import {
   faTimes,
   faChevronLeft,
   faWindowMinimize,
+  faHeart,
 } from '@fortawesome/free-solid-svg-icons';
+import {
+  faHeart as farHeart,
+} from '@fortawesome/free-regular-svg-icons';
 /** Font Awesome End */
 
 /** UIKit Start */
 import '../scss/uikit.scss';
 
-library.add(faTimes, faChevronLeft, faWindowMinimize);
+library.add(faTimes, faChevronLeft, faWindowMinimize, faHeart, farHeart);
 Vue.component('font-awesome-icon', FontAwesomeIcon);
-
 /** UIKit End */
+
+/** Vue Filters */
+Vue.filter('truncate', (text = '', stop = 75, clamp) => text.slice(0, stop) + (stop < text.length ? clamp || '...' : ''));

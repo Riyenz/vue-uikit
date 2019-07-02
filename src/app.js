@@ -17,3 +17,6 @@ export { default as Column } from '@/UIKit/Grid/Column.component.vue';
 
 /** Badge Component */
 export { default as Badge } from '@/UIKit/Badge/Badge.component.vue';
+
+/** Itemlist Component */
+export { default as Itemlist } from '@/UIKit/Itemlist/Itemlist.component.vue';

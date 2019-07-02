@@ -30,7 +30,7 @@ describe('Btn.component.vue', () => {
     try {
       expect(wrapper.find(`#${defaultSlot.id}`).is(`#${defaultSlot.id}`)).to.equal(true);
     } catch (err) {
-      expect.fail('can\'t found slot default');
+      expect.fail('can\'t find slot default');
     }
   });
 

@@ -7,7 +7,7 @@
 .eduk-h4,
 .eduk-h5,
 .eduk-h6 {
-  margin-top: -5px;
+  margin-top: 0;
   margin-bottom: $headings-margin-bottom;
   font-family: $headings-font-family;
   font-weight: $headings-font-weight;
@@ -53,6 +53,28 @@ h6.eduk-head,
   @include font-size($p-font-size);
 }
 
+.eduk-link {
+  display: block;
+  color: $link-color;
+  text-decoration: none;
+
+  @include hover {
+    color: darken($link-color, $emphasized-link-hover-darken-percentage);
+  }
+
+  @each $color, $value in $theme-colors {
+    &--#{$color} {
+      display: block;
+      color: $value;
+      text-decoration: none;
+
+      @include hover {
+        color: darken($value, $emphasized-link-hover-darken-percentage);
+      }
+    }
+  }
+}
+
 @include media-breakpoint-down(sm) {
   h1.eduk-head,
   .eduk-h1 {
@@ -85,7 +107,7 @@ h6.eduk-head,
   }
 
   .eduk-text {
-    @include font-size($p-font-size);
+    @include font-size($p-font-size-mobile);
   }
 
   .eduk-text-sm {

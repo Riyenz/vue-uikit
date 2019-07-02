@@ -14,14 +14,15 @@
   "main": "dist/uikit.umd.min.js",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.18",
+    "@fortawesome/free-regular-svg-icons": "^5.9.0",
     "@fortawesome/free-solid-svg-icons": "^5.8.2",
     "@fortawesome/vue-fontawesome": "^0.1.6",
     "core-js": "^2.6.5",
+    "handlebars": "^4.1.2",
     "prismjs": "^1.16.0",
     "vue": "^2.6.10",
     "vue-prism": "^1.0.5",
-    "vue-router": "^3.0.3",
-    "handlebars": "^4.1.2"
+    "vue-router": "^3.0.3"
   },
   "devDependencies": {
     "@commitlint/cli": "^8.0.0",

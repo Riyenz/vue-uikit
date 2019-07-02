@@ -9,8 +9,9 @@ import router from './router';
 import App from './App.vue';
 
 import ModalService from '@/UIKit/Modal/Modal.service';
+import EdukNavbarLogo from '@/assets/img/eduk-navbar-logo.png';
 
-ModalService.setDefaultLogo('/assets/img/eduk-navbar-logo.png');
+ModalService.setDefaultLogo(EdukNavbarLogo);
 
 Vue.config.productionTip = false;
 

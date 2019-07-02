@@ -5,14 +5,14 @@
     <Modal ref="modalSub" :title="modalTitle">
       <template v-slot:content>
         <h3 class="eduk-head">Here might be a content title</h3>
-        <p class="eduk-u-text">
+        <p class="eduk-text">
           Cillum commodo quis ut laboris aliquip et non Lorem fugiat.
           Laborum minim esse ad proident proident eiusmod nostrud aliqua
           elit. Id id eu cupidatat aliquip magna amet magna nisi non in
           et nisi. Dolor laboris enim incididunt tempor veniam. Ex aliquip
           dolor consectetur officia elit.
         </p>
-        <p class="eduk-u-text">
+        <p class="eduk-text">
           Elit eiusmod velit et sunt proident tempor.
           Enim incididunt eiusmod pariatur reprehenderit
           ipsum minim consequat. Nisi duis eu dolor nostrud
@@ -21,10 +21,10 @@
           officia exercitation ut cillum veniam fugiat dolor enim
           irure ut esse in fugiat.
         </p>
-        <p class="eduk-u-text">
+        <p class="eduk-text">
           Non ex occaecat veniam minim fugiat enim magna.
         </p>
-        <p class="eduk-u-text">
+        <p class="eduk-text">
           Cillum commodo quis ut laboris aliquip et non Lorem fugiat.
           Laborum minim esse ad proident proident eiusmod nostrud aliqua
           elit. Id id eu cupidatat aliquip magna amet magna nisi non in
@@ -36,12 +36,12 @@
         <Row noGutters>
           <Column :cols="3" :colssm="12">
             <span class="eduk-logo eduk-u-mb-3">
-              <img src="/assets/img/logo-placeholder.png">
+              <img :src="defaultLogo">
             </span>
           </Column>
           <Column :colssm="12">
             <h4 class="eduk-head eduk-u-mb-1">Dolore duis tempor Anim do fugiat.</h4>
-            <p class="eduk-u-text eduk-u-text-sm--mobile eduk-u-mb-0">
+            <p class="eduk-text eduk-u-text-sm--mobile eduk-u-mb-0">
               Tempor adipisicing commodo ut cupidatat aliqua nisi elit.
             </p>
           </Column>
@@ -59,14 +59,14 @@
         &#x3C;Modal ref=&#x22;modalSub&#x22; :title=&#x22;modalTitle&#x22;&#x3E;
           &#x3C;template v-slot:content&#x3E;
             &#x3C;h3 class=&#x22;eduk-head&#x22;&#x3E;Here might be a content title&#x3C;/h3&#x3E;
-            &#x3C;p class=&#x22;eduk-u-text&#x22;&#x3E;
+            &#x3C;p class=&#x22;eduk-text&#x22;&#x3E;
               Cillum commodo quis ut laboris aliquip et non Lorem fugiat.
               Laborum minim esse ad proident proident eiusmod nostrud aliqua
               elit. Id id eu cupidatat aliquip magna amet magna nisi non in
               et nisi. Dolor laboris enim incididunt tempor veniam. Ex aliquip
               dolor consectetur officia elit.
             &#x3C;/p&#x3E;
-            &#x3C;p class=&#x22;eduk-u-text&#x22;&#x3E;
+            &#x3C;p class=&#x22;eduk-text&#x22;&#x3E;
               Elit eiusmod velit et sunt proident tempor.
               Enim incididunt eiusmod pariatur reprehenderit
               ipsum minim consequat. Nisi duis eu dolor nostrud
@@ -75,10 +75,10 @@
               officia exercitation ut cillum veniam fugiat dolor enim
               irure ut esse in fugiat.
             &#x3C;/p&#x3E;
-            &#x3C;p class=&#x22;eduk-u-text&#x22;&#x3E;
+            &#x3C;p class=&#x22;eduk-text&#x22;&#x3E;
               Non ex occaecat veniam minim fugiat enim magna.
             &#x3C;/p&#x3E;
-            &#x3C;p class=&#x22;eduk-u-text&#x22;&#x3E;
+            &#x3C;p class=&#x22;eduk-text&#x22;&#x3E;
               Cillum commodo quis ut laboris aliquip et non Lorem fugiat.
               Laborum minim esse ad proident proident eiusmod nostrud aliqua
               elit. Id id eu cupidatat aliquip magna amet magna nisi non in
@@ -95,7 +95,7 @@
               &#x3C;/Column&#x3E;
               &#x3C;Column :colssm=&#x22;12&#x22;&#x3E;
                 &#x3C;h4 class=&#x22;eduk-head eduk-u-mb-1&#x22;&#x3E;Dolore duis tempor Anim do fugiat.&#x3C;/h4&#x3E;
-                &#x3C;p class=&#x22;eduk-u-text eduk-u-text-sm--mobile eduk-u-mb-0&#x22;&#x3E;
+                &#x3C;p class=&#x22;eduk-text eduk-u-text-sm--mobile eduk-u-mb-0&#x22;&#x3E;
                   Tempor adipisicing commodo ut cupidatat aliqua nisi elit.
                 &#x3C;/p&#x3E;
               &#x3C;/Column&#x3E;
@@ -129,14 +129,14 @@
                 &#x3C;section class=&#x22;eduk-modal__body&#x22;&#x3E;
                   &#x3C;h2 class=&#x22;eduk-modal__title eduk-modal__title--mobile&#x22;&#x3E;Modal w/ Sub Content&#x3C;/h2&#x3E;
                   &#x3C;h3 class=&#x22;eduk-head&#x22;&#x3E;Here might be a content title&#x3C;/h3&#x3E;
-                  &#x3C;p class=&#x22;eduk-u-text&#x22;&#x3E;
+                  &#x3C;p class=&#x22;eduk-text&#x22;&#x3E;
                     Cillum commodo quis ut laboris aliquip et non Lorem fugiat.
                     Laborum minim esse ad proident proident eiusmod nostrud aliqua
                     elit. Id id eu cupidatat aliquip magna amet magna nisi non in
                     et nisi. Dolor laboris enim incididunt tempor veniam. Ex aliquip
                     dolor consectetur officia elit.
                   &#x3C;/p&#x3E;
-                  &#x3C;p class=&#x22;eduk-u-text&#x22;&#x3E;
+                  &#x3C;p class=&#x22;eduk-text&#x22;&#x3E;
                     Elit eiusmod velit et sunt proident tempor.
                     Enim incididunt eiusmod pariatur reprehenderit
                     ipsum minim consequat. Nisi duis eu dolor nostrud
@@ -145,10 +145,10 @@
                     officia exercitation ut cillum veniam fugiat dolor enim
                     irure ut esse in fugiat.
                   &#x3C;/p&#x3E;
-                  &#x3C;p class=&#x22;eduk-u-text&#x22;&#x3E;
+                  &#x3C;p class=&#x22;eduk-text&#x22;&#x3E;
                     Non ex occaecat veniam minim fugiat enim magna.
                   &#x3C;/p&#x3E;
-                  &#x3C;p class=&#x22;eduk-u-text&#x22;&#x3E;
+                  &#x3C;p class=&#x22;eduk-text&#x22;&#x3E;
                     Cillum commodo quis ut laboris aliquip et non Lorem fugiat.
                     Laborum minim esse ad proident proident eiusmod nostrud aliqua
                     elit. Id id eu cupidatat aliquip magna amet magna nisi non in
@@ -173,7 +173,7 @@
                   &#x3C;/div&#x3E;
                   &#x3C;div class=&#x22;eduk-col eduk-col-sm-12&#x22;&#x3E;
                     &#x3C;h4 class=&#x22;eduk-head eduk-u-mb-1&#x22;&#x3E;Dolore duis tempor Anim do fugiat.&#x3C;/h4&#x3E;
-                    &#x3C;p class=&#x22;eduk-u-text eduk-u-text-sm--mobile eduk-u-mb-0&#x22;&#x3E;
+                    &#x3C;p class=&#x22;eduk-text eduk-u-text-sm--mobile eduk-u-mb-0&#x22;&#x3E;
                       Tempor adipisicing commodo ut cupidatat aliqua nisi elit.
                     &#x3C;/p&#x3E;
                   &#x3C;/div&#x3E;
@@ -200,6 +200,7 @@ import Row from '@/UIKit/Grid/Row.component.vue';
 import Column from '@/UIKit/Grid/Column.component.vue';
 import Modal from '@/UIKit/Modal/Modal.component.vue';
 import Btn from '@/UIKit/Btn/Btn.component.vue';
+import logoPlaceholder from '@/assets/img/logo-placeholder.png';
 
 export default {
   name: 'ModalWithSub',
@@ -212,6 +213,7 @@ export default {
   data() {
     return {
       modalTitle: 'Modal w/ Sub Content',
+      defaultLogo: logoPlaceholder,
     };
   },
   methods: {

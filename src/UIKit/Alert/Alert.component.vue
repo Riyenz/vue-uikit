@@ -1,6 +1,6 @@
 <template>
-  <div :class="alertClass">
-    <div class="eduk-alert__container">
+  <div :class="alertClass" @click="hide">
+    <div class="eduk-alert__container" @click.stop>
       <div class="eduk-alert__content">
         <section class="eduk-alert__header">
           <h2 class="eduk-head eduk-alert__header-title eduk-u-mb-0">{{ title }}</h2>

@@ -31,7 +31,7 @@ describe('Modal.vue', () => {
     try {
       expect(content.is('#testContent')).to.equal(true);
     } catch (err) {
-      expect.fail('can\'t found slot content');
+      expect.fail('can\'t find slot content');
     }
   });
 
@@ -48,7 +48,7 @@ describe('Modal.vue', () => {
     try {
       expect(footer.is('#testFooter')).to.equal(true);
     } catch (err) {
-      expect.fail('can\'t found slot footer');
+      expect.fail('can\'t find slot footer');
     }
   });
 
@@ -65,7 +65,7 @@ describe('Modal.vue', () => {
     try {
       expect(subContent.is('#testSubContent')).to.equal(true);
     } catch (err) {
-      expect.fail('can\'t found slot subContent');
+      expect.fail('can\'t find slot subContent');
     }
   });
 

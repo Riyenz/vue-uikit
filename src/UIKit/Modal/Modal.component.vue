@@ -1,6 +1,6 @@
 <template>
-  <div :class="modalClass">
-    <div class="eduk-modal__container">
+  <div :class="modalClass" @click="hide">
+    <div class="eduk-modal__container" @click.stop>
       <div class="eduk-modal__main">
         <section class="eduk-modal__navbar">
           <font-awesome-icon

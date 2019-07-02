@@ -25,6 +25,11 @@
         <DemoBadges/>
       </Column>
     </Row>
+    <Row class="demo__section">
+      <Column>
+        <DemoItemlists/>
+      </Column>
+    </Row>
   </Container>
 </template>
 
@@ -38,6 +43,7 @@ import DemoModals from '@/views/pages/DemoModals/index.vue';
 import DemoGrids from '@/views/pages/DemoGrids/index.vue';
 import DemoAlerts from '@/views/pages/DemoAlerts/index.vue';
 import DemoBadges from '@/views/pages/DemoBadges/index.vue';
+import DemoItemlists from '@/views/pages/DemoItemlists/index.vue';
 
 export default {
   name: 'Demo',
@@ -50,6 +56,7 @@ export default {
     DemoAlerts,
     DemoGrids,
     DemoBadges,
+    DemoItemlists,
   },
 };
 </script>

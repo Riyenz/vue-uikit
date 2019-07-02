@@ -31,7 +31,7 @@ describe('Alert.vue', () => {
     try {
       expect(content.is('#testDefault')).to.equal(true);
     } catch (err) {
-      expect.fail('can\'t found slot content');
+      expect.fail('can\'t find slot content');
     }
   });
 
