@@ -7,7 +7,7 @@
       "ignore": ["inside-block", "after-comment"],
       "ignoreAtRules": ["import"]
     }],
-    "max-nesting-depth": [2, {
+    "max-nesting-depth": [3, {
       "ignore": ["blockless-at-rules", "pseudo-classes"],
       "ignoreAtRules": ["include"]
     }]

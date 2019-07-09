@@ -41,4 +41,10 @@ export default [
     displayName: 'Modal',
     component: () => import('./views/pages/DemoModals/index.vue'),
   },
+  {
+    path: 'accordion',
+    name: 'demo-accordion',
+    displayName: 'Accordion',
+    component: () => import('./views/pages/DemoAccordion/index.vue'),
+  },
 ];

@@ -6,6 +6,7 @@
     "serve": "vue-cli-service serve --port=8880",
     "lint": "vue-cli-service lint",
     "lint:css": "stylelint '**/*.vue' '**/*.scss' --syntax scss",
+    "lint:css:fix": "stylelint '**/*.vue' '**/*.scss' --syntax scss --fix",
     "test:unit": "vue-cli-service test:unit",
     "build:lib": "vue-cli-service build --target lib --name uikit --formats umd-min src/app.js",
     "build": "vue-cli-service build",
@@ -23,7 +24,8 @@
     "prismjs": "^1.16.0",
     "vue": "^2.6.10",
     "vue-prism": "^1.0.5",
-    "vue-router": "^3.0.3"
+    "vue-router": "^3.0.3",
+    "vue2-transitions": "^0.3.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^8.0.0",
@@ -41,7 +43,7 @@
     "eslint-plugin-vue": "^5.0.0",
     "file-loader": "^4.0.0",
     "husky": "^2.4.1",
-    "node-sass": "^4.9.0",
+    "node-sass": "^4.12.0",
     "sass-loader": "^7.1.0",
     "stylelint": "^10.1.0",
     "stylelint-config-standard": "^18.3.0",

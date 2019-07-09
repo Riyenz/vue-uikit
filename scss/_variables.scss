@@ -217,3 +217,10 @@ $itemlist-img-size: 115px;
 $itemlist-img-size-mobile: 80px;
 $itemlist-column-gap: $spacer * 1.5;
 $itemlist-min-height: 153px;
+
+/** Accordion Variables */
+$accordion-border-arrow: 0.35em solid;
+$accordion-transition-duration: 0.3s;
+$accordion-text-color: $gray-600;
+$accordion-font-size: $font-size-base;
+$accordion-border-color: #dfe3e9;

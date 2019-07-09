@@ -11,6 +11,7 @@ module.exports = {
   rules: {
     'no-console': 'error',
     'no-debugger': 'error',
+    'arrow-body-style': 0,
     'max-len': ['error', {
       code: 150,
     }],
