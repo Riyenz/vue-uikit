@@ -1,5 +1,6 @@
 module.exports = {
   appPath: 'src/app.js',
+  scssComponentsPath: 'scss/_components.scss',
   blueprintsFolderPath: 'blueprints',
   acceptedExtension: '.hbs',
   requiredOptions: ['action', 'scope', 'name'],
@@ -8,19 +9,26 @@ module.exports = {
     scope: 3, // component
     name: 4, // Component Name
   },
-  cssPrefix: 'eduk',
-  componentSettings: {
-    src: 'src/core/generator/blueprints/component',
-    dest: 'src/UIKit',
-    subFiles: {
-      scss: {
-        src: 'scss',
-        dest: 'scss/components',
-      },
-      test: {
-        src: 'test',
-        dest: 'tests/unit/components',
-      },
-    },
+  scopeTypes: {
+    component: ['c', 'component'],
   },
+  componentBlueprints: [
+    {
+      format: 'pascalcase',
+      src: 'src/core/generator/blueprints/component',
+      dest: 'src/UIKit',
+      hasFolder: true,
+    },
+    {
+      format: 'lowercase',
+      src: 'src/core/generator/blueprints/component/scss',
+      dest: 'scss/components',
+      prefix: '_',
+    },
+    {
+      format: 'pascalcase',
+      src: 'src/core/generator/blueprints/component/test',
+      dest: 'tests/unit/components',
+    },
+  ],
 };
