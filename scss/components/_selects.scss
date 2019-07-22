@@ -1,0 +1,172 @@
+.eduk-select {
+  width: 100%;
+  max-width: $select-max-width;
+  display: inline-block;
+  border: $select-border;
+  border-radius: $select-border-radius;
+  position: relative;
+  background: $white;
+  transition: border-color 0.15s;
+  will-change: border-color;
+  cursor: pointer;
+
+  &:not(.eduk-select--open):hover {
+    border-color: $select-border-hover-color;
+  }
+
+  &--open {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-color: $select-border-color-active;
+    border-bottom-color: $select-border-bottom-color-active;
+  }
+
+  &__input-wrapper {
+    align-items: center;
+    display: flex;
+    padding: $select-input-wrapper-padding;
+  }
+
+  &__input-wrapper--wrap {
+    flex-wrap: wrap;
+  }
+
+  &__pill {
+    background-color: $select-pill-background-color;
+    font-size: $font-size-sm;
+    line-height: 1em;
+    color: $select-pill-color;
+    padding: $select-pill-padding;
+    display: inline-flex;
+    align-items: center;
+    margin-right: $select-pill-margin;
+    margin-bottom: $select-pill-margin;
+    margin-top: $select-pill-margin;
+    border-radius: $select-border-radius;
+    font-weight: 600;
+  }
+
+  &__img {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+  }
+
+  &__input {
+    flex: 1;
+    min-width: 20px;
+    display: block;
+    margin: 0;
+    border: none;
+    background-color: transparent;
+    font-size: $font-size-sm;
+    padding: $select-input-padding;
+    position: relative;
+    z-index: 2;
+    outline: none;
+    text-align: left;
+    color: $select-input-color;
+    font-weight: 600;
+    font-family: $font-family-base;
+    cursor: pointer;
+  }
+
+  &__input--empty::placeholder {
+    color: $gray-400;
+  }
+
+  &__input--active {
+    padding-left: $spacer * 3;
+  }
+
+  &__indicator {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translate3d(0, -50%, 0) rotate(0);
+    width: 8px;
+    border-top: 4px solid $tertiary;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    z-index: 1;
+    transition: transform 0.15s;
+    will-change: transform;
+  }
+
+  &__options {
+    overflow: auto;
+    max-height: 190px;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    border: $select-border;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    bottom: 0;
+    left: -1px;
+    right: -1px;
+    background: $white;
+    transform: translate3d(0, 100%, 0);
+    z-index: 10;
+    -webkit-box-shadow: $select-options-shadow;
+    -moz-box-shadow: $select-options-shadow;
+    box-shadow: $select-options-shadow;
+    transition: all 0.15s;
+    will-change: visibility, opacity;
+  }
+
+  &__option > a {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    font-size: $select-options-font-size;
+    outline: none;
+    text-decoration: none;
+    padding: $select-option-padding;
+    font-weight: 600;
+    color: $select-option-color;
+    transition: all 0.15s;
+    cursor: pointer;
+    will-change: background-color, color;
+  }
+
+  &__option--dense a {
+    padding: $select-option-padding-dense;
+  }
+
+  &__option > a img {
+    display: block;
+    width: 28px;
+    margin-right: 5px;
+  }
+
+  &__empty {
+    padding: $select-option-padding;
+    font-size: $font-size-sm;
+    display: none;
+    color: $gray-400;
+  }
+
+  &__empty--active {
+    display: block;
+  }
+
+  &__option > a:hover {
+    color: $select-option-color-hover;
+    background-color: $select-option-background-color-hover;
+  }
+
+  &--open &__options {
+    opacity: 1;
+    visibility: visible;
+    border-color: $select-border-color-active;
+    border-top-color: $gray-300;
+  }
+
+  &--open &__indicator {
+    transform: translate3d(0, -50%, 0) rotate(-180deg);
+  }
+}

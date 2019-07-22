@@ -72,7 +72,6 @@ export default {
   border-radius: 5px;
   max-width: 650px;
   margin: 0 auto 25px;
-  overflow: hidden;
 
   &--wide {
     max-width: 900px;

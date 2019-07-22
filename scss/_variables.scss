@@ -224,3 +224,43 @@ $accordion-transition-duration: 0.3s;
 $accordion-text-color: $gray-600;
 $accordion-font-size: $font-size-base;
 $accordion-border-color: #dfe3e9;
+
+/** Dropdown Variables */
+$dropdown-border-radius: 4px;
+$dropdown-options-max-height: 190px;
+$dropdown-options-font-size: $font-size-sm;
+$dropdown-options-shadow: 0 2px 30px -17px rgba(0, 0, 0, 0.29);
+$dropdown-option-padding: ($spacer / 2) $spacer;
+$dropdown-option-color: $tertiary;
+$dropdown-option-empty-color: $gray-400;
+$dropdown-option-color-hover: $primary;
+$dropdown-option-background-color-hover: $gray-200;
+$dropdown-border: solid $border-width $gray-300;
+$dropdown-icon-background: rgba(0, 0, 0, 0.1);
+$dropdown-icon-padding: $spacer * 3.5;
+$dropdown-search-icon-color: $gray-400;
+$dropdown-search-padding: $spacer * 0.125;
+$dropdown-search-input-padding: 0 ($spacer * 1.375) 0 ($spacer * 0.625);
+
+/** Select Variables */
+$select-border-radius: 4px;
+$select-border-hover-color: $gray-600;
+$select-max-width: 250px;
+$select-border: solid $border-width $gray-300;
+$select-border-color-active: $secondary;
+$select-border-bottom-color-active: $gray-300;
+$select-options-shadow: 0 2px 30px -17px rgba(0, 0, 0, 0.29);
+$select-options-font-size: $font-size-sm;
+$select-option-padding: ($spacer / 2) $spacer;
+$select-option-padding-dense: ($spacer * 0.25) $spacer;
+$select-option-color: $tertiary;
+$select-option-color-hover: $primary;
+$select-option-background-color-hover: $gray-200;
+$select-option-background-color-hover: $gray-200;
+$select-input-wrapper-padding: ($spacer * 0.3125) ($spacer * 1.25) ($spacer * 0.3125) ($spacer * 0.9375);
+$select-input-padding: ($spacer * 0.3125) 0;
+$select-input-color: $tertiary;
+$select-pill-color: $white;
+$select-pill-background-color: $primary;
+$select-pill-padding: ($spacer * 0.1875) ($spacer * 0.375);
+$select-pill-margin: $spacer * 0.25;

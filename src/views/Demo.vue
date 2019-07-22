@@ -2,6 +2,11 @@
   <Container class="demo">
     <Row class="demo__section">
       <Column>
+        <DemoDropdowns />
+      </Column>
+    </Row>
+    <Row class="demo__section">
+      <Column>
         <DemoButtons/>
       </Column>
     </Row>
@@ -50,6 +55,7 @@ import DemoAlerts from '@/views/pages/DemoAlerts/index.vue';
 import DemoBadges from '@/views/pages/DemoBadges/index.vue';
 import DemoItemlists from '@/views/pages/DemoItemlists/index.vue';
 import DemoAccordion from '@/views/pages/DemoAccordion/index.vue';
+import DemoDropdowns from '@/views/pages/DemoDropdowns/index.vue';
 
 export default {
   name: 'Demo',
@@ -64,6 +70,7 @@ export default {
     DemoBadges,
     DemoItemlists,
     DemoAccordion,
+    DemoDropdowns,
   },
 };
 </script>

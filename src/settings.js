@@ -14,6 +14,7 @@ import {
   faHeart,
   faBars,
   faCode,
+  faSearch,
 } from '@fortawesome/free-solid-svg-icons';
 import {
   faHeart as farHeart,
@@ -23,7 +24,7 @@ import {
 /** UIKit Start */
 import '../scss/uikit.scss';
 
-library.add(faTimes, faChevronLeft, faWindowMinimize, faHeart, farHeart, faBars, faCode);
+library.add(faTimes, faChevronLeft, faWindowMinimize, faHeart, farHeart, faBars, faCode, faSearch);
 
 Vue.component('font-awesome-icon', FontAwesomeIcon);
 /** UIKit End */

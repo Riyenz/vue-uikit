@@ -23,3 +23,9 @@ export { default as Itemlist } from '@/UIKit/Itemlist/Itemlist.component.vue';
 
 /** Accordion Component */
 export { default as Accordion } from '@/UIKit/Accordion/Accordion.component.vue';
+
+/** Dropdown Component */
+export { default as Dropdown } from '@/UIKit/Dropdown/Dropdown.component.vue';
+
+/** Select Component */
+export { default as Select } from '@/UIKit/Select/Select.component.vue';

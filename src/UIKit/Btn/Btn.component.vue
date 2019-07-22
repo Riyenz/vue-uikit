@@ -1,5 +1,5 @@
 <template>
-  <button :class="btnClass">
+  <button :class="btnClass" @click="onClick">
     <slot></slot>
   </button>
 </template>
@@ -65,6 +65,11 @@ export default {
         [size]: this.size,
         'eduk-u-m-1': !this.noMargin,
       };
+    },
+  },
+  methods: {
+    onClick(ev) {
+      this.$emit('click', ev);
     },
   },
 };

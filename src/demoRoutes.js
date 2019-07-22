@@ -6,6 +6,12 @@ export default [
     component: () => import('./views/pages/Introduction/index.vue'),
   },
   {
+    path: 'accordion',
+    name: 'demo-accordion',
+    displayName: 'Accordion',
+    component: () => import('./views/pages/DemoAccordion/index.vue'),
+  },
+  {
     path: 'alert',
     name: 'demo-alert',
     displayName: 'Alert',
@@ -24,6 +30,12 @@ export default [
     component: () => import('./views/pages/DemoButtons/index.vue'),
   },
   {
+    path: 'dropdown-and-selectors',
+    name: 'demo-dropdown',
+    displayName: 'Dropdown & Selectors',
+    component: () => import('./views/pages/DemoDropdowns/index.vue'),
+  },
+  {
     path: 'grid',
     name: 'demo-grid',
     displayName: 'Grid',
@@ -40,11 +52,5 @@ export default [
     name: 'demo-modal',
     displayName: 'Modal',
     component: () => import('./views/pages/DemoModals/index.vue'),
-  },
-  {
-    path: 'accordion',
-    name: 'demo-accordion',
-    displayName: 'Accordion',
-    component: () => import('./views/pages/DemoAccordion/index.vue'),
   },
 ];
