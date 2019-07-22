@@ -53,4 +53,10 @@ export default [
     displayName: 'Modal',
     component: () => import('./views/pages/DemoModals/index.vue'),
   },
+  {
+    path: 'pagination',
+    name: 'demo-pagination',
+    displayName: 'Pagination',
+    component: () => import('./views/pages/DemoPagination/index.vue'),
+  },
 ];

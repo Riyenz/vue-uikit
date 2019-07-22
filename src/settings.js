@@ -10,6 +10,7 @@ import {
 import {
   faTimes,
   faChevronLeft,
+  faChevronRight,
   faWindowMinimize,
   faHeart,
   faBars,
@@ -24,7 +25,17 @@ import {
 /** UIKit Start */
 import '../scss/uikit.scss';
 
-library.add(faTimes, faChevronLeft, faWindowMinimize, faHeart, farHeart, faBars, faCode, faSearch);
+library.add(
+  faTimes,
+  faChevronLeft,
+  faChevronRight,
+  faWindowMinimize,
+  faHeart,
+  farHeart,
+  faBars,
+  faCode,
+  faSearch,
+);
 
 Vue.component('font-awesome-icon', FontAwesomeIcon);
 /** UIKit End */

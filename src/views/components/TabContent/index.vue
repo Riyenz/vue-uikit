@@ -15,7 +15,7 @@
           </div>
         </div>
       </div>
-      <div class="content__quicklinks">
+      <div class="content__quicklinks" v-if="$slots.quicklinks">
         <slot name="quicklinks"></slot>
       </div>
     </div>
@@ -92,7 +92,8 @@ export default {
       background: $gray-100;
       padding: 30px;
       border-radius: 5px;
-      max-width: 650px;
+      max-width: 60vw;
+      min-width: 400px;
       margin: 0 auto 25px;
     }
   }

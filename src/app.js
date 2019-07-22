@@ -21,6 +21,9 @@ export { default as Badge } from '@/UIKit/Badge/Badge.component.vue';
 /** Itemlist Component */
 export { default as Itemlist } from '@/UIKit/Itemlist/Itemlist.component.vue';
 
+/** Pagination Component */
+export { default as Pagination } from '@/UIKit/Pagination/Pagination.component.vue';
+
 /** Accordion Component */
 export { default as Accordion } from '@/UIKit/Accordion/Accordion.component.vue';
 

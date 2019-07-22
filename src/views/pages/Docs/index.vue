@@ -32,7 +32,7 @@ export default {
       next: {},
       prev: {},
       currentRoute: null,
-      selectedTab: 0,
+      selectedTab: +localStorage.getItem('eduk-selected-tab') || 0,
     };
   },
   components: {
@@ -58,6 +58,7 @@ export default {
     },
     tabChange(tabIndex) {
       this.selectedTab = tabIndex;
+      localStorage.setItem('eduk-selected-tab', tabIndex);
     },
   },
 };

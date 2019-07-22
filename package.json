@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": false,
   "scripts": {
-    "serve": "vue-cli-service serve --port=8880",
+    "serve": "vue-cli-service serve --port=8880 --open",
     "lint": "vue-cli-service lint",
     "lint:css": "stylelint '**/*.vue' '**/*.scss' --syntax scss",
     "lint:css:fix": "stylelint '**/*.vue' '**/*.scss' --syntax scss --fix",

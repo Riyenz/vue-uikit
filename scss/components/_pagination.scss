@@ -1,0 +1,55 @@
+.eduk-pagination {
+  $self: &;
+
+  display: flex;
+  flex-direction: row;
+  font-size: 14px;
+  font-weight: bold;
+
+  &__page-list {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__dots {
+    margin-left: $pagination-items-spacing;
+  }
+
+  &__page-item {
+    cursor: pointer;
+    user-select: none;
+    border-radius: $border-radius;
+    padding: 0.1rem 0.5rem;
+
+    @include hover() {
+      &:not(.active) {
+        background-color: $gray-400;
+        color: color-yiq($gray-400);
+      }
+    }
+
+    &--disabled {
+      pointer-events: none;
+      background-color: $pagination-disabled-background;
+      color: $pagination-disabled-color;
+    }
+
+    &:not(:first-child) {
+      margin-left: $pagination-items-spacing;
+    }
+
+    &.active {
+      background-color: $pagination-active-background;
+      color: color-yiq($pagination-active-background);
+    }
+  }
+
+  &--contained {
+    #{$self}__page-item {
+      border: $pagination-contained-border;
+    }
+  }
+}

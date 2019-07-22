@@ -48,7 +48,9 @@ const getPropsData = (pos) => {
 
 describe('Accordion.component.vue', () => {
   it(`adds a .${ACCORDION_CLASS_NAME} class on init`, () => {
-    const wrapper = shallowMount(Accordion);
+    const wrapper = shallowMount(Accordion, {
+      propsData: getPropsData(1),
+    });
 
     expect(wrapper.find(`.${ACCORDION_CLASS_NAME}`).exists()).to.equal(true);
   });

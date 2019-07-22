@@ -80,6 +80,7 @@ $spacers: map-merge(
 $border-width: 1px;
 $border-color: $gray-300;
 $border-radius: 5px;
+$border: $border-width solid $border-color;
 
 $padding-y: 0.375rem;
 $padding-x: 0.375rem;
@@ -218,12 +219,21 @@ $itemlist-img-size-mobile: 80px;
 $itemlist-column-gap: $spacer * 1.5;
 $itemlist-min-height: 153px;
 
+/** Pagination Variables */
+$pagination-contained-border: $border;
+$pagination-active-background: $primary;
+$pagination-items-spacing: $spacer / 1.5;
+$pagination-disabled-color: $gray-500;
+$pagination-disabled-background: $gray-200;
+$pagination-hover-background: $gray-400;
+$pagination-border-radius: $border-radius;
+
 /** Accordion Variables */
 $accordion-border-arrow: 0.35em solid;
 $accordion-transition-duration: 0.3s;
 $accordion-text-color: $gray-600;
 $accordion-font-size: $font-size-base;
-$accordion-border-color: #dfe3e9;
+$accordion-border-color: $gray-300;
 
 /** Dropdown Variables */
 $dropdown-border-radius: 4px;

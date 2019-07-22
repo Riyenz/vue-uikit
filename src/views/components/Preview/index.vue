@@ -70,7 +70,8 @@ export default {
 .preview {
   border: 1px solid $secondary;
   border-radius: 5px;
-  max-width: 650px;
+  max-width: 60vw;
+  min-width: 400px;
   margin: 0 auto 25px;
 
   &--wide {

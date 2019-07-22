@@ -36,7 +36,6 @@ export default {
 
 .bottom-nav {
   padding: 25px 35px;
-  width: calc(100% - 325px);
 
   &__container {
     padding: 30px;
