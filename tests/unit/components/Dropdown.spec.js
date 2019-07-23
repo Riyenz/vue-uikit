@@ -1,8 +1,8 @@
 import { expect } from 'chai';
 import { shallowMount, mount } from '@vue/test-utils';
 import Dropdown from '@/UIKit/Dropdown/Dropdown.component.vue';
-import DropdownTest from '@/UIKit/Dropdown/Dropdown.test.vue';
 import { DROPDOWN_CLASS_NAME } from '@/UIKit/Dropdown/Dropdown.config';
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 
 const options = [
   { id: 1, name: 'One' },
@@ -10,15 +10,22 @@ const options = [
   { id: 3, name: 'Three' },
 ];
 
+const dropdownProps = {
+  components: {
+    FontAwesomeIcon,
+  },
+};
+
 describe('Dropdown.component.vue', () => {
   it(`adds a .${DROPDOWN_CLASS_NAME} class on init`, () => {
-    const wrapper = shallowMount(Dropdown);
+    const wrapper = shallowMount(Dropdown, dropdownProps);
 
     expect(wrapper.find(`.${DROPDOWN_CLASS_NAME}`).exists()).to.equal(true);
   });
 
   it('add dropdown title', () => {
     const wrapper = shallowMount(Dropdown, {
+      ...dropdownProps,
       propsData: {
         options,
         title: 'Dropdown',
@@ -30,6 +37,7 @@ describe('Dropdown.component.vue', () => {
 
   it('align dropdown options center', () => {
     const wrapper = shallowMount(Dropdown, {
+      ...dropdownProps,
       propsData: {
         options,
         title: 'Dropdown',
@@ -42,6 +50,7 @@ describe('Dropdown.component.vue', () => {
 
   it('align dropdown options right', () => {
     const wrapper = shallowMount(Dropdown, {
+      ...dropdownProps,
       propsData: {
         options,
         title: 'Dropdown',
@@ -54,6 +63,7 @@ describe('Dropdown.component.vue', () => {
 
   it('adds a --open class when clicked', () => {
     const wrapper = mount(Dropdown, {
+      ...dropdownProps,
       propsData: {
         options,
       },
@@ -66,6 +76,7 @@ describe('Dropdown.component.vue', () => {
 
   it('add dropdown options', () => {
     const wrapper = mount(Dropdown, {
+      ...dropdownProps,
       propsData: {
         options,
       },
@@ -78,6 +89,7 @@ describe('Dropdown.component.vue', () => {
 
   it('add dropdown search field', () => {
     const wrapper = shallowMount(Dropdown, {
+      ...dropdownProps,
       propsData: {
         options,
         searchable: true,
@@ -89,6 +101,7 @@ describe('Dropdown.component.vue', () => {
 
   it('add dropdown icon', () => {
     const wrapper = shallowMount(Dropdown, {
+      ...dropdownProps,
       propsData: {
         options,
         icon: 'times',
@@ -100,6 +113,7 @@ describe('Dropdown.component.vue', () => {
 
   it('add dropdown icon toggle', () => {
     const wrapper = shallowMount(Dropdown, {
+      ...dropdownProps,
       propsData: {
         options,
         icon: 'times',
@@ -112,6 +126,7 @@ describe('Dropdown.component.vue', () => {
 
   it('add dropdown icon right placement', () => {
     const wrapper = shallowMount(Dropdown, {
+      ...dropdownProps,
       propsData: {
         options,
         icon: 'times',
@@ -124,6 +139,7 @@ describe('Dropdown.component.vue', () => {
 
   it('add dropdown icon toggle right placement', () => {
     const wrapper = shallowMount(Dropdown, {
+      ...dropdownProps,
       propsData: {
         options,
         icon: 'times',
@@ -136,22 +152,34 @@ describe('Dropdown.component.vue', () => {
   });
 
   it('add dropdown option click event', () => {
-    const wrapper = mount(DropdownTest);
+    const wrapper = mount(Dropdown, {
+      ...dropdownProps,
+      propsData: {
+        options,
+        title: 'Dropdown',
+      },
+    });
 
-    wrapper.find(`#normal .${DROPDOWN_CLASS_NAME}__trigger`).trigger('click');
+    wrapper.find(`.${DROPDOWN_CLASS_NAME}__trigger`).trigger('click');
 
-    wrapper.find(`#normal .${DROPDOWN_CLASS_NAME}__option a`).trigger('click');
+    wrapper.find(`.${DROPDOWN_CLASS_NAME}__option:nth-child(2) a`).trigger('click');
 
-    expect(wrapper.vm.selectValue).to.equal(1);
+    expect(wrapper.emitted().select.length).to.equal(1);
   });
 
   it('add dropdown icon toggle cta click event', () => {
-    const wrapper = mount(DropdownTest);
+    const wrapper = mount(Dropdown, {
+      ...dropdownProps,
+      propsData: {
+        options,
+        icon: 'times',
+        iconTrigger: true,
+        iconPlacement: 'right',
+      },
+    });
 
-    wrapper.find(`#cta .${DROPDOWN_CLASS_NAME}__trigger`).trigger('click');
+    wrapper.find(`.${DROPDOWN_CLASS_NAME}__cta`).trigger('click');
 
-    wrapper.find(`#cta .${DROPDOWN_CLASS_NAME}__cta`).trigger('click');
-
-    expect(wrapper.vm.ctaClicked).to.equal(true);
+    expect(wrapper.emitted().action.length).to.equal(1);
   });
 });
