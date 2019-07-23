@@ -13,7 +13,7 @@
       noMargin
     >
       <span class="eduk-dropdown__title">{{title}}</span>
-      <span><FontAwesomeIcon :icon="icon" class="eduk-dropdown__icon" /></span>
+      <span><font-awesome-icon :icon="icon" class="eduk-dropdown__icon" /></span>
     </Btn>
     <div
       :class="dropdownGroupClass"
@@ -37,7 +37,7 @@
         class="eduk-dropdown__trigger"
         noMargin
       >
-        <FontAwesomeIcon :icon="icon" class="eduk-dropdown__icon" />
+        <font-awesome-icon :icon="icon" class="eduk-dropdown__icon" />
       </Btn>
     </div>
     <Btn
@@ -64,7 +64,7 @@
           @input="onInputChange"
         />
         <span class="eduk-dropdown__search-icon">
-          <FontAwesomeIcon icon="search" />
+          <font-awesome-icon icon="search" />
         </span>
       </li>
       <li
@@ -73,7 +73,7 @@
         class="eduk-dropdown__option"
       >
         <a v-if="!!option.icon" @click="(ev) => onSelectOption(ev, option)">
-          <FontAwesomeIcon :icon="option.icon" />
+          <font-awesome-icon :icon="option.icon" />
           <span>{{option.name}}</span>
         </a>
         <a v-else @click="(ev) => onSelectOption(ev, option)">{{option.name}}</a>
@@ -86,10 +86,6 @@
 </template>
 
 <script>
-import {
-  FontAwesomeIcon,
-} from '@fortawesome/vue-fontawesome';
-
 import { DEFAULT_VARIANT } from '@/UIKit/config';
 import Btn from '@/UIKit/Btn/Btn.component.vue';
 import {
@@ -154,7 +150,6 @@ export default {
   },
   components: {
     Btn,
-    FontAwesomeIcon,
   },
   computed: {
     dropdownClass() {
@@ -203,7 +198,7 @@ export default {
     },
     onSelectOption(ev, option) {
       ev.preventDefault();
-      this.$emit('optionClicked', option);
+      this.$emit('select', option);
       this.open = false;
     },
     filterOptions() {
@@ -219,7 +214,7 @@ export default {
       ev.stopImmediatePropagation();
     },
     onAction(ev) {
-      this.$emit('click', ev);
+      this.$emit('action', ev);
     },
     onClickBody() {
       this.open = false;
