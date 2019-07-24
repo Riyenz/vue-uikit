@@ -30,6 +30,12 @@ export default [
     component: () => import('./views/pages/DemoButtons/index.vue'),
   },
   {
+    path: 'checkbox',
+    name: 'demo-checkbox',
+    displayName: 'Checkbox',
+    component: () => import('./views/pages/DemoCheckbox/index.vue'),
+  },
+  {
     path: 'dropdown-and-selectors',
     name: 'demo-dropdown',
     displayName: 'Dropdown & Selectors',

@@ -1,0 +1,108 @@
+.eduk-checkbox {
+  $c: &;
+
+  display: none;
+  transition: $checkbox-transition-duration;
+
+  & + label {
+    cursor: pointer;
+    display: block;
+    line-height: $checkbox-line-height;
+    margin: $checkbox-label-spacer;
+    padding: $checkbox-label-spacer;
+    margin-left: 0;
+  }
+
+  & + label::before {
+    width: 1.95em;
+    font-family: "Font Awesome 5 Free";
+    font-size: 0.8em;
+    font-weight: 900;
+    content: "\F00C";
+    display: inline-block;
+    border-radius: 0.3em;
+    color: transparent;
+    border: 0.1em solid $checkbox-default-border-color;
+    margin-right: 0.5em;
+    padding: $checkbox-default-padding;
+    transition: $checkbox-transition-duration;
+    vertical-align: text-bottom;
+  }
+
+  &--small + label {
+    font-size: 0.8em;
+  }
+
+  &--large + label {
+    font-size: 1.2em;
+  }
+
+  &--large + label::before {
+    font-size: 1em;
+    vertical-align: baseline;
+  }
+
+  &--indeterminate + label::before {
+    content: "\f068";
+  }
+
+  & + label:active::before {
+    transform: scale(0);
+  }
+
+  &:checked + label::before {
+    background-color: $primary;
+    border-color: darken($primary, 3%);
+    color: $white;
+  }
+
+  &:disabled + label::before {
+    background-color: $checkbox-disabled-background;
+    border-color: $checkbox-default-border-color;
+    transform: scale(1);
+  }
+
+  &:checked:disabled + label::before {
+    background-color: $checkbox-disabled-background;
+    border-color: $checkbox-default-border-color;
+    transform: scale(1);
+  }
+
+  // positioning
+
+  &--items {
+    margin-left: 1em;
+  }
+
+  &--block {
+    display: block;
+
+    #{$c}--items span {
+      display: block;
+    }
+  }
+
+  &--inline {
+    display: inline-block;
+
+    #{$c}--items span {
+      display: inline-block;
+    }
+  }
+
+  @each $color, $value in $theme-colors {
+    &--#{$color}.eduk-checkbox[type="checkbox"]:checked + label::before {
+      background-color: $value;
+      border-color: darken($value, 3%);
+      color: $white;
+    }
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .eduk-checkbox {
+    &--items {
+      margin-left: unset;
+    }
+  }
+}

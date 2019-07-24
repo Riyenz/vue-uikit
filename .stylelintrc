@@ -3,6 +3,7 @@
   "extends": "stylelint-config-standard-scss",
   "rules": {
     "no-empty-source": null,
+    "font-family-no-missing-generic-family-keyword": null,
     "at-rule-empty-line-before": ["always", {
       "ignore": ["inside-block", "after-comment"],
       "ignoreAtRules": ["import"]

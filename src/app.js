@@ -32,3 +32,6 @@ export { default as Dropdown } from '@/UIKit/Dropdown/Dropdown.component.vue';
 
 /** Select Component */
 export { default as Select } from '@/UIKit/Select/Select.component.vue';
+
+/** Checkbox Component */
+export { default as Checkbox } from '@/UIKit/Checkbox/Checkbox.component.vue';

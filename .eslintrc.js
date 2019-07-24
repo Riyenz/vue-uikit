@@ -15,6 +15,7 @@ module.exports = {
     'max-len': ['error', {
       code: 150,
     }],
+    'no-param-reassign': ['error', { props: false }],
     'class-methods-use-this': 'off',
     'no-multiple-empty-lines': [1, {
       max: 1,

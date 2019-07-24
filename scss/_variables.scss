@@ -274,3 +274,13 @@ $select-pill-color: $white;
 $select-pill-background-color: $primary;
 $select-pill-padding: ($spacer * 0.1875) ($spacer * 0.375);
 $select-pill-margin: $spacer * 0.25;
+$accordion-border-color: #dfe3e9;
+
+/** Checkbox Variables */
+$checkbox-line-height: 1em;
+$checkbox-label-spacer: 0.2em;
+$checkbox-disabled-background: #e9edf1;
+$checkbox-default-border-color: #dfe3e9;
+$checkbox-transition-duration: 0.3s;
+$checkbox-font-size: $font-size-base;
+$checkbox-default-padding: 0.2em 0.3em 0.1em 0.4em;
