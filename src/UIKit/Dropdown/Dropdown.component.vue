@@ -2,8 +2,16 @@
   <div
     :class="dropdownClass"
   >
+    <a
+      v-if="!!icon && !iconTrigger && !title"
+      @click="toggle"
+      :class="dropdownIconClass"
+      class="eduk-dropdown__trigger"
+    >
+      <font-awesome-icon :icon="icon" class="eduk-dropdown__icon" />
+    </a>
     <Btn
-      v-if="!!icon && !iconTrigger"
+      v-else-if="!!icon && !iconTrigger"
       @click="toggle"
       :variant="variant"
       :outline="outline"
@@ -12,7 +20,7 @@
       class="eduk-dropdown__trigger"
       noMargin
     >
-      <span class="eduk-dropdown__title">{{title}}</span>
+      <span v-if="!!title" class="eduk-dropdown__title">{{title}}</span>
       <span><font-awesome-icon :icon="icon" class="eduk-dropdown__icon" /></span>
     </Btn>
     <div
@@ -78,7 +86,7 @@
         </a>
         <a v-else @click="(ev) => onSelectOption(ev, option)">{{option.name}}</a>
       </li>
-      <li class="eduk-dropdown__empty" :class="emptyOptions">
+      <li :class="emptyOptions">
         No results found.
       </li>
     </ul>
@@ -91,6 +99,15 @@ import Btn from '@/UIKit/Btn/Btn.component.vue';
 import {
   COMPONENT_NAME,
   DROPDOWN_CLASS_NAME,
+  DROPDOWN_OPEN_CLASS_NAME,
+  DROPDOWN_ALIGN_LEFT_CLASS_NAME,
+  DROPDOWN_ALIGN_CENTER_CLASS_NAME,
+  DROPDOWN_ALIGN_RIGHT_CLASS_NAME,
+  DROPDOWN_GROUP_CLASS_NAME,
+  DROPDOWN_ICON_CLASS_NAME,
+  DROPDOWN_ICON_ONLY_CLASS_NAME,
+  DROPDOWN_EMPTY_CLASS_NAME,
+  DROPDOWN_EMPTY_ACTIVE_CLASS_NAME,
   DROPDOWN_PLACEMENT,
 } from './Dropdown.config';
 
@@ -140,6 +157,7 @@ export default {
       open: false,
       searchKey: '',
       dropdownOptions: [],
+      targeted: false,
     };
   },
   created() {
@@ -155,29 +173,35 @@ export default {
     dropdownClass() {
       return {
         [DROPDOWN_CLASS_NAME]: true,
-        [`${DROPDOWN_CLASS_NAME}--left`]: this.placement === DROPDOWN_PLACEMENT.LEFT,
-        [`${DROPDOWN_CLASS_NAME}--center`]: this.placement === DROPDOWN_PLACEMENT.CENTER,
-        [`${DROPDOWN_CLASS_NAME}--right`]: this.placement === DROPDOWN_PLACEMENT.RIGHT,
-        [`${DROPDOWN_CLASS_NAME}--open`]: this.open,
+        [DROPDOWN_ALIGN_LEFT_CLASS_NAME]: this.placement === DROPDOWN_PLACEMENT.LEFT,
+        [DROPDOWN_ALIGN_CENTER_CLASS_NAME]: this.placement === DROPDOWN_PLACEMENT.CENTER,
+        [DROPDOWN_ALIGN_RIGHT_CLASS_NAME]: this.placement === DROPDOWN_PLACEMENT.RIGHT,
+        [DROPDOWN_OPEN_CLASS_NAME]: this.open,
       };
     },
     dropdownGroupClass() {
       return {
-        [`${DROPDOWN_CLASS_NAME}__group`]: true,
-        [`${DROPDOWN_CLASS_NAME}__group--${this.iconPlacement}`]: true,
+        [DROPDOWN_GROUP_CLASS_NAME]: true,
+        [`${DROPDOWN_GROUP_CLASS_NAME}--${this.iconPlacement}`]: true,
         'eduk-u-m-1': true,
+      };
+    },
+    dropdownIconClass() {
+      return {
+        [DROPDOWN_ICON_ONLY_CLASS_NAME]: true,
       };
     },
     dropdownWithIconClass() {
       return {
-        [`${DROPDOWN_CLASS_NAME}__icon`]: true,
-        [`${DROPDOWN_CLASS_NAME}__icon--${this.iconPlacement}`]: true,
+        [DROPDOWN_ICON_CLASS_NAME]: true,
+        [`${DROPDOWN_ICON_CLASS_NAME}--${this.iconPlacement}`]: true,
         'eduk-u-m-1': true,
       };
     },
     emptyOptions() {
       return {
-        [`${DROPDOWN_CLASS_NAME}__empty--active`]: this.dropdownOptions.length === 0,
+        [DROPDOWN_EMPTY_CLASS_NAME]: true,
+        [DROPDOWN_EMPTY_ACTIVE_CLASS_NAME]: this.dropdownOptions.length === 0,
       };
     },
   },
@@ -186,8 +210,9 @@ export default {
       this.searchKey = this.$refs.search.value;
       this.filterOptions();
     },
-    toggle(ev) {
-      ev.stopImmediatePropagation();
+    toggle() {
+      this.targeted = true;
+
       if (!this.open) {
         this.searchKey = '';
         this.$refs.dropdownOptions.scrollTop = 0;
@@ -217,7 +242,8 @@ export default {
       this.$emit('action', ev);
     },
     onClickBody() {
-      this.open = false;
+      if (this.targeted) this.targeted = false;
+      else this.open = false;
     },
   },
 };

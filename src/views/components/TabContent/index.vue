@@ -3,6 +3,7 @@
     <Tabs
       @selectTab="selectTab"
       :selectedTab="selected || selectedTab"
+      :hasMobile="!!$slots.mobile"
     />
     <div class="content">
       <div class="content__main">
@@ -12,6 +13,9 @@
           </div>
           <div class="panes__item" :class="{'panes__item--active': (selected || selectedTab) === 1}">
             <slot name="code"></slot>
+          </div>
+          <div class="panes__item" :class="{'panes__item--active': (selected || selectedTab) === 2}">
+            <slot name="mobile"></slot>
           </div>
         </div>
       </div>

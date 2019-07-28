@@ -19,6 +19,10 @@
             iconPlacement="right"
             icon="times"
           />
+          <Dropdown
+            :options="dropdownOptionsWithIcons"
+            icon="ellipsis-v"
+          />
         </div>
       </template>
       <template slot="vue-code">

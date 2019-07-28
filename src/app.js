@@ -35,3 +35,6 @@ export { default as Select } from '@/UIKit/Select/Select.component.vue';
 
 /** Checkbox Component */
 export { default as Checkbox } from '@/UIKit/Checkbox/Checkbox.component.vue';
+
+/** Table Component */
+export { default as Table } from '@/UIKit/Table/Table.component.vue';
