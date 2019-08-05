@@ -7,7 +7,7 @@
       while links are usually text.
     </p>
     <section class="well">
-      <Btn>Primary</Btn>
+      <Btn class="eduk-u-mr-1">Primary</Btn>
       <Btn outline>Outlined</Btn>
     </section>
     <h3 class="eduk-h3 eduk-u-mb-3">HTML Structure</h3>
@@ -30,13 +30,13 @@
     <Preview>
       <template slot="example">
         <div>
-          <Btn>Primary</Btn>
-          <Btn variant="secondary">Secondary</Btn>
-          <Btn variant="tertiary">Tertiary</Btn>
-          <Btn variant="success">Success</Btn>
-          <Btn variant="danger">Danger</Btn>
-          <Btn variant="warning">Warning</Btn>
-          <Btn variant="light">Light</Btn>
+          <Btn class="eduk-u-mr-1">Primary</Btn>
+          <Btn class="eduk-u-mr-1" variant="secondary">Secondary</Btn>
+          <Btn class="eduk-u-mr-1" variant="tertiary">Tertiary</Btn>
+          <Btn class="eduk-u-mr-1" variant="success">Success</Btn>
+          <Btn class="eduk-u-mr-1" variant="danger">Danger</Btn>
+          <Btn class="eduk-u-mr-1" variant="warning">Warning</Btn>
+          <Btn class="eduk-u-mr-1" variant="light">Light</Btn>
           <Btn variant="dark">Dark</Btn>
         </div>
       </template>
@@ -75,13 +75,13 @@
     <Preview>
       <template slot="example">
         <div>
-          <Btn outline>Primary</Btn>
-          <Btn variant="secondary" outline>Secondary</Btn>
-          <Btn variant="tertiary" outline>Tertiary</Btn>
-          <Btn variant="success" outline>Success</Btn>
-          <Btn variant="danger" outline>Danger</Btn>
-          <Btn variant="warning" outline>Warning</Btn>
-          <Btn variant="light" outline>Light</Btn>
+          <Btn class="eduk-u-mr-1" outline>Primary</Btn>
+          <Btn class="eduk-u-mr-1" variant="secondary" outline>Secondary</Btn>
+          <Btn class="eduk-u-mr-1" variant="tertiary" outline>Tertiary</Btn>
+          <Btn class="eduk-u-mr-1" variant="success" outline>Success</Btn>
+          <Btn class="eduk-u-mr-1" variant="danger" outline>Danger</Btn>
+          <Btn class="eduk-u-mr-1" variant="warning" outline>Warning</Btn>
+          <Btn class="eduk-u-mr-1" variant="light" outline>Light</Btn>
           <Btn variant="dark" outline>Dark</Btn>
         </div>
       </template>
@@ -138,8 +138,8 @@
     <Preview>
       <template slot="example">
         <div>
-          <Btn size="sm">Small</Btn>
-          <Btn>Default</Btn>
+          <Btn class="eduk-u-mr-1" size="sm">Small</Btn>
+          <Btn class="eduk-u-mr-1">Default</Btn>
           <Btn size="lg">Large</Btn>
         </div>
       </template>
@@ -173,6 +173,42 @@
       <template slot="vanilla-code">
         <code class="language-html">
           &lt;button class=&quot;eduk-btn eduk-btn-primary disabled&quot;&gt;Disabled&lt;/button&gt;
+        </code>
+      </template>
+    </Preview>
+    <h3 class="eduk-h3 eduk-u-mb-3">Block</h3>
+    <Preview>
+      <template slot="example">
+        <div>
+          <Btn block>Block</Btn>
+        </div>
+      </template>
+      <template slot="vue-code">
+        <code class="language-html">
+          &#x3C;Btn block&#x3E;Block&#x3C;/Btn&#x3E;
+        </code>
+      </template>
+      <template slot="vanilla-code">
+        <code class="language-html">
+          &lt;button class=&quot;eduk-btn eduk-btn-primary eduk-btn--block&quot;&gt;Block&lt;/button&gt;
+        </code>
+      </template>
+    </Preview>
+    <h3 class="eduk-h3 eduk-u-mb-3">Link</h3>
+    <Preview>
+      <template slot="example">
+        <div>
+          <Btn link="#">Link</Btn>
+        </div>
+      </template>
+      <template slot="vue-code">
+        <code class="language-html">
+          &#x3C;Btn link=&quot;#&quot;&#x3E;Link&#x3C;/Btn&#x3E;
+        </code>
+      </template>
+      <template slot="vanilla-code">
+        <code class="language-html">
+          &lt;a href=&quot;#&quot; class=&quot;eduk-btn eduk-btn-primary&quot;&gt;Link&lt;/a&gt;
         </code>
       </template>
     </Preview>

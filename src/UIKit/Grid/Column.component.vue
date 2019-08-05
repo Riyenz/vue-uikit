@@ -9,34 +9,34 @@ export default {
   name: 'Column',
   props: {
     cols: {
-      type: Number,
+      type: [Number, String],
     },
     colssm: {
-      type: Number,
+      type: [Number, String],
     },
     colsmd: {
-      type: Number,
+      type: [Number, String],
     },
     colslg: {
-      type: Number,
+      type: [Number, String],
     },
     colsxl: {
-      type: Number,
+      type: [Number, String],
     },
     offset: {
-      type: Number,
+      type: [Number, String],
     },
     offsetsm: {
-      type: Number,
+      type: [Number, String],
     },
     offsetmd: {
-      type: Number,
+      type: [Number, String],
     },
     offsetlg: {
-      type: Number,
+      type: [Number, String],
     },
     offsetxl: {
-      type: Number,
+      type: [Number, String],
     },
   },
   data() {

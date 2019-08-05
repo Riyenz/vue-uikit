@@ -1,7 +1,10 @@
 <template>
-  <button :class="btnClass" @click="onClick">
+  <button :class="btnClass" @click="onClick" v-if="!link">
     <slot></slot>
   </button>
+  <a :href="link" :class="btnClass" @click="onClick" v-else>
+    <slot></slot>
+  </a>
 </template>
 
 <script>
@@ -11,6 +14,7 @@ import {
   AVAILABLE_SIZES,
   BTN_CLASS_NAME,
   BTN_CLASS_DISABLED,
+  BTN_BLOCK_CLASS_NAME,
 } from './Btn.config';
 
 import {
@@ -46,24 +50,23 @@ export default {
         return true;
       },
     },
-    noMargin: {
+    block: {
       type: Boolean,
       default: false,
+    },
+    link: {
+      type: String,
     },
   },
   computed: {
     btnClass() {
-      const variant = `${BTN_CLASS_NAME}-${this.variant}`;
-      const outline = this.outline ? `${BTN_CLASS_NAME}-${this.variant}-outline` : '';
-      const size = this.size ? `${BTN_CLASS_NAME}--${this.size}` : '';
-
       return {
         [BTN_CLASS_NAME]: true,
         [BTN_CLASS_DISABLED]: this.disabled,
-        [variant]: !this.outline,
-        [outline]: this.outline,
-        [size]: this.size,
-        'eduk-u-m-1': !this.noMargin,
+        [BTN_BLOCK_CLASS_NAME]: this.block,
+        [`${BTN_CLASS_NAME}-${this.variant}`]: !this.outline,
+        [`${BTN_CLASS_NAME}-${this.variant}-outline`]: this.outline,
+        [`${BTN_CLASS_NAME}--${this.size}`]: this.size,
       };
     },
   },

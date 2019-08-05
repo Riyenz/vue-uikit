@@ -118,15 +118,17 @@ $emphasized-link-hover-darken-percentage: 15%;
 
 /** Button Variables */
 $btn-font-weight: $font-weight-semi-bold;
-$btn-min-height: 35px;
-$btn-min-width: 100px;
-$btn-min-height-sm: 30px;
-$btn-min-width-sm: 80px;
-$btn-min-height-lg: 42px;
-$btn-min-width-lg: 120px;
+$btn-min-height: $padding-y * 6;
+$btn-min-width: $padding-x * 6 * 3;
+$btn-min-height-sm: $padding-y * 5;
+$btn-min-width-sm: $padding-x * 5 * 2;
+$btn-min-height-lg: $padding-y * 7;
+$btn-min-width-lg: $padding-x * 7 * 3;
 $btn-disabled-color: $gray-500;
-$btn-padding-y: $padding-y * 0.4;
-$btn-padding-x: $padding-x * 3;
+$btn-padding-y: $padding-y * 1.05;
+$btn-padding-x: $padding-x * 4;
+$btn-padding-y-sm: $padding-y * 0.8;
+$btn-padding-x-sm: $padding-x * 3.465;
 
 $yiq-contrasted-threshold: 170;
 $yiq-text-dark: $gray-900;

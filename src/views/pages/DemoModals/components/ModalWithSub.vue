@@ -188,7 +188,7 @@
         </Row>
       </template>
       <template v-slot:subActions>
-        <Btn size="lg">Apply to this school</Btn>
+        <Btn size="lg" class="eduk-u-mb-1">Apply to this school</Btn>
         <Btn variant="tertiary" size="lg" outline>Message School</Btn>
       </template>
     </Modal>
