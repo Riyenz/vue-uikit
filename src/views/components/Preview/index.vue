@@ -106,6 +106,8 @@ export default {
     padding: 7px 30px;
     background-color: $gray-100;
     transition: background-color 0.15s;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
   }
 
   &__control--open {

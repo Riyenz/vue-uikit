@@ -6,6 +6,13 @@
     <li class="tabs__item" :class="{'tabs__item--active': selectedTab === 1}">
       <a @click="() => selectTab(1)">Develop</a>
     </li>
+    <li
+      class="tabs__item"
+      :class="{'tabs__item--active': selectedTab === 2}"
+      v-if="hasMobile"
+    >
+      <a @click="() => selectTab(2)">Mobile</a>
+    </li>
   </ul>
 </template>
 
@@ -14,6 +21,7 @@ export default {
   name: 'Tabs',
   props: {
     selectedTab: Number,
+    hasMobile: Boolean,
   },
   methods: {
     selectTab(index) {

@@ -65,4 +65,10 @@ export default [
     displayName: 'Pagination',
     component: () => import('./views/pages/DemoPagination/index.vue'),
   },
+  {
+    path: 'table',
+    name: 'demo-table',
+    displayName: 'Table',
+    component: () => import('./views/pages/DemoTable/index.vue'),
+  },
 ];

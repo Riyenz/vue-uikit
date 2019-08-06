@@ -10,8 +10,7 @@
     list-style-type: none;
     border: $dropdown-border;
     border-radius: $dropdown-border-radius;
-    opacity: 0;
-    visibility: hidden;
+    display: none;
     position: absolute;
     bottom: 0;
     width: 200px;
@@ -21,8 +20,6 @@
     -webkit-box-shadow: $dropdown-options-shadow;
     -moz-box-shadow: $dropdown-options-shadow;
     box-shadow: $dropdown-options-shadow;
-    transition: all 0.15s;
-    will-change: visibility, opacity;
   }
 
   &__option > a {
@@ -51,8 +48,16 @@
   }
 
   &--open &__options {
-    opacity: 1;
-    visibility: visible;
+    display: block;
+  }
+
+  &__icon-only {
+    padding: 0 5px;
+    cursor: pointer;
+  }
+
+  &--open &__icon-only {
+    color: $dropdown-open-icon-color;
   }
 
   &--left &__options {

@@ -1,7 +1,14 @@
 import { expect } from 'chai';
 import { shallowMount, mount } from '@vue/test-utils';
 import Dropdown from '@/UIKit/Dropdown/Dropdown.component.vue';
-import { DROPDOWN_CLASS_NAME } from '@/UIKit/Dropdown/Dropdown.config';
+import {
+  DROPDOWN_CLASS_NAME,
+  DROPDOWN_OPEN_CLASS_NAME,
+  DROPDOWN_ALIGN_CENTER_CLASS_NAME,
+  DROPDOWN_ALIGN_RIGHT_CLASS_NAME,
+  DROPDOWN_GROUP_CLASS_NAME,
+  DROPDOWN_ICON_CLASS_NAME,
+} from '@/UIKit/Dropdown/Dropdown.config';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 
 const options = [
@@ -45,7 +52,7 @@ describe('Dropdown.component.vue', () => {
       },
     });
 
-    expect(wrapper.find(`.${DROPDOWN_CLASS_NAME}--center`).exists()).to.equal(true);
+    expect(wrapper.find(`.${DROPDOWN_ALIGN_CENTER_CLASS_NAME}`).exists()).to.equal(true);
   });
 
   it('align dropdown options right', () => {
@@ -58,10 +65,10 @@ describe('Dropdown.component.vue', () => {
       },
     });
 
-    expect(wrapper.find(`.${DROPDOWN_CLASS_NAME}--right`).exists()).to.equal(true);
+    expect(wrapper.find(`.${DROPDOWN_ALIGN_RIGHT_CLASS_NAME}`).exists()).to.equal(true);
   });
 
-  it('adds a --open class when clicked', () => {
+  it(`adds a ${DROPDOWN_OPEN_CLASS_NAME} class when clicked`, () => {
     const wrapper = mount(Dropdown, {
       ...dropdownProps,
       propsData: {
@@ -71,7 +78,7 @@ describe('Dropdown.component.vue', () => {
 
     wrapper.find(`.${DROPDOWN_CLASS_NAME}__trigger`).trigger('click');
 
-    expect(wrapper.find(`.${DROPDOWN_CLASS_NAME}--open`).exists()).to.equal(true);
+    expect(wrapper.find(`.${DROPDOWN_OPEN_CLASS_NAME}`).exists()).to.equal(true);
   });
 
   it('add dropdown options', () => {
@@ -104,11 +111,12 @@ describe('Dropdown.component.vue', () => {
       ...dropdownProps,
       propsData: {
         options,
+        title: 'Dropdown',
         icon: 'times',
       },
     });
 
-    expect(wrapper.find(`.${DROPDOWN_CLASS_NAME}__icon`).exists()).to.equal(true);
+    expect(wrapper.find(`.${DROPDOWN_ICON_CLASS_NAME}`).exists()).to.equal(true);
   });
 
   it('add dropdown icon toggle', () => {
@@ -121,7 +129,7 @@ describe('Dropdown.component.vue', () => {
       },
     });
 
-    expect(wrapper.find(`.${DROPDOWN_CLASS_NAME}__trigger .${DROPDOWN_CLASS_NAME}__icon`).exists()).to.equal(true);
+    expect(wrapper.find(`.${DROPDOWN_CLASS_NAME}__trigger .${DROPDOWN_ICON_CLASS_NAME}`).exists()).to.equal(true);
   });
 
   it('add dropdown icon right placement', () => {
@@ -129,12 +137,13 @@ describe('Dropdown.component.vue', () => {
       ...dropdownProps,
       propsData: {
         options,
+        title: 'Dropdown',
         icon: 'times',
         iconPlacement: 'right',
       },
     });
 
-    expect(wrapper.find(`.${DROPDOWN_CLASS_NAME}__icon--right`).exists()).to.equal(true);
+    expect(wrapper.find(`.${DROPDOWN_ICON_CLASS_NAME}--right`).exists()).to.equal(true);
   });
 
   it('add dropdown icon toggle right placement', () => {
@@ -148,12 +157,11 @@ describe('Dropdown.component.vue', () => {
       },
     });
 
-    expect(wrapper.find(`.${DROPDOWN_CLASS_NAME}__group--right`).exists()).to.equal(true);
+    expect(wrapper.find(`.${DROPDOWN_GROUP_CLASS_NAME}--right`).exists()).to.equal(true);
   });
 
   it('add dropdown option click event', () => {
     const wrapper = mount(Dropdown, {
-      ...dropdownProps,
       propsData: {
         options,
         title: 'Dropdown',
@@ -168,7 +176,7 @@ describe('Dropdown.component.vue', () => {
   });
 
   it('add dropdown icon toggle cta click event', () => {
-    const wrapper = mount(Dropdown, {
+    const wrapper = shallowMount(Dropdown, {
       ...dropdownProps,
       propsData: {
         options,
@@ -178,7 +186,7 @@ describe('Dropdown.component.vue', () => {
       },
     });
 
-    wrapper.find(`.${DROPDOWN_CLASS_NAME}__cta`).trigger('click');
+    wrapper.vm.onAction(1);
 
     expect(wrapper.emitted().action.length).to.equal(1);
   });
