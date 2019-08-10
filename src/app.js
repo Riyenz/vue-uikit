@@ -38,3 +38,6 @@ export { default as Table } from '@/UIKit/Table/Table.component.vue';
 
 /** Accordion Component */
 export { default as Accordion } from '@/UIKit/Accordion/Accordion.component.vue';
+
+/** Card Component */
+export { default as Card } from '@/UIKit/Card/Card.component.vue';

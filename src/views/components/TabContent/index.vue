@@ -80,10 +80,6 @@ export default {
   }
 
   /deep/ {
-    .eduk-h5 {
-      letter-spacing: 1.6px;
-    }
-
     .eduk-text {
       letter-spacing: 0;
     }

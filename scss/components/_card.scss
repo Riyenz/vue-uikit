@@ -1,0 +1,89 @@
+.eduk-card {
+  display: inline-block;
+  border-radius: $eduk-card-border-radius;
+  background-color: transparent;
+  max-width: 300px;
+  width: 100%;
+
+  &__header,
+  &__content {
+    position: relative;
+  }
+
+  &__header--padded,
+  &__content--padded {
+    padding: $eduk-card-content-padding;
+  }
+
+  &__actions {
+    position: absolute;
+    display: inline-flex;
+    align-items: center;
+    top: $eduk-card-actions-offset;
+    right: $eduk-card-actions-offset;
+  }
+
+  &__actions > &__action {
+    margin-left: $eduk-card-action-margin;
+    cursor: pointer;
+  }
+
+  &__actions > &__action--active {
+    color: $eduk-card-action-active-color;
+  }
+
+  &__actions--baseline {
+    top: auto;
+    bottom: $eduk-card-actions-offset;
+  }
+
+  &__image {
+    height: $eduk-card-image-height;
+    display: block;
+    padding: $eduk-card-image-padding;
+    background-color: $eduk-card-image-background-color;
+    background-size: cover;
+    background-position: center;
+  }
+
+  &--bordered {
+    border: $eduk-card-border;
+  }
+
+  &--block {
+    display: block;
+    max-width: none;
+  }
+
+  &--text-invert *:not(button) {
+    color: $white;
+  }
+
+  &--horizontal {
+    display: flex;
+    max-width: none;
+  }
+
+  &--horizontal > &__image {
+    width: $eduk-card-image-horizontal-height;
+    height: auto;
+  }
+
+  &--horizontal > &__content {
+    flex: 1;
+  }
+
+  &--horizontal-invert &__image {
+    order: 2;
+  }
+
+  &--horizontal-invert &__content {
+    order: 1;
+  }
+
+  &--elevated {
+    box-shadow: $eduk-card-shadow;
+    border: $eduk-card-border;
+    background-color: $white;
+  }
+}
