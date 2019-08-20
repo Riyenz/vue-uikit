@@ -13,15 +13,14 @@ export const VARIANT = {
   DARK: 'dark',
 };
 
-export const AVAILABLE_VARIANTS = [
-  VARIANT.PRIMARY,
-  VARIANT.SECONDARY,
-  VARIANT.TERTIARY,
-  VARIANT.SUCCESS,
-  VARIANT.WARNING,
-  VARIANT.DANGER,
-  VARIANT.INFO,
-  VARIANT.LIGHT,
-  VARIANT.DARK,
-];
+export const AVAILABLE_VARIANTS = Object.values(VARIANT);
+
+export const DISPLAY_CLASS = {
+  NONE: 'eduk-u-d-none',
+  INLINE: 'eduk-u-d-inline',
+  INLINE_BLOCK: 'eduk-u-d-inline-block',
+  BLOCK: 'eduk-u-d-block',
+  FLEX: 'eduk-u-d-flex',
+};
+
 export const DEFAULT_VARIANT = VARIANT.PRIMARY;

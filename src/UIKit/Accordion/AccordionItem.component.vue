@@ -1,78 +1,96 @@
 <template>
-  <div class="eduk-accordion__sub">
+  <div :class="itemClass">
     <div
-      :class="['eduk-accordion__list has-sub', {active: item.active}]"
-      v-for="(item,index) in listItem"
-      :key="index">
-      <transition name="eduk-accordion-fade-slide" mode="out-in">
-        <div class="eduk-accordion__head" @click="item.active = toggleActive(item, index)">
-          <div :class="['eduk-accordion__arrow',{'eduk-accordion__arrow--down': item.active}]"></div>
-          <h3 class="eduk-accordion__title">{{ item.title }}</h3>
-        </div>
-      </transition>
-      <CollapseTransition>
-        <div class="eduk-accordion__body" v-if="lastClick === index && isSelected">
-          <template v-if="item.type === 'slot'">
-            <slot :name="item.name"></slot>
-          </template>
-          <template v-else-if="item.type === 'html'">
-            <div v-html="item.content"></div>
-          </template>
-          <template v-else>
-            <span>{{ item.content }}</span>
-          </template>
-        </div>
-      </CollapseTransition>
+      :class="ACCORDION_ITEM_HEAD_CLASS"
+      @click="toggleShow"
+    >
+      <template v-if="isArrowDown">
+        <font-awesome-icon
+          icon="caret-down"
+          :class="achClass"
+        ></font-awesome-icon>
+        <font-awesome-icon
+          icon="caret-up"
+          :class="acsClass"
+        ></font-awesome-icon>
+      </template>
+      <template v-else>
+        <font-awesome-icon
+          icon="caret-right"
+          :class="achClass"
+        ></font-awesome-icon>
+        <font-awesome-icon
+          icon="caret-down"
+          :class="acsClass"
+        ></font-awesome-icon>
+      </template>
+      <h6 class="eduk-accordion-item__header-title eduk-u-m-0" v-if="!$slots.title">{{ title }}</h6>
+      <h6 class="eduk-accordion-item__header-title eduk-u-m-0" v-else>
+        <slot name="title"></slot>
+      </h6>
+    </div>
+    <div :class="ACCORDION_ITEM_CONTENT_CLASS">
+      <slot></slot>
     </div>
   </div>
 </template>
 
 <script>
-import { CollapseTransition } from 'vue2-transitions';
+import {
+  ACCORDION_ITEM_CLASS,
+  ACCORDION_ITEM_HEAD_CLASS,
+  ACCORDION_ITEM_CONTENT_CLASS,
+  ACCORDION_ARROW_CLASS,
+  ACCORDION_ITEM_ACTIVE_CLASS,
+} from './Accordion.config';
+
+import { DISPLAY_CLASS } from '@/UIKit/config';
 
 export default {
-  name: 'AccordionItem',
-  components: {
-    CollapseTransition,
-  },
+  name: 'Accordion',
   props: {
-    content: {
-      type: Array, // array of object
-      default() {
-        return [];
-      },
-      required: true,
-    },
-    variant: {
-      type: String,
-      default: 'standard',
+    title: {
+      type: [String, Number],
     },
   },
   data() {
     return {
-      lastClick: 0,
-      isSelected: false,
-      listItem: this.content,
+      ACCORDION_ITEM_HEAD_CLASS,
+      ACCORDION_ITEM_CONTENT_CLASS,
+      isActive: false,
+      isArrowDown: false,
+      // Assigned by Accordion Component
+      itemIndex: -1,
+      fnItemActive: () => {},
     };
   },
-  beforeDestroy() {
-    this.resetSelectedItem();
+  computed: {
+    itemClass() {
+      return {
+        [ACCORDION_ITEM_CLASS]: true,
+        [ACCORDION_ITEM_ACTIVE_CLASS]: this.isActive,
+      };
+    },
+    // Arrow for Content Hidden
+    achClass() {
+      return {
+        [ACCORDION_ARROW_CLASS]: true,
+        [DISPLAY_CLASS.NONE]: this.isActive,
+      };
+    },
+    // Arrow for Content Shown
+    acsClass() {
+      return {
+        [ACCORDION_ARROW_CLASS]: true,
+        [DISPLAY_CLASS.NONE]: !this.isActive,
+      };
+    },
   },
   methods: {
-    resetSelectedItem() {
-      Object.keys(this.listItem).forEach((key) => {
-        this.listItem[key].active = false;
-      });
-    },
-    toggleActive(item, index) {
-      if (this.lastClick !== index) {
-        this.listItem[this.lastClick].active = false;
-        this.isSelected = true;
-      } else {
-        this.isSelected = !this.isSelected;
-      }
-      this.lastClick = index;
-      return !item.active;
+    toggleShow() {
+      this.isActive = !this.isActive;
+
+      if (this.isActive) this.fnItemActive(this.itemIndex);
     },
   },
 };

@@ -24,9 +24,6 @@ export { default as Itemlist } from '@/UIKit/Itemlist/Itemlist.component.vue';
 /** Pagination Component */
 export { default as Pagination } from '@/UIKit/Pagination/Pagination.component.vue';
 
-/** Accordion Component */
-export { default as Accordion } from '@/UIKit/Accordion/Accordion.component.vue';
-
 /** Dropdown Component */
 export { default as Dropdown } from '@/UIKit/Dropdown/Dropdown.component.vue';
 
@@ -38,3 +35,6 @@ export { default as Checkbox } from '@/UIKit/Checkbox/Checkbox.component.vue';
 
 /** Table Component */
 export { default as Table } from '@/UIKit/Table/Table.component.vue';
+
+/** Accordion Component */
+export { default as Accordion } from '@/UIKit/Accordion/Accordion.component.vue';

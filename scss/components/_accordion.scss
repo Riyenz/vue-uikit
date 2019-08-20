@@ -1,214 +1,155 @@
+$accordion-item: '.eduk-accordion-item';
+
 .eduk-accordion {
-  $c: &;
-
   display: block;
-  color: $accordion-text-color;
-  font-size: $accordion-font-size;
+}
 
-  &-fade-slide {
-    &-enter-active,
-    &-leave-active {
-      transition: $accordion-transition-duration all;
-    }
+// Default Accordion Item
+#{$accordion-item} {
+  &__header {
+    display: grid;
+    grid-template-columns: 20px 1fr;
+    grid-template-areas: "arrow title";
+    align-items: center;
+    padding: $accordion-header-padding-y $accordion-header-padding-x;
+    cursor: pointer;
+    color: $headings-color;
+    user-select: none;
 
-    &-enter {
-      transform: translateY(-25px);
-      opacity: 0;
-    }
-
-    &-leave-to {
-      transform: translateY(25px);
-      opacity: 0;
-    }
-  }
-
-  &__sub {
-    margin-left: -$spacer;
-  }
-
-  &__content {
-    margin-top: $spacer;
-    margin-bottom: $spacer;
-    margin-left: $spacer;
-  }
-
-  #{$c}__list {
-    #{$c}__head {
-      cursor: pointer;
-      padding: $spacer;
-    }
-
-    #{$c}__head.has-menu {
-      display: flex;
-      justify-content: space-between;
-    }
-
-    #{$c}__body {
-      overflow: hidden;
-      padding-left: $spacer;
-      padding-right: $spacer;
-      transition: $accordion-transition-duration ease-in;
+    @include hover() {
+      color: $accordion-header-hover-color;
     }
   }
 
-  #{$c}__list.active {
-    > #{$c}__head {
-      color: $primary;
-    }
-
-    #{$c}__body {
-      transition: $accordion-transition-duration + 0.2;
-    }
-  }
-
-  #{$c}__list.has-sub {
-    #{$c}__body {
-      margin-left: 1rem;
-    }
-  }
-
-  &--outlined,
-  &--themed {
-    #{$c}__list {
-      border: $border-width solid $accordion-border-color;
-      border-bottom: none;
-
-      &:first-child {
-        border-radius: $border-radius $border-radius 0 0;
-      }
-
-      &:last-child {
-        border: $border-width solid $accordion-border-color;
-        border-radius: 0 0 $border-radius $border-radius;
-      }
-    }
-
-    #{$c}__list.has-sub {
-      border: none;
-
-      &:last-child {
-        border: none;
-      }
-    }
-
-    #{$c}__content {
-      margin-top: $spacer * 0.5;
-    }
-  }
-
-  &--themed {
-    #{$c}__head {
-      display: flex;
-      justify-content: space-between;
-    }
-  }
-
-  &--menu {
-    #{$c}__head {
-      display: flex;
-      justify-content: space-between;
-    }
-  }
-
-  &--menu.eduk-accordion--outlined {
-    #{$c}__list {
-      border: $border-width solid $accordion-border-color;
-      border-bottom: none;
-
-      &:last-child {
-        border: $border-width solid $accordion-border-color;
-      }
-    }
-  }
-
-  @each $color, $value in $theme-colors {
-    &--#{$color}.eduk-accordion--themed,
-    &--#{$color}.eduk-accordion--outlined {
-      #{$c}__arrow {
-        border-left: $accordion-border-arrow $white;
-      }
-    }
-
-    &--#{$color}.eduk-accordion--themed {
-      #{$c}__head {
-        background-color: $value;
-        color: $white;
-        transition: $accordion-transition-duration background-color;
-      }
-
-      #{$c}__list {
-        border: $border-width solid darken($value, 10%);
-        border-top: none;
-
-        &:first-child {
-          border-top: $border-width solid darken($value, 10%);
-        }
-
-        &:last-child {
-          border-bottom: $border-width solid darken($value, 10%);
-        }
-
-        &.active > .eduk-accordion__head {
-          color: $value;
-          background-color: transparent;
-        }
-
-        &.active #{$c}__arrow {
-          border-left: $accordion-border-arrow $value;
-        }
-      }
-
-      #{$c}__list.has-sub {
-        border: none;
-
-        #{$c}__head {
-          display: block;
-          color: unset;
-          background-color: transparent;
-        }
-      }
-
-      #{$c}__list.has-sub.active {
-        #{$c}__head {
-          color: $value;
-        }
-      }
-    }
-  }
-
-  &__icon {
-    width: 0.6em;
-    transition: $accordion-transition-duration ease-out;
-
-    &--large {
-      width: 1em;
-    }
+  &__header-title {
+    grid-area: title;
+    @include font-size($h6-font-size);
   }
 
   &__arrow {
-    width: 0;
-    height: 0;
-    display: inline-block;
-    align-self: center;
-    border-top: $accordion-border-arrow transparent;
-    border-bottom: $accordion-border-arrow transparent;
-    border-left: $accordion-border-arrow $gray-600;
-    transition: $accordion-transition-duration all;
+    grid-area: arrow;
+    color: $headings-color;
+  }
 
-    &--up {
-      transform: rotate(-90deg);
-    }
+  &__content {
+    display: none;
+    padding: $accordion-content-padding-y $accordion-content-padding-x;
+    margin-left: $accordion-content-margin-left;
+  }
 
-    &--down {
-      transform: rotate(90deg);
+  &:first-child {
+    #{$accordion-item}__header {
+      border-top-left-radius: $accordion-border-radius;
+      border-top-right-radius: $accordion-border-radius;
     }
   }
 
-  &__title {
-    display: inline-block;
-    margin: 0.05em;
-    font-weight: $font-weight-semi-bold;
-    margin-left: 0.8em;
-    transition: color $accordion-transition-duration;
+  &:last-child {
+    #{$accordion-item}__header {
+      border-bottom-left-radius: $accordion-border-radius;
+      border-bottom-right-radius: $accordion-border-radius;
+    }
+  }
+}
+
+// Accordion Item Active
+#{$accordion-item}--active {
+  #{$accordion-item} {
+    &__header-title {
+      color: $accordion-header-active-color;
+    }
+
+    &__content {
+      display: block;
+    }
+  }
+}
+
+// Thick Header Accordion
+.eduk-accordion--thick {
+  #{$accordion-item} {
+    &__header {
+      padding: $accordion-header-padding-y-thick $accordion-header-padding-x;
+    }
+  }
+}
+
+// Reverse grid area from 'arrow title' to 'title arrow'
+.eduk-accordion--inverted {
+  #{$accordion-item} {
+    &__header {
+      grid-template-columns: 1fr 20px;
+      grid-template-areas: "title arrow";
+    }
+
+    &__arrow {
+      justify-self: end;
+    }
+  }
+}
+
+// Bordered Accordion
+.eduk-accordion--bordered {
+  border: $accordion-border;
+  border-radius: $accordion-border-radius;
+
+  #{$accordion-item} {
+    &__content {
+      padding: $accordion-content-padding-y calc(#{$accordion-header-padding-x} + #{$accordion-arrow-margin-x} + 8px);
+      margin: 0;
+    }
+
+    &__header + #{$accordion-item}__content {
+      border-top: $accordion-border;
+    }
+
+    & + #{$accordion-item} {
+      border-top: $accordion-border;
+    }
+  }
+}
+
+// Theme Colored Accordion
+@each $color, $value in $theme-colors {
+  .eduk-accordion--#{$color} {
+    #{$accordion-item} {
+      &__header {
+        background-color: $value;
+
+        @include hover() {
+          background-color: darken($value, $hover-darken-percentage);
+        }
+      }
+
+      &__content {
+        padding: $accordion-content-padding-y $accordion-header-padding-x;
+      }
+
+      &__header-title,
+      &__arrow {
+        color: color-yiq($value);
+      }
+
+      &__header + #{$accordion-item}__content {
+        border-top: none;
+      }
+
+      & + #{$accordion-item} {
+        border-top-color: color-yiq($value);
+      }
+    }
+
+    #{$accordion-item}--active {
+      #{$accordion-item} {
+        &__header {
+          background-color: transparent;
+        }
+
+        &__header-title,
+        &__arrow {
+          color: $value;
+        }
+      }
+    }
   }
 }

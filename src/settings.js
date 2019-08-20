@@ -19,6 +19,11 @@ import {
   faTrash,
   faEdit,
   faEllipsisV,
+  faCaretRight,
+  faCaretDown,
+  faCaretUp,
+  faMusic,
+  faBook,
 } from '@fortawesome/free-solid-svg-icons';
 import {
   faHeart as farHeart,
@@ -41,6 +46,11 @@ library.add(
   faTrash,
   faEdit,
   faEllipsisV,
+  faCaretRight,
+  faCaretDown,
+  faCaretUp,
+  faMusic,
+  faBook,
 );
 
 Vue.component('font-awesome-icon', FontAwesomeIcon);

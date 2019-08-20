@@ -231,11 +231,18 @@ $pagination-hover-background: $gray-400;
 $pagination-border-radius: $border-radius;
 
 /** Accordion Variables */
+$accordion-border: $border;
+$accordion-border-radius: $border-radius;
+$accordion-header-padding-y: $padding-y;
+$accordion-header-padding-y-thick: $padding-y * 2;
+$accordion-header-padding-x: $padding-x * 3;
+$accordion-content-margin-left: $margin-x * 1.7;
+$accordion-content-padding-y: $padding-y * 2;
+$accordion-content-padding-x:$padding-x;
 $accordion-border-arrow: 0.35em solid;
-$accordion-transition-duration: 0.3s;
-$accordion-text-color: $gray-600;
-$accordion-font-size: $font-size-base;
-$accordion-border-color: $gray-300;
+$accordion-arrow-margin-x: $spacer * 0.8;
+$accordion-header-active-color: $primary;
+$accordion-header-hover-color: $primary;
 
 /** Dropdown Variables */
 $dropdown-border-radius: 4px;
