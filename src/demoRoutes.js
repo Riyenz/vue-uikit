@@ -30,6 +30,12 @@ export default [
     component: () => import('./views/pages/DemoButtons/index.vue'),
   },
   {
+    path: 'cards',
+    name: 'demo-cards',
+    displayName: 'Cards',
+    component: () => import('./views/pages/DemoCards/index.vue'),
+  },
+  {
     path: 'checkbox',
     name: 'demo-checkbox',
     displayName: 'Checkbox',
