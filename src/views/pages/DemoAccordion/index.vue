@@ -1,9 +1,9 @@
 <template>
-  <TabContent :selected="selectedTab" @change="onTabChange">
+  <TabContent :selected="selectedTab" @change="onTabChange" padded>
     <template slot="design">
       <Design />
     </template>
-    <template slot="code">
+    <template slot="develop">
       <Code />
     </template>
   </TabContent>
@@ -18,8 +18,7 @@ export default {
   name: 'DemoButtons',
   props: {
     selectedTab: {
-      type: Number,
-      default: 0,
+      type: String,
     },
   },
   components: {

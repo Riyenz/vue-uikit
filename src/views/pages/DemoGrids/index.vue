@@ -1,9 +1,9 @@
 <template>
-  <TabContent :selected="selectedTab" @change="onTabChange">
+  <TabContent :selected="selectedTab" @change="onTabChange" padded>
     <template slot="design">
       <div></div>
     </template>
-    <template slot="code">
+    <template slot="develop">
       <div class="demo-grids">
         <h2 class="eduk-h2 eduk-u-mb-3">Grids</h2>
         <div class="demo-grids__container">
@@ -12,6 +12,9 @@
           <GridColumns/>
           <ResponsiveColumns/>
         </div>
+        <ContainerApi />
+        <RowApi />
+        <ColumnApi />
       </div>
     </template>
     <template slot="quicklinks">
@@ -26,12 +29,15 @@ import GridContainerFluid from '@/views/pages/DemoGrids/components/GridContainer
 import GridColumns from '@/views/pages/DemoGrids/components/GridColumns.vue';
 import ResponsiveColumns from '@/views/pages/DemoGrids/components/ResponsiveColumns.vue';
 
+import ContainerApi from './components/ContainerApi.vue';
+import RowApi from './components/RowApi.vue';
+import ColumnApi from './components/ColumnApi.vue';
+
 export default {
   name: 'DemoGrids',
   props: {
     selectedTab: {
-      type: Number,
-      default: 0,
+      type: String,
     },
   },
   components: {
@@ -40,6 +46,9 @@ export default {
     GridContainerFluid,
     GridColumns,
     ResponsiveColumns,
+    ContainerApi,
+    RowApi,
+    ColumnApi,
   },
   methods: {
     onTabChange(tabIndex) {

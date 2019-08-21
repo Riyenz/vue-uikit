@@ -1,9 +1,9 @@
 <template>
-  <TabContent :selected="selectedTab" @change="onTabChange">
+  <TabContent :selected="selectedTab" @change="onTabChange" padded>
     <template slot="design">
       <div></div>
     </template>
-    <template slot="code">
+    <template slot="develop">
       <div class="demo-modals">
         <h2 class="eduk-h2 eduk-u-mb-3">Modals</h2>
         <div class="demo-modals__container">
@@ -12,6 +12,7 @@
           <LongModal/>
           <ModalWithSub/>
         </div>
+        <ModalApi />
       </div>
     </template>
     <template slot="quicklinks">
@@ -25,13 +26,13 @@ import BasicModal from './components/BasicModal.vue';
 import ModalWithActions from './components/ModalWithActions.vue';
 import LongModal from './components/LongModal.vue';
 import ModalWithSub from './components/ModalWithSub.vue';
+import ModalApi from './components/ModalApi.vue';
 
 export default {
   name: 'DemoModals',
   props: {
     selectedTab: {
-      type: Number,
-      default: 0,
+      type: String,
     },
   },
   components: {
@@ -40,6 +41,7 @@ export default {
     ModalWithActions,
     LongModal,
     ModalWithSub,
+    ModalApi,
   },
   methods: {
     onTabChange(tabIndex) {

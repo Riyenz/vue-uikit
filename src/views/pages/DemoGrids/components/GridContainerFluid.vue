@@ -7,16 +7,16 @@
       </template>
       <template slot="vue-code">
         <code class="language-html">
-&#x3C;Container fluid&#x3E;
-  //do something
-&#x3C;/Container&#x3E;
+          &#x3C;Container fluid&#x3E;
+            //do something
+          &#x3C;/Container&#x3E;
         </code>
       </template>
       <template slot="vanilla-code">
         <code class="language-html">
-&#x3C;div class=&#x22;eduk-container-fluid&#x22;&#x3E;
-  //do something
-&#x3C;/div&#x3E;
+          &#x3C;div class=&#x22;eduk-container-fluid&#x22;&#x3E;
+            //do something
+          &#x3C;/div&#x3E;
         </code>
       </template>
     </Preview>

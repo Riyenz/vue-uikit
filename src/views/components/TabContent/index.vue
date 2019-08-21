@@ -3,19 +3,20 @@
     <Tabs
       @selectTab="selectTab"
       :selectedTab="selected || selectedTab"
-      :hasMobile="!!$slots.mobile"
+      :hasMobile="!!slots.mobile"
+      :slots="slots"
+      :padded="padded"
     />
     <div class="content">
       <div class="content__main">
-        <div class="panes">
-          <div class="panes__item" :class="{'panes__item--active': (selected || selectedTab) === 0}">
-            <slot name="design"></slot>
-          </div>
-          <div class="panes__item" :class="{'panes__item--active': (selected || selectedTab) === 1}">
-            <slot name="code"></slot>
-          </div>
-          <div class="panes__item" :class="{'panes__item--active': (selected || selectedTab) === 2}">
-            <slot name="mobile"></slot>
+        <div :class="paneClasses">
+          <div
+            v-for="(value, name) in slots"
+            class="panes__item"
+            :key="name"
+            :class="{'panes__item--active': (selected || selectedTab) === name}"
+          >
+            <slot :name="name"></slot>
           </div>
         </div>
       </div>
@@ -33,17 +34,36 @@ export default {
   name: 'TabContent',
   props: {
     selected: {
-      type: Number,
+      type: String,
+    },
+    padded: {
+      type: Boolean,
+      default: false,
     },
   },
   data() {
-    return { selectedTab: 0 };
+    const newSlots = { ...this.$slots };
+
+    delete newSlots.quicklinks;
+
+    return {
+      selectedTab: Object.keys(newSlots)[0],
+      slots: newSlots,
+    };
   },
   components: {
     Tabs,
   },
+  computed: {
+    paneClasses() {
+      return {
+        panes: true,
+        'panes--padded': this.padded,
+      };
+    },
+  },
   methods: {
-    selectTab(tabIndex = 0) {
+    selectTab(tabIndex) {
       this.selectedTab = tabIndex;
       this.$emit('change', tabIndex);
     },
@@ -72,30 +92,45 @@ export default {
 
   &__item {
     display: none;
-    padding: 25px 35px;
+    padding: 25px 0;
   }
 
   &__item--active {
     display: block;
   }
 
-  /deep/ {
-    .eduk-text {
-      letter-spacing: 0;
-    }
+  &--padded {
+    padding: 25px 35px;
+  }
+}
 
-    .eduk-text a {
-      color: $primary;
-    }
+/deep/ {
+  .eduk-h5 {
+    letter-spacing: 1.6px;
+  }
 
-    .well {
-      background: $gray-100;
-      padding: 30px;
-      border-radius: 5px;
-      max-width: 60vw;
-      min-width: 400px;
-      margin: 0 auto 25px;
-    }
+  .eduk-text {
+    letter-spacing: 0;
+  }
+
+  .eduk-text a {
+    color: $primary;
+  }
+
+  .well {
+    background: $gray-100;
+    padding: 30px;
+    border-radius: 5px;
+    max-width: 60vw;
+    min-width: 400px;
+    margin: 0 auto 25px;
+  }
+
+  code.highlighter {
+    color: #e83e8c;
+    background: #f1f1f1;
+    padding: 4px 6px;
+    border-radius: 3px;
   }
 }
 </style>

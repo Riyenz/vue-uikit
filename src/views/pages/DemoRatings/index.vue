@@ -1,11 +1,12 @@
 <template>
-  <TabContent :selected="selectedTab" @change="onTabChange">
+  <TabContent :selected="selectedTab" @change="onTabChange" padded>
     <template slot="design">
       <div></div>
     </template>
-    <template slot="code">
+    <template slot="develop">
       <div>
         <Code />
+        <RatingApi />
       </div>
     </template>
   </TabContent>
@@ -15,18 +16,19 @@
 import TabContent from '@/views/components/TabContent/index.vue';
 
 import Code from './components/Code.vue';
+import RatingApi from './components/RatingApi.vue';
 
 export default {
   name: 'DemoRatings',
   props: {
     selectedTab: {
-      type: Number,
-      default: 0,
+      type: String,
     },
   },
   components: {
     TabContent,
     Code,
+    RatingApi,
   },
   methods: {
     onTabChange(tabIndex) {

@@ -1,10 +1,13 @@
 <template>
-  <TabContent :selected="selectedTab" @change="onTabChange">
+  <TabContent :selected="selectedTab" @change="onTabChange" padded>
     <template slot="design">
       <Design />
     </template>
-    <template slot="code">
-      <Code />
+    <template slot="develop">
+      <div>
+        <Code />
+        <PaginationApi />
+      </div>
     </template>
   </TabContent>
 </template>
@@ -13,19 +16,20 @@
 import TabContent from '@/views/components/TabContent/index.vue';
 import Code from './components/Code.vue';
 import Design from './components/Design.vue';
+import PaginationApi from './components/PaginationApi.vue';
 
 export default {
   name: 'DemoButtons',
   props: {
     selectedTab: {
-      type: Number,
-      default: 0,
+      type: String,
     },
   },
   components: {
     TabContent,
     Code,
     Design,
+    PaginationApi,
   },
   methods: {
     onTabChange(tabIndex) {

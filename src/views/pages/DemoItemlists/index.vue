@@ -1,9 +1,9 @@
 <template>
-  <TabContent :selected="selectedTab" @change="onTabChange">
+  <TabContent :selected="selectedTab" @change="onTabChange" padded>
     <template slot="design">
       <div></div>
     </template>
-    <template slot="code">
+    <template slot="develop">
       <div class="demo-itemlists">
         <h2 class="eduk-h2 eduk-u-mb-3">Item List</h2>
         <div class="demo-itemlists__container">
@@ -11,6 +11,7 @@
           <HintItemlist/>
           <BadgeItemlist/>
         </div>
+        <ItemListApi />
       </div>
     </template>
     <template slot="quicklinks">
@@ -21,13 +22,13 @@
 <script>
 import TabContent from '@/views/components/TabContent/index.vue';
 import { BasicItemlist, HintItemlist, BadgeItemlist } from './components';
+import ItemListApi from './components/ItemListApi.vue';
 
 export default {
   name: 'DemoItemlists',
   props: {
     selectedTab: {
-      type: Number,
-      default: 0,
+      type: String,
     },
   },
   components: {
@@ -35,6 +36,7 @@ export default {
     BasicItemlist,
     HintItemlist,
     BadgeItemlist,
+    ItemListApi,
   },
   methods: {
     onTabChange(tabIndex) {

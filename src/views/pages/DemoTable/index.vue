@@ -1,9 +1,9 @@
 <template>
-  <TabContent :selected="selectedTab" @change="onTabChange">
+  <TabContent :selected="selectedTab" @change="onTabChange" padded>
     <template slot="design">
       <div></div>
     </template>
-    <template slot="code">
+    <template slot="develop">
       <div>
         <h1 class="eduk-h1 eduk-u-mb-3">Table (Desktop)</h1>
         <p>A table displays a collections of data grouped into rows</p>
@@ -86,9 +86,10 @@ const TABLE_DATA = [
         <Sortable />
         <Fixed />
         <Stack />
+        <TableApi />
       </div>
     </template>
-    <template slot="mobile">
+    <template slot="Mobile">
       <div>
         <h1 class="eduk-h1 eduk-u-mb-3">Table (Mobile)</h1>
         <p>A table displays a collections of data grouped into rows</p>
@@ -181,13 +182,13 @@ import Sortable from './components/Sortable.vue';
 import Fixed from './components/Fixed.vue';
 import Stack from './components/Stack.vue';
 import Mobile from './components/Mobile.vue';
+import TableApi from './components/TableApi.vue';
 
 export default {
   name: 'DemoTable',
   props: {
     selectedTab: {
-      type: Number,
-      default: 0,
+      type: String,
     },
   },
   components: {
@@ -198,6 +199,7 @@ export default {
     Fixed,
     Stack,
     Mobile,
+    TableApi,
   },
   methods: {
     onTabChange(tabIndex) {

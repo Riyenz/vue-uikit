@@ -1,8 +1,9 @@
 <template>
-  <TabContent :selected="selectedTab" @change="onTabChange">
+  <TabContent :selected="selectedTab" @change="onTabChange" padded>
     <template slot="design">
+      <div></div>
     </template>
-    <template slot="code">
+    <template slot="develop">
       <div>
         <Basic />
         <BasicWithImages />
@@ -10,6 +11,7 @@
         <BasicWithBadge />
         <Orientations />
         <FluidImage />
+        <CardApi />
       </div>
     </template>
   </TabContent>
@@ -24,13 +26,13 @@ import BasicWithActions from './components/BasicWithActions.vue';
 import BasicWithBadge from './components/BasicWithBadge.vue';
 import Orientations from './components/Orientations.vue';
 import FluidImage from './components/FluidImage.vue';
+import CardApi from './components/CardApi.vue';
 
 export default {
   name: 'DemoCards',
   props: {
     selectedTab: {
-      type: Number,
-      default: 0,
+      type: String,
     },
   },
   methods: {
@@ -46,6 +48,7 @@ export default {
     BasicWithBadge,
     Orientations,
     FluidImage,
+    CardApi,
   },
 };
 </script>

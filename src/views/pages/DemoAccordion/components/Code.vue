@@ -269,6 +269,8 @@
         </code>
       </template>
     </Preview>
+    <AccordionApi />
+    <AccordionItemApi />
   </div>
 </template>
 
@@ -278,12 +280,17 @@ import Accordion from '@/UIKit/Accordion/Accordion.component.vue';
 import AccordionItem from '@/UIKit/Accordion/AccordionItem.component.vue';
 import Preview from '@/views/components/Preview/index.vue';
 
+import AccordionApi from './AccordionApi.vue';
+import AccordionItemApi from './AccordionItemApi.vue';
+
 export default {
   name: 'Code',
   components: {
     Accordion,
     AccordionItem,
     Preview,
+    AccordionApi,
+    AccordionItemApi,
   },
   methods: {
     handler(pagination) {
