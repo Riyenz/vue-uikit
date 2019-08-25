@@ -18,7 +18,7 @@
     min-width: 480px;
     border-collapse: separate;
     border-spacing: 0;
-    font-size: $eduk-table-font-size;
+    font-size: $table-font-size;
   }
 
   &__table--clone {
@@ -36,7 +36,7 @@
 
   &__action > i,
   &__action > svg {
-    margin: $eduk-table-action-icon-margin;
+    margin: $table-action-icon-margin;
   }
 
   &__checkbox {
@@ -44,50 +44,50 @@
   }
 
   &__thead th {
-    color: $eduk-table-thead-color;
+    color: $table-thead-color;
     font-weight: bold;
-    padding: $eduk-table-thead-th-padding;
-    border-bottom: $eduk-table-border;
+    padding: $table-thead-th-padding;
+    border-bottom: $table-border;
     white-space: nowrap;
   }
 
   &__thead th:not(.selection) {
-    font-size: $eduk-table-thead-font-size;
+    font-size: $table-thead-font-size;
   }
 
   &--compact &__thead th {
-    padding: $eduk-table-thead-th-padding-compact;
+    padding: $table-thead-th-padding-compact;
   }
 
   &__thead > tr:first-child > th:first-child {
-    border-top-left-radius: $eduk-table-border-radius;
+    border-top-left-radius: $table-border-radius;
   }
 
   &__thead > tr:first-child > th:last-child {
-    border-top-right-radius: $eduk-table-border-radius;
+    border-top-right-radius: $table-border-radius;
   }
 
   &__tbody td {
-    padding: $eduk-table-tbody-td--padding;
+    padding: $table-tbody-td--padding;
     font-weight: 600;
     white-space: nowrap;
     position: static;
   }
 
   &--compact &__tbody td {
-    padding: $eduk-table-tbody-td--padding-compact;
+    padding: $table-tbody-td--padding-compact;
   }
 
   &__tbody > tr:not(:last-child) td {
-    border-bottom: $eduk-table-border;
+    border-bottom: $table-border;
   }
 
   &__tbody > tr:last-child > td:first-child {
-    border-bottom-left-radius: $eduk-table-border-radius;
+    border-bottom-left-radius: $table-border-radius;
   }
 
   &__tbody > tr:last-child > td:last-child {
-    border-bottom-right-radius: $eduk-table-border-radius;
+    border-bottom-right-radius: $table-border-radius;
   }
 
   &__thead th > span:not(.eduk-table__checkbox) {
@@ -101,10 +101,10 @@
 
   &__thead .sortable > span i {
     opacity: 0.4;
-    margin-left: $eduk-table-sortable-icon-margin;
-    border-top: $eduk-table-sortable-border-top;
-    border-left: $eduk-table-sortable-border-horizontal;
-    border-right: $eduk-table-sortable-border-horizontal;
+    margin-left: $table-sortable-icon-margin;
+    border-top: $table-sortable-border-top;
+    border-left: $table-sortable-border-horizontal;
+    border-right: $table-sortable-border-horizontal;
     transform-origin: center;
     transition: opacity 0.15s;
     will-change: opacity;
@@ -120,7 +120,7 @@
   }
 
   &__tbody > tr {
-    background-color: $eduk-table-tr-background;
+    background-color: $table-tr-background;
   }
 
   &__table--clone &__thead > tr > th:first-child,
@@ -138,24 +138,24 @@
   }
 
   &--bordered {
-    border: $eduk-table-border;
+    border: $table-border;
   }
 
   &--bordered &__thead > tr th:not(:last-child),
   &--bordered &__tbody > tr td:not(:last-child) {
-    border-right: $eduk-table-border;
+    border-right: $table-border;
   }
 
   &--elevated &__thead tr,
   &--striped &__thead tr,
   &--striped &__tbody tr:nth-child(even) {
-    background-color: $eduk-table-tr-background-secondary;
+    background-color: $table-tr-background-secondary;
   }
 
   &--elevated {
     box-shadow: 0 2px 17px 0 rgba(0, 0, 0, 0.08);
-    border: $eduk-table-border;
-    border-radius: $eduk-table-border-radius;
+    border: $table-border;
+    border-radius: $table-border-radius;
   }
 
   &--single td > span:not(.eduk-table__checkbox),
@@ -177,10 +177,10 @@
 }
 
 .eduk-table-pagination {
-  padding: $eduk-table-pagination-padding;
+  padding: $table-pagination-padding;
   display: flex;
   justify-content: flex-end;
-  border-top: $eduk-table-border;
+  border-top: $table-border;
 
   &--mobile {
     justify-content: center;
@@ -207,14 +207,14 @@
 
     &--stackable table &__thead > tr,
     &--stackable table &__tbody > tr {
-      padding: $eduk-table-stackable-tr;
-      border-bottom: $eduk-table-stackable-tr-border;
+      padding: $table-stackable-tr;
+      border-bottom: $table-stackable-tr-border;
     }
 
     &--stackable table &__thead > tr > th,
     &--stackable table &__tbody > tr > td {
       border-bottom: none;
-      padding: $eduk-table-stackable-td-padding;
+      padding: $table-stackable-td-padding;
     }
 
     &--fixed &__table {

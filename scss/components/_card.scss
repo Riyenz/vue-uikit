@@ -1,6 +1,6 @@
 .eduk-card {
   display: inline-block;
-  border-radius: $eduk-card-border-radius;
+  border-radius: $card-border-radius;
   background-color: transparent;
   max-width: 300px;
   width: 100%;
@@ -12,42 +12,42 @@
 
   &__header--padded,
   &__content--padded {
-    padding: $eduk-card-content-padding;
+    padding: $card-content-padding;
   }
 
   &__actions {
     position: absolute;
     display: inline-flex;
     align-items: center;
-    top: $eduk-card-actions-offset;
-    right: $eduk-card-actions-offset;
+    top: $card-actions-offset;
+    right: $card-actions-offset;
   }
 
   &__actions > &__action {
-    margin-left: $eduk-card-action-margin;
+    margin-left: $card-action-margin;
     cursor: pointer;
   }
 
   &__actions > &__action--active {
-    color: $eduk-card-action-active-color;
+    color: $card-action-active-color;
   }
 
   &__actions--baseline {
     top: auto;
-    bottom: $eduk-card-actions-offset;
+    bottom: $card-actions-offset;
   }
 
   &__image {
-    height: $eduk-card-image-height;
+    height: $card-image-height;
     display: block;
-    padding: $eduk-card-image-padding;
-    background-color: $eduk-card-image-background-color;
+    padding: $card-image-padding;
+    background-color: $card-image-background-color;
     background-size: cover;
     background-position: center;
   }
 
   &--bordered {
-    border: $eduk-card-border;
+    border: $card-border;
   }
 
   &--block {
@@ -65,7 +65,7 @@
   }
 
   &--horizontal > &__image {
-    width: $eduk-card-image-horizontal-height;
+    width: $card-image-horizontal-height;
     height: auto;
   }
 
@@ -82,8 +82,8 @@
   }
 
   &--elevated {
-    box-shadow: $eduk-card-shadow;
-    border: $eduk-card-border;
+    box-shadow: $card-shadow;
+    border: $card-border;
     background-color: $white;
   }
 }

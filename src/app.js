@@ -41,3 +41,6 @@ export { default as Accordion } from '@/UIKit/Accordion/Accordion.component.vue'
 
 /** Card Component */
 export { default as Card } from '@/UIKit/Card/Card.component.vue';
+
+/** Ratings Component */
+export { default as Ratings } from '@/UIKit/Ratings/Ratings.component.vue';
