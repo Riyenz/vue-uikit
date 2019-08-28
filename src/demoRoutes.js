@@ -72,6 +72,12 @@ export default [
     component: () => import('./views/pages/DemoPagination/index.vue'),
   },
   {
+    path: 'rating',
+    name: 'demo-rating',
+    displayName: 'Rating',
+    component: () => import('./views/pages/DemoRatings/index.vue'),
+  },
+  {
     path: 'table',
     name: 'demo-table',
     displayName: 'Table',

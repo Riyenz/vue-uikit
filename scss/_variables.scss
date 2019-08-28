@@ -296,36 +296,46 @@ $checkbox-font-size: $font-size-base;
 $checkbox-default-padding: 0.2em 0.3em 0.1em 0.4em;
 
 /** Table Variables */
-$eduk-table-border: 1px solid $gray-300;
-$eduk-table-border-radius: 5px;
-$eduk-table-font-size: $font-size-sm;
-$eduk-table-thead-font-size: $font-size-base;
-$eduk-table-thead-th-padding: $spacer * 0.875;
-$eduk-table-thead-th-padding-compact: ($spacer * 0.3125) ($spacer * 0.625);
-$eduk-table-thead-color: #354052;
-$eduk-table-tbody-td--padding: ($spacer * 1.0625) ($spacer * 0.875);
-$eduk-table-tbody-td--padding-compact: ($spacer * 0.625);
-$eduk-table-stackable-tr: ($spacer * 0.625) ($spacer * 0.875);
-$eduk-table-stackable-tr-border: 1px solid $gray-300;
-$eduk-table-stackable-td-padding: $spacer * 0.1875;
-$eduk-table-tr-background: $white;
-$eduk-table-tr-background-secondary: $gray-100;
-$eduk-table-action-icon-margin: 0 ($spacer * 0.625);
-$eduk-table-sortable-icon-margin: ($spacer * 0.625);
-$eduk-table-sortable-border-top: 5px solid $eduk-table-thead-color;
-$eduk-table-sortable-border-horizontal: 4px solid transparent;
-$eduk-table-pagination-padding: $spacer * 1.25;
+$table-border: 1px solid $gray-300;
+$table-border-radius: 5px;
+$table-font-size: $font-size-sm;
+$table-thead-font-size: $font-size-base;
+$table-thead-th-padding: $spacer * 0.875;
+$table-thead-th-padding-compact: ($spacer * 0.3125) ($spacer * 0.625);
+$table-thead-color: #354052;
+$table-tbody-td--padding: ($spacer * 1.0625) ($spacer * 0.875);
+$table-tbody-td--padding-compact: ($spacer * 0.625);
+$table-stackable-tr: ($spacer * 0.625) ($spacer * 0.875);
+$table-stackable-tr-border: 1px solid $gray-300;
+$table-stackable-td-padding: $spacer * 0.1875;
+$table-tr-background: $white;
+$table-tr-background-secondary: $gray-100;
+$table-action-icon-margin: 0 ($spacer * 0.625);
+$table-sortable-icon-margin: ($spacer * 0.625);
+$table-sortable-border-top: 5px solid $table-thead-color;
+$table-sortable-border-horizontal: 4px solid transparent;
+$table-pagination-padding: $spacer * 1.25;
 
 /** Card Variables */
 // $eduk-card
-$eduk-card-content-padding: $spacer;
-$eduk-card-actions-offset: $spacer;
-$eduk-card-action-margin: $spacer * 0.625;
-$eduk-card-action-active-color: $primary;
-$eduk-card-image-padding: $spacer;
-$eduk-card-image-background-color: $gray-100;
-$eduk-card-image-height: 180px;
-$eduk-card-image-horizontal-height: 300px;
-$eduk-card-border: solid 1px #dfe3e9;
-$eduk-card-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.2);
-$eduk-card-border-radius: 5px;
+$card-content-padding: $spacer;
+$card-actions-offset: $spacer;
+$card-action-margin: $spacer * 0.625;
+$card-action-active-color: $primary;
+$card-image-padding: $spacer;
+$card-image-background-color: $gray-100;
+$card-image-height: 180px;
+$card-image-horizontal-height: 300px;
+$card-border: solid 1px #dfe3e9;
+$card-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.2);
+$card-border-radius: 5px;
+
+/** Ratings Variables */
+$ratings-font-size: $font-size-base * 1.125;
+$ratings-font-size-sm: $font-size-base * 0.75;
+$ratings-font-size-lg: $font-size-base * 1.5;
+$ratings-icon-margin: 0 ($spacer * 0.3125);
+$ratings-icon-active-color: #f5a623;
+$ratings-icon-hover-color: #ffc464;
+$ratings-icon-default-color: #dfdfdf;
+$ratings-icon-transition: color 0.15s;

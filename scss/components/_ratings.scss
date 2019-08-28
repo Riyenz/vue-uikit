@@ -1,0 +1,51 @@
+.eduk-ratings {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  font-size: $ratings-font-size;
+  color: $ratings-icon-default-color;
+
+  &__clone {
+    display: flex;
+    align-items: center;
+    top: 0;
+    left: 0;
+    max-width: 100%;
+    position: absolute;
+    color: $ratings-icon-active-color;
+    overflow: hidden;
+    width: 100%;
+  }
+
+  > .fa-star,
+  > .fa-star-half,
+  &__clone > .fa-star,
+  &__clone > .fa-star-half {
+    margin: $ratings-icon-margin;
+    transition: $ratings-icon-transition;
+    cursor: pointer;
+  }
+
+  &__clone > .fa-star,
+  &__clone > .fa-star-half {
+    opacity: 0;
+    transition: $ratings-icon-transition;
+  }
+
+  &__clone > .fa-star:hover,
+  &__clone > .fa-star-half:hover {
+    opacity: 1;
+  }
+
+  > .fa-star:hover {
+    color: $ratings-icon-hover-color;
+  }
+
+  &--sm {
+    font-size: $ratings-font-size-sm;
+  }
+
+  &--lg {
+    font-size: $ratings-font-size-lg;
+  }
+}

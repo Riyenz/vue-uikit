@@ -25,6 +25,8 @@ import {
   faMusic,
   faBook,
   faShare,
+  faStar,
+  faStarHalf,
 } from '@fortawesome/free-solid-svg-icons';
 import {
   faHeart as farHeart,
@@ -53,6 +55,8 @@ library.add(
   faMusic,
   faBook,
   faShare,
+  faStar,
+  faStarHalf,
 );
 
 Vue.component('font-awesome-icon', FontAwesomeIcon);
