@@ -27,6 +27,8 @@ it would output the following.
  created  src/UIKit/Badge/Badge.component.vue
  created  src/UIKit/Badge/Badge.config.js
  created  tests/unit/components/Badge.spec.js
+ created  src/views/pages/DemoProgressbar/index.vue
  created  scss/components/_badges.scss
  updated  src/app.js
+ updated  src/demoRoutes.js
 ```

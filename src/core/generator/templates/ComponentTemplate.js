@@ -5,6 +5,7 @@ const {
   componentBlueprints,
   appPath,
   scssComponentsPath,
+  demoRoutesPath,
 } = require('./../config');
 const StringHelper = require('./../helpers/StringHelper');
 
@@ -17,6 +18,7 @@ class ComponentTemplate {
   hooks() {
     this.importComponent();
     this.importStyle();
+    this.importDemo();
   }
 
   importComponent() {
@@ -53,6 +55,43 @@ class ComponentTemplate {
         '\x1b[36m',
         scssComponentsPath,
       );
+    });
+  }
+
+  importDemo() {
+    const displayName = StringHelper(this.name).format('capitalize').output();
+
+    fs.readFile(demoRoutesPath, 'utf8', (err, data) => {
+      const arr = data.slice(16, data.length).split('},');
+      const insertIndex = arr.map((str) => {
+        const start = str.indexOf('\'') + 1;
+        const end = str.indexOf('\'', start);
+
+        return str.slice(start, end);
+      }).reduce((acc, cur, index) => {
+        return cur < this.name && index !== arr.length - 1 ? index + 1 : acc;
+      }, arr.length - 1);
+
+      arr.splice(
+        insertIndex,
+        0,
+        // eslint-disable-next-line max-len
+        `\n  {\n    path: '${this.name}',\n    name: 'demo-${this.name}',\n    displayName: '${displayName}',\n    component: () => import('./views/pages/Demo${displayName}/index.vue'),\n  `,
+      );
+
+      fs.writeFile(demoRoutesPath, `export default [${arr.join('},')}`, (writeError) => {
+        if (writeError) {
+          console.log(err);
+          return;
+        }
+
+        console.log(
+          '\x1b[32m',
+          'updated',
+          '\x1b[36m',
+          demoRoutesPath,
+        );
+      });
     });
   }
 }

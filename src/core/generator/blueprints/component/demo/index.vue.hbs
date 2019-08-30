@@ -1,0 +1,35 @@
+<template>
+  <TabContent :selected="selectedTab" @change="onTabChange">
+    <template slot="design">
+      <!-- add something -->
+    </template>
+    <template slot="code">
+      <!-- add something -->
+    </template>
+    <template slot="quicklinks">
+      <!-- add something -->
+    </template>
+  </TabContent>
+</template>
+
+<script>
+import TabContent from '@/views/components/TabContent/index.vue';
+
+export default {
+  name: 'Demo{{ scopeName }}',
+  props: {
+    selectedTab: {
+      type: Number,
+      default: 0,
+    },
+  },
+  components: {
+    TabContent,
+  },
+  methods: {
+    onTabChange(tabIndex) {
+      this.$emit('tabChange', tabIndex);
+    },
+  },
+};
+</script>

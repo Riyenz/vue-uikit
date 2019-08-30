@@ -88,7 +88,7 @@ class TemplateGenerator {
       .format(blueprint.format)
       .output();
     const folder = blueprint.hasFolder
-      ? `/${firstName}`
+      ? `/${blueprint.folderPrefix || ''}${firstName}`
       : '';
     return `${blueprint.dest}${folder}/${this.fileName(firstName, file, blueprint)}`;
   }
@@ -103,6 +103,8 @@ class TemplateGenerator {
    */
   fileName(firstName, file, blueprint) {
     const prefix = blueprint.prefix || '';
+
+    if (file.split('.')[0] === 'index') return StringHelper(file).removeBlueprintExt().output();
 
     return StringHelper(file)
       .removeBlueprintExt()

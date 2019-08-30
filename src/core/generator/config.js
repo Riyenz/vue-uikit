@@ -1,6 +1,7 @@
 module.exports = {
   appPath: 'src/app.js',
   scssComponentsPath: 'scss/_components.scss',
+  demoRoutesPath: 'src/demoRoutes.js',
   blueprintsFolderPath: 'blueprints',
   acceptedExtension: '.hbs',
   requiredOptions: ['action', 'scope', 'name'],
@@ -29,6 +30,13 @@ module.exports = {
       format: 'pascalcase',
       src: 'src/core/generator/blueprints/component/test',
       dest: 'tests/unit/components',
+    },
+    {
+      format: 'pascalcase',
+      src: 'src/core/generator/blueprints/component/demo',
+      dest: 'src/views/pages',
+      hasFolder: true,
+      folderPrefix: 'Demo',
     },
   ],
 };
