@@ -1,9 +1,9 @@
 <template>
-  <TabContent :selected="selectedTab" @change="onTabChange">
+  <TabContent :selected="selectedTab" @change="onTabChange" padded>
     <template slot="design">
       <div></div>
     </template>
-    <template slot="code">
+    <template slot="develop">
       <div>
         <h1 class="eduk-h1 eduk-u-mb-3">Dropdowns & Selectors</h1>
         <p class="eduk-text eduk-u-mb-4">
@@ -12,8 +12,10 @@
           managable throught nested symbols to give you all the flexibility.
         </p>
         <Selections />
+        <SelectionApi />
         <Search />
         <Icons />
+        <DropdownApi />
       </div>
     </template>
     <template slot="quicklinks">
@@ -27,6 +29,9 @@ import Selections from './components/Selections.vue';
 import Icons from './components/Icons.vue';
 import Search from './components/Search.vue';
 
+import DropdownApi from './components/DropdownApi.vue';
+import SelectionApi from './components/SelectionApi.vue';
+
 export default {
   name: 'DemoDropdowns',
   components: {
@@ -34,11 +39,12 @@ export default {
     Selections,
     Icons,
     Search,
+    DropdownApi,
+    SelectionApi,
   },
   props: {
     selectedTab: {
-      type: Number,
-      default: 0,
+      type: String,
     },
   },
   methods: {

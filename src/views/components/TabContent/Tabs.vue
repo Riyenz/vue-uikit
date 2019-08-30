@@ -1,17 +1,12 @@
 <template>
-  <ul class="tabs">
-    <li class="tabs__item" :class="{'tabs__item--active': selectedTab === 0}">
-      <a @click="() => selectTab(0)">Design</a>
-    </li>
-    <li class="tabs__item" :class="{'tabs__item--active': selectedTab === 1}">
-      <a @click="() => selectTab(1)">Develop</a>
-    </li>
+  <ul :class="tabClasses">
     <li
+      v-for="(value, name) in slots"
+      :key="name"
       class="tabs__item"
-      :class="{'tabs__item--active': selectedTab === 2}"
-      v-if="hasMobile"
+      :class="{'tabs__item--active': selectedTab === name}"
     >
-      <a @click="() => selectTab(2)">Mobile</a>
+      <a @click="() => selectTab(name)">{{name}}</a>
     </li>
   </ul>
 </template>
@@ -20,8 +15,23 @@
 export default {
   name: 'Tabs',
   props: {
-    selectedTab: Number,
+    selectedTab: String,
     hasMobile: Boolean,
+    slots: {
+      type: Object,
+    },
+    padded: {
+      type: Boolean,
+      default: false,
+    },
+  },
+  computed: {
+    tabClasses() {
+      return {
+        tabs: true,
+        'tabs--padded': this.padded,
+      };
+    },
   },
   methods: {
     selectTab(index) {
@@ -36,11 +46,11 @@ export default {
   list-style-type: none;
   margin: 0;
   display: flex;
-  padding: 0 10px;
+  padding: 0;
   border-bottom: solid 1px #e8ebef;
 
   &__item {
-    padding: 0 20px;
+    padding: 0;
     color: #939393;
     transition: color 0.15s;
   }
@@ -49,10 +59,11 @@ export default {
     cursor: pointer;
     font-size: 16px;
     font-weight: bold;
-    padding: 15px 1px 11px;
+    padding: 15px 15px 11px;
     display: block;
     border-bottom: 4px solid transparent;
     transition: border-color 0.15s;
+    text-transform: capitalize;
   }
 
   &__item--active {
@@ -61,6 +72,18 @@ export default {
 
   &__item--active > a {
     border-color: #0e9be4;
+  }
+
+  &--padded {
+    padding: 0 10px;
+  }
+
+  &--padded &__item {
+    padding: 0 20px;
+  }
+
+  &--padded &__item > a {
+    padding: 15px 1px 11px;
   }
 }
 </style>

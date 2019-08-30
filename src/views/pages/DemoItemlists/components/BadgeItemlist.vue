@@ -39,76 +39,77 @@
       </template>
       <template slot="vue-code">
         <code class="language-html">
-&lt;Itemlist&gt;
-  &lt;template slot=&quot;header&quot;&gt;
-    &lt;h4 class=&quot;eduk-head&quot;&gt;
-      Eu id ut occaecat nostrud.
-    &lt;/h4&gt;
-    &lt;a href=&quot;#&quot; class=&quot;eduk-link eduk-u-mb-2&quot;&gt;
-      Aliqua ipsum nulla.
-    &lt;/a&gt;
-  &lt;/template&gt;
-  &lt;template slot=&quot;description&quot;&gt;
-    &lt;p class=&quot;eduk-text&quot;&gt;
-      Cillum consectetur elit aliquip exercitation consectetur qui fugiat et.
-      Sit tempor laborum do ea ea eu laborum quis duis aliquip reprehenderit non quis pariatur.
-      Ut esse cillum fugiat qui aliquip tempor qui.
-    &lt;/p&gt;
-    &lt;p class=&quot;eduk-text eduk-u-text-muted eduk-u-text-sm&quot;&gt;
-      Cupidatat consectetur qui aliquip enim.
-    &lt;/p&gt;
-  &lt;/template&gt;
-  &lt;template slot=&quot;status&quot;&gt;
-    &lt;Badge variant=&quot;success&quot; class=&quot;eduk-u-mb-3&quot;&gt;Availability: Open for Applications&lt;/Badge&gt;
-  &lt;/template&gt;
-  &lt;template slot=&quot;actions&quot;&gt;
-    &lt;div class=&quot;eduk-u-d-flex eduk-u-flex-column eduk-u-justify-content-stretch&quot;&gt;
-      &lt;Btn noMargin class=&quot;eduk-u-d-none eduk-u-d-lg-block&quot;&gt;
-        View Result
-      &lt;/Btn&gt;
-      &lt;Btn noMargin outline class=&quot;eduk-u-d-none eduk-u-d-lg-block eduk-u-mt-2&quot;&gt;
-        View Details
-      &lt;/Btn&gt;
-    &lt;/div&gt;
-  &lt;/template&gt;
-&lt;/Itemlist&gt;
+          &lt;Itemlist&gt;
+            &lt;template slot=&quot;header&quot;&gt;
+              &lt;h4 class=&quot;eduk-head&quot;&gt;
+                Eu id ut occaecat nostrud.
+              &lt;/h4&gt;
+              &lt;a href=&quot;#&quot; class=&quot;eduk-link eduk-u-mb-2&quot;&gt;
+                Aliqua ipsum nulla.
+              &lt;/a&gt;
+            &lt;/template&gt;
+            &lt;template slot=&quot;description&quot;&gt;
+              &lt;p class=&quot;eduk-text&quot;&gt;
+                Cillum consectetur elit aliquip exercitation consectetur qui fugiat et.
+                Sit tempor laborum do ea ea eu laborum quis duis aliquip reprehenderit non quis pariatur.
+                Ut esse cillum fugiat qui aliquip tempor qui.
+              &lt;/p&gt;
+              &lt;p class=&quot;eduk-text eduk-u-text-muted eduk-u-text-sm&quot;&gt;
+                Cupidatat consectetur qui aliquip enim.
+              &lt;/p&gt;
+            &lt;/template&gt;
+            &lt;template slot=&quot;status&quot;&gt;
+              &lt;Badge variant=&quot;success&quot; class=&quot;eduk-u-mb-3&quot;&gt;Availability: Open for Applications&lt;/Badge&gt;
+            &lt;/template&gt;
+            &lt;template slot=&quot;actions&quot;&gt;
+              &lt;div class=&quot;eduk-u-d-flex eduk-u-flex-column eduk-u-justify-content-stretch&quot;&gt;
+                &lt;Btn noMargin class=&quot;eduk-u-d-none eduk-u-d-lg-block&quot;&gt;
+                  View Result
+                &lt;/Btn&gt;
+                &lt;Btn noMargin outline class=&quot;eduk-u-d-none eduk-u-d-lg-block eduk-u-mt-2&quot;&gt;
+                  View Details
+                &lt;/Btn&gt;
+              &lt;/div&gt;
+            &lt;/template&gt;
+          &lt;/Itemlist&gt;
         </code>
       </template>
       <template slot="vanilla-code">
         <code class="language-html">
-&lt;div class=&quot;eduk-itemlist&quot;&gt;
-  &lt;div class=&quot;eduk-itemlist__img&quot; style=&apos;background-image: url(&quot;/img/logo-placeholder.png&quot;);&apos;&gt;&lt;/div&gt;
-  &lt;div class=&quot;eduk-itemlist__header&quot;&gt;
-    &lt;h4 class=&quot;eduk-head&quot;&gt;
-      Eu id ut occaecat nostrud.
-    &lt;/h4&gt;&lt;a href=&quot;#&quot; class=&quot;eduk-link eduk-u-mb-2&quot;&gt;
-      Aliqua ipsum nulla.
-    &lt;/a&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;eduk-itemlist__description&quot;&gt;
-    &lt;p class=&quot;eduk-text&quot;&gt;
-      Cillum consectetur elit aliquip exercitation consectetur qui fugiat et.
-      Sit tempor laborum do ea ea eu laborum quis duis aliquip reprehenderit non quis pariatur.
-      Ut esse cillum fugiat qui aliquip tempor qui.
-    &lt;/p&gt;
-    &lt;p class=&quot;eduk-text eduk-u-text-muted eduk-u-text-sm&quot;&gt;
-      Cupidatat consectetur qui aliquip enim.
-    &lt;/p&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;eduk-itemlist__actions&quot;&gt;
-    &lt;div class=&quot;eduk-u-d-flex eduk-u-flex-column eduk-u-justify-content-stretch&quot;&gt;
-      &lt;button class=&quot;eduk-u-d-none eduk-u-d-lg-block eduk-btn eduk-btn-primary&quot;&gt;
-        View Result
-      &lt;/button&gt;
-      &lt;button class=&quot;eduk-u-d-none eduk-u-d-lg-block eduk-u-mt-2 eduk-btn eduk-btn-primary-outline&quot;&gt;
-        View Details
-      &lt;/button&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;eduk-itemlist__status&quot;&gt;
-    &lt;div class=&quot;eduk-u-mb-3 eduk-badge eduk-badge-success&quot;&gt;Availability: Open for Applications&lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
+          &lt;div class=&quot;eduk-itemlist&quot;&gt;
+            &lt;div class=&quot;eduk-itemlist__img&quot;
+            style=&apos;background-image: url(&quot;/img/logo-placeholder.png&quot;);&apos;&gt;&lt;/div&gt;
+            &lt;div class=&quot;eduk-itemlist__header&quot;&gt;
+              &lt;h4 class=&quot;eduk-head&quot;&gt;
+                Eu id ut occaecat nostrud.
+              &lt;/h4&gt;&lt;a href=&quot;#&quot; class=&quot;eduk-link eduk-u-mb-2&quot;&gt;
+                Aliqua ipsum nulla.
+              &lt;/a&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;eduk-itemlist__description&quot;&gt;
+              &lt;p class=&quot;eduk-text&quot;&gt;
+                Cillum consectetur elit aliquip exercitation consectetur qui fugiat et.
+                Sit tempor laborum do ea ea eu laborum quis duis aliquip reprehenderit non quis pariatur.
+                Ut esse cillum fugiat qui aliquip tempor qui.
+              &lt;/p&gt;
+              &lt;p class=&quot;eduk-text eduk-u-text-muted eduk-u-text-sm&quot;&gt;
+                Cupidatat consectetur qui aliquip enim.
+              &lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;eduk-itemlist__actions&quot;&gt;
+              &lt;div class=&quot;eduk-u-d-flex eduk-u-flex-column eduk-u-justify-content-stretch&quot;&gt;
+                &lt;button class=&quot;eduk-u-d-none eduk-u-d-lg-block eduk-btn eduk-btn-primary&quot;&gt;
+                  View Result
+                &lt;/button&gt;
+                &lt;button class=&quot;eduk-u-d-none eduk-u-d-lg-block eduk-u-mt-2 eduk-btn eduk-btn-primary-outline&quot;&gt;
+                  View Details
+                &lt;/button&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;eduk-itemlist__status&quot;&gt;
+              &lt;div class=&quot;eduk-u-mb-3 eduk-badge eduk-badge-success&quot;&gt;Availability: Open for Applications&lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
         </code>
       </template>
     </Preview>

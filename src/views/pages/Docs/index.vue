@@ -32,7 +32,7 @@ export default {
       next: {},
       prev: {},
       currentRoute: null,
-      selectedTab: +localStorage.getItem('eduk-selected-tab') || 0,
+      selectedTab: localStorage.getItem('eduk-selected-tab') || 'Develop',
     };
   },
   components: {
