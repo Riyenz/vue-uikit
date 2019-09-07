@@ -1,0 +1,139 @@
+.eduk-input {
+  margin-bottom: 1rem;
+
+  &__label {
+    font-size: $input-label-font-size;
+    color: $input-label-color;
+    font-weight: 600;
+    display: inline-block;
+  }
+
+  &__flex {
+    display: flex;
+    position: relative;
+  }
+
+  &__field {
+    display: block;
+    flex: 1;
+    outline: none;
+    border: $input-default-border;
+    padding: $input-padding;
+    color: $input-color;
+    font-size: $input-font-size;
+    font-family: $input-font-family;
+    transition: border-color 0.15s;
+  }
+
+  &__field.eduk-input__field--pl {
+    padding-left: $input-icon-padding;
+  }
+
+  &__field.eduk-input__field--pr {
+    padding-right: $input-icon-padding;
+  }
+
+  &__field:focus,
+  &__field:hover {
+    border: $input-focused-border;
+  }
+
+  &__field[disabled] {
+    background-color: $input-disabled-background;
+    pointer-events: none;
+  }
+
+  &__icon {
+    flex: 1;
+    position: relative;
+  }
+
+  &__icon > &__field {
+    width: 100%;
+  }
+
+  &__icon > .fa-icon {
+    font-size: $input-icon-size;
+    position: absolute;
+    top: 50%;
+    transform: translate3d(0, -50%, 0);
+    color: $input-icon-color;
+    transition: color 0.15s;
+    left: 10px;
+  }
+
+  &__msg {
+    font-size: 12px;
+    color: $input-label-color;
+    margin: 0;
+    display: flex;
+    align-items: center;
+  }
+
+  &__msg > svg,
+  &__msg > i {
+    font-size: $input-msg-icon-size;
+  }
+
+  &--error &__msg,
+  &--error .fa-icon,
+  &--error .fa-validation {
+    color: $input-error-color;
+  }
+
+  &--success &__msg,
+  &--success .fa-icon,
+  &--success .fa-validation {
+    color: $input-success-color;
+  }
+
+  &__field:focus + .fa-icon {
+    color: $input-icon-focus-color;
+  }
+
+  &__icon > .fa-validation {
+    position: absolute;
+    top: 50%;
+    transform: translate3d(0, -50%, 0);
+    right: 10px;
+    font-size: $input-icon-times-size;
+  }
+
+  &__icon > .fa-validation [data-icon="check"] {
+    font-size: $input-icon-check-size;
+  }
+
+  &--error &__field {
+    border-color: $input-error-color;
+  }
+
+  &--success &__field {
+    border-color: $input-success-color;
+  }
+
+  &__flex > :first-child,
+  &__flex > :first-child > .eduk-input__field {
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+  }
+
+  &__flex > :last-child,
+  &__flex > :last-child > .eduk-input__field {
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+  }
+
+  &__flex > .eduk-btn {
+    min-width: 0;
+  }
+
+  &__flex > .eduk-btn:first-child {
+    border-radius: 4px 0 0 4px;
+    border-right: none;
+  }
+
+  &__flex > .eduk-btn:last-child {
+    border-radius: 0 4px 4px 0;
+    border-left: none;
+  }
+}

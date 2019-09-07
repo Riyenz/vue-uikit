@@ -1,0 +1,122 @@
+@keyframes snackbarFadeSlideIn {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+    transform: translate3d(0, -150%, 0);
+  }
+
+  50% {
+    opacity: 0;
+    visibility: hidden;
+    transform: translate3d(0, -75%, 0);
+  }
+
+  100% {
+    opacity: 1;
+    visibility: visible;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes snackbarFadeOut {
+  from {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.eduk-snackbar {
+  background-color: $snackbar-background;
+  opacity: 0;
+  visibility: hidden;
+  width: 100%;
+  border-radius: 5px;
+  color: $snackbar-color;
+  padding: $snackbar-padding;
+  font-size: $snackbar-font-size;
+  transform: translate3d(0, -120%, 0);
+  will-change: transform, opacity, visibility;
+  display: flex;
+  align-items: center;
+  box-shadow: $snackbar-shadow;
+  animation: snackbarFadeSlideIn 0.18s ease-in-out forwards;
+
+  &.hide {
+    transform: translate3d(0, 0, 0);
+    animation: snackbarFadeOut 0.4s ease-in-out forwards;
+  }
+
+  &__content {
+    flex: 1;
+  }
+
+  &__action {
+    color: $snackbar-color;
+    font-size: $snackbar-action-font-size;
+    text-transform: uppercase;
+    font-weight: 600;
+    cursor: pointer;
+  }
+
+  @each $color, $value in $theme-colors {
+    &__action--#{$color} {
+      color: $value;
+    }
+  }
+}
+
+.eduk-snackbar-list {
+  max-width: $snackbar-list-max-width;
+  width: 100%;
+  position: fixed;
+  z-index: 10000;
+
+  &--top {
+    top: 20px;
+    left: 50%;
+    transform: translate3d(-50%, 0, 0);
+  }
+
+  &--top-left {
+    top: 20px;
+    left: 20px;
+  }
+
+  &--top-right {
+    top: 20px;
+    right: 20px;
+  }
+
+  &--top > .eduk-snackbar,
+  &--top-left > .eduk-snackbar,
+  &--top-right > .eduk-snackbar {
+    margin-bottom: $snackbar-spacer;
+  }
+
+  &--bottom {
+    bottom: 20px;
+    left: 50%;
+    transform: translate3d(-50%, 0, 0);
+  }
+
+  &--bottom-left {
+    bottom: 20px;
+    left: 20px;
+  }
+
+  &--bottom-right {
+    bottom: 20px;
+    right: 20px;
+  }
+
+  &--bottom > .eduk-snackbar,
+  &--bottom-left > .eduk-snackbar,
+  &--bottom-right > .eduk-snackbar {
+    margin-top: $snackbar-spacer;
+  }
+}

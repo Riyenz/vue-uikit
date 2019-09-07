@@ -27,6 +27,10 @@ import {
   faShare,
   faStar,
   faStarHalf,
+  faCheck,
+  faCheckCircle,
+  faTimesCircle,
+  faInfoCircle,
 } from '@fortawesome/free-solid-svg-icons';
 import {
   faHeart as farHeart,
@@ -57,6 +61,10 @@ library.add(
   faShare,
   faStar,
   faStarHalf,
+  faCheck,
+  faCheckCircle,
+  faTimesCircle,
+  faInfoCircle,
 );
 
 Vue.component('font-awesome-icon', FontAwesomeIcon);

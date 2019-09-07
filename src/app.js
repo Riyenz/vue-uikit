@@ -44,3 +44,6 @@ export { default as Card } from '@/UIKit/Card/Card.component.vue';
 
 /** Ratings Component */
 export { default as Ratings } from '@/UIKit/Ratings/Ratings.component.vue';
+
+/** Input Component */
+export { default as Input } from '@/UIKit/Input/Input.component.vue';
