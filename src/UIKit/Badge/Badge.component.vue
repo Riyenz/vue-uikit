@@ -18,7 +18,7 @@ export default {
   },
   computed: {
     badgeClass() {
-      const variant = `${BADGE_CLASS_NAME}-${this.variant}`;
+      const variant = `${BADGE_CLASS_NAME}--${this.variant}`;
       return {
         [BADGE_CLASS_NAME]: true,
         [variant]: true,

@@ -36,7 +36,7 @@
       <template slot="vanilla-code">
         <code class="language-html">
           &#x3C;div class=&#x22;eduk-dropdown eduk-dropdown--left&#x22;&#x3E;
-            &#x3C;button class=&#x22;eduk-btn eduk-btn-primary eduk-dropdown__icon eduk-dropdown__icon--left eduk-u-m-1&#x22;&#x3E;
+            &#x3C;button class=&#x22;eduk-btn eduk-btn--primary eduk-dropdown__icon eduk-dropdown__icon--left eduk-u-m-1&#x22;&#x3E;
               &#x3C;span&#x3E;Filter&#x3C;/span&#x3E;
               &#x3C;span&#x3E;
                 &#x3C;i class=&#x22;fas fa-times&#x22;&#x3E;&#x3C;/i&#x3E;
@@ -67,7 +67,7 @@
             &#x3C;/ul&#x3E;
           &#x3C;/div&#x3E;
           &#x3C;div class=&#x22;eduk-dropdown eduk-dropdown--right&#x22;&#x3E;
-            &#x3C;button class=&#x22;eduk-btn eduk-btn-primary eduk-dropdown__icon eduk-dropdown__icon--right eduk-u-m-1&#x22;&#x3E;
+            &#x3C;button class=&#x22;eduk-btn eduk-btn--primary eduk-dropdown__icon eduk-dropdown__icon--right eduk-u-m-1&#x22;&#x3E;
               &#x3C;span&#x3E;Filter&#x3C;/span&#x3E;
               &#x3C;span&#x3E;
                 &#x3C;i class=&#x22;fas fa-times&#x22;&#x3E;&#x3C;/i&#x3E;
@@ -134,8 +134,8 @@
         <code class="language-html">
           &#x3C;div class=&#x22;eduk-dropdown eduk-dropdown--left&#x22;&#x3E;
             &#x3C;div class=&#x22;eduk-dropdown__group eduk-dropdown__group--left eduk-u-m-1&#x22;&#x3E;
-              &#x3C;button class=&#x22;eduk-btn eduk-btn-primary&#x22;&#x3E;&#x3C;span&#x3E;Button&#x3C;/span&#x3E;&#x3C;/button&#x3E;
-              &#x3C;button class=&#x22;eduk-btn eduk-btn-primary&#x22;&#x3E;
+              &#x3C;button class=&#x22;eduk-btn eduk-btn--primary&#x22;&#x3E;&#x3C;span&#x3E;Button&#x3C;/span&#x3E;&#x3C;/button&#x3E;
+              &#x3C;button class=&#x22;eduk-btn eduk-btn--primary&#x22;&#x3E;
                 &#x3C;i class=&#x22;fas fa-bars&#x22;&#x3E;&#x3C;/i&#x3E;
               &#x3C;/button&#x3E;
             &#x3C;/div&#x3E;
@@ -155,8 +155,8 @@
           &#x3C;/div&#x3E;
           &#x3C;div class=&#x22;eduk-dropdown eduk-dropdown--right&#x22;&#x3E;
             &#x3C;div class=&#x22;eduk-dropdown__group eduk-dropdown__group--right eduk-u-m-1&#x22;&#x3E;
-              &#x3C;button class=&#x22;eduk-btn eduk-btn-primary&#x22;&#x3E;&#x3C;span&#x3E;Button&#x3C;/span&#x3E;&#x3C;/button&#x3E;
-              &#x3C;button class=&#x22;eduk-btn eduk-btn-primary&#x22;&#x3E;
+              &#x3C;button class=&#x22;eduk-btn eduk-btn--primary&#x22;&#x3E;&#x3C;span&#x3E;Button&#x3C;/span&#x3E;&#x3C;/button&#x3E;
+              &#x3C;button class=&#x22;eduk-btn eduk-btn--primary&#x22;&#x3E;
               &#x3C;i class=&#x22;fas fa-bars&#x22;&#x3E;&#x3C;/i&#x3E;
               &#x3C;/button&#x3E;
             &#x3C;/div&#x3E;

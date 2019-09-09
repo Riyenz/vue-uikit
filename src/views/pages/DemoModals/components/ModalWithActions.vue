@@ -27,38 +27,38 @@
       </template>
       <template slot="vanilla-code">
         <code class="language-html">
-          &#x3C;div class=&#x22;eduk-modal show&#x22;&#x3E;
-            &#x3C;div class=&#x22;eduk-modal__container&#x22;&#x3E;
-              &#x3C;div class=&#x22;eduk-modal__main&#x22;&#x3E;
-                &#x3C;section class=&#x22;eduk-modal__navbar&#x22;&#x3E;
-                  &#x3C;i class=&#x22;eduk-modal__navbar-back fas fa-chevron-left fa-w-10 fa-lg&#x22;&#x3E;&#x3C;/i&#x3E;
-                  &#x3C;span class=&#x22;eduk-modal__navbar-logo&#x22;&#x3E;
-                    &#x3C;img src=&#x22;/assets/img/eduk-navbar-logo.png&#x22; alt=&#x22;&#x22;&#x3E;
-                  &#x3C;/span&#x3E;
-                &#x3C;/section&#x3E;
-                &#x3C;section class=&#x22;eduk-modal__header&#x22;&#x3E;
-                  &#x3C;h2 class=&#x22;eduk-head eduk-modal__header-title eduk-u-mb-0&#x22;&#x3E;Modal w/ Actions&#x3C;/h2&#x3E;
-                  &#x3C;i class=&#x22;eduk-modal__header-close fas fa-times fa-lg&#x22;&#x3E;&#x3C;/i&#x3E;
-                &#x3C;/section&#x3E;
-                &#x3C;section class=&#x22;eduk-modal__content&#x22;&#x3E;
-                  &#x3C;section class=&#x22;eduk-modal__body&#x22;&#x3E;
-                    &#x3C;h2 class=&#x22;eduk-modal__title eduk-modal__title--mobile&#x22;&#x3E;Modal w/ Actions&#x3C;/h2&#x3E;
-                    &#x3C;h3 class=&#x22;eduk-head&#x22;&#x3E;Here might be a content title&#x3C;/h3&#x3E;
-                    &#x3C;p class=&#x22;eduk-text&#x22;&#x3E;
+          &lt;div class=&quot;eduk-modal show&quot;&gt;
+            &lt;div class=&quot;eduk-modal__container&quot;&gt;
+              &lt;div class=&quot;eduk-modal__main&quot;&gt;
+                &lt;section class=&quot;eduk-modal__navbar&quot;&gt;
+                  &lt;i class=&quot;eduk-modal__navbar-back fas fa-chevron-left fa-w-10 fa-lg&quot;&gt;&lt;/i&gt;
+                  &lt;span class=&quot;eduk-modal__navbar-logo&quot;&gt;
+                    &lt;img src=&quot;/assets/img/eduk-navbar-logo.png&quot; alt=&quot;&quot;&gt;
+                  &lt;/span&gt;
+                &lt;/section&gt;
+                &lt;section class=&quot;eduk-modal__header&quot;&gt;
+                  &lt;h2 class=&quot;eduk-head eduk-modal__header-title eduk-u-mb-0&quot;&gt;Modal w/ Actions&lt;/h2&gt;
+                  &lt;i class=&quot;eduk-modal__header-close fas fa-times fa-lg&quot;&gt;&lt;/i&gt;
+                &lt;/section&gt;
+                &lt;section class=&quot;eduk-modal__content&quot;&gt;
+                  &lt;section class=&quot;eduk-modal__body&quot;&gt;
+                    &lt;h2 class=&quot;eduk-modal__title eduk-modal__title--mobile&quot;&gt;Modal w/ Actions&lt;/h2&gt;
+                    &lt;h3 class=&quot;eduk-head&quot;&gt;Here might be a content title&lt;/h3&gt;
+                    &lt;p class=&quot;eduk-text&quot;&gt;
                       Cillum commodo quis ut laboris aliquip et non Lorem fugiat.
                       Laborum minim esse ad proident proident eiusmod nostrud aliqua
                       elit. Id id eu cupidatat aliquip magna amet magna nisi non in
                       et nisi. Dolor laboris enim incididunt tempor veniam. Ex aliquip
                       dolor consectetur officia elit.
-                    &#x3C;/p&#x3E;
-                  &#x3C;/section&#x3E;
-                  &#x3C;section class=&#x22;eduk-modal__footer&#x22;&#x3E;
-                    &#x3C;button class=&#x22;eduk-btn eduk-btn-primary  eduk-u-m-1 &#x22;&#x3E;OK&#x3C;/button&#x3E;
-                    &#x3C;button class=&#x22;eduk-btn eduk-btn-tertiary-outline  eduk-u-m-1 &#x22;&#x3E;Cancel&#x3C;/button&#x3E;&#x3C;/section&#x3E;
-                &#x3C;/section&#x3E;
-              &#x3C;/div&#x3E;
-            &#x3C;/div&#x3E;
-          &#x3C;/div&#x3E;
+                    &lt;/p&gt;
+                  &lt;/section&gt;
+                  &lt;section class=&quot;eduk-modal__footer&quot;&gt;
+                    &lt;button class=&quot;eduk-btn eduk-btn--primary  eduk-u-m-1 &quot;&gt;OK&lt;/button&gt;
+                    &lt;button class=&quot;eduk-btn eduk-btn--tertiary eduk-btn--outlined  eduk-u-m-1 &quot;&gt;Cancel&lt;/button&gt;&lt;/section&gt;
+                &lt;/section&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
         </code>
       </template>
     </Preview>

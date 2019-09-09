@@ -72,7 +72,7 @@
               &lt;/p&gt;
             &lt;/div&gt;
             &lt;div class=&quot;eduk-itemlist__actions eduk-itemlist__actions--full-row&quot;&gt;
-              &lt;button class=&quot;eduk-u-d-none eduk-u-d-lg-block eduk-btn eduk-btn-primary-outline&quot;&gt;
+              &lt;button class=&quot;eduk-u-d-none eduk-u-d-lg-block eduk-btn eduk-btn--primary eduk-btn--outlined&quot;&gt;
                 &lt;i class=&quot;eduk-u-mr-2 eduk-u-mt-1 fa-heart&quot;/&gt;
                 Saved
               &lt;/button&gt;

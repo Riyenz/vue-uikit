@@ -64,8 +64,8 @@ export default {
         [BTN_CLASS_NAME]: true,
         [BTN_CLASS_DISABLED]: this.disabled,
         [BTN_BLOCK_CLASS_NAME]: this.block,
-        [`${BTN_CLASS_NAME}-${this.variant}`]: !this.outline,
-        [`${BTN_CLASS_NAME}-${this.variant}-outline`]: this.outline,
+        [`${BTN_CLASS_NAME}--${this.variant}`]: this.variant,
+        [`${BTN_CLASS_NAME}--outlined`]: this.outline,
         [`${BTN_CLASS_NAME}--${this.size}`]: this.size,
       };
     },

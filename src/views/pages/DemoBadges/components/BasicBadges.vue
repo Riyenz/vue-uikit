@@ -31,15 +31,15 @@
         </template>
         <template slot="vanilla-code">
           <code class="language-html">
-            &#x3C;div class=&#x22;eduk-badge eduk-badge-primary&#x22;&#x3E;Primary&#x3C;/div&#x3E;
-            &#x3C;div class=&#x22;eduk-badge eduk-badge-secondary&#x22;&#x3E;Secondary&#x3C;/div&#x3E;
-            &#x3C;div class=&#x22;eduk-badge eduk-badge-tertiary&#x22;&#x3E;Tertiary&#x3C;/div&#x3E;
-            &#x3C;div class=&#x22;eduk-badge eduk-badge-success&#x22;&#x3E;Success&#x3C;/div&#x3E;
-            &#x3C;div class=&#x22;eduk-badge eduk-badge-warning&#x22;&#x3E;Warning&#x3C;/div&#x3E;
-            &#x3C;div class=&#x22;eduk-badge eduk-badge-danger&#x22;&#x3E;Danger&#x3C;/div&#x3E;
-            &#x3C;div class=&#x22;eduk-badge eduk-badge-info&#x22;&#x3E;Info&#x3C;/div&#x3E;
-            &#x3C;div class=&#x22;eduk-badge eduk-badge-light&#x22;&#x3E;Light&#x3C;/div&#x3E;
-            &#x3C;div class=&#x22;eduk-badge eduk-badge-dark&#x22;&#x3E;Dark&#x3C;/div&#x3E;
+            &#x3C;div class=&#x22;eduk-badge eduk-badge--primary&#x22;&#x3E;Primary&#x3C;/div&#x3E;
+            &#x3C;div class=&#x22;eduk-badge eduk-badge--secondary&#x22;&#x3E;Secondary&#x3C;/div&#x3E;
+            &#x3C;div class=&#x22;eduk-badge eduk-badge--tertiary&#x22;&#x3E;Tertiary&#x3C;/div&#x3E;
+            &#x3C;div class=&#x22;eduk-badge eduk-badge--success&#x22;&#x3E;Success&#x3C;/div&#x3E;
+            &#x3C;div class=&#x22;eduk-badge eduk-badge--warning&#x22;&#x3E;Warning&#x3C;/div&#x3E;
+            &#x3C;div class=&#x22;eduk-badge eduk-badge--danger&#x22;&#x3E;Danger&#x3C;/div&#x3E;
+            &#x3C;div class=&#x22;eduk-badge eduk-badge--info&#x22;&#x3E;Info&#x3C;/div&#x3E;
+            &#x3C;div class=&#x22;eduk-badge eduk-badge--light&#x22;&#x3E;Light&#x3C;/div&#x3E;
+            &#x3C;div class=&#x22;eduk-badge eduk-badge--dark&#x22;&#x3E;Dark&#x3C;/div&#x3E;
           </code>
         </template>
       </Preview>

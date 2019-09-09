@@ -21,7 +21,7 @@
       <template slot="vanilla-code">
         <code class="language-html">
           &#x3C;div class=&#x22;eduk-dropdown eduk-dropdown--left&#x22;&#x3E;
-            &#x3C;button class=&#x22;eduk-btn eduk-btn-primary eduk-dropdown__icon eduk-dropdown__icon--left eduk-u-m-1&#x22;&#x3E;
+            &#x3C;button class=&#x22;eduk-btn eduk-btn--primary eduk-dropdown__icon eduk-dropdown__icon--left eduk-u-m-1&#x22;&#x3E;
               &#x3C;span&#x3E;Filter&#x3C;/span&#x3E;
               &#x3C;span&#x3E;
                 &#x3C;i class=&#x22;fas fa-bars&#x22;&#x3E;&#x3C;/i&#x3E;

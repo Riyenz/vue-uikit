@@ -33,7 +33,7 @@
   /** TODO: [UIKIT-40] Change color from element to modifiers */
 
   /** Basic */
-  .eduk-btn-#{$color} {
+  .eduk-btn--#{$color} {
     border-color: darken($value, $hover-darken-percentage);
     background-color: $value;
     color: color-yiq($value);
@@ -50,7 +50,7 @@
   }
 
   /** Outline */
-  .eduk-btn-#{$color}-outline {
+  .eduk-btn--#{$color}.eduk-btn--outlined {
     border-color: darken($value, $hover-darken-percentage);
     background-color: transparent;
     color: $value;

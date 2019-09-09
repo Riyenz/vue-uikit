@@ -20,6 +20,7 @@
           </template>
           <template slot="vanilla-code">
             <code class="language-html">
+              <!-- eslint-disable max-len -->
               &#x3C;div class=&#x22;eduk-alert show&#x22;&#x3E;
                 &#x3C;div class=&#x22;eduk-alert__container&#x22;&#x3E;
                   &#x3C;div class=&#x22;eduk-alert__content&#x22;&#x3E;
@@ -31,11 +32,12 @@
                       Do! ullamco Lorem occaecat tempor incididunt nulla adipisicing.
                     &#x3C;/section&#x3E;
                     &#x3C;section class=&#x22;eduk-alert__actions&#x22;&#x3E;
-                      &#x3C;button class=&#x22;eduk-btn eduk-btn-tertiary-outline eduk-btn--lg eduk-u-m-1 &#x22;&#x3E;OK&#x3C;/button&#x3E;
+                      &#x3C;button class=&#x22;eduk-btn eduk-btn--tertiary eduk-btn--outlined eduk-btn--lg eduk-u-m-1 &#x22;&#x3E;OK&#x3C;/button&#x3E;
                     &#x3C;/section&#x3E;
                   &#x3C;/div&#x3E;
                 &#x3C;/div&#x3E;
               &#x3C;/div&#x3E;
+              <!-- eslint-enable max-len -->
             </code>
           </template>
         </Preview>

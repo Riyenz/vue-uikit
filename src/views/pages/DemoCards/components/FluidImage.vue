@@ -173,7 +173,7 @@
               &#x3C;/div&#x3E;
               &#x3C;div&#x3E;
                 &#x3C;div class=&#x22;eduk-u-pb-5&#x22;&#x3E;
-                  &#x3C;div class=&#x22;eduk-badge eduk-badge-secondary&#x22;&#x3E;
+                  &#x3C;div class=&#x22;eduk-badge eduk-badge--secondary&#x22;&#x3E;
                     Sponsored Content
                   &#x3C;/div&#x3E;
                 &#x3C;/div&#x3E;

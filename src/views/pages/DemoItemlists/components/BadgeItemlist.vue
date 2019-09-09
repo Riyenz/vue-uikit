@@ -98,16 +98,16 @@
             &lt;/div&gt;
             &lt;div class=&quot;eduk-itemlist__actions&quot;&gt;
               &lt;div class=&quot;eduk-u-d-flex eduk-u-flex-column eduk-u-justify-content-stretch&quot;&gt;
-                &lt;button class=&quot;eduk-u-d-none eduk-u-d-lg-block eduk-btn eduk-btn-primary&quot;&gt;
+                &lt;button class=&quot;eduk-u-d-none eduk-u-d-lg-block eduk-btn eduk-btn--primary&quot;&gt;
                   View Result
                 &lt;/button&gt;
-                &lt;button class=&quot;eduk-u-d-none eduk-u-d-lg-block eduk-u-mt-2 eduk-btn eduk-btn-primary-outline&quot;&gt;
+                &lt;button class=&quot;eduk-u-d-none eduk-u-d-lg-block eduk-u-mt-2 eduk-btn eduk-btn--primary eduk-btn--outlined&quot;&gt;
                   View Details
                 &lt;/button&gt;
               &lt;/div&gt;
             &lt;/div&gt;
             &lt;div class=&quot;eduk-itemlist__status&quot;&gt;
-              &lt;div class=&quot;eduk-u-mb-3 eduk-badge eduk-badge-success&quot;&gt;Availability: Open for Applications&lt;/div&gt;
+              &lt;div class=&quot;eduk-u-mb-3 eduk-badge eduk-badge--success&quot;&gt;Availability: Open for Applications&lt;/div&gt;
             &lt;/div&gt;
           &lt;/div&gt;
         </code>

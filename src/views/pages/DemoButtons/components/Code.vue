@@ -54,14 +54,14 @@
       </template>
       <template slot="vanilla-code">
         <code class="language-html">
-          &lt;button class=&quot;eduk-btn eduk-btn-primary&quot;&gt;Primary&lt;/button&gt;
-          &lt;button class=&quot;eduk-btn eduk-btn-secondary&quot;&gt;Secondary&lt;/button&gt;
-          &lt;button class=&quot;eduk-btn eduk-btn-tertiary&quot;&gt;Tertiary&lt;/button&gt;
-          &lt;button class=&quot;eduk-btn eduk-btn-success&quot;&gt;Success&lt;/button&gt;
-          &lt;button class=&quot;eduk-btn eduk-btn-danger&quot;&gt;Danger&lt;/button&gt;
-          &lt;button class=&quot;eduk-btn eduk-btn-warning&quot;&gt;Warning&lt;/button&gt;
-          &lt;button class=&quot;eduk-btn eduk-btn-light&quot;&gt;Light&lt;/button&gt;
-          &lt;button class=&quot;eduk-btn eduk-btn-dark&quot;&gt;Dark&lt;/button&gt;
+          &lt;button class=&quot;eduk-btn eduk-btn--primary&quot;&gt;Primary&lt;/button&gt;
+          &lt;button class=&quot;eduk-btn eduk-btn--secondary&quot;&gt;Secondary&lt;/button&gt;
+          &lt;button class=&quot;eduk-btn eduk-btn--tertiary&quot;&gt;Tertiary&lt;/button&gt;
+          &lt;button class=&quot;eduk-btn eduk-btn--success&quot;&gt;Success&lt;/button&gt;
+          &lt;button class=&quot;eduk-btn eduk-btn--danger&quot;&gt;Danger&lt;/button&gt;
+          &lt;button class=&quot;eduk-btn eduk-btn--warning&quot;&gt;Warning&lt;/button&gt;
+          &lt;button class=&quot;eduk-btn eduk-btn--light&quot;&gt;Light&lt;/button&gt;
+          &lt;button class=&quot;eduk-btn eduk-btn--dark&quot;&gt;Dark&lt;/button&gt;
         </code>
       </template>
     </Preview>
@@ -99,14 +99,14 @@
       </template>
       <template slot="vanilla-code">
         <code class="language-html">
-          &lt;button class=&quot;eduk-btn eduk-btn-primary-outline&quot;&gt;Primary&lt;/button&gt;
-          &lt;button class=&quot;eduk-btn eduk-btn-secondary-outline&quot;&gt;Secondary&lt;/button&gt;
-          &lt;button class=&quot;eduk-btn eduk-btn-tertiary-outline&quot;&gt;Tertiary&lt;/button&gt;
-          &lt;button class=&quot;eduk-btn eduk-btn-success-outline&quot;&gt;Success&lt;/button&gt;
-          &lt;button class=&quot;eduk-btn eduk-btn-danger-outline&quot;&gt;Danger&lt;/button&gt;
-          &lt;button class=&quot;eduk-btn eduk-btn-warning-outline&quot;&gt;Warning&lt;/button&gt;
-          &lt;button class=&quot;eduk-btn eduk-btn-light-outline&quot;&gt;Light&lt;/button&gt;
-          &lt;button class=&quot;eduk-btn eduk-btn-dark-outline&quot;&gt;Dark&lt;/button&gt;
+          &lt;button class=&quot;eduk-btn eduk-btn--primary eduk-btn--outlined&quot;&gt;Primary&lt;/button&gt;
+          &lt;button class=&quot;eduk-btn eduk-btn--secondary eduk-btn--outlined&quot;&gt;Secondary&lt;/button&gt;
+          &lt;button class=&quot;eduk-btn eduk-btn--tertiary eduk-btn--outlined&quot;&gt;Tertiary&lt;/button&gt;
+          &lt;button class=&quot;eduk-btn eduk-btn--success eduk-btn--outlined&quot;&gt;Success&lt;/button&gt;
+          &lt;button class=&quot;eduk-btn eduk-btn--danger eduk-btn--outlined&quot;&gt;Danger&lt;/button&gt;
+          &lt;button class=&quot;eduk-btn eduk-btn--warning eduk-btn--outlined&quot;&gt;Warning&lt;/button&gt;
+          &lt;button class=&quot;eduk-btn eduk-btn--light eduk-btn--outlined&quot;&gt;Light&lt;/button&gt;
+          &lt;button class=&quot;eduk-btn eduk-btn--dark eduk-btn--outlined&quot;&gt;Dark&lt;/button&gt;
         </code>
       </template>
     </Preview>
@@ -130,7 +130,7 @@
       </template>
       <template slot="vanilla-code">
         <code class="language-html">
-          &lt;button class=&quot;eduk-btn eduk-btn-primary&quot;&gt;Primary&lt;/button&gt;
+          &lt;button class=&quot;eduk-btn eduk-btn--primary&quot;&gt;Primary&lt;/button&gt;
         </code>
       </template>
     </Preview>
@@ -152,9 +152,9 @@
       </template>
       <template slot="vanilla-code">
         <code class="language-html">
-          &lt;button class=&quot;eduk-btn eduk-btn-primary eduk-btn--sm&quot;&gt;Small&lt;/button&gt;
-          &lt;button class=&quot;eduk-btn eduk-btn-primary&quot;&gt;Default&lt;/button&gt;
-          &lt;button class=&quot;eduk-btn eduk-btn-primary eduk-btn--lg&quot;&gt;Large&lt;/button&gt;
+          &lt;button class=&quot;eduk-btn eduk-btn--primary eduk-btn--sm&quot;&gt;Small&lt;/button&gt;
+          &lt;button class=&quot;eduk-btn eduk-btn--primary&quot;&gt;Default&lt;/button&gt;
+          &lt;button class=&quot;eduk-btn eduk-btn--primary eduk-btn--lg&quot;&gt;Large&lt;/button&gt;
         </code>
       </template>
     </Preview>
@@ -172,7 +172,7 @@
       </template>
       <template slot="vanilla-code">
         <code class="language-html">
-          &lt;button class=&quot;eduk-btn eduk-btn-primary disabled&quot;&gt;Disabled&lt;/button&gt;
+          &lt;button class=&quot;eduk-btn eduk-btn--primary disabled&quot;&gt;Disabled&lt;/button&gt;
         </code>
       </template>
     </Preview>
@@ -190,7 +190,7 @@
       </template>
       <template slot="vanilla-code">
         <code class="language-html">
-          &lt;button class=&quot;eduk-btn eduk-btn-primary eduk-btn--block&quot;&gt;Block&lt;/button&gt;
+          &lt;button class=&quot;eduk-btn eduk-btn--primary eduk-btn--block&quot;&gt;Block&lt;/button&gt;
         </code>
       </template>
     </Preview>
@@ -208,7 +208,7 @@
       </template>
       <template slot="vanilla-code">
         <code class="language-html">
-          &lt;a href=&quot;#&quot; class=&quot;eduk-btn eduk-btn-primary&quot;&gt;Link&lt;/a&gt;
+          &lt;a href=&quot;#&quot; class=&quot;eduk-btn eduk-btn--primary&quot;&gt;Link&lt;/a&gt;
         </code>
       </template>
     </Preview>

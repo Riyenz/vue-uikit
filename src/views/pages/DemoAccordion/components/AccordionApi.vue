@@ -83,6 +83,32 @@
           </div>
         </div>
       </template>
+      <template slot="slots">
+        <div>
+          <div class="eduk-table">
+            <table class="eduk-table__table">
+              <thead class="eduk-table__thead">
+                <tr>
+                  <th class="" style="width: 140px;">
+                    Slot
+                  </th>
+                  <th class="" style="width: 0px;">
+                    Description
+                  </th>
+                </tr>
+              </thead>
+              <tbody class="eduk-table__tbody">
+                <tr>
+                  <td style="max-width: 140px;">
+                    <code class="highlighter">default</code>
+                  </td>
+                  <td style="text-align: left;">Contains AccordionItem Components</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </template>
     </TabContent>
   </div>
 </template>

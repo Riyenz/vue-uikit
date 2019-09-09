@@ -54,7 +54,7 @@
             &#x3C;div
               class=&#x22;eduk-card__image&#x22; style=&#x22;background-image:
               url(&quot;//via.placeholder.com/300x180&quot;);&#x22;&#x3E;
-              &#x3C;div class=&#x22;eduk-u-mx-1 eduk-badge eduk-badge-secondary&#x22;&#x3E;
+              &#x3C;div class=&#x22;eduk-u-mx-1 eduk-badge eduk-badge--secondary&#x22;&#x3E;
                 Sponsored content
               &#x3C;/div&#x3E;
             &#x3C;/div&#x3E;

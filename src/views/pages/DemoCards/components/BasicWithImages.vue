@@ -64,7 +64,7 @@
                   Additional Information
                 &#x3C;/p&#x3E;
                 &#x3C;button
-                  class=&#x22;eduk-btn eduk-btn--block eduk-btn-primary&#x22;
+                  class=&#x22;eduk-btn eduk-btn--block eduk-btn--primary&#x22;
                   nomargin=&#x22;&#x22;&#x3E;
                   Apply now
                 &#x3C;/button&#x3E;

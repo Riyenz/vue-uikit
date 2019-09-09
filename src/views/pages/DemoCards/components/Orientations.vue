@@ -70,7 +70,7 @@
             &#x3C;div
               class=&#x22;eduk-card__image&#x22;
               style=&#x22;background-image: url(&quot;//via.placeholder.com/300&quot;);&#x22;&#x3E;
-              &#x3C;div class=&#x22;eduk-u-mx-1 eduk-badge eduk-badge-secondary&#x22;&#x3E;
+              &#x3C;div class=&#x22;eduk-u-mx-1 eduk-badge eduk-badge--secondary&#x22;&#x3E;
                 Sponsored content
               &#x3C;/div&#x3E;
             &#x3C;/div&#x3E;
@@ -172,7 +172,7 @@
             &#x3C;div
               class=&#x22;eduk-card__image&#x22;
               style=&#x22;background-image: url(&quot;//via.placeholder.com/300&quot;);&#x22;&#x3E;
-              &#x3C;div class=&#x22;eduk-u-mx-1 eduk-badge eduk-badge-secondary&#x22;&#x3E;
+              &#x3C;div class=&#x22;eduk-u-mx-1 eduk-badge eduk-badge--secondary&#x22;&#x3E;
                 Sponsored content
               &#x3C;/div&#x3E;
             &#x3C;/div&#x3E;
@@ -305,7 +305,7 @@
                     &#x3C;/div&#x3E;
                   &#x3C;/div&#x3E;
                   &#x3C;button
-                    class=&#x22;eduk-btn eduk-btn--block eduk-btn-primary&#x22;
+                    class=&#x22;eduk-btn eduk-btn--block eduk-btn--primary&#x22;
                     nomargin=&#x22;&#x22;&#x3E;
                     View details
                   &#x3C;/button&#x3E;

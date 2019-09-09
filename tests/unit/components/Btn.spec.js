@@ -38,7 +38,7 @@ describe('Btn.component.vue', () => {
   it('adds a button class of the specified props variant', () => {
     const wrapper = shallowMount(Btn, btnProperties);
 
-    expect(wrapper.classes(`${BTN_CLASS_NAME}-${btnProperties.propsData.variant}`)).to.equal(true);
+    expect(wrapper.classes(`${BTN_CLASS_NAME}--${btnProperties.propsData.variant}`)).to.equal(true);
   });
 
   it(`adds a .${BTN_CLASS_DISABLED} class when props disabled is equals true`, () => {
@@ -52,7 +52,7 @@ describe('Btn.component.vue', () => {
     expect(wrapper.classes(BTN_CLASS_DISABLED)).to.equal(true);
   });
 
-  it('adds an -outline modifier when props outline is equals true', () => {
+  it('adds an --outline modifier when props outline is equals true', () => {
     const wrapper = shallowMount(Btn, {
       ...btnProperties,
       propsData: {
@@ -60,7 +60,7 @@ describe('Btn.component.vue', () => {
       },
     });
 
-    expect(wrapper.classes(`${BTN_CLASS_NAME}-${btnProps.variant}-outline`)).to.equal(true);
+    expect(wrapper.classes(`${BTN_CLASS_NAME}--outlined`)).to.equal(true);
   });
 
   it('adds a --{size} modifier when props size is provided', () => {
@@ -88,7 +88,7 @@ describe('Btn.component.vue', () => {
       slots: btnSlots,
     });
 
-    expect(wrapper.classes(`${BTN_CLASS_NAME}-${DEFAULT_VARIANT}`)).to.equal(true);
+    expect(wrapper.classes(`${BTN_CLASS_NAME}--${DEFAULT_VARIANT}`)).to.equal(true);
   });
 
   it('throws a VARIANT_DOESNT_EXISTS error if props variant is not available', () => {

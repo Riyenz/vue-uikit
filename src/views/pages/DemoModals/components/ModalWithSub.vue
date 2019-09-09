@@ -61,31 +61,32 @@
       </template>
       <template slot="vanilla-code">
         <code class="language-html">
-          &#x3C;div class=&#x22;eduk-modal show&#x22;&#x3E;
-            &#x3C;div class=&#x22;eduk-modal__container&#x22;&#x3E;
-              &#x3C;div class=&#x22;eduk-modal__main&#x22;&#x3E;
-                &#x3C;section class=&#x22;eduk-modal__navbar&#x22;&#x3E;
-                  &#x3C;i class=&#x22;eduk-modal__navbar-back fas fa-chevron-left fa-lg&#x22;&#x3E;&#x3C;/i&#x3E;
-                  &#x3C;span class=&#x22;eduk-modal__navbar-logo&#x22;&#x3E;
-                    &#x3C;img src=&#x22;/assets/img/eduk-navbar-logo.png&#x22; alt=&#x22;&#x22;&#x3E;
-                  &#x3C;/span&#x3E;
-                &#x3C;/section&#x3E;
-                &#x3C;section class=&#x22;eduk-modal__header&#x22;&#x3E;
-                  &#x3C;h2 class=&#x22;eduk-head eduk-modal__header-title eduk-u-mb-0&#x22;&#x3E;Modal w/ Sub Content&#x3C;/h2&#x3E;
-                  &#x3C;i class=&#x22;eduk-modal__header-close fas fa-times fa-lg&#x22;&#x3E;&#x3C;/i&#x3E;
-                &#x3C;/section&#x3E;
-                &#x3C;section class=&#x22;eduk-modal__content&#x22;&#x3E;
-                  &#x3C;section class=&#x22;eduk-modal__body&#x22;&#x3E;
-                    &#x3C;h2 class=&#x22;eduk-modal__title eduk-modal__title--mobile&#x22;&#x3E;Modal w/ Sub Content&#x3C;/h2&#x3E;
-                    &#x3C;h3 class=&#x22;eduk-head&#x22;&#x3E;Here might be a content title&#x3C;/h3&#x3E;
-                    &#x3C;p class=&#x22;eduk-text&#x22;&#x3E;
+          <!-- eslint-disable max-len -->
+          &lt;div class=&quot;eduk-modal show&quot;&gt;
+            &lt;div class=&quot;eduk-modal__container&quot;&gt;
+              &lt;div class=&quot;eduk-modal__main&quot;&gt;
+                &lt;section class=&quot;eduk-modal__navbar&quot;&gt;
+                  &lt;i class=&quot;eduk-modal__navbar-back fas fa-chevron-left fa-lg&quot;&gt;&lt;/i&gt;
+                  &lt;span class=&quot;eduk-modal__navbar-logo&quot;&gt;
+                    &lt;img src=&quot;/assets/img/eduk-navbar-logo.png&quot; alt=&quot;&quot;&gt;
+                  &lt;/span&gt;
+                &lt;/section&gt;
+                &lt;section class=&quot;eduk-modal__header&quot;&gt;
+                  &lt;h2 class=&quot;eduk-head eduk-modal__header-title eduk-u-mb-0&quot;&gt;Modal w/ Sub Content&lt;/h2&gt;
+                  &lt;i class=&quot;eduk-modal__header-close fas fa-times fa-lg&quot;&gt;&lt;/i&gt;
+                &lt;/section&gt;
+                &lt;section class=&quot;eduk-modal__content&quot;&gt;
+                  &lt;section class=&quot;eduk-modal__body&quot;&gt;
+                    &lt;h2 class=&quot;eduk-modal__title eduk-modal__title--mobile&quot;&gt;Modal w/ Sub Content&lt;/h2&gt;
+                    &lt;h3 class=&quot;eduk-head&quot;&gt;Here might be a content title&lt;/h3&gt;
+                    &lt;p class=&quot;eduk-text&quot;&gt;
                       Cillum commodo quis ut laboris aliquip et non Lorem fugiat.
                       Laborum minim esse ad proident proident eiusmod nostrud aliqua
                       elit. Id id eu cupidatat aliquip magna amet magna nisi non in
                       et nisi. Dolor laboris enim incididunt tempor veniam. Ex aliquip
                       dolor consectetur officia elit.
-                    &#x3C;/p&#x3E;
-                    &#x3C;p class=&#x22;eduk-text&#x22;&#x3E;
+                    &lt;/p&gt;
+                    &lt;p class=&quot;eduk-text&quot;&gt;
                       Elit eiusmod velit et sunt proident tempor.
                       Enim incididunt eiusmod pariatur reprehenderit
                       ipsum minim consequat. Nisi duis eu dolor nostrud
@@ -93,52 +94,53 @@
                       Laborum tempor ullamco ex Lorem excepteur. Ex consequat
                       officia exercitation ut cillum veniam fugiat dolor enim
                       irure ut esse in fugiat.
-                    &#x3C;/p&#x3E;
-                    &#x3C;p class=&#x22;eduk-text&#x22;&#x3E;
+                    &lt;/p&gt;
+                    &lt;p class=&quot;eduk-text&quot;&gt;
                       Non ex occaecat veniam minim fugiat enim magna.
-                    &#x3C;/p&#x3E;
-                    &#x3C;p class=&#x22;eduk-text&#x22;&#x3E;
+                    &lt;/p&gt;
+                    &lt;p class=&quot;eduk-text&quot;&gt;
                       Cillum commodo quis ut laboris aliquip et non Lorem fugiat.
                       Laborum minim esse ad proident proident eiusmod nostrud aliqua
                       elit. Id id eu cupidatat aliquip magna amet magna nisi non in
                       et nisi. Dolor laboris enim incididunt tempor veniam. Ex aliquip
                       dolor consectetur officia elit.
-                    &#x3C;/p&#x3E;
-                  &#x3C;/section&#x3E;
-                &#x3C;/section&#x3E;
-              &#x3C;/div&#x3E;
-              &#x3C;div class=&#x22;eduk-modal__sub show&#x22;&#x3E;
-                &#x3C;div class=&#x22;eduk-modal__sub-mask&#x22;&#x3E;&#x3C;/div&#x3E;
-                &#x3C;div class=&#x22;eduk-modal__sub-content&#x22;&#x3E;
-                  &#x3C;div class=&#x22;eduk-modal__sub-top&#x22;&#x3E;
-                    &#x3C;img src=&#x22;/assets/icons/horizontal-line.png&#x22; class=&#x22;eduk-modal__sub-top-line show&#x22;&#x3E;
-                    &#x3C;img src=&#x22;/assets/icons/chevron-down.png&#x22; class=&#x22;eduk-modal__sub-top-down&#x22;&#x3E;
-                  &#x3C;/div&#x3E;
-                  &#x3C;div class=&#x22;eduk-row eduk-no-gutters&#x22;&#x3E;
-                    &#x3C;div class=&#x22;eduk-col-3 eduk-col-sm-12&#x22;&#x3E;
-                      &#x3C;span class=&#x22;eduk-logo eduk-u-mb-3&#x22;&#x3E;
-                        &#x3C;img src=&#x22;/assets/img/logo-placeholder.png&#x22;&#x3E;
-                      &#x3C;/span&#x3E;
-                    &#x3C;/div&#x3E;
-                    &#x3C;div class=&#x22;eduk-col eduk-col-sm-12&#x22;&#x3E;
-                      &#x3C;h4 class=&#x22;eduk-head eduk-u-mb-1&#x22;&#x3E;Dolore duis tempor Anim do fugiat.&#x3C;/h4&#x3E;
-                      &#x3C;p class=&#x22;eduk-text eduk-u-text-sm--mobile eduk-u-mb-0&#x22;&#x3E;
+                    &lt;/p&gt;
+                  &lt;/section&gt;
+                &lt;/section&gt;
+              &lt;/div&gt;
+              &lt;div class=&quot;eduk-modal__sub show&quot;&gt;
+                &lt;div class=&quot;eduk-modal__sub-mask&quot;&gt;&lt;/div&gt;
+                &lt;div class=&quot;eduk-modal__sub-content&quot;&gt;
+                  &lt;div class=&quot;eduk-modal__sub-top&quot;&gt;
+                    &lt;img src=&quot;/assets/icons/horizontal-line.png&quot; class=&quot;eduk-modal__sub-top-line show&quot;&gt;
+                    &lt;img src=&quot;/assets/icons/chevron-down.png&quot; class=&quot;eduk-modal__sub-top-down&quot;&gt;
+                  &lt;/div&gt;
+                  &lt;div class=&quot;eduk-row eduk-no-gutters&quot;&gt;
+                    &lt;div class=&quot;eduk-col-3 eduk-col-sm-12&quot;&gt;
+                      &lt;span class=&quot;eduk-logo eduk-u-mb-3&quot;&gt;
+                        &lt;img src=&quot;/assets/img/logo-placeholder.png&quot;&gt;
+                      &lt;/span&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;eduk-col eduk-col-sm-12&quot;&gt;
+                      &lt;h4 class=&quot;eduk-head eduk-u-mb-1&quot;&gt;Dolore duis tempor Anim do fugiat.&lt;/h4&gt;
+                      &lt;p class=&quot;eduk-text eduk-u-text-sm--mobile eduk-u-mb-0&quot;&gt;
                         Tempor adipisicing commodo ut cupidatat aliqua nisi elit.
-                      &#x3C;/p&#x3E;
-                    &#x3C;/div&#x3E;
-                  &#x3C;/div&#x3E;
-                  &#x3C;div class=&#x22;eduk-modal__sub-actions&#x22;&#x3E;
-                    &#x3C;button class=&#x22;eduk-btn eduk-btn-primary eduk-btn--lg eduk-u-m-1 &#x22;&#x3E;Apply to this school&#x3C;/button&#x3E;
-                    &#x3C;button class=&#x22;eduk-btn eduk-btn-tertiary-outline eduk-btn--lg eduk-u-m-1 &#x22;&#x3E;Message School&#x3C;/button&#x3E;
-                  &#x3C;/div&#x3E;
-                &#x3C;/div&#x3E;
-                &#x3C;div class=&#x22;eduk-modal__sub-close&#x22;&#x3E;
+                      &lt;/p&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                  &lt;div class=&quot;eduk-modal__sub-actions&quot;&gt;
+                    &lt;button class=&quot;eduk-btn eduk-btn--primary eduk-btn--lg eduk-u-m-1 &quot;&gt;Apply to this school&lt;/button&gt;
+                    &lt;button class=&quot;eduk-btn eduk-btn--tertiary eduk-btn--outlined eduk-btn--lg eduk-u-m-1 &quot;&gt;Message School&lt;/button&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;eduk-modal__sub-close&quot;&gt;
                   Close Window
-                  &#x3C;i class=&#x22;fas fa-times&#x22;&#x3E;&#x3C;/i&#x3E;
-                &#x3C;/div&#x3E;
-              &#x3C;/div&#x3E;
-            &#x3C;/div&#x3E;
-          &#x3C;/div&#x3E;
+                  &lt;i class=&quot;fas fa-times&quot;&gt;&lt;/i&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          <!-- eslint-enable max-len -->
         </code>
       </template>
     </Preview>
