@@ -118,4 +118,14 @@ describe('Input.component.vue', () => {
 
     expect(wrapper.find(`textarea.${INPUT_FIELD_CLASS_NAME}`).exists()).to.equal(true);
   });
+
+  it('set field value', () => {
+    const wrapper = shallowMount(Input, {
+      propsData: {
+        value: 'test',
+      },
+    });
+
+    expect(wrapper.vm.value).to.equal('test');
+  });
 });

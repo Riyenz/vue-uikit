@@ -118,6 +118,17 @@
                 <code class="highlighter">1</code>
               </td>
             </tr>
+            <tr>
+              <td style="max-width: 140px;">
+                <code class="highlighter">v-model</code>
+              </td>
+              <td style="text-align: left;">
+                Control's two way binding property
+              </td>
+              <td style="text-align: left;">String</td>
+              <td style="text-align: left;">&mdash;</td>
+              <td style="text-align: left;">&mdash;</td>
+            </tr>
           </tbody>
         </table>
       </div>

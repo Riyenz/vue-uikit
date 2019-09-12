@@ -18,6 +18,8 @@
           :placeholder="placeholder"
           :disabled="disabled"
           :id="id"
+          :value="value"
+          @input="$emit('input', $event.target.value)"
           @change="inputChange"
         />
         <input
@@ -26,6 +28,8 @@
           :placeholder="placeholder"
           :disabled="disabled"
           :id="id"
+          :value="value"
+          @input="$emit('input', $event.target.value)"
           @change="inputChange"
           v-else
         />
@@ -97,6 +101,10 @@ export default {
     rows: {
       type: Number,
       default: 1,
+    },
+    value: {
+      type: String,
+      default: '',
     },
   },
   computed: {
