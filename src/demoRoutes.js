@@ -54,6 +54,12 @@ export default [
     component: () => import('./views/pages/DemoGrids/index.vue'),
   },
   {
+    path: 'input',
+    name: 'demo-input',
+    displayName: 'Input',
+    component: () => import('./views/pages/DemoInput/index.vue'),
+  },
+  {
     path: 'item-list',
     name: 'demo-item-list',
     displayName: 'Item List',
@@ -78,9 +84,21 @@ export default [
     component: () => import('./views/pages/DemoRatings/index.vue'),
   },
   {
+    path: 'snackbar',
+    name: 'demo-snackbar',
+    displayName: 'Snackbar',
+    component: () => import('./views/pages/DemoSnackbar/index.vue'),
+  },
+  {
     path: 'table',
     name: 'demo-table',
     displayName: 'Table',
     component: () => import('./views/pages/DemoTable/index.vue'),
+  },
+  {
+    path: 'toast',
+    name: 'demo-toast',
+    displayName: 'Toast',
+    component: () => import('./views/pages/DemoToast/index.vue'),
   },
 ];

@@ -1,0 +1,120 @@
+@keyframes toastFadeSlideIn {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+    transform: translate3d(0, -150%, 0);
+  }
+
+  50% {
+    opacity: 0;
+    visibility: hidden;
+    transform: translate3d(0, -75%, 0);
+  }
+
+  100% {
+    opacity: 1;
+    visibility: visible;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes toastFadeOut {
+  from {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.eduk-toast {
+  display: flex;
+  width: 100%;
+  color: $toast-color;
+  padding: $toast-padding;
+  border-radius: 5px;
+  align-items: center;
+  box-shadow: $toast-shadow;
+  animation: toastFadeSlideIn 0.18s ease-in-out forwards;
+
+  &.hide {
+    transform: translate3d(0, 0, 0);
+    animation: toastFadeOut 0.4s ease-in-out forwards;
+  }
+
+  &__content {
+    flex: 1;
+  }
+
+  &__action {
+    font-size: $toast-action-font-size;
+    line-height: 1em;
+    font-weight: 600;
+    color: $toast-action-color;
+    cursor: pointer;
+  }
+
+  @each $color, $value in $theme-colors {
+    &--#{$color} {
+      background-color: $value;
+    }
+  }
+
+  .fa-icon {
+    font-size: $toast-icon-size;
+  }
+}
+
+.eduk-toast-list {
+  max-width: $toast-list-max-width;
+  width: 100%;
+  position: fixed;
+  z-index: 10000;
+
+  &--top {
+    top: 20px;
+    left: 50%;
+    transform: translate3d(-50%, 0, 0);
+  }
+
+  &--top-left {
+    top: 20px;
+    left: 20px;
+  }
+
+  &--top-right {
+    top: 20px;
+    right: 20px;
+  }
+
+  &--top > .eduk-toast,
+  &--top-left > .eduk-toast,
+  &--top-right > .eduk-toast {
+    margin-bottom: $toast-spacer;
+  }
+
+  &--bottom {
+    bottom: 20px;
+    left: 50%;
+    transform: translate3d(-50%, 0, 0);
+  }
+
+  &--bottom-left {
+    bottom: 20px;
+    left: 20px;
+  }
+
+  &--bottom-right {
+    bottom: 20px;
+    right: 20px;
+  }
+
+  &--bottom > .eduk-toast,
+  &--bottom-left > .eduk-toast,
+  &--bottom-right > .eduk-toast {
+    margin-top: $toast-spacer;
+  }
+}
