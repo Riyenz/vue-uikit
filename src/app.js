@@ -46,4 +46,11 @@ export { default as Card } from '@/UIKit/Card/Card.component.vue';
 export { default as Ratings } from '@/UIKit/Ratings/Ratings.component.vue';
 
 /** Input Component */
-export { default as Input } from '@/UIKit/Input/Input.component.vue';
+export { default as InputField } from '@/UIKit/Input/Input.component.vue';
+
+/** Snackbar Component */
+export { default as Snackbar } from '@/UIKit/Snackbar/Snackbar.lib';
+
+/** Toast Component */
+export { default as Toast } from '@/UIKit/Toast/Toast.lib';
+
