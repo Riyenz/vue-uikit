@@ -54,3 +54,5 @@ export { default as Snackbar } from '@/UIKit/Snackbar/Snackbar.lib';
 /** Toast Component */
 export { default as Toast } from '@/UIKit/Toast/Toast.lib';
 
+/** Sidebar Component */
+export { default as Sidebar } from '@/UIKit/Sidebar/Sidebar.component.vue';

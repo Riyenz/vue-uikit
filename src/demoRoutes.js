@@ -84,6 +84,12 @@ export default [
     component: () => import('./views/pages/DemoRatings/index.vue'),
   },
   {
+    path: 'sidebar',
+    name: 'demo-sidebar',
+    displayName: 'Sidebar',
+    component: () => import('./views/pages/DemoSidebar/index.vue'),
+  },
+  {
     path: 'snackbar',
     name: 'demo-snackbar',
     displayName: 'Snackbar',
