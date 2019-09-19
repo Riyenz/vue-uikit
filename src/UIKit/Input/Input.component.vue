@@ -31,6 +31,7 @@
           :value="value"
           @input="$emit('input', $event.target.value)"
           @change="inputChange"
+          @blur="blurChange"
           v-else
         />
         <span class="fa-icon" v-if="icon">
@@ -162,6 +163,9 @@ export default {
     inputChange(ev) {
       this.$emit('change', ev);
     },
+    blurChange(ev){
+      this.$emit('blur', ev);
+    }
   },
 };
 </script>
