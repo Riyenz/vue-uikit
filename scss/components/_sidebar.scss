@@ -102,6 +102,7 @@
     color: inherit;
   }
 
+  &__item:hover,
   &__item--active {
     background-color: $sidebar-menu-item-active-background;
     border-color: $sidebar-menu-item-active-border-color;
@@ -113,7 +114,8 @@
     width: 16px;
   }
 
-  &__item--active > .svg-inline--fa {
+  &__item--active > .svg-inline--fa,
+  &__item:hover > .svg-inline--fa {
     color: $sidebar-menu-item-active-icon-color;
   }
 
@@ -182,6 +184,7 @@
     flex: 1;
   }
 
+  &__item:hover > .svg-inline--fa:first-child,
   &--active &__item > .svg-inline--fa:first-child {
     color: $sidebar-list-item-icon-active-color;
   }
@@ -206,6 +209,7 @@
     color: inherit;
   }
 
+  &__sub-item:hover,
   &__sub-item--active {
     background-color: $sidebar-list-sub-item-active-background;
     border-color: $sidebar-list-sub-item-active-border-color;

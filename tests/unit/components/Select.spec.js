@@ -2,7 +2,10 @@ import { expect } from 'chai';
 import { shallowMount, mount } from '@vue/test-utils';
 import Select from '@/UIKit/Select/Select.component.vue';
 import SelectTest from '@/UIKit/Select/Select.test.vue';
-import { SELECT_CLASS_NAME } from '@/UIKit/Select/Select.config';
+import {
+  SELECT_CLASS_NAME,
+  SELECT_DISABLED_CLASS_NAME,
+} from '@/UIKit/Select/Select.config';
 
 const options = [
   { id: 1, name: 'One' },
@@ -21,6 +24,16 @@ describe('Select.component.vue', () => {
     const wrapper = shallowMount(Select);
 
     expect(wrapper.find(`.${SELECT_CLASS_NAME}`).exists()).to.equal(true);
+  });
+
+  it(`adds a .${SELECT_DISABLED_CLASS_NAME} class when disabled is true`, () => {
+    const wrapper = shallowMount(Select, {
+      propsData: {
+        disabled: true,
+      },
+    });
+
+    expect(wrapper.find(`.${SELECT_DISABLED_CLASS_NAME}`).exists()).to.equal(true);
   });
 
   it('add select options', () => {

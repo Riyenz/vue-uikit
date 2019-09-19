@@ -17,6 +17,7 @@
         :class="inputClass"
         :placeholder="inputPlaceholder"
         :value="searchKey"
+        :disabled="disabled"
         @input="onInputChange"
         @focus="onFocus"
         @blur="onFocusOut"
@@ -39,6 +40,7 @@
         :class="inputClass"
         :placeholder="inputPlaceholder"
         :value="searchKey"
+        :disabled="disabled"
         @input="onInputChange"
         @focus="onFocus"
         @blur="onFocusOut"
@@ -80,6 +82,11 @@
 import {
   COMPONENT_NAME,
   SELECT_CLASS_NAME,
+  SELECT_OPEN_CLASS_NAME,
+  SELECT_DISABLED_CLASS_NAME,
+  SELECT_INPUT_CLASS_NAME,
+  SELECT_INPUT_EMPTY_CLASS_NAME,
+  SELECT_INPUT_ACTIVE_CLASS_NAME,
 } from './Select.config';
 
 export default {
@@ -103,6 +110,10 @@ export default {
       type: Boolean,
       default: false,
     },
+    disabled: {
+      type: Boolean,
+      default: false,
+    },
   },
   data() {
     return {
@@ -117,7 +128,8 @@ export default {
     selectClass() {
       return {
         [SELECT_CLASS_NAME]: true,
-        [`${SELECT_CLASS_NAME}--open`]: this.open,
+        [SELECT_OPEN_CLASS_NAME]: this.open,
+        [SELECT_DISABLED_CLASS_NAME]: this.disabled,
       };
     },
     inputPlaceholder() {
@@ -132,9 +144,9 @@ export default {
     },
     inputClass() {
       return {
-        [`${SELECT_CLASS_NAME}__input`]: true,
-        [`${SELECT_CLASS_NAME}__input--empty`]: this.selected === null,
-        [`${SELECT_CLASS_NAME}__input--active`]: this.hasImage && this.selected !== null,
+        [SELECT_INPUT_CLASS_NAME]: true,
+        [SELECT_INPUT_EMPTY_CLASS_NAME]: this.selected === null,
+        [SELECT_INPUT_ACTIVE_CLASS_NAME]: this.hasImage && this.selected !== null,
       };
     },
     emptyOptions() {

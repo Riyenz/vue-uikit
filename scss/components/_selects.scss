@@ -169,4 +169,21 @@
   &--open &__indicator {
     transform: translate3d(0, -50%, 0) rotate(-180deg);
   }
+
+  &--disabled {
+    background-color: $select-disabled-background;
+    cursor: not-allowed;
+  }
+
+  &--disabled &__input {
+    pointer-events: none;
+  }
+
+  &--disabled &__input::placeholder {
+    color: $select-disabled-input-color;
+  }
+
+  &--disabled &__options {
+    display: none;
+  }
 }
