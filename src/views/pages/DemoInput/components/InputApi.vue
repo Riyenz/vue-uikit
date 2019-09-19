@@ -190,6 +190,16 @@
                 - Native event action information
               </td>
             </tr>
+            <tr>
+              <td style="max-width: 180px;">
+                <code class="highlighter">@blur</code>
+              </td>
+              <td style="text-align: left;">Triggered when the input loses focus.</td>
+              <td style="text-align: left;">
+                <code class="highlighter">event</code>
+                - Native event action information
+              </td>
+            </tr>
           </tbody>
         </table>
       </div>
