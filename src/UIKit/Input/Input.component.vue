@@ -163,9 +163,9 @@ export default {
     inputChange(ev) {
       this.$emit('change', ev);
     },
-    blurChange(ev){
+    blurChange(ev) {
       this.$emit('blur', ev);
-    }
+    },
   },
 };
 </script>
