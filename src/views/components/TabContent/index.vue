@@ -75,8 +75,6 @@ export default {
 @import "scss/variables";
 
 .content {
-  display: flex;
-
   &__main {
     flex: 1;
   }
@@ -89,6 +87,8 @@ export default {
 .panes {
   display: block;
   color: $tertiary;
+  width: 100%;
+  overflow: auto;
 
   &__item {
     display: none;
