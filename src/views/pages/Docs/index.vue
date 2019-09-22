@@ -1,9 +1,12 @@
 <template>
   <div class="main">
-    <Nav />
+    <Nav @toggle="toggleMobileSidebar" />
     <div class="content">
-      <aside class="content__sidebar">
-        <Sidebar :currentRoute="currentRoute" />
+      <aside :class="contentSidebarClass" @click="toggleMobileSidebar">
+        <Sidebar
+          :currentRoute="currentRoute"
+          :open="mblSidebarOpen"
+        />
       </aside>
       <div class="content__body">
         <router-view
@@ -33,6 +36,7 @@ export default {
       prev: {},
       currentRoute: null,
       selectedTab: localStorage.getItem('eduk-selected-tab') || 'Develop',
+      mblSidebarOpen: false,
     };
   },
   components: {
@@ -45,6 +49,14 @@ export default {
   },
   updated() {
     this.applyNavigations();
+  },
+  computed: {
+    contentSidebarClass() {
+      return {
+        content__sidebar: true,
+        'content__sidebar--open': this.mblSidebarOpen,
+      };
+    },
   },
   methods: {
     applyNavigations() {
@@ -60,12 +72,16 @@ export default {
       this.selectedTab = tabIndex;
       localStorage.setItem('eduk-selected-tab', tabIndex);
     },
+    toggleMobileSidebar() {
+      this.mblSidebarOpen = !this.mblSidebarOpen;
+    },
   },
 };
 </script>
 
 <style lang="scss" scoped>
 @import "scss/variables";
+@import "scss/mixins/_breakpoints";
 
 .main {
   height: 100vh;
@@ -81,8 +97,6 @@ export default {
 
   &__sidebar {
     width: 310px;
-    box-shadow: 0 2px 5px 0 rgba(116, 116, 116, 0.5);
-    background-color: $gray-100;
     position: relative;
     height: 100%;
   }
@@ -93,10 +107,29 @@ export default {
     overflow: auto;
     height: 100%;
   }
+}
 
-  &__quicklinks {
-    width: 310px;
-    background-color: $white;
+@include media-breakpoint-down(lg) {
+  .content {
+    &__sidebar {
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.15);
+      position: fixed;
+      z-index: 1001;
+      left: 0;
+      right: 0;
+      top: 0;
+      width: auto;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.15s, visibility 0.15s;
+      will-change: opacity, visibility;
+    }
+
+    &__sidebar--open {
+      opacity: 1;
+      visibility: visible;
+    }
   }
 }
 </style>

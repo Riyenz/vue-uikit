@@ -66,6 +66,7 @@ export default {
 
 <style lang="scss" scoped>
 @import 'scss/variables';
+@import 'scss/mixins/_breakpoints';
 
 .preview {
   border: 1px solid $secondary;
@@ -156,6 +157,24 @@ export default {
 
   &__section:not(:last-child) {
     border-bottom: 1px solid $secondary;
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .preview {
+    min-width: 0;
+    max-width: none;
+    width: 100%;
+
+    &__content {
+      padding: 20px;
+    }
+  }
+
+  .collapsible {
+    &__section {
+      padding: 10px 20px 20px;
+    }
   }
 }
 </style>
