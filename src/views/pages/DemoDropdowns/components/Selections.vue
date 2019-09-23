@@ -12,11 +12,18 @@
             :options="dropdownOptions"
           />
         </span>
-        <span>
+        <span class="eduk-u-mr-3">
           <Select
             placeholder="Select w/ image"
             :options="dropdownOptionsWithImages"
             hasImage
+          />
+        </span>
+        <span>
+          <Select
+            placeholder="Disabled"
+            disabled
+            :options="dropdownOptions"
           />
         </span>
       </template>
@@ -25,6 +32,7 @@
           &#x3C;Select placeholder=&#x22;Normal&#x22; :options=&#x22;[{ id: 1, name: 'One' }]&#x22; /&#x3E;
           &#x3C;Select placeholder=&#x22;Select w/ image&#x22; :options=&#x22;[{ id: 1, name: 'One', img: 'https://via.placeholder.com/150' }]
           &#x22; hasImage /&#x3E;
+          &#x3C;Select placeholder=&#x22;Normal&#x22; :options=&#x22;[{ id: 1, name: 'One' }]&#x22; disabled /&#x3E;
         </code>
       </template>
       <template slot="vanilla-code">
@@ -65,6 +73,14 @@
                   No results found.
               &#x3C;/li&#x3E;
             &#x3C;/ul&#x3E;
+          &#x3C;/div&#x3E;
+
+          &#x3C;div class=&#x22;eduk-select eduk-select--disabled&#x22;&#x3E;
+            &#x3C;span class=&#x22;eduk-select__indicator&#x22;&#x3E;&#x3C;/span&#x3E;
+            &#x3C;div class=&#x22;eduk-select__input-wrapper&#x22;&#x3E;
+              &#x3C;input placeholder=&#x22;Disabled&#x22; disabled=&#x22;disabled&#x22;
+              class=&#x22;eduk-select__input eduk-select__input--empty&#x22;&#x3E;
+            &#x3C;/div&#x3E;
           &#x3C;/div&#x3E;
         </code>
       </template>
