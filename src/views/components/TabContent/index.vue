@@ -92,11 +92,11 @@ export default {
   display: block;
   color: $tertiary;
   width: 100%;
-  overflow: auto;
 
   &__item {
     display: none;
     padding: 25px 0;
+    overflow: hidden;
   }
 
   &__item--active {
@@ -105,6 +105,10 @@ export default {
 
   &--padded {
     padding: 25px 35px;
+  }
+
+  &__item > .scollable {
+    overflow: auto;
   }
 }
 

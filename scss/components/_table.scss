@@ -217,6 +217,10 @@
       padding: $table-stackable-td-padding;
     }
 
+    &--stackable &__table--clone {
+      display: none;
+    }
+
     &--fixed &__table {
       table-layout: auto;
     }
