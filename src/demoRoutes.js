@@ -96,6 +96,12 @@ export default [
     component: () => import('./views/pages/DemoSnackbar/index.vue'),
   },
   {
+    path: 'tab',
+    name: 'demo-tab',
+    displayName: 'Tab',
+    component: () => import('./views/pages/DemoTab/index.vue'),
+  },
+  {
     path: 'table',
     name: 'demo-table',
     displayName: 'Table',

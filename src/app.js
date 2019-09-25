@@ -56,3 +56,6 @@ export { default as Toast } from '@/UIKit/Toast/Toast.lib';
 
 /** Sidebar Component */
 export { default as Sidebar } from '@/UIKit/Sidebar/Sidebar.component.vue';
+
+/** Tab Component */
+export { default as Tab } from '@/UIKit/Tab/Tab.component.vue';

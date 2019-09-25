@@ -477,3 +477,21 @@ $sidebar-footer-copy-color: $gray-600;
 $sidebar-footer-copy-font-size: $font-size-base * 0.75;
 $sidebar-footer-link-size: $font-size-base * 0.75;
 $sidebar-footer-link-margin: $spacer * 0.625;
+
+/* Tab Variables */
+$eduk-tab-pane-padding: ($spacer * 1.25) 0;
+$eduk-tab-nav-item-margin: 0 ($spacer * 0.9375);
+$eduk-tab-nav-item-first-margin: 0 ($spacer * 0.9375) 0 0;
+$eduk-tab-nav-item-last-margin: 0 0 0 ($spacer * 0.9375);
+$eduk-tab-nav-item-border: 3px solid transparent;
+$eduk-tab-nav-item-transition: border 0.15s;
+$eduk-tab-link-size: $font-size-base;
+$eduk-tab-link-padding: ($spacer * 0.625) 0 ($spacer * 0.5);
+$eduk-tab-link-transition: color 0.15s;
+$eduk-tab-active-color: $secondary;
+$eduk-tab-loading-padding: ($spacer * 5) ($spacer * 1.25);
+$eduk-tab-loading-background: $gray-100;
+$eduk-tab-loading-icon-size: $font-size-base * 1.75;
+$eduk-tab-loading-icon-color: $primary;
+$eduk-tab-loading-text-size: $font-size-base;
+$eduk-tab-loading-text-size-color: $gray-500;
