@@ -96,7 +96,6 @@ export default {
   &__item {
     display: none;
     padding: 25px 0;
-    overflow: hidden;
   }
 
   &__item--active {

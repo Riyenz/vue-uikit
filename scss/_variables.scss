@@ -517,3 +517,26 @@ $blockquote-border-horizontal-padding: ($spacer * 1.5625) ($spacer * 1.25) ($spa
 $tooltip-font-size: $font-size-base * 0.75;
 $tooltip-padding: ($spacer * 0.375) ($spacer * 0.5);
 $tooltip-max-width: 180px;
+
+/* Datepicker Variables */
+$datepicker-default-width: 250px;
+$datepicker-margin: $spacer * 0.625;
+$datepicker-calendar-transition: all 0.15s;
+$datepicker-separator-margin: 0 ($spacer * 0.625);
+$datepicker-calendar-border: solid 1px $gray-300;
+$datepicker-calendar-padding: ($spacer * 0.75) ($spacer * 1.125);
+$datepicker-calendar-caret-size: $font-size-base * 0.75;
+$datepicker-calendar-caret-margin: $spacer * 0.625;
+$datepicker-calendar-weeks-padding: $spacer * 0.5;
+$datepicker-calendar-day-font-size: $font-size-base * 0.75;
+$datepicker-calendar-day-padding: ($spacer * 0.6875) 0;
+$datepicker-calendar-day-transition: all 0.15s;
+$datepicker-calendar-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+$datepicker-months-padding: $spacer * 0.3125;
+$datepicker-months-background: rgba(0, 0, 0, 0.85);
+$datepicker-months-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+$datepicker-months-header-padding: ($spacer * 0.1875) ($spacer * 0.625);
+$datepicker-months-arrows-size: $font-size-base * 0.75;
+$datepicker-months-font-size: $font-size-base * 0.875;
+$datepicker-month-padding: ($spacer * 0.3125) ($spacer * 0.625);
+$datepicker-month-transition: all 0.1s;
