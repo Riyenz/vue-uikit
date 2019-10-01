@@ -1,6 +1,6 @@
 <template>
   <nav class="nav">
-    <button class="nav__menu">
+    <button class="nav__menu" @click="toggleSidebar">
       <font-awesome-icon icon="bars" />
     </button>
     <img src="@/assets/img/eduk-navbar-logo.png" alt="EdukasyonPH" class="nav__logo" />
@@ -10,11 +10,17 @@
 <script>
 export default {
   name: 'MainNav',
+  methods: {
+    toggleSidebar() {
+      this.$emit('toggle');
+    },
+  },
 };
 </script>
 
 <style lang="scss" scoped>
 @import "scss/variables";
+@import "scss/mixins/_breakpoints";
 
 .nav {
   padding: 16px 30px;
@@ -30,12 +36,27 @@ export default {
   }
 
   &__menu {
+    cursor: pointer;
     outline: none;
     background: transparent;
     border: none;
-    margin-right: 40px;
-    font-size: 20px;
-    color: #bfc5d1;
+    font-size: 18px;
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 25px;
+    transform: translate3d(0, -50%, 0);
+  }
+}
+
+@include media-breakpoint-down(lg) {
+  .nav {
+    padding: 16px 20px;
+    justify-content: center;
+
+    &__menu {
+      display: block;
+    }
   }
 }
 </style>

@@ -1,7 +1,7 @@
 <template>
   <TabContent>
     <template slot="properties">
-      <div class="eduk-table">
+      <div class="eduk-table scollable">
         <table class="eduk-table__table">
           <thead class="eduk-table__thead">
             <tr>
@@ -134,7 +134,7 @@
       </div>
     </template>
     <template slot="slots">
-      <div class="eduk-table">
+      <div class="eduk-table scollable">
         <table class="eduk-table__table">
           <thead class="eduk-table__thead">
             <tr>
@@ -164,7 +164,7 @@
       </div>
     </template>
     <template slot="events">
-      <div class="eduk-table">
+      <div class="eduk-table scollable">
         <table class="eduk-table__table">
           <thead class="eduk-table__thead">
             <tr>

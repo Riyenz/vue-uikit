@@ -33,6 +33,7 @@ export default {
 
 <style lang="scss" scoped>
 @import "scss/variables";
+@import "scss/mixins/_breakpoints";
 
 .bottom-nav {
   padding: 25px 35px;
@@ -71,6 +72,12 @@ export default {
     text-transform: uppercase;
     letter-spacing: 1.6px;
     color: $gray-500;
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .bottom-nav__container {
+    padding: 20px;
   }
 }
 </style>

@@ -1,5 +1,9 @@
 <template>
-  <div class="sidebar">
+  <div
+    :class="sidebarClass"
+    @click="stopPropagation"
+  >
+    <a class="sidebar__close">&times;</a>
     <div class="sidebar__top">
       <h3>Edukasyon Product<br />Design Language System</h3>
       <h4><router-link to="/">Introduction</router-link></h4>
@@ -45,10 +49,17 @@ export default {
   name: 'Sidebar',
   props: {
     currentRoute: String,
+    open: Boolean,
   },
   computed: {
     componentRoutes() {
       return this.demoRoutes.filter(r => r.name !== 'demo-intro');
+    },
+    sidebarClass() {
+      return {
+        sidebar: true,
+        'sidebar--open': this.open,
+      };
     },
   },
   data() {
@@ -56,11 +67,21 @@ export default {
       demoRoutes,
     };
   },
+  methods: {
+    stopPropagation(ev) {
+      const tag = ev.target.tagName;
+
+      if (tag !== 'A' && tag !== 'BUTTON') {
+        ev.stopImmediatePropagation();
+      }
+    },
+  },
 };
 </script>
 
 <style lang="scss" scoped>
 @import "scss/variables";
+@import "scss/mixins/_breakpoints";
 
 .sidebar {
   color: $tertiary;
@@ -68,6 +89,18 @@ export default {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  width: 310px;
+  box-shadow: 0 2px 5px 0 rgba(116, 116, 116, 0.5);
+  background-color: $gray-100;
+
+  &__close {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    font-size: 30px;
+    cursor: pointer;
+    display: none;
+  }
 
   &__top {
     padding: 35px 40px;
@@ -121,7 +154,6 @@ export default {
 .footer-links {
   padding: 20px 30px;
   display: flex;
-  justify-content: space-between;
   border-bottom: 1px solid $gray-300;
 
   &__item {
@@ -129,6 +161,7 @@ export default {
     font-weight: bold;
     text-decoration: none;
     outline: none;
+    margin-right: 15px;
   }
 
   &--secondary {
@@ -149,6 +182,41 @@ export default {
 
   p {
     font-size: 12px;
+  }
+}
+
+@include media-breakpoint-down(lg) {
+  .sidebar {
+    min-height: 100vh;
+    height: auto;
+    transform: translate3d(-102%, 0, 0);
+    transition: transform 0.15s ease-in-out;
+
+    &--open {
+      transform: translate3d(0, 0, 0);
+    }
+
+    &__top {
+      padding: 60px 20px 30px;
+    }
+
+    &__close {
+      display: block;
+    }
+  }
+
+  .footer-links {
+    padding: 20px;
+  }
+
+  .copyright {
+    padding: 0 20px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .sidebar {
+    width: 100%;
   }
 }
 </style>

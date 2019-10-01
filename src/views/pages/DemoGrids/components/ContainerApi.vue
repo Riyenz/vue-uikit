@@ -3,7 +3,7 @@
     <h3 class="eduk-h3 eduk-u-mb-3">Container API</h3>
     <TabContent>
       <template slot="properties">
-        <div class="eduk-table">
+        <div class="eduk-table scollable">
           <table class="eduk-table__table">
             <thead class="eduk-table__thead">
               <tr>
@@ -42,7 +42,7 @@
       </template>
       <template slot="slots">
         <div>
-          <div class="eduk-table">
+          <div class="eduk-table scollable">
             <table class="eduk-table__table">
               <thead class="eduk-table__thead">
                 <tr>

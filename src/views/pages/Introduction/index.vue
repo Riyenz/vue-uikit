@@ -33,6 +33,7 @@ export default {
 
 <style lang="scss" scoped>
 @import "scss/variables";
+@import "scss/mixins/_breakpoints";
 
 .wrapper {
   padding: 25px 35px;
@@ -44,6 +45,12 @@ export default {
 
   .eduk-text {
     letter-spacing: 0;
+  }
+}
+
+@include media-breakpoint-down(lg) {
+  .wrapper {
+    width: auto;
   }
 }
 </style>

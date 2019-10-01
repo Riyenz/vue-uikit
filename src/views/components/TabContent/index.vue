@@ -73,12 +73,14 @@ export default {
 
 <style lang="scss" scoped>
 @import "scss/variables";
+@import "scss/mixins/_breakpoints";
 
 .content {
   display: flex;
 
   &__main {
     flex: 1;
+    width: calc(100% - 325px);
   }
 
   &__quicklinks {
@@ -89,10 +91,12 @@ export default {
 .panes {
   display: block;
   color: $tertiary;
+  width: 100%;
 
   &__item {
     display: none;
     padding: 25px 0;
+    overflow: hidden;
   }
 
   &__item--active {
@@ -101,6 +105,10 @@ export default {
 
   &--padded {
     padding: 25px 35px;
+  }
+
+  &__item > .scollable {
+    overflow: auto;
   }
 }
 
@@ -131,6 +139,21 @@ export default {
     background: #f1f1f1;
     padding: 4px 6px;
     border-radius: 3px;
+  }
+
+  @include media-breakpoint-down(sm) {
+    .well {
+      min-width: 0;
+      max-width: none;
+      width: 100%;
+      padding: 20px;
+    }
+  }
+
+  @include media-breakpoint-down(lg) {
+    .content__quicklinks {
+      display: none;
+    }
   }
 }
 </style>
