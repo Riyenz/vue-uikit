@@ -1,10 +1,12 @@
 <template>
-  <button :class="btnClass" @click="onClick" v-if="!link">
-    <slot></slot>
-  </button>
-  <a :href="link" :class="btnClass" @click="onClick" v-else>
-    <slot></slot>
-  </a>
+  <component :is="btnTag" :class="btnClass" @click="onClick">
+    <template v-if="!loading">
+      <slot></slot>
+    </template>
+    <template v-else>
+      <span></span>
+    </template>
+  </component>
 </template>
 
 <script>
@@ -15,6 +17,7 @@ import {
   BTN_CLASS_NAME,
   BTN_CLASS_DISABLED,
   BTN_BLOCK_CLASS_NAME,
+  BTN_LOADING_CLASS_NAME,
 } from './Btn.config';
 
 import {
@@ -57,6 +60,9 @@ export default {
     link: {
       type: String,
     },
+    loading: {
+      type: Boolean,
+    },
   },
   computed: {
     btnClass() {
@@ -67,7 +73,11 @@ export default {
         [`${BTN_CLASS_NAME}--${this.variant}`]: this.variant,
         [`${BTN_CLASS_NAME}--outlined`]: this.outline,
         [`${BTN_CLASS_NAME}--${this.size}`]: this.size,
+        [BTN_LOADING_CLASS_NAME]: this.loading,
       };
+    },
+    btnTag() {
+      return this.link ? 'a' : 'button';
     },
   },
   methods: {

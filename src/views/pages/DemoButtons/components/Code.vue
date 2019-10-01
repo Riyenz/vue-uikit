@@ -212,18 +212,21 @@
         </code>
       </template>
     </Preview>
+    <ButtonLoading/>
   </div>
 </template>
 
 <script>
 import Btn from '@/UIKit/Btn/Btn.component.vue';
 import Preview from '@/views/components/Preview/index.vue';
+import ButtonLoading from './ButtonLoading.vue';
 
 export default {
   name: 'Code',
   components: {
     Btn,
     Preview,
+    ButtonLoading,
   },
 };
 </script>

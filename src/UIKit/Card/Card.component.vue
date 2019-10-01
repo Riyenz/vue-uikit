@@ -58,6 +58,7 @@ import {
   CARD_ACTIONS_BASELINE_CLASS_NAME,
   CARD_ACTION_CLASS_NAME,
   CARD_ACTION_ACTIVE_CLASS_NAME,
+  CARD_LOADING_CLASS_NAME,
 } from './Card.config';
 
 export default {
@@ -107,6 +108,9 @@ export default {
       type: String,
       default: '',
     },
+    loading: {
+      type: Boolean,
+    },
   },
   data() {
     return {
@@ -118,8 +122,13 @@ export default {
   },
   computed: {
     cardStyle() {
+      let background = 'none';
+
+      if (this.bgImage) background = `#f1f1f1 url("${this.bgImage}") center/cover`;
+      if (this.bgImage && this.loading) background = '#ced4da';
+
       return {
-        background: this.bgImage ? `#f1f1f1 url("${this.bgImage}") center/cover` : 'none',
+        background,
       };
     },
     cardClass() {
@@ -131,6 +140,7 @@ export default {
         [CARD_HORIZONTAL_INVERT_CLASS_NAME]: this.horizontalInvert,
         [CARD_ELEVATED_CLASS_NAME]: this.elevated,
         [CARD_BORDERED_CLASS_NAME]: this.bordered,
+        [CARD_LOADING_CLASS_NAME]: this.loading,
       };
     },
     cardHeaderClass() {

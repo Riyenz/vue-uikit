@@ -1,16 +1,16 @@
 <template>
   <div :class="itemlistClass">
-    <div :class="imageClass" :style="{ 'background-image': `url(${image})` }"></div>
-    <div :class="headerClass" v-if="hasHeader">
+    <div :class="IMAGE_CLASS_NAME" :style="{ 'background-image': `url(${image})` }"></div>
+    <div :class="HEADER_CLASS_NAME" v-if="hasHeader">
       <slot name="header"></slot>
     </div>
-    <div :class="descriptionClass" v-if="hasDescription">
+    <div :class="DESCRIPTION_CLASS_NAME" v-if="hasDescription">
       <slot name="description"></slot>
     </div>
     <div :class="actionsClass" v-if="hasActions">
       <slot name="actions"></slot>
     </div>
-    <div :class="statusClass" v-if="hasStatus">
+    <div :class="STATUS_CLASS_NAME" v-if="hasStatus">
       <slot name="status"></slot>
     </div>
   </div>
@@ -25,6 +25,7 @@ import {
   ACTIONS_CLASS_NAME,
   ACTIONS_FULL_ROW_CLASS_NAME,
   STATUS_CLASS_NAME,
+  ITEMLIST_LOADING_CLASS_NAME,
 } from './Itemlist.config';
 import logoPlaceholder from '@/assets/img/logo-placeholder.png';
 
@@ -35,14 +36,17 @@ export default {
       type: String,
       default: logoPlaceholder,
     },
+    loading: {
+      type: Boolean,
+    },
   },
   data() {
     return {
-      itemlistClass: ITEMLIST_CLASS_NAME,
-      imageClass: IMAGE_CLASS_NAME,
-      headerClass: HEADER_CLASS_NAME,
-      descriptionClass: DESCRIPTION_CLASS_NAME,
-      statusClass: STATUS_CLASS_NAME,
+      ITEMLIST_CLASS_NAME,
+      IMAGE_CLASS_NAME,
+      HEADER_CLASS_NAME,
+      DESCRIPTION_CLASS_NAME,
+      STATUS_CLASS_NAME,
     };
   },
   computed: {
@@ -52,17 +56,23 @@ export default {
         [ACTIONS_FULL_ROW_CLASS_NAME]: !this.hasStatus,
       };
     },
+    itemlistClass() {
+      return {
+        [ITEMLIST_CLASS_NAME]: true,
+        [ITEMLIST_LOADING_CLASS_NAME]: this.loading,
+      };
+    },
     hasHeader() {
-      return this.$slots.header;
+      return this.$slots.header || this.loading;
     },
     hasDescription() {
-      return this.$slots.description;
+      return this.$slots.description || this.loading;
     },
     hasActions() {
-      return this.$slots.actions;
+      return this.$slots.actions || this.loading;
     },
     hasStatus() {
-      return this.$slots.status;
+      return this.$slots.status || this.loading;
     },
   },
 };

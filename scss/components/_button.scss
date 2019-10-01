@@ -78,3 +78,33 @@
 .eduk-btn--lg {
   @include button-size($btn-min-width-lg, $btn-min-height-lg, $font-size-base, $border-radius);
 }
+
+/** Loading Button Animation */
+.eduk-btn--loading {
+  pointer-events: none;
+
+  span {
+    @include dot-animation;
+
+    animation-delay: 0.1s;
+    margin: -5px auto 0;
+
+    &::before {
+      @include dot-animation;
+
+      animation-delay: 0s;
+      content: '';
+      margin-top: 5px;
+      margin-left: 18px;
+    }
+
+    &::after {
+      @include dot-animation;
+
+      animation-delay: 0.2s;
+      content: '';
+      margin-top: -10px;
+      margin-left: -18px;
+    }
+  }
+}

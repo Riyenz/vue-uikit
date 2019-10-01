@@ -87,3 +87,61 @@
     background-color: $white;
   }
 }
+
+/** Card Loading Classes */
+.eduk-card--loading {
+  &:not(.eduk-card--horizontal)::after {
+    display: block;
+    margin: $card-content-padding;
+    content: '';
+    @include loading($font-size-base, calc(40px + 60%));
+  }
+
+  .eduk-card__content {
+    padding: 0 $card-content-padding;
+    height: 150px;
+
+    &::before {
+      display: block;
+      content: '';
+      margin: $spacer 0;
+      @include loading($h6-font-size + 8px, calc(30px + 40%));
+    }
+
+    &::after {
+      display: block;
+      content: '';
+      @include loading($font-size-base, calc(40px + 60%));
+    }
+
+    > * {
+      display: none;
+    }
+  }
+
+  .eduk-card__image {
+    background-image: none !important;
+    background-color: $gray-400;
+    margin-bottom: $spacer;
+
+    > * {
+      display: none;
+    }
+  }
+
+  .eduk-card__header {
+    display: block;
+    content: '';
+    margin: $spacer;
+    @include loading($h6-font-size + 8px, calc(30px + 40%));
+
+    > * {
+      display: none !important;
+    }
+  }
+
+  &.eduk-card--horizontal > .eduk-card__image {
+    height: $card-image-horizontal-height;
+    margin-bottom: 0;
+  }
+}

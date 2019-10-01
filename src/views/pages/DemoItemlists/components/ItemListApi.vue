@@ -34,6 +34,15 @@
                 <code class="highlighter">/assets/img/logo-placeholder.png</code>
               </td>
             </tr>
+            <tr>
+              <td style="max-width: 190px;">
+                <code class="highlighter">loading</code>
+              </td>
+              <td style="text-align: left;">Adds a loading animation</td>
+              <td style="text-align: left;">Boolean</td>
+              <td style="text-align: left;">&mdash;</td>
+              <td style="text-align: left;">&mdash;</td>
+            </tr>
           </tbody>
         </table>
       </div>

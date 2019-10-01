@@ -153,3 +153,20 @@ $accordion-item: '.eduk-accordion-item';
     }
   }
 }
+
+/** Accordion Loading Classes */
+#{$accordion-item}--loading {
+  pointer-events: none;
+
+  #{$accordion-item}__header {
+    height: calc((#{$accordion-header-padding-y} * 2) + #{$font-size-base} + 8px);
+  }
+
+  #{$accordion-item}__header-title {
+    @include loading($h6-font-size + 8px);
+  }
+}
+
+.eduk-accordion--thick > #{$accordion-item}--loading > #{$accordion-item}__header {
+  height: calc((#{$accordion-header-padding-y-thick} * 2) + #{$font-size-base} + 8px);
+}

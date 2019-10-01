@@ -29,7 +29,9 @@
         <slot name="title"></slot>
       </h6>
     </div>
-    <div :class="ACCORDION_ITEM_CONTENT_CLASS">
+    <div
+      v-if="!loading"
+      :class="ACCORDION_ITEM_CONTENT_CLASS">
       <slot></slot>
     </div>
   </div>
@@ -42,6 +44,7 @@ import {
   ACCORDION_ITEM_CONTENT_CLASS,
   ACCORDION_ARROW_CLASS,
   ACCORDION_ITEM_ACTIVE_CLASS,
+  ACCORDION_ITEM_LOADING_CLASS,
 } from './Accordion.config';
 
 import { DISPLAY_CLASS } from '@/UIKit/config';
@@ -51,6 +54,9 @@ export default {
   props: {
     title: {
       type: [String, Number],
+    },
+    loading: {
+      type: Boolean,
     },
   },
   data() {
@@ -69,6 +75,7 @@ export default {
       return {
         [ACCORDION_ITEM_CLASS]: true,
         [ACCORDION_ITEM_ACTIVE_CLASS]: this.isActive,
+        [ACCORDION_ITEM_LOADING_CLASS]: this.loading,
       };
     },
     // Arrow for Content Hidden

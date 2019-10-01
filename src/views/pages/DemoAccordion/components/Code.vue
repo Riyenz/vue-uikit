@@ -51,7 +51,7 @@
                 Magna ea eu laboris sunt incididunt ex exercitation esse qui laborum.
               &lt;/div&gt;
             &lt;/div&gt;
-        &lt;/div&gt;
+          &lt;/div&gt;
         </code>
       </template>
     </Preview>
@@ -269,8 +269,9 @@
         </code>
       </template>
     </Preview>
-    <AccordionApi />
-    <AccordionItemApi />
+    <AccordionLoading/>
+    <AccordionApi/>
+    <AccordionItemApi/>
   </div>
 </template>
 
@@ -280,6 +281,7 @@ import Accordion from '@/UIKit/Accordion/Accordion.component.vue';
 import AccordionItem from '@/UIKit/Accordion/AccordionItem.component.vue';
 import Preview from '@/views/components/Preview/index.vue';
 
+import AccordionLoading from './AccordionLoading.vue';
 import AccordionApi from './AccordionApi.vue';
 import AccordionItemApi from './AccordionItemApi.vue';
 
@@ -291,6 +293,7 @@ export default {
     Preview,
     AccordionApi,
     AccordionItemApi,
+    AccordionLoading,
   },
   methods: {
     handler(pagination) {

@@ -8,4 +8,5 @@ export const DESCRIPTION_CLASS_NAME = 'eduk-itemlist__description';
 export const ACTIONS_CLASS_NAME = 'eduk-itemlist__actions';
 export const STATUS_CLASS_NAME = 'eduk-itemlist__status';
 export const ACTIONS_FULL_ROW_CLASS_NAME = 'eduk-itemlist__actions--full-row';
+export const ITEMLIST_LOADING_CLASS_NAME = 'eduk-itemlist--loading';
 export const ERROR_MESSAGE = `${APP_NAME} ${COMPONENT_NAME}: this is a sample error message`;

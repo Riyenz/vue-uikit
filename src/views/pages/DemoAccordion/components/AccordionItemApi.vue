@@ -35,6 +35,15 @@
                   <td style="text-align: left;">&mdash;</td>
                   <td style="text-align: left;">&mdash;</td>
                 </tr>
+                <tr>
+                  <td style="max-width: 120px;">
+                    <code class="highlighter">loading</code>
+                  </td>
+                  <td style="text-align: left;">Makes the component to animate loading. Can be used individually</td>
+                  <td style="text-align: left;">Boolean</td>
+                  <td style="text-align: left;">&mdash;</td>
+                  <td style="text-align: left;"><code class="highlighter">false</code></td>
+                </tr>
               </tbody>
             </table>
           </div>

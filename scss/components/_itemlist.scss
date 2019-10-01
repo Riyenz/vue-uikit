@@ -7,8 +7,8 @@
   padding: $itemlist-padding-y $itemlist-padding-x;
   overflow: hidden;
   grid-column-gap: $itemlist-column-gap;
-  grid-auto-columns: auto 1fr auto;
-  grid-auto-rows: auto auto;
+  grid-template-columns: auto 1fr auto;
+  grid-template-rows: auto auto;
 
   &__img {
     height: $itemlist-img-size;
@@ -47,6 +47,10 @@
 
     &--full-row {
       grid-row: 1 / 3;
+
+      :first-child {
+        margin-bottom: auto;
+      }
     }
   }
 
@@ -86,6 +90,75 @@
     &__actions {
       grid-row: 1 / 3;
       grid-column: 3 / 4;
+    }
+  }
+}
+
+/** Itemlist Loading Classes */
+.eduk-itemlist--loading {
+  .eduk-itemlist__status {
+    display: block;
+    content: '';
+    @include loading($font-size-base + 8px, 200px);
+
+    > * {
+      display: none;
+    }
+  }
+
+  .eduk-itemlist__img {
+    background-image: none !important;
+    background-color: $gray-400 !important;
+    border-radius: 50%;
+
+    > * {
+      display: none;
+    }
+  }
+
+  .eduk-itemlist__header {
+    &::before {
+      display: block;
+      content: '';
+      margin-bottom: $spacer;
+      @include loading($h6-font-size + 8px, calc(70px + 40%));
+    }
+
+    > * {
+      display: none;
+    }
+  }
+
+  .eduk-itemlist__description {
+    &::before {
+      display: block;
+      content: '';
+      margin-bottom: $spacer;
+      @include loading($font-size-base, 100%);
+    }
+
+    &::after {
+      display: block;
+      content: '';
+      margin-bottom: $spacer;
+      @include loading($font-size-base, calc(100px + 50%));
+    }
+
+    > * {
+      display: none;
+    }
+  }
+
+  .eduk-itemlist__actions {
+    &::before {
+      display: block;
+      content: '';
+      margin: auto 0 0 auto;
+      @include loading($btn-min-height, $btn-min-width);
+    }
+
+    > * {
+      display: none !important;
     }
   }
 }

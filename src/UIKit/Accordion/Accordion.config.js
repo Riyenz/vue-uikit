@@ -7,6 +7,7 @@ export const BORDERED_ACCORDION_CLASS = 'eduk-accordion--bordered';
 export const INVERTED_ACCORDION_CLASS = 'eduk-accordion--inverted';
 
 export const ACCORDION_ITEM_CLASS = 'eduk-accordion-item';
+export const ACCORDION_ITEM_LOADING_CLASS = 'eduk-accordion-item--loading';
 export const ACCORDION_ITEM_ACTIVE_CLASS = 'eduk-accordion-item--active';
 export const ACCORDION_ARROW_CLASS = 'eduk-accordion-item__arrow';
 export const ACCORDION_ITEM_HEAD_CLASS = 'eduk-accordion-item__header';

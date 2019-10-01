@@ -10,6 +10,7 @@
           <BasicItemlist/>
           <HintItemlist/>
           <BadgeItemlist/>
+          <ItemlistLoading/>
         </div>
         <ItemListApi />
       </div>
@@ -21,7 +22,9 @@
 
 <script>
 import TabContent from '@/views/components/TabContent/index.vue';
-import { BasicItemlist, HintItemlist, BadgeItemlist } from './components';
+import {
+  BasicItemlist, HintItemlist, BadgeItemlist, ItemlistLoading,
+} from './components';
 import ItemListApi from './components/ItemListApi.vue';
 
 export default {
@@ -36,6 +39,7 @@ export default {
     BasicItemlist,
     HintItemlist,
     BadgeItemlist,
+    ItemlistLoading,
     ItemListApi,
   },
   methods: {

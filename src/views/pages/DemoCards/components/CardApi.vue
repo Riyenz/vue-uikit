@@ -123,7 +123,20 @@
                 <code class="highlighter">bgImage</code>
               </td>
               <td style="text-align: left;">Card background image</td>
-              <td style="text-align: left;">String</td>
+              <td style="text-align: left;">Boolean</td>
+              <td style="text-align: left;">&mdash;</td>
+              <td style="text-align: left;">
+                <code class="highlighter">
+                  false
+                </code>
+              </td>
+            </tr>
+            <tr>
+              <td style="max-width: 190px;">
+                <code class="highlighter">loading</code>
+              </td>
+              <td style="text-align: left;">Adds a loading animation</td>
+              <td style="text-align: left;">Boolean</td>
               <td style="text-align: left;">&mdash;</td>
               <td style="text-align: left;">&mdash;</td>
             </tr>

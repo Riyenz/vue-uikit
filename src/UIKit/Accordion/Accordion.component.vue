@@ -1,10 +1,22 @@
 <template>
   <div :class="accordionClass">
-    <slot></slot>
+    <template v-if="!loading">
+      <!-- main content -->
+      <slot></slot>
+    </template>
+
+    <!-- for loading only -->
+    <template v-if="loading">
+      <AccordionItem loading/>
+      <AccordionItem loading/>
+      <AccordionItem loading/>
+    </template>
   </div>
 </template>
 
 <script>
+import AccordionItem from './AccordionItem.component.vue';
+
 import {
   ACCORDION_CLASS_NAME,
   THICK_ACCORDION_CLASS,
@@ -14,6 +26,9 @@ import {
 
 export default {
   name: 'Accordion',
+  components: {
+    AccordionItem,
+  },
   props: {
     variant: {
       type: String,
@@ -27,6 +42,9 @@ export default {
     menu: {
       type: Boolean,
     },
+    loading: {
+      type: Boolean,
+    },
   },
   computed: {
     accordionClass() {
@@ -35,7 +53,7 @@ export default {
         [THICK_ACCORDION_CLASS]: this.thick,
         [BORDERED_ACCORDION_CLASS]: this.bordered,
         [INVERTED_ACCORDION_CLASS]: this.menu || this.variant,
-        [`${ACCORDION_CLASS_NAME}--${this.variant}`]: this.variant,
+        [`${ACCORDION_CLASS_NAME}--${this.variant}`]: this.variant && !this.loading,
       };
     },
   },
@@ -47,8 +65,9 @@ export default {
   mounted() {
     if (this.menu || this.variant) this.setItemArrowDown();
 
-    this.mutateItemComponent();
-    window.TEST = this.$slots.default;
+    this.$watch('loading', () => {
+      this.mutateItemComponent();
+    }, { immediate: true });
   },
   methods: {
     setItemArrowDown() {
@@ -66,7 +85,6 @@ export default {
 
       this.$slots.default = this.$slots.default.map((accordionItem, accordionItemIndex) => {
         if (!accordionItem.componentOptions.tag === 'AccordionItem') return accordionItem;
-
         accordionItem.componentInstance.$data.itemIndex = accordionItemIndex;
         accordionItem.componentInstance.$data.fnItemActive = this.itemActiveCallback;
         return accordionItem;

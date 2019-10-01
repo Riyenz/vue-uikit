@@ -11,6 +11,7 @@
         <BasicWithBadge />
         <Orientations />
         <FluidImage />
+        <CardLoading />
         <CardApi />
       </div>
     </template>
@@ -26,20 +27,11 @@ import BasicWithActions from './components/BasicWithActions.vue';
 import BasicWithBadge from './components/BasicWithBadge.vue';
 import Orientations from './components/Orientations.vue';
 import FluidImage from './components/FluidImage.vue';
+import CardLoading from './components/CardLoading.vue';
 import CardApi from './components/CardApi.vue';
 
 export default {
   name: 'DemoCards',
-  props: {
-    selectedTab: {
-      type: String,
-    },
-  },
-  methods: {
-    onTabChange(tabIndex) {
-      this.$emit('tabChange', tabIndex);
-    },
-  },
   components: {
     TabContent,
     Basic,
@@ -49,6 +41,17 @@ export default {
     Orientations,
     FluidImage,
     CardApi,
+    CardLoading,
+  },
+  props: {
+    selectedTab: {
+      type: String,
+    },
+  },
+  methods: {
+    onTabChange(tabIndex) {
+      this.$emit('tabChange', tabIndex);
+    },
   },
 };
 </script>
