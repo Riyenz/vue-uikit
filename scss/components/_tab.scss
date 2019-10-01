@@ -1,0 +1,69 @@
+.eduk-tab {
+  display: block;
+
+  &__pane {
+    display: none;
+    padding: $eduk-tab-pane-padding;
+  }
+
+  &__pane--active {
+    display: block;
+  }
+
+  &__loading {
+    padding: $eduk-tab-loading-padding;
+    background-color: $eduk-tab-loading-background;
+    text-align: center;
+    border-radius: 5px;
+  }
+
+  &__loading-icon {
+    font-size: $eduk-tab-loading-icon-size;
+    color: $eduk-tab-loading-icon-color;
+  }
+
+  &__loading-text {
+    font-size: $eduk-tab-loading-text-size;
+    color: $eduk-tab-loading-text-size-color;
+  }
+}
+
+.eduk-tab-nav {
+  display: flex;
+
+  &__item {
+    margin: $eduk-tab-nav-item-margin;
+    border-bottom: $eduk-tab-nav-item-border;
+    transition: $eduk-tab-nav-item-transition;
+    will-change: border;
+  }
+
+  &__item:first-child {
+    margin: $eduk-tab-nav-item-first-margin;
+  }
+
+  &__item:last-child {
+    margin: $eduk-tab-nav-item-last-margin;
+  }
+
+  &__link {
+    font-size: $eduk-tab-link-size;
+    font-weight: bold;
+    padding: $eduk-tab-link-padding;
+    display: block;
+    cursor: pointer;
+    text-transform: capitalize;
+    transition: $eduk-tab-link-transition;
+    will-change: color;
+  }
+
+  &__item:hover,
+  &__item--active {
+    border-bottom-color: $eduk-tab-active-color;
+  }
+
+  &__item--active &__link,
+  &__item:hover &__link {
+    color: $eduk-tab-active-color;
+  }
+}
