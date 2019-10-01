@@ -60,6 +60,7 @@ class ComponentTemplate {
 
   importDemo() {
     const displayName = StringHelper(this.name).format('capitalize').output();
+    const pathName = StringHelper(this.name).format('kebabcase').output();
 
     fs.readFile(demoRoutesPath, 'utf8', (err, data) => {
       const arr = data.slice(16, data.length).split('},');
@@ -76,7 +77,7 @@ class ComponentTemplate {
         insertIndex,
         0,
         // eslint-disable-next-line max-len
-        `\n  {\n    path: '${this.name}',\n    name: 'demo-${this.name}',\n    displayName: '${displayName}',\n    component: () => import('./views/pages/Demo${displayName}/index.vue'),\n  `,
+        `\n  {\n    path: '${pathName}',\n    name: 'demo-${pathName}',\n    displayName: '${displayName}',\n    component: () => import('./views/pages/Demo${displayName}/index.vue'),\n  `,
       );
 
       fs.writeFile(demoRoutesPath, `export default [${arr.join('},')}`, (writeError) => {

@@ -37,7 +37,7 @@
 .eduk-u-text-white { color: $white !important; }
 
 @each $color, $value in $theme-colors {
-  @include text-emphasis-variant(".eduk-u-text-#{$color}", $value);
+  @include text-emphasis-variant(".eduk-u-text--#{$color}", $value);
 }
 
 .eduk-u-text-body { color: $body-color !important; }

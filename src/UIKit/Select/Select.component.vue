@@ -114,12 +114,15 @@ export default {
       type: Boolean,
       default: false,
     },
+    value: {
+      type: Object,
+    },
   },
   data() {
     return {
       open: false,
       isOpenOnMouseDown: false,
-      selected: null,
+      selected: this.value || null,
       searchKey: '',
       selectOptions: [],
     };
@@ -203,10 +206,12 @@ export default {
 
         this.filterMultiselectOptions();
         this.$emit('change', [...this.selected]);
+        this.$emit('input', [...this.selected]);
       } else {
         this.selected = this.options.find(option => String(option.id) === id);
 
         this.$emit('change', { ...this.selected });
+        this.$emit('input', { ...this.selected });
       }
     },
     setSelectState(isOpen) {

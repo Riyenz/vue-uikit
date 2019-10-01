@@ -57,5 +57,8 @@ export { default as Toast } from '@/UIKit/Toast/Toast.lib';
 /** Sidebar Component */
 export { default as Sidebar } from '@/UIKit/Sidebar/Sidebar.component.vue';
 
+/** Statistics Component */
+export { default as Statistics } from '@/UIKit/Statistics/Statistics.component.vue';
+
 /** Tab Component */
 export { default as Tab } from '@/UIKit/Tab/Tab.component.vue';

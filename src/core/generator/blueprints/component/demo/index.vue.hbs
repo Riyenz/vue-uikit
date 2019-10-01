@@ -3,7 +3,7 @@
     <template slot="design">
       <!-- add something -->
     </template>
-    <template slot="code">
+    <template slot="develop">
       <!-- add something -->
     </template>
     <template slot="quicklinks">
@@ -19,8 +19,7 @@ export default {
   name: 'Demo{{ scopeName }}',
   props: {
     selectedTab: {
-      type: Number,
-      default: 0,
+      type: String,
     },
   },
   components: {

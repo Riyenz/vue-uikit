@@ -2,6 +2,7 @@ const {
   camelCase,
   upperFirst,
   toLower,
+  kebabCase,
 } = require('lodash');
 
 module.exports = function StringHelper(str) {
@@ -22,6 +23,9 @@ module.exports = function StringHelper(str) {
         break;
       case 'lowercase':
         this.str = toLower(this.str);
+        break;
+      case 'kebabcase':
+        this.str = kebabCase(this.str);
         break;
       default:
         this.str = upperFirst(camelCase(this.str)); // default 'pascalcase'

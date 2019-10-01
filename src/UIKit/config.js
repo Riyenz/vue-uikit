@@ -1,5 +1,6 @@
 export const APP_NAME = 'UIKit';
 export const SHOW_CLASS = 'eduk-u-show';
+export const TEXT_UTILITY_CLASS = 'eduk-u-text';
 
 export const VARIANT = {
   PRIMARY: 'primary',
