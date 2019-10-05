@@ -24,10 +24,22 @@ export default [
     component: () => import('./views/pages/DemoBadges/index.vue'),
   },
   {
+    path: 'blockquote',
+    name: 'demo-blockquote',
+    displayName: 'Blockquote',
+    component: () => import('./views/pages/DemoBlockquote/index.vue'),
+  },
+  {
     path: 'button',
     name: 'demo-button',
     displayName: 'Button',
     component: () => import('./views/pages/DemoButtons/index.vue'),
+  },
+  {
+    path: 'button-group',
+    name: 'demo-button-group',
+    displayName: 'Button Group',
+    component: () => import('./views/pages/DemoButtonGroup/index.vue'),
   },
   {
     path: 'cards',
@@ -118,5 +130,11 @@ export default [
     name: 'demo-toast',
     displayName: 'Toast',
     component: () => import('./views/pages/DemoToast/index.vue'),
+  },
+  {
+    path: 'tooltip',
+    name: 'demo-tooltip',
+    displayName: 'Tooltip',
+    component: () => import('./views/pages/DemoTooltip/index.vue'),
   },
 ];

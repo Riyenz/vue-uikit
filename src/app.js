@@ -62,3 +62,12 @@ export { default as Statistics } from '@/UIKit/Statistics/Statistics.component.v
 
 /** Tab Component */
 export { default as Tab } from '@/UIKit/Tab/Tab.component.vue';
+
+/** ButtonGroup Component */
+export { default as ButtonGroup } from '@/UIKit/ButtonGroup/ButtonGroup.component.vue';
+
+/** Blockquote Component */
+export { default as Blockquote } from '@/UIKit/Blockquote/Blockquote.component.vue';
+
+/** Tooltip Component */
+export { default as Tooltip } from '@/UIKit/Tooltip/Tooltip.lib';

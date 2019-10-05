@@ -18,7 +18,6 @@
       :size="size"
       :class="dropdownWithIconClass"
       class="eduk-dropdown__trigger"
-      noMargin
     >
       <span v-if="!!title" class="eduk-dropdown__title">{{title}}</span>
       <span><font-awesome-icon :icon="icon" class="eduk-dropdown__icon" /></span>
@@ -33,7 +32,6 @@
         :outline="outline"
         :size="size"
         class="eduk-dropdown__cta"
-        noMargin
       >
         <span class="eduk-dropdown__title">{{title}}</span>
       </Btn>
@@ -43,7 +41,6 @@
         :outline="outline"
         :size="size"
         class="eduk-dropdown__trigger"
-        noMargin
       >
         <font-awesome-icon :icon="icon" class="eduk-dropdown__icon" />
       </Btn>
@@ -183,7 +180,6 @@ export default {
       return {
         [DROPDOWN_GROUP_CLASS_NAME]: true,
         [`${DROPDOWN_GROUP_CLASS_NAME}--${this.iconPlacement}`]: true,
-        'eduk-u-m-1': true,
       };
     },
     dropdownIconClass() {
@@ -195,7 +191,6 @@ export default {
       return {
         [DROPDOWN_ICON_CLASS_NAME]: true,
         [`${DROPDOWN_ICON_CLASS_NAME}--${this.iconPlacement}`]: true,
-        'eduk-u-m-1': true,
       };
     },
     emptyOptions() {

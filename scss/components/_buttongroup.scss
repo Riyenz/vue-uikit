@@ -1,0 +1,57 @@
+.eduk-buttongroup {
+  display: inline-flex;
+  vertical-align: middle;
+
+  > .eduk-dropdown .eduk-dropdown__trigger {
+    width: 100%;
+  }
+
+  > .eduk-btn,
+  > .eduk-dropdown .eduk-dropdown__trigger {
+    border-radius: 0;
+  }
+
+  > .eduk-dropdown:first-child .eduk-dropdown__trigger,
+  > .eduk-btn:first-child {
+    border-top-left-radius: $button-group-btn-radius;
+    border-bottom-left-radius: $button-group-btn-radius;
+  }
+
+  > .eduk-dropdown:last-child .eduk-dropdown__trigger,
+  > .eduk-btn:last-child {
+    border-top-right-radius: $button-group-btn-radius;
+    border-bottom-right-radius: $button-group-btn-radius;
+  }
+
+  &--vertical {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &--vertical > .eduk-dropdown:first-child .eduk-dropdown__trigger,
+  &--vertical > .eduk-btn:first-child {
+    border-top-left-radius: $button-group-btn-radius;
+    border-top-right-radius: $button-group-btn-radius;
+    border-bottom-left-radius: 0;
+  }
+
+  &--vertical > .eduk-dropdown:last-child .eduk-dropdown__trigger,
+  &--vertical > .eduk-btn:last-child {
+    border-bottom-left-radius: $button-group-btn-radius;
+    border-bottom-right-radius: $button-group-btn-radius;
+    border-top-right-radius: 0;
+  }
+}
+
+.eduk-buttontoolbar {
+  display: flex;
+  flex-wrap: wrap;
+
+  > .eduk-buttongroup {
+    margin-bottom: $button-group-spacer;
+  }
+
+  > .eduk-buttongroup:not(:last-child) {
+    margin-right: $button-group-spacer;
+  }
+}

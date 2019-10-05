@@ -92,6 +92,7 @@ export default {
   width: 310px;
   box-shadow: 0 2px 5px 0 rgba(116, 116, 116, 0.5);
   background-color: $gray-100;
+  overflow: auto;
 
   &__close {
     position: absolute;
