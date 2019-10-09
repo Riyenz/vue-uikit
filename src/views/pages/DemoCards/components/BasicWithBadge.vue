@@ -8,20 +8,18 @@
           badge="Sponsored content"
           bordered
         >
-          <template slot="content">
-            <div>
-              <h4 class="eduk-h4">
-                Header Title
-              </h4>
-              <p class="eduk-text">
-                Description Body Content Bonbon cake cotton candy marshmallow. Apple
-                pie topping ice cream chocolate. Cake gummies lemon drops.
-              </p>
-              <p class="eduk-text eduk-u-m-0 disabled">
-                Additional Information
-              </p>
-            </div>
-          </template>
+          <div>
+            <h4 class="eduk-h4">
+              Header Title
+            </h4>
+            <p class="eduk-text">
+              Description Body Content Bonbon cake cotton candy marshmallow. Apple
+              pie topping ice cream chocolate. Cake gummies lemon drops.
+            </p>
+            <p class="eduk-text eduk-u-m-0 disabled">
+              Additional Information
+            </p>
+          </div>
         </Card>
       </template>
       <template slot="vue-code">
@@ -31,20 +29,18 @@
             badge=&#x22;Sponsored content&#x22;
             bordered
           &#x3E;
-            &#x3C;template slot=&#x22;content&#x22;&#x3E;
-              &#x3C;div&#x3E;
-                &#x3C;h4 class=&#x22;eduk-h4&#x22;&#x3E;
-                  Header Title
-                &#x3C;/h4&#x3E;
-                &#x3C;p class=&#x22;eduk-text&#x22;&#x3E;
-                  Description Body Content Bonbon cake cotton candy marshmallow. Apple
-                  pie topping ice cream chocolate. Cake gummies lemon drops.
-                &#x3C;/p&#x3E;
-                &#x3C;p class=&#x22;eduk-text eduk-u-m-0 disabled&#x22;&#x3E;
-                  Additional Information
-                &#x3C;/p&#x3E;
-              &#x3C;/div&#x3E;
-            &#x3C;/template&#x3E;
+            &#x3C;div&#x3E;
+              &#x3C;h4 class=&#x22;eduk-h4&#x22;&#x3E;
+                Header Title
+              &#x3C;/h4&#x3E;
+              &#x3C;p class=&#x22;eduk-text&#x22;&#x3E;
+                Description Body Content Bonbon cake cotton candy marshmallow. Apple
+                pie topping ice cream chocolate. Cake gummies lemon drops.
+              &#x3C;/p&#x3E;
+              &#x3C;p class=&#x22;eduk-text eduk-u-m-0 disabled&#x22;&#x3E;
+                Additional Information
+              &#x3C;/p&#x3E;
+            &#x3C;/div&#x3E;
           &#x3C;/Card&#x3E;
         </code>
       </template>

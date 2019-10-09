@@ -10,26 +10,24 @@
           horizontal
           noPadding
         >
-          <template slot="content">
-            <div class="eduk-u-p-4">
-              <p class="eduk-text disabled">
-                Category
-              </p>
-              <h4 class="eduk-h4">
-                Header Title
-              </h4>
-              <p class="eduk-text">
-                Description Body Content Bonbon cake cotton candy marshmallow.
-                Bear claw candy canes marzipan jelly beans. Cake gummies danish
-                fruitcake pudding pudding. Bear claw candy canes marzipan jelly
-                beans. Cake gummies danish fruitcake pudding pudding.
-              </p>
-              <a class="link eduk-u-mb-4">Read more</a>
-              <p class="eduk-text eduk-u-m-0 disabled">
-                Additional Information (Optional)
-              </p>
-            </div>
-          </template>
+          <div class="eduk-u-p-4">
+            <p class="eduk-text disabled">
+              Category
+            </p>
+            <h4 class="eduk-h4">
+              Header Title
+            </h4>
+            <p class="eduk-text">
+              Description Body Content Bonbon cake cotton candy marshmallow.
+              Bear claw candy canes marzipan jelly beans. Cake gummies danish
+              fruitcake pudding pudding. Bear claw candy canes marzipan jelly
+              beans. Cake gummies danish fruitcake pudding pudding.
+            </p>
+            <a class="link eduk-u-mb-4">Read more</a>
+            <p class="eduk-text eduk-u-m-0 disabled">
+              Additional Information (Optional)
+            </p>
+          </div>
         </Card>
       </template>
       <template slot="vue-code">
@@ -41,26 +39,24 @@
             horizontal
             noPadding
           &#x3E;
-            &#x3C;template slot=&#x22;content&#x22;&#x3E;
-              &#x3C;div class=&#x22;eduk-u-p-4&#x22;&#x3E;
-                &#x3C;p class=&#x22;eduk-text disabled&#x22;&#x3E;
-                  Category
-                &#x3C;/p&#x3E;
-                &#x3C;h4 class=&#x22;eduk-h4&#x22;&#x3E;
-                  Header Title
-                &#x3C;/h4&#x3E;
-                &#x3C;p class=&#x22;eduk-text&#x22;&#x3E;
-                  Description Body Content Bonbon cake cotton candy marshmallow.
-                  Bear claw candy canes marzipan jelly beans. Cake gummies danish
-                  fruitcake pudding pudding. Bear claw candy canes marzipan jelly
-                  beans. Cake gummies danish fruitcake pudding pudding.
-                &#x3C;/p&#x3E;
-                &#x3C;a class=&#x22;link eduk-u-mb-4&#x22;&#x3E;Read more&#x3C;/a&#x3E;
-                &#x3C;p class=&#x22;eduk-text eduk-u-m-0 disabled&#x22;&#x3E;
-                  Additional Information (Optional)
-                &#x3C;/p&#x3E;
-              &#x3C;/div&#x3E;
-            &#x3C;/template&#x3E;
+            &#x3C;div class=&#x22;eduk-u-p-4&#x22;&#x3E;
+              &#x3C;p class=&#x22;eduk-text disabled&#x22;&#x3E;
+                Category
+              &#x3C;/p&#x3E;
+              &#x3C;h4 class=&#x22;eduk-h4&#x22;&#x3E;
+                Header Title
+              &#x3C;/h4&#x3E;
+              &#x3C;p class=&#x22;eduk-text&#x22;&#x3E;
+                Description Body Content Bonbon cake cotton candy marshmallow.
+                Bear claw candy canes marzipan jelly beans. Cake gummies danish
+                fruitcake pudding pudding. Bear claw candy canes marzipan jelly
+                beans. Cake gummies danish fruitcake pudding pudding.
+              &#x3C;/p&#x3E;
+              &#x3C;a class=&#x22;link eduk-u-mb-4&#x22;&#x3E;Read more&#x3C;/a&#x3E;
+              &#x3C;p class=&#x22;eduk-text eduk-u-m-0 disabled&#x22;&#x3E;
+                Additional Information (Optional)
+              &#x3C;/p&#x3E;
+            &#x3C;/div&#x3E;
           &#x3C;/Card&#x3E;
         </code>
       </template>
@@ -109,26 +105,24 @@
           horizontalInvert
           noPadding
         >
-          <template slot="content">
-            <div class="eduk-u-p-4">
-              <p class="eduk-text disabled">
-                Category
-              </p>
-              <h4 class="eduk-h4">
-                Header Title
-              </h4>
-              <p class="eduk-text">
-                Description Body Content Bonbon cake cotton candy marshmallow.
-                Bear claw candy canes marzipan jelly beans. Cake gummies danish
-                fruitcake pudding pudding. Bear claw candy canes marzipan jelly
-                beans. Cake gummies danish fruitcake pudding pudding.
-              </p>
-              <a class="link eduk-u-mb-4">Read more</a>
-              <p class="eduk-text eduk-u-m-0 disabled">
-                Additional Information (Optional)
-              </p>
-            </div>
-          </template>
+          <div class="eduk-u-p-4">
+            <p class="eduk-text disabled">
+              Category
+            </p>
+            <h4 class="eduk-h4">
+              Header Title
+            </h4>
+            <p class="eduk-text">
+              Description Body Content Bonbon cake cotton candy marshmallow.
+              Bear claw candy canes marzipan jelly beans. Cake gummies danish
+              fruitcake pudding pudding. Bear claw candy canes marzipan jelly
+              beans. Cake gummies danish fruitcake pudding pudding.
+            </p>
+            <a class="link eduk-u-mb-4">Read more</a>
+            <p class="eduk-text eduk-u-m-0 disabled">
+              Additional Information (Optional)
+            </p>
+          </div>
         </Card>
       </template>
       <template slot="vue-code">
@@ -141,26 +135,24 @@
             horizontalInvert
             noPadding
           &#x3E;
-            &#x3C;template slot=&#x22;content&#x22;&#x3E;
-              &#x3C;div class=&#x22;eduk-u-p-4&#x22;&#x3E;
-                &#x3C;p class=&#x22;eduk-text disabled&#x22;&#x3E;
-                  Category
-                &#x3C;/p&#x3E;
-                &#x3C;h4 class=&#x22;eduk-h4&#x22;&#x3E;
-                  Header Title
-                &#x3C;/h4&#x3E;
-                &#x3C;p class=&#x22;eduk-text&#x22;&#x3E;
-                  Description Body Content Bonbon cake cotton candy marshmallow.
-                  Bear claw candy canes marzipan jelly beans. Cake gummies danish
-                  fruitcake pudding pudding. Bear claw candy canes marzipan jelly
-                  beans. Cake gummies danish fruitcake pudding pudding.
-                &#x3C;/p&#x3E;
-                &#x3C;a class=&#x22;link eduk-u-mb-4&#x22;&#x3E;Read more&#x3C;/a&#x3E;
-                &#x3C;p class=&#x22;eduk-text eduk-u-m-0 disabled&#x22;&#x3E;
-                  Additional Information (Optional)
-                &#x3C;/p&#x3E;
-              &#x3C;/div&#x3E;
-            &#x3C;/template&#x3E;
+            &#x3C;div class=&#x22;eduk-u-p-4&#x22;&#x3E;
+              &#x3C;p class=&#x22;eduk-text disabled&#x22;&#x3E;
+                Category
+              &#x3C;/p&#x3E;
+              &#x3C;h4 class=&#x22;eduk-h4&#x22;&#x3E;
+                Header Title
+              &#x3C;/h4&#x3E;
+              &#x3C;p class=&#x22;eduk-text&#x22;&#x3E;
+                Description Body Content Bonbon cake cotton candy marshmallow.
+                Bear claw candy canes marzipan jelly beans. Cake gummies danish
+                fruitcake pudding pudding. Bear claw candy canes marzipan jelly
+                beans. Cake gummies danish fruitcake pudding pudding.
+              &#x3C;/p&#x3E;
+              &#x3C;a class=&#x22;link eduk-u-mb-4&#x22;&#x3E;Read more&#x3C;/a&#x3E;
+              &#x3C;p class=&#x22;eduk-text eduk-u-m-0 disabled&#x22;&#x3E;
+                Additional Information (Optional)
+              &#x3C;/p&#x3E;
+            &#x3C;/div&#x3E;
           &#x3C;/Card&#x3E;
         </code>
       </template>
@@ -205,70 +197,66 @@
       <template slot="example">
         <div class="card-inline">
           <Card bordered block>
-            <template slot="content">
-              <div>
-                <h4 class="eduk-h4">
-                  Header Title Bear claw candy canes
-                </h4>
-                <div class="row-reset eduk-u-pt-2 eduk-u-pb-3">
-                  <Container fluid>
-                    <Row>
-                      <Column :cols="4">
-                        <img class="img-responsive" src="//via.placeholder.com/150x160" alt="Sample placeholder" />
-                      </Column>
-                      <Column :cols="8">
-                        <div class="eduk-u-pl-3">
-                          <p class="eduk-text">
-                            Description Body Content Bonbon cake cotton candy marshmallow. Apple
-                            pie topping ice cream chocolate. Cake gummies lemon drops.
-                          </p>
-                          <p class="eduk-text eduk-u-m-0 disabled">
-                            Additional Information
-                          </p>
-                        </div>
-                      </Column>
-                    </Row>
-                  </Container>
-                </div>
-                <Btn noMargin block>View details</Btn>
+            <div>
+              <h4 class="eduk-h4">
+                Header Title Bear claw candy canes
+              </h4>
+              <div class="row-reset eduk-u-pt-2 eduk-u-pb-3">
+                <Container fluid>
+                  <Row>
+                    <Column :cols="4">
+                      <img class="img-responsive" src="//via.placeholder.com/150x160" alt="Sample placeholder" />
+                    </Column>
+                    <Column :cols="8">
+                      <div class="eduk-u-pl-3">
+                        <p class="eduk-text">
+                          Description Body Content Bonbon cake cotton candy marshmallow. Apple
+                          pie topping ice cream chocolate. Cake gummies lemon drops.
+                        </p>
+                        <p class="eduk-text eduk-u-m-0 disabled">
+                          Additional Information
+                        </p>
+                      </div>
+                    </Column>
+                  </Row>
+                </Container>
               </div>
-            </template>
+              <Btn noMargin block>View details</Btn>
+            </div>
           </Card>
         </div>
       </template>
       <template slot="vue-code">
         <code class="language-html">
           &#x3C;Card bordered block&#x3E;
-            &#x3C;template slot=&#x22;content&#x22;&#x3E;
-              &#x3C;div&#x3E;
-                &#x3C;h4 class=&#x22;eduk-h4&#x22;&#x3E;
-                  Header Title Bear claw candy canes
-                &#x3C;/h4&#x3E;
-                &#x3C;div class=&#x22;row-reset eduk-u-pt-2 eduk-u-pb-3&#x22;&#x3E;
-                  &#x3C;Container fluid&#x3E;
-                    &#x3C;Row&#x3E;
-                      &#x3C;Column :cols=&#x22;4&#x22;&#x3E;
-                        &#x3C;img class=&#x22;img-responsive&#x22;
-                        src=&#x22;//via.placeholder.com/150x160&#x22;
-                        alt=&#x22;Sample placeholder&#x22; /&#x3E;
-                      &#x3C;/Column&#x3E;
-                      &#x3C;Column :cols=&#x22;8&#x22;&#x3E;
-                        &#x3C;div class=&#x22;eduk-u-pl-3&#x22;&#x3E;
-                          &#x3C;p class=&#x22;eduk-text&#x22;&#x3E;
-                            Description Body Content Bonbon cake cotton candy marshmallow. Apple
-                            pie topping ice cream chocolate. Cake gummies lemon drops.
-                          &#x3C;/p&#x3E;
-                          &#x3C;p class=&#x22;eduk-text eduk-u-m-0 disabled&#x22;&#x3E;
-                            Additional Information
-                          &#x3C;/p&#x3E;
-                        &#x3C;/div&#x3E;
-                      &#x3C;/Column&#x3E;
-                    &#x3C;/Row&#x3E;
-                  &#x3C;/Container&#x3E;
-                &#x3C;/div&#x3E;
-                &#x3C;Btn noMargin block&#x3E;View details&#x3C;/Btn&#x3E;
+            &#x3C;div&#x3E;
+              &#x3C;h4 class=&#x22;eduk-h4&#x22;&#x3E;
+                Header Title Bear claw candy canes
+              &#x3C;/h4&#x3E;
+              &#x3C;div class=&#x22;row-reset eduk-u-pt-2 eduk-u-pb-3&#x22;&#x3E;
+                &#x3C;Container fluid&#x3E;
+                  &#x3C;Row&#x3E;
+                    &#x3C;Column :cols=&#x22;4&#x22;&#x3E;
+                      &#x3C;img class=&#x22;img-responsive&#x22;
+                      src=&#x22;//via.placeholder.com/150x160&#x22;
+                      alt=&#x22;Sample placeholder&#x22; /&#x3E;
+                    &#x3C;/Column&#x3E;
+                    &#x3C;Column :cols=&#x22;8&#x22;&#x3E;
+                      &#x3C;div class=&#x22;eduk-u-pl-3&#x22;&#x3E;
+                        &#x3C;p class=&#x22;eduk-text&#x22;&#x3E;
+                          Description Body Content Bonbon cake cotton candy marshmallow. Apple
+                          pie topping ice cream chocolate. Cake gummies lemon drops.
+                        &#x3C;/p&#x3E;
+                        &#x3C;p class=&#x22;eduk-text eduk-u-m-0 disabled&#x22;&#x3E;
+                          Additional Information
+                        &#x3C;/p&#x3E;
+                      &#x3C;/div&#x3E;
+                    &#x3C;/Column&#x3E;
+                  &#x3C;/Row&#x3E;
+                &#x3C;/Container&#x3E;
               &#x3C;/div&#x3E;
-            &#x3C;/template&#x3E;
+              &#x3C;Btn noMargin block&#x3E;View details&#x3C;/Btn&#x3E;
+            &#x3C;/div&#x3E;
           &#x3C;/Card&#x3E;
         </code>
       </template>

@@ -13,7 +13,7 @@
           </template>
           <template slot="vue-code">
             <code class="language-html">
-              &#x3C;Alert ref=&#x22;alert&#x22; title=&#x22;Alerts&#x22;&#x3E;
+              &#x3C;Alert ref=&#x22;alert&#x22;&#x3E;
                 Do! ullamco Lorem occaecat tempor incididunt nulla adipisicing.
               &#x3C;/Alert&#x3E;
             </code>
@@ -24,10 +24,6 @@
               &#x3C;div class=&#x22;eduk-alert show&#x22;&#x3E;
                 &#x3C;div class=&#x22;eduk-alert__container&#x22;&#x3E;
                   &#x3C;div class=&#x22;eduk-alert__content&#x22;&#x3E;
-                    &#x3C;section class=&#x22;eduk-alert__header&#x22;&#x3E;
-                      &#x3C;h2 class=&#x22;eduk-head eduk-alert__header-title eduk-u-mb-0&#x22;&#x3E;Alerts&#x3C;/h2&#x3E;
-                      &#x3C;i class=&#x22;eduk-alert__header-close fas fa-times fa-lg&#x22;&#x3E;&#x3C;/i&#x3E;
-                    &#x3C;/section&#x3E;
                     &#x3C;section class=&#x22;eduk-alert__body&#x22;&#x3E;
                       Do! ullamco Lorem occaecat tempor incididunt nulla adipisicing.
                     &#x3C;/section&#x3E;
@@ -41,7 +37,38 @@
             </code>
           </template>
         </Preview>
-        <Alert ref="alert" title="Alerts">
+        <h3 class="eduk-h3 eduk-u-mb-3">No Action Alert</h3>
+        <Preview>
+          <template slot="example">
+            <Btn noMargin @click.native="showNoActionAlert">Show Alert</Btn>
+          </template>
+          <template slot="vue-code">
+            <code class="language-html">
+              &#x3C;Alert ref=&#x22;alertNoAction&#x22; noActions&#x3E;
+                Do! ullamco Lorem occaecat tempor incididunt nulla adipisicing.
+              &#x3C;/Alert&#x3E;
+            </code>
+          </template>
+          <template slot="vanilla-code">
+            <code class="language-html">
+              <!-- eslint-disable max-len -->
+              &#x3C;div class=&#x22;eduk-alert show&#x22;&#x3E;
+                &#x3C;div class=&#x22;eduk-alert__container&#x22;&#x3E;
+                  &#x3C;div class=&#x22;eduk-alert__content&#x22;&#x3E;
+                    &#x3C;section class=&#x22;eduk-alert__body&#x22;&#x3E;
+                      Do! ullamco Lorem occaecat tempor incididunt nulla adipisicing.
+                    &#x3C;/section&#x3E;
+                  &#x3C;/div&#x3E;
+                &#x3C;/div&#x3E;
+              &#x3C;/div&#x3E;
+              <!-- eslint-enable max-len -->
+            </code>
+          </template>
+        </Preview>
+        <Alert ref="alert">
+          Do! ullamco Lorem occaecat tempor incididunt nulla adipisicing.
+        </Alert>
+        <Alert ref="alertNoAction" noActions>
           Do! ullamco Lorem occaecat tempor incididunt nulla adipisicing.
         </Alert>
         <AlertApi />
@@ -77,6 +104,9 @@ export default {
   methods: {
     showAlert() {
       this.$refs.alert.show();
+    },
+    showNoActionAlert() {
+      this.$refs.alertNoAction.show();
     },
     onTabChange(tabIndex) {
       this.$emit('tabChange', tabIndex);

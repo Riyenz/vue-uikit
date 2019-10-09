@@ -3,7 +3,7 @@
     <h3 class="eduk-h3 eduk-u-mb-3">Loading</h3>
     <Preview>
       <template slot="example">
-        <Tab :items="[{ name: 'first', loading: true }, 'second', 'third']">
+        <Tab :items="[{ name: 'first', display: 'First Day', loading: true }, 'second', 'third']">
           <template slot="first">
             <div>
               <h2 class="eduk-u-m-0">first</h2>
@@ -32,7 +32,7 @@
       </template>
       <template slot="vue-code">
         <code class="language-html">
-          &#x3C;Tab :items=&#x22;[{ name: 'first', loading: true }, 'second', 'third']&#x22;&#x3E;
+          &#x3C;Tab :items=&#x22;[{ name: 'first', display: 'First Day', loading: true }, 'second', 'third']&#x22;&#x3E;
             &#x3C;template slot=&#x22;first&#x22;&#x3E;
               &#x3C;div&#x3E;
                 &#x3C;h2 class=&#x22;eduk-u-m-0&#x22;&#x3E;first&#x3C;/h2&#x3E;

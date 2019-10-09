@@ -3,7 +3,7 @@
     <h3 class="eduk-h3 eduk-u-mb-3">Basic Tab</h3>
     <Preview>
       <template slot="example">
-        <Tab :items="['first', 'second', 'third']" />
+        <Tab :items="[{ name: 'in-progress', display: 'In Progress(6)' }, { name: 'completed', display: 'Completed(3)' }]" />
       </template>
       <template slot="vue-code">
         <code class="language-html">

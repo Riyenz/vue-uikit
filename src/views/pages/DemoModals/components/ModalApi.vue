@@ -74,6 +74,15 @@
                 <code class="highlighter">/assets/icons/horizontal-line.png</code>
               </td>
             </tr>
+            <tr>
+              <td style="max-width: 200px;">
+                <code class="highlighter">noSeparator</code>
+              </td>
+              <td style="text-align: left;">Remove shadow separator on header</td>
+              <td style="text-align: left;">Boolean</td>
+              <td style="text-align: left;">&mdash;</td>
+              <td style="text-align: left;">&mdash;</td>
+            </tr>
           </tbody>
         </table>
       </div>

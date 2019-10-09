@@ -7,63 +7,59 @@
           featuredImg="//via.placeholder.com/300x180"
           bordered
         >
-          <template slot="content">
-            <div>
-              <h4 class="eduk-h4">
-                Header Title
-              </h4>
-              <p class="eduk-text">
-                Description Body Content Bonbon cake cotton candy marshmallow. Apple
-                pie topping ice cream chocolate. Cake gummies lemon drops.
-              </p>
-              <p class="eduk-text eduk-u-mb-3 disabled">
-                Additional Information
-              </p>
-              <div class="row-reset">
-                <Container fluid>
-                  <Row>
-                    <Column :cols="6">
-                      <Btn noMargin outline block>View details</Btn>
-                    </Column>
-                    <Column :cols="6">
-                      <Btn noMargin block>Apply now</Btn>
-                    </Column>
-                  </Row>
-                </Container>
-              </div>
+          <div>
+            <h4 class="eduk-h4">
+              Header Title
+            </h4>
+            <p class="eduk-text">
+              Description Body Content Bonbon cake cotton candy marshmallow. Apple
+              pie topping ice cream chocolate. Cake gummies lemon drops.
+            </p>
+            <p class="eduk-text eduk-u-mb-3 disabled">
+              Additional Information
+            </p>
+            <div class="row-reset">
+              <Container fluid>
+                <Row>
+                  <Column :cols="6">
+                    <Btn noMargin outline block>View details</Btn>
+                  </Column>
+                  <Column :cols="6">
+                    <Btn noMargin block>Apply now</Btn>
+                  </Column>
+                </Row>
+              </Container>
             </div>
-          </template>
+          </div>
         </Card>
       </template>
       <template slot="vue-code">
         <code class="language-html">
           &#x3C;Card featuredImg=&#x22;//via.placeholder.com/300x180&#x22; bordered&#x3E;
-            &#x3C;template slot=&#x22;content&#x22;&#x3E;
-              &#x3C;div&#x3E;
-                &#x3C;h4 class=&#x22;eduk-h4&#x22;&#x3E;
-                  Header Title
-                &#x3C;/h4&#x3E;
-                &#x3C;p class=&#x22;eduk-text&#x22;&#x3E;
-                  Description Body Content Bonbon cake cotton candy marshmallow. Apple
-                  pie topping ice cream chocolate. Cake gummies lemon drops.
-                &#x3C;/p&#x3E;
-                &#x3C;p class=&#x22;eduk-text eduk-u-mb-3 disabled&#x22;&#x3E;
-                  Additional Information
-                &#x3C;/p&#x3E;
-                &#x3C;div class=&#x22;row-reset&#x22;&#x3E;
-                  &#x3C;Container fluid&#x3E;
-                    &#x3C;Row&#x3E;
-                      &#x3C;Column :cols=&#x22;6&#x22;&#x3E;
-                        &#x3C;Btn noMargin outline block&#x3E;View details&#x3C;/Btn&#x3E;
-                      &#x3C;/Column&#x3E;
-                      &#x3C;Column :cols=&#x22;6&#x22;&#x3E;
-                        &#x3C;Btn noMargin block&#x3E;Apply now&#x3C;/Btn&#x3E;
-                      &#x3C;/Column&#x3E;
-                    &#x3C;/Row&#x3E;
-                  &#x3C;/Container&#x3E;
-                &#x3C;/div&#x3E;
+            &#x3C;div&#x3E;
+              &#x3C;h4 class=&#x22;eduk-h4&#x22;&#x3E;
+                Header Title
+              &#x3C;/h4&#x3E;
+              &#x3C;p class=&#x22;eduk-text&#x22;&#x3E;
+                Description Body Content Bonbon cake cotton candy marshmallow. Apple
+                pie topping ice cream chocolate. Cake gummies lemon drops.
+              &#x3C;/p&#x3E;
+              &#x3C;p class=&#x22;eduk-text eduk-u-mb-3 disabled&#x22;&#x3E;
+                Additional Information
+              &#x3C;/p&#x3E;
+              &#x3C;div class=&#x22;row-reset&#x22;&#x3E;
+                &#x3C;Container fluid&#x3E;
+                  &#x3C;Row&#x3E;
+                    &#x3C;Column :cols=&#x22;6&#x22;&#x3E;
+                      &#x3C;Btn noMargin outline block&#x3E;View details&#x3C;/Btn&#x3E;
+                    &#x3C;/Column&#x3E;
+                    &#x3C;Column :cols=&#x22;6&#x22;&#x3E;
+                      &#x3C;Btn noMargin block&#x3E;Apply now&#x3C;/Btn&#x3E;
+                    &#x3C;/Column&#x3E;
+                  &#x3C;/Row&#x3E;
+                &#x3C;/Container&#x3E;
               &#x3C;/div&#x3E;
-            &#x3C;/template&#x3E;
+            &#x3C;/div&#x3E;
           &#x3C;/Card&#x3E;
         </code>
       </template>
@@ -119,41 +115,37 @@
           featuredImg="//via.placeholder.com/300x180"
           bordered
         >
-          <template slot="content">
-            <div>
-              <h4 class="eduk-h4">
-                Header Title
-              </h4>
-              <p class="eduk-text">
-                Description Body Content Bonbon cake cotton candy marshmallow. Apple
-                pie topping ice cream chocolate. Cake gummies lemon drops.
-              </p>
-              <p class="eduk-text eduk-u-mb-3 disabled">
-                Additional Information
-              </p>
-              <Btn noMargin outline block>View details</Btn>
-            </div>
-          </template>
+          <div>
+            <h4 class="eduk-h4">
+              Header Title
+            </h4>
+            <p class="eduk-text">
+              Description Body Content Bonbon cake cotton candy marshmallow. Apple
+              pie topping ice cream chocolate. Cake gummies lemon drops.
+            </p>
+            <p class="eduk-text eduk-u-mb-3 disabled">
+              Additional Information
+            </p>
+            <Btn noMargin outline block>View details</Btn>
+          </div>
         </Card>
       </template>
       <template slot="vue-code">
         <code class="language-html">
           &#x3C;Card featuredImg=&#x22;'//via.placeholder.com/300x180'&#x22; bordered&#x3E;
-            &#x3C;template slot=&#x22;content&#x22;&#x3E;
-              &#x3C;div&#x3E;
-                &#x3C;h4 class=&#x22;eduk-h4&#x22;&#x3E;
-                  Header Title
-                &#x3C;/h4&#x3E;
-                &#x3C;p class=&#x22;eduk-text&#x22;&#x3E;
-                  Description Body Content Bonbon cake cotton candy marshmallow. Apple
-                  pie topping ice cream chocolate. Cake gummies lemon drops.
-                &#x3C;/p&#x3E;
-                &#x3C;p class=&#x22;eduk-text eduk-u-mb-3 disabled&#x22;&#x3E;
-                  Additional Information
-                &#x3C;/p&#x3E;
-                &#x3C;Btn noMargin outline block&#x3E;View details&#x3C;/Btn&#x3E;
-              &#x3C;/div&#x3E;
-            &#x3C;/template&#x3E;
+            &#x3C;div&#x3E;
+              &#x3C;h4 class=&#x22;eduk-h4&#x22;&#x3E;
+                Header Title
+              &#x3C;/h4&#x3E;
+              &#x3C;p class=&#x22;eduk-text&#x22;&#x3E;
+                Description Body Content Bonbon cake cotton candy marshmallow. Apple
+                pie topping ice cream chocolate. Cake gummies lemon drops.
+              &#x3C;/p&#x3E;
+              &#x3C;p class=&#x22;eduk-text eduk-u-mb-3 disabled&#x22;&#x3E;
+                Additional Information
+              &#x3C;/p&#x3E;
+              &#x3C;Btn noMargin outline block&#x3E;View details&#x3C;/Btn&#x3E;
+            &#x3C;/div&#x3E;
           &#x3C;/Card&#x3E;
         </code>
       </template>

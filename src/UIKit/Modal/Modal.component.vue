@@ -13,7 +13,7 @@
             <img :src="navLogo || defaultLogo">
           </span>
         </section>
-        <section class="eduk-modal__header">
+        <section :class="modalHeaderClass">
           <h2 class="eduk-head eduk-modal__header-title eduk-u-mb-0">{{ title }}</h2>
           <font-awesome-icon class="eduk-modal__header-close" icon="times" size="lg" @click="hide"/>
         </section>
@@ -91,6 +91,9 @@ export default {
       type: String,
       default: HORIZONTAL_LINE_ICON,
     },
+    noSeparator: {
+      type: Boolean,
+    },
   },
   data() {
     return {
@@ -145,6 +148,12 @@ export default {
       return {
         'eduk-modal__sub-mask': true,
         [SHOW_CLASS]: this.isSubActionsExpand,
+      };
+    },
+    modalHeaderClass() {
+      return {
+        'eduk-modal__header': true,
+        'eduk-modal__header--no-separator': this.noSeparator,
       };
     },
   },

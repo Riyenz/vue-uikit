@@ -33,7 +33,7 @@
           <font-awesome-icon icon="share" />
         </a>
       </div>
-      <slot name="content" v-if="!!$slots.content">
+      <slot name="default" v-if="!!$slots.default">
       </slot>
     </div>
   </div>

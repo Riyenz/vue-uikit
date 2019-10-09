@@ -198,7 +198,7 @@
     <Preview>
       <template slot="example">
         <div>
-          <Btn link="#">Link</Btn>
+          <Btn link="/hello">Link</Btn>
         </div>
       </template>
       <template slot="vue-code">

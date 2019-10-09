@@ -85,6 +85,10 @@
 
 @include media-breakpoint-up(sm) {
   .eduk-alert {
+    &__body {
+      padding-bottom: $modal-padding-y;
+    }
+
     &__header-close {
       display: block;
     }

@@ -261,7 +261,10 @@
     &__header {
       position: sticky;
       top: 0;
-      box-shadow: 0 2px 4px 0 $modal-box-shadow + CC;
+
+      &:not(&--no-separator) {
+        box-shadow: 0 2px 4px 0 $modal-box-shadow + CC;
+      }
     }
 
     &__main {

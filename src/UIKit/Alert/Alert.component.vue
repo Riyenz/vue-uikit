@@ -2,14 +2,10 @@
   <div :class="alertClass" @click="hide">
     <div class="eduk-alert__container" @click.stop>
       <div class="eduk-alert__content">
-        <section class="eduk-alert__header">
-          <h2 class="eduk-head eduk-alert__header-title eduk-u-mb-0">{{ title }}</h2>
-          <font-awesome-icon class="eduk-alert__header-close" icon="times" size="lg" @click="hide"/>
-        </section>
         <section class="eduk-alert__body">
           <slot></slot>
         </section>
-        <section class="eduk-alert__actions">
+        <section class="eduk-alert__actions" v-if="!noActions">
           <Btn
             variant="tertiary"
             size="lg"
@@ -34,8 +30,8 @@ export default {
     Btn,
   },
   props: {
-    title: {
-      type: String,
+    noActions: {
+      type: Boolean,
     },
   },
   data() {

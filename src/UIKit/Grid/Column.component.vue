@@ -1,10 +1,15 @@
 <template>
-  <div ref="edukCol">
+  <div ref="edukCol" :class="colClass">
     <slot></slot>
   </div>
 </template>
 
 <script>
+import {
+  GRID_COLUMN_CLASS_NAME,
+  GRID_OFFSET_CLASS_NAME,
+} from './Grid.config';
+
 export default {
   name: 'Column',
   props: {
@@ -39,55 +44,23 @@ export default {
       type: [Number, String],
     },
   },
-  data() {
-    return {
-      colClass: 'eduk-col',
-      offsetClass: 'eduk-offset',
-    };
-  },
-  mounted() {
-    this.initDefaultColClass();
-    this.initColSizeClasses();
-    this.initOffsetClasses();
-  },
-  methods: {
-    initDefaultColClass() {
-      const colSize = this.cols ? `-${this.cols}` : '';
-      this.addClass(`${this.colClass}${colSize}`);
-    },
-    initColSizeClasses() {
-      if (this.colssm) {
-        this.addClass(`${this.colClass}-sm-${this.colssm}`);
-      }
-      if (this.colsmd) {
-        this.addClass(`${this.colClass}-md-${this.colsmd}`);
-      }
-      if (this.colslg) {
-        this.addClass(`${this.colClass}-lg-${this.colslg}`);
-      }
-      if (this.colsxl) {
-        this.addClass(`${this.colClass}-xl-${this.colsxl}`);
-      }
-    },
-    initOffsetClasses() {
-      if (this.offset) {
-        this.addClass(`${this.offsetClass}-${this.offset}`);
-      }
-      if (this.offsetsm) {
-        this.addClass(`${this.offsetClass}-sm-${this.offsetsm}`);
-      }
-      if (this.offsetmd) {
-        this.addClass(`${this.offsetClass}-md-${this.offsetmd}`);
-      }
-      if (this.offsetlg) {
-        this.addClass(`${this.offsetClass}-lg-${this.offsetlg}`);
-      }
-      if (this.offsetxl) {
-        this.addClass(`${this.offsetClass}-xl-${this.offsetxl}`);
-      }
-    },
-    addClass(className) {
-      this.$refs.edukCol.classList.add(className);
+  computed: {
+    colClass() {
+      return {
+        /** Column Class */
+        [GRID_COLUMN_CLASS_NAME]: !(this.cols || this.colssm || this.colsmd || this.colslg || this.colsxl),
+        [`${GRID_COLUMN_CLASS_NAME}-${this.cols}`]: this.cols,
+        [`${GRID_COLUMN_CLASS_NAME}-sm-${this.colssm}`]: this.colssm,
+        [`${GRID_COLUMN_CLASS_NAME}-md-${this.colsmd}`]: this.colsmd,
+        [`${GRID_COLUMN_CLASS_NAME}-lg-${this.colslg}`]: this.colslg,
+        [`${GRID_COLUMN_CLASS_NAME}-xl-${this.colsxl}`]: this.colsxl,
+        /** Offset Class */
+        [`${GRID_OFFSET_CLASS_NAME}-${this.offset}`]: this.offset,
+        [`${GRID_OFFSET_CLASS_NAME}-sm-${this.offsetsm}`]: this.offsetsm,
+        [`${GRID_OFFSET_CLASS_NAME}-md-${this.offsetmd}`]: this.offsetmd,
+        [`${GRID_OFFSET_CLASS_NAME}-lg-${this.offsetlg}`]: this.offsetlg,
+        [`${GRID_OFFSET_CLASS_NAME}-xl-${this.offsetxl}`]: this.offsetxl,
+      };
     },
   },
 };

@@ -6,7 +6,6 @@
           featuredImg="//via.placeholder.com/300x180"
           bordered
         >
-          <template slot="content">
             <div>
               <h4 class="eduk-h4">
                 Header Title
@@ -20,27 +19,24 @@
               </p>
               <Btn noMargin block>Apply now</Btn>
             </div>
-          </template>
         </Card>
       </template>
       <template slot="vue-code">
         <code class="language-html">
           &#x3C;Card featuredImg=&#x22;//via.placeholder.com/300x180&#x22; bordered&#x3E;
-            &#x3C;template slot=&#x22;content&#x22;&#x3E;
-              &#x3C;div&#x3E;
-                &#x3C;h4 class=&#x22;eduk-h4&#x22;&#x3E;
-                  Header Title
-                &#x3C;/h4&#x3E;
-                &#x3C;p class=&#x22;eduk-text&#x22;&#x3E;
-                  Description Body Content Bonbon cake cotton candy marshmallow. Apple
-                  pie topping ice cream chocolate. Cake gummies lemon drops.
-                &#x3C;/p&#x3E;
-                &#x3C;p class=&#x22;eduk-text eduk-u-mb-3 disabled&#x22;&#x3E;
-                  Additional Information
-                &#x3C;/p&#x3E;
-                &#x3C;Btn noMargin block&#x3E;Apply now&#x3C;/Btn&#x3E;
-              &#x3C;/div&#x3E;
-            &#x3C;/template&#x3E;
+            &#x3C;div&#x3E;
+              &#x3C;h4 class=&#x22;eduk-h4&#x22;&#x3E;
+                Header Title
+              &#x3C;/h4&#x3E;
+              &#x3C;p class=&#x22;eduk-text&#x22;&#x3E;
+                Description Body Content Bonbon cake cotton candy marshmallow. Apple
+                pie topping ice cream chocolate. Cake gummies lemon drops.
+              &#x3C;/p&#x3E;
+              &#x3C;p class=&#x22;eduk-text eduk-u-mb-3 disabled&#x22;&#x3E;
+                Additional Information
+              &#x3C;/p&#x3E;
+              &#x3C;Btn noMargin block&#x3E;Apply now&#x3C;/Btn&#x3E;
+            &#x3C;/div&#x3E;
           &#x3C;/Card&#x3E;
         </code>
       </template>
@@ -98,20 +94,18 @@
               </div>
             </div>
           </template>
-          <template slot="content">
-            <div>
-              <h4 class="eduk-h4">
-                Header Title
-              </h4>
-              <p class="eduk-text">
-                Description Body Content Bonbon cake cotton candy marshmallow. Apple
-                pie topping ice cream chocolate. Cake gummies lemon drops.
-              </p>
-              <p class="eduk-text eduk-u-m-0 disabled">
-                Additional Information
-              </p>
-            </div>
-          </template>
+          <div>
+            <h4 class="eduk-h4">
+              Header Title
+            </h4>
+            <p class="eduk-text">
+              Description Body Content Bonbon cake cotton candy marshmallow. Apple
+              pie topping ice cream chocolate. Cake gummies lemon drops.
+            </p>
+            <p class="eduk-text eduk-u-m-0 disabled">
+              Additional Information
+            </p>
+          </div>
         </Card>
       </template>
       <template slot="vue-code">
@@ -137,20 +131,18 @@
                 &#x3C;/div&#x3E;
               &#x3C;/div&#x3E;
             &#x3C;/template&#x3E;
-            &#x3C;template slot=&#x22;content&#x22;&#x3E;
-              &#x3C;div&#x3E;
-                &#x3C;h4 class=&#x22;eduk-h4&#x22;&#x3E;
-                  Header Title
-                &#x3C;/h4&#x3E;
-                &#x3C;p class=&#x22;eduk-text&#x22;&#x3E;
-                  Description Body Content Bonbon cake cotton candy marshmallow. Apple
-                  pie topping ice cream chocolate. Cake gummies lemon drops.
-                &#x3C;/p&#x3E;
-                &#x3C;p class=&#x22;eduk-text eduk-u-m-0 disabled&#x22;&#x3E;
-                  Additional Information
-                &#x3C;/p&#x3E;
-              &#x3C;/div&#x3E;
-            &#x3C;/template&#x3E;
+            &#x3C;div&#x3E;
+              &#x3C;h4 class=&#x22;eduk-h4&#x22;&#x3E;
+                Header Title
+              &#x3C;/h4&#x3E;
+              &#x3C;p class=&#x22;eduk-text&#x22;&#x3E;
+                Description Body Content Bonbon cake cotton candy marshmallow. Apple
+                pie topping ice cream chocolate. Cake gummies lemon drops.
+              &#x3C;/p&#x3E;
+              &#x3C;p class=&#x22;eduk-text eduk-u-m-0 disabled&#x22;&#x3E;
+                Additional Information
+              &#x3C;/p&#x3E;
+            &#x3C;/div&#x3E;
           &#x3C;/Card&#x3E;
         </code>
       </template>
@@ -209,25 +201,23 @@
           actions
           noPadding
         >
-          <template slot="content">
-            <div>
-              <div class="overflow-image">
-                <img src="//via.placeholder.com/70" alt="Sample placeholder" />
-              </div>
-              <div class="eduk-u-p-3">
-                <h4 class="eduk-h4">
-                  Header Title
-                </h4>
-                <p class="eduk-text">
-                  Description Body Content Bonbon cake cotton candy marshmallow. Apple
-                  pie topping ice cream chocolate. Cake gummies lemon drops.
-                </p>
-                <p class="eduk-text eduk-u-m-0 disabled">
-                  Additional Information
-                </p>
-              </div>
+          <div>
+            <div class="overflow-image">
+              <img src="//via.placeholder.com/70" alt="Sample placeholder" />
             </div>
-          </template>
+            <div class="eduk-u-p-3">
+              <h4 class="eduk-h4">
+                Header Title
+              </h4>
+              <p class="eduk-text">
+                Description Body Content Bonbon cake cotton candy marshmallow. Apple
+                pie topping ice cream chocolate. Cake gummies lemon drops.
+              </p>
+              <p class="eduk-text eduk-u-m-0 disabled">
+                Additional Information
+              </p>
+            </div>
+          </div>
         </Card>
       </template>
       <template slot="vue-code">
@@ -238,25 +228,23 @@
             actions
             noPadding
           &#x3E;
-            &#x3C;template slot=&#x22;content&#x22;&#x3E;
-              &#x3C;div&#x3E;
-                &#x3C;div class=&#x22;overflow-image&#x22;&#x3E;
-                  &#x3C;img src=&#x22;//via.placeholder.com/70&#x22; alt=&#x22;Sample placeholder&#x22; /&#x3E;
-                &#x3C;/div&#x3E;
-                &#x3C;div class=&#x22;eduk-u-p-3&#x22;&#x3E;
-                  &#x3C;h4 class=&#x22;eduk-h4&#x22;&#x3E;
-                    Header Title
-                  &#x3C;/h4&#x3E;
-                  &#x3C;p class=&#x22;eduk-text&#x22;&#x3E;
-                    Description Body Content Bonbon cake cotton candy marshmallow. Apple
-                    pie topping ice cream chocolate. Cake gummies lemon drops.
-                  &#x3C;/p&#x3E;
-                  &#x3C;p class=&#x22;eduk-text eduk-u-m-0 disabled&#x22;&#x3E;
-                    Additional Information
-                  &#x3C;/p&#x3E;
-                &#x3C;/div&#x3E;
+            &#x3C;div&#x3E;
+              &#x3C;div class=&#x22;overflow-image&#x22;&#x3E;
+                &#x3C;img src=&#x22;//via.placeholder.com/70&#x22; alt=&#x22;Sample placeholder&#x22; /&#x3E;
               &#x3C;/div&#x3E;
-            &#x3C;/template&#x3E;
+              &#x3C;div class=&#x22;eduk-u-p-3&#x22;&#x3E;
+                &#x3C;h4 class=&#x22;eduk-h4&#x22;&#x3E;
+                  Header Title
+                &#x3C;/h4&#x3E;
+                &#x3C;p class=&#x22;eduk-text&#x22;&#x3E;
+                  Description Body Content Bonbon cake cotton candy marshmallow. Apple
+                  pie topping ice cream chocolate. Cake gummies lemon drops.
+                &#x3C;/p&#x3E;
+                &#x3C;p class=&#x22;eduk-text eduk-u-m-0 disabled&#x22;&#x3E;
+                  Additional Information
+                &#x3C;/p&#x3E;
+              &#x3C;/div&#x3E;
+            &#x3C;/div&#x3E;
           &#x3C;/Card&#x3E;
         </code>
       </template>

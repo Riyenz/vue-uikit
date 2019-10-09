@@ -13,18 +13,9 @@ const AlertProperties = {
   components: {
     FontAwesomeIcon,
   },
-  propsData: {
-    title: 'Alert',
-  },
 };
 
 describe('Alert.vue', () => {
-  it('renders props title when passed', () => {
-    const wrapper = shallowMount(Alert, AlertProperties);
-
-    expect(wrapper.text()).to.includes(AlertProperties.propsData.title);
-  });
-
   it('renders default slot when passed', () => {
     const wrapper = shallowMount(Alert, AlertProperties);
     const content = wrapper.find('#testDefault');

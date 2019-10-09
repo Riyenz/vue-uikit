@@ -9,7 +9,14 @@
         <a
           class="eduk-tab-nav__link"
           @click="(e) => selectTab(e, item)"
-        >{{typeof item === 'string' ? item : item.name}}</a>
+        >
+          <template v-if="typeof item === 'string'">
+            {{ item | pascalCase }}
+          </template>
+          <template v-else>
+            {{ item.display }}
+          </template>
+        </a>
       </div>
     </nav>
     <div
@@ -38,6 +45,10 @@
 </template>
 
 <script>
+import {
+  startCase,
+} from 'lodash';
+
 import {
   TAB_CLASS_NAME,
   TAB_NAV_CLASS_NAME,
@@ -103,6 +114,11 @@ export default {
         }
         return false;
       });
+    },
+  },
+  filters: {
+    pascalCase(val) {
+      return startCase(val);
     },
   },
 };

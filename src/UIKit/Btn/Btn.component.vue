@@ -1,5 +1,5 @@
 <template>
-  <component :is="btnTag" :class="btnClass" @click="onClick">
+  <component :is="btnTag" :to="link" :class="btnClass" @click="onClick">
     <template v-if="!loading">
       <slot></slot>
     </template>
@@ -77,7 +77,7 @@ export default {
       };
     },
     btnTag() {
-      return this.link ? 'a' : 'button';
+      return this.link ? 'router-link' : 'button';
     },
   },
   methods: {
