@@ -54,6 +54,12 @@ export default [
     component: () => import('./views/pages/DemoCheckbox/index.vue'),
   },
   {
+    path: 'datepicker',
+    name: 'demo-datepicker',
+    displayName: 'Datepicker',
+    component: () => import('./views/pages/DemoDatepicker/index.vue'),
+  },
+  {
     path: 'dropdown-and-selectors',
     name: 'demo-dropdown',
     displayName: 'Dropdown & Selectors',

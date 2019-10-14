@@ -71,3 +71,6 @@ export { default as Blockquote } from '@/UIKit/Blockquote/Blockquote.component.v
 
 /** Tooltip Component */
 export { default as Tooltip } from '@/UIKit/Tooltip/Tooltip.lib';
+
+/** Datepicker Component */
+export { default as Datepicker } from '@/UIKit/Datepicker/Datepicker.component.vue';
