@@ -1,0 +1,83 @@
+.eduk-blockquote {
+  display: flex;
+  align-items: flex-start;
+  padding-top: $blockquote-padding-top;
+
+  &__avatar {
+    border-radius: 90px;
+    height: 90px;
+    width: 90px;
+    display: flex;
+    margin-right: $blockquote-margin-top;
+  }
+
+  &__content,
+  &__header {
+    margin: 0;
+  }
+
+  &__content {
+    position: relative;
+  }
+
+  &__header {
+    font-size: $blockquote-header-font-size;
+    font-weight: bold;
+    margin-bottom: $blockquote-header-margin;
+  }
+
+  &__quote {
+    font-size: $blockquote-quote-font-size;
+    line-height: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate3d(0, -100%, 0);
+  }
+
+  &__quote-wrap {
+    display: block;
+    margin-bottom: $blockquote-quote-wrap-margin;
+  }
+
+  &__quote-wrap::before,
+  &__quote-wrap::after {
+    font-weight: bold;
+  }
+
+  &__footer {
+    font-size: $blockquote-footer-font-size;
+    line-height: 18px;
+    color: $gray-500;
+  }
+
+  &--compact {
+    padding-top: 0;
+  }
+
+  &--compact &__header {
+    font-size: $font-size-base;
+    display: inline;
+  }
+
+  &--horizontal {
+    padding-top: 0;
+    padding-left: $blockquote-horizontal-padding-left;
+  }
+
+  &--horizontal &__quote {
+    transform: translate3d(-33px, 5px, 0);
+  }
+
+  &--bordered {
+    border: $blockquote-border;
+    background-color: $white;
+    padding: $blockquote-border-padding;
+    border-radius: 4px;
+  }
+
+  &--horizontal.eduk-blockquote--bordered {
+    padding: $blockquote-border-horizontal-padding;
+  }
+}

@@ -495,3 +495,25 @@ $eduk-tab-loading-icon-size: $font-size-base * 1.75;
 $eduk-tab-loading-icon-color: $primary;
 $eduk-tab-loading-text-size: $font-size-base;
 $eduk-tab-loading-text-size-color: $gray-500;
+
+/* Button Group Variables */
+$button-group-spacer: $spacer * 0.625;
+$button-group-btn-radius: 5px;
+
+/* Blockquote Variables */
+$blockquote-padding-top: $spacer * 1.875;
+$blockquote-horizontal-padding-left: $spacer * 2.0625;
+$blockquote-border: solid 1px $gray-300;
+$blockquote-margin-top: $spacer * 1.875;
+$blockquote-header-font-size: $font-size-base * 1.125;
+$blockquote-header-margin: $spacer * 0.625;
+$blockquote-quote-font-size: $font-size-base * 2.625;
+$blockquote-quote-wrap-margin: $spacer * 0.3125;
+$blockquote-footer-font-size: $font-size-base * 0.875;
+$blockquote-border-padding: ($spacer * 2.8125) ($spacer * 1.25) ($spacer * 1.5625);
+$blockquote-border-horizontal-padding: ($spacer * 1.5625) ($spacer * 1.25) ($spacer * 1.5625) ($spacer * 3.125);
+
+/* Tooltip Variables */
+$tooltip-font-size: $font-size-base * 0.75;
+$tooltip-padding: ($spacer * 0.375) ($spacer * 0.5);
+$tooltip-max-width: 180px;

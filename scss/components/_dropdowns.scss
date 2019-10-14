@@ -12,7 +12,7 @@
     border-radius: $dropdown-border-radius;
     display: none;
     position: absolute;
-    bottom: 0;
+    bottom: -3px;
     width: 200px;
     background: $white;
     transform: translate3d(0, 100%, 0);
