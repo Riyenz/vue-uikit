@@ -35,6 +35,8 @@ import {
   faBell,
   faSpinner,
   faCalendarAlt,
+  faShareAlt,
+  faBrain,
 } from '@fortawesome/free-solid-svg-icons';
 import {
   faHeart as farHeart,
@@ -73,6 +75,8 @@ library.add(
   faBell,
   faSpinner,
   faCalendarAlt,
+  faShareAlt,
+  faBrain,
 );
 
 Vue.component('font-awesome-icon', FontAwesomeIcon);
