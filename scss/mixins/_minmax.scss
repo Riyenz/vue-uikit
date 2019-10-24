@@ -7,3 +7,8 @@
   max-height: $max-height;
   max-width: $max-width;
 }
+
+@mixin size($height, $width) {
+  height: $height;
+  width: $width;
+}

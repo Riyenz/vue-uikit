@@ -59,6 +59,8 @@ import {
   MODAL_CLASS_NAME,
   DEFAULT_SUB_CLOSE_TEXT,
   FREEZE_BODY_CLASS,
+  MODAL_LARGE_CLASS_NAME,
+  MODAL_SMALL_CLASS_NAME,
 } from './Modal.config';
 
 import {
@@ -94,6 +96,9 @@ export default {
     noSeparator: {
       type: Boolean,
     },
+    size: {
+      type: String,
+    },
   },
   data() {
     return {
@@ -118,6 +123,8 @@ export default {
       return {
         [MODAL_CLASS_NAME]: true,
         [SHOW_CLASS]: this.isShown,
+        [MODAL_LARGE_CLASS_NAME]: this.size === 'lg',
+        [MODAL_SMALL_CLASS_NAME]: this.size === 'sm',
       };
     },
     subClass() {

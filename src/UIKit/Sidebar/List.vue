@@ -10,17 +10,17 @@
       :style="optionsHeight"
     >
       <div ref="optionsWrapper">
-        <router-link
+        <a
           v-for="(item, index) in menu.items"
-          :to="item.href"
           :class="{
             'eduk-sidebar-list__sub-item': true,
             'eduk-sidebar-list__sub-item--active': $route.path === item.href,
           }"
           :key="index"
+          @click="SidebarService.selectPath(item.href)"
         >
           {{item.name}}
-        </router-link>
+        </a>
       </div>
     </div>
   </div>
@@ -28,6 +28,7 @@
 
 <script>
 import { SIDEBAR_LIST_CLASS_NAME } from './Sidebar.config';
+import SidebarService from './Sidebar.service';
 
 export default {
   name: 'SidebarList',
@@ -38,7 +39,10 @@ export default {
     collapsed: Boolean,
   },
   data() {
-    return { open: false };
+    return {
+      open: false,
+      SidebarService,
+    };
   },
   computed: {
     sidebarListClass() {

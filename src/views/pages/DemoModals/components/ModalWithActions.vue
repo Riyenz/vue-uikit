@@ -74,8 +74,8 @@
         </p>
       </template>
       <template v-slot:footer>
-        <Btn @click.native="hideModal">OK</Btn>
-        <Btn variant="tertiary" outline @click.native="hideModal">Cancel</Btn>
+        <Btn @click="hideModal">OK</Btn>
+        <Btn variant="tertiary" outline @click="hideModal" class="eduk-u-mr-2">Cancel</Btn>
       </template>
     </Modal>
   </div>

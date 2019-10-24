@@ -3,6 +3,7 @@ import { shallowMount } from '@vue/test-utils';
 import Modal from '@/UIKit/Modal/Modal.component.vue';
 import { SHOW_CLASS } from '@/UIKit/config';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
+import { MODAL_LARGE_CLASS_NAME, MODAL_SMALL_CLASS_NAME } from '@/UIKit/Modal/Modal.config';
 
 const slots = {
   content: '<i id="testContent">test</i>',
@@ -74,6 +75,30 @@ describe('Modal.vue', () => {
     wrapper.vm.show();
 
     expect(wrapper.classes(SHOW_CLASS)).to.equal(true);
+  });
+
+  it(`adds a .${MODAL_LARGE_CLASS_NAME} class when added size lg props`, () => {
+    const wrapper = shallowMount(Modal, {
+      ...modalProperties,
+      propsData: {
+        ...modalProperties.propsData,
+        size: 'lg',
+      },
+    });
+
+    expect(wrapper.classes(MODAL_LARGE_CLASS_NAME)).to.equal(true);
+  });
+
+  it(`adds a .${MODAL_SMALL_CLASS_NAME} class when added size lg props`, () => {
+    const wrapper = shallowMount(Modal, {
+      ...modalProperties,
+      propsData: {
+        ...modalProperties.propsData,
+        size: 'sm',
+      },
+    });
+
+    expect(wrapper.classes(MODAL_SMALL_CLASS_NAME)).to.equal(true);
   });
 
   it('freezes the body element when modal is shown', () => {

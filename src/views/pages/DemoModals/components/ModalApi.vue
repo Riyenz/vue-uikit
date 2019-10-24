@@ -83,6 +83,18 @@
               <td style="text-align: left;">&mdash;</td>
               <td style="text-align: left;">&mdash;</td>
             </tr>
+            <tr>
+              <td style="max-width: 200px;">
+                <code class="highlighter">size</code>
+              </td>
+              <td style="text-align: left;">Define size of modal</td>
+              <td style="text-align: left;">String</td>
+              <td style="text-align: left;">&mdash;</td>
+              <td style="text-align: left;">
+                <code class="highlighter">sm</code>,
+                <code class="highlighter">lg</code>
+              </td>
+            </tr>
           </tbody>
         </table>
       </div>

@@ -217,16 +217,12 @@
     }
 
     &__footer {
+      position: fixed;
       bottom: 0;
-      position: sticky;
       box-shadow: 0 2px 12px 0 $modal-box-shadow + CC;
-
-      /** Special Case */
-      .eduk-btn {
-        flex: 1;
-
-        @include button-size($btn-min-width-lg, $btn-min-height-lg, $font-size-base, $border-radius);
-      }
+      display: flex;
+      justify-content: center;
+      width: 100%;
     }
 
     &__sub {
@@ -271,7 +267,7 @@
       border-radius: $border-radius;
       margin: 0 10px;
 
-      @include min-size($modal-min-height, $modal-min-width);
+      @include min-size($modal-min-height, $modal-max-width);
       @include max-size($modal-max-height, $modal-max-width);
     }
 
@@ -283,6 +279,22 @@
       border-top: 1px solid $hr-color;
       margin-top: $spacer * 1.5;
       padding-top: $spacer * 1.5;
+    }
+  }
+
+  .eduk-modal--lg {
+    .eduk-modal__main {
+      max-width: unset;
+      min-width: unset;
+      width: $modal-lg-width;
+    }
+  }
+
+  .eduk-modal--sm {
+    .eduk-modal__main {
+      max-width: unset;
+      min-width: unset;
+      width: $modal-sm-width;
     }
   }
 }

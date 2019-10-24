@@ -11,7 +11,7 @@
         v-if="achievements.length > 0 && !collapsed"
         :achievements="achievements"
       />
-      <Menu :menus="menus" :collapsed="collapsed" />
+      <Menu :menus="menus" :collapsed="collapsed" @change="href => $emit('change', href)"/>
     </div>
     <Footer
       :footerLinks="footerLinks"
@@ -30,6 +30,7 @@ import {
   SIDEBAR_CLASS_NAME,
   SIDEBAR_COLLAPSED_CLASS_NAME,
 } from './Sidebar.config';
+import SidebarService from './Sidebar.service';
 
 export default {
   name: 'Sidebar',
@@ -112,12 +113,25 @@ export default {
       },
     },
   },
+  data() {
+    return {
+      SidebarService,
+    };
+  },
   computed: {
     sidebarClass() {
       return {
         [SIDEBAR_CLASS_NAME]: true,
         [SIDEBAR_COLLAPSED_CLASS_NAME]: this.collapsed,
       };
+    },
+  },
+  watch: {
+    'SidebarService.selectedPath': {
+      handler(path) {
+        this.$emit('change', path);
+        this.$router.push(path);
+      },
     },
   },
   components: {

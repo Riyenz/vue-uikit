@@ -177,6 +177,39 @@
         </table>
       </div>
     </template>
+    <template slot="events">
+      <div class="eduk-table scollable">
+        <table class="eduk-table__table">
+          <thead class="eduk-table__thead">
+            <tr>
+              <th class="" style="width: 180px;">
+                Name
+              </th>
+              <th class="" style="width: 0px;">
+                Description
+              </th>
+              <th class="" style="width: 0px;">
+                Arguments
+              </th>
+            </tr>
+          </thead>
+          <tbody class="eduk-table__tbody">
+            <tr>
+              <td style="max-width: 180px;">
+                <code class="highlighter">@change</code>
+              </td>
+              <td style="text-align: left;">
+                triggered when router link is clicked within the sidebar
+              </td>
+              <td style="text-align: left;">
+                <code class="highlighter">path</code>
+                - the selected path
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </template>
   </TabContent>
 </template>
 
