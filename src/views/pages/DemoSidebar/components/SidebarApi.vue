@@ -47,7 +47,7 @@
   role: 'Edukasyon Admin',
   name: 'Kristel Balbido',
   initials: 'kb',
-  profile: '/me',
+  profileUrl: '/me',
   settings: {
     type: 'router',
     url: '/me/settings',
