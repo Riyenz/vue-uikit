@@ -60,7 +60,7 @@
           <a v-if="user.settings.type === 'anchor'" :href="user.settings.url">
             Manage Account
           </a>
-          <router-link v-else :to="user.settings.url">
+          <router-link v-else-if="user.settings.type === 'router'" :to="user.settings.url">
             Manage Account
           </router-link>
         </div>
