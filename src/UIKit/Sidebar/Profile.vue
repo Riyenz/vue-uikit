@@ -56,8 +56,11 @@
             <p class="eduk-p" v-if="user.role">{{user.role}}</p>
           </span>
         </router-link>
-        <div class="eduk-sidebar-dropdown__manage" v-if="!!user.settingsUrl">
-          <router-link :to="user.settingsUrl">
+        <div class="eduk-sidebar-dropdown__manage" v-if="!!user.settings">
+          <a v-if="user.settings.type === 'anchor'" :href="user.settings.url">
+            Manage Account
+          </a>
+          <router-link v-else-if="user.settings.type === 'router'" :to="user.settings.url">
             Manage Account
           </router-link>
         </div>

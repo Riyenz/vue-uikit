@@ -48,7 +48,10 @@
   name: 'Kristel Balbido',
   initials: 'kb',
   profileUrl: '/me',
-  settingsUrl: '/me/settings',
+  settings: {
+    type: 'router',
+    url: '/me/settings',
+  },
   picture: 'https://via.placeholder.com/70',
 }
                   </code>
