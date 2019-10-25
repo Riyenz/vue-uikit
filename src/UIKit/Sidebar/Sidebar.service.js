@@ -2,11 +2,11 @@ class SidebarService {
   selectedPath;
 
   constructor() {
-    this.selectedPath = '';
+    this.selectedPath = {};
   }
 
   selectPath(url) {
-    this.selectedPath = url;
+    this.selectedPath = { path: url };
   }
 }
 
