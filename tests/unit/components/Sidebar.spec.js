@@ -126,6 +126,7 @@ describe('Sidebar.component.vue', () => {
     });
 
     expect(wrapper.find(`.${SIDEBAR_FOOTER_CLASS_NAME}`).exists()).to.equal(true);
-    expect(wrapper.findAll(`.${SIDEBAR_FOOTER_CLASS_NAME}__links > a`).length).to.equal(FOOTER_LINKS.length + FOOTER_LINKS_SECONDARY.length);
+    expect(wrapper.findAll(`.${SIDEBAR_FOOTER_CLASS_NAME}__links > .${SIDEBAR_FOOTER_CLASS_NAME}__link`).length)
+      .to.equal(FOOTER_LINKS.length + FOOTER_LINKS_SECONDARY.length);
   });
 });
