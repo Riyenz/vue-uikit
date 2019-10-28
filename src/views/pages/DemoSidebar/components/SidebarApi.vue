@@ -145,6 +145,7 @@
   {
     name: 'About',
     href: '/',
+    type: 'router',
   },...
 ]
                   </code>
@@ -167,6 +168,7 @@
   {
     name: 'FAQ',
     href: '/',
+    type: 'router',
   },...
 ]
                   </code>
