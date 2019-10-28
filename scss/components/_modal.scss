@@ -284,9 +284,9 @@
 
   .eduk-modal--lg {
     .eduk-modal__main {
-      max-width: unset;
       min-width: unset;
       width: $modal-lg-width;
+      max-width: 95vw;
     }
   }
 
