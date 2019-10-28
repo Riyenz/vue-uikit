@@ -11,7 +11,6 @@
       v-if="footerLinksSecondary.length > 0"
     >
       <div class="eduk-sidebar-footer__link" v-for="(item, index) in footerLinksSecondary" :key="index">
-        {{item.type}}
         <a v-if="item.type === 'anchor'" :href="item.href">{{item.name}}</a>
         <router-link v-else-if="item.type === 'router'" :to="item.href">{{item.name}}</router-link>
       </div>
