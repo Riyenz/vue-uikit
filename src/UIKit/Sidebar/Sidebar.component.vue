@@ -13,6 +13,10 @@
       />
       <Menu :menus="menus" :collapsed="collapsed" @change="href => $emit('change', href)"/>
     </div>
+    <div class="eduk-sidebar__actions">
+      <slot name="expanded"/>
+      <slot name="collapsed"/>
+    </div>
     <Footer
       :footerLinks="footerLinks"
       :footerLinksSecondary="footerLinksSecondary"
@@ -26,6 +30,7 @@ import Profile from './Profile.vue';
 import Menu from './Menu.vue';
 import Achievements from './Achievements.vue';
 import Footer from './Footer.vue';
+
 import {
   SIDEBAR_CLASS_NAME,
   SIDEBAR_COLLAPSED_CLASS_NAME,
