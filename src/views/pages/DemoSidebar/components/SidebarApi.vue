@@ -215,6 +215,38 @@
         </table>
       </div>
     </template>
+    <template slot="slots">
+      <div>
+        <div class="eduk-table scollable">
+          <table class="eduk-table__table">
+            <thead class="eduk-table__thead">
+              <tr>
+                <th class="" style="width: 140px;">
+                  Slot
+                </th>
+                <th class="" style="width: 0px;">
+                  Description
+                </th>
+              </tr>
+            </thead>
+            <tbody class="eduk-table__tbody">
+              <tr>
+                <td style="max-width: 140px;">
+                  <code class="highlighter">expanded</code>
+                </td>
+                <td style="text-align: left;">Content for the expanded sidebar.</td>
+              </tr>
+              <tr>
+                <td style="max-width: 140px;">
+                  <code class="highlighter">collapsed</code>
+                </td>
+                <td style="text-align: left;">Content for the collapsed sidebar.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </template>
   </TabContent>
 </template>
 

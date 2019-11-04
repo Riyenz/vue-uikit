@@ -3,6 +3,7 @@ import { mount, shallowMount, createLocalVue } from '@vue/test-utils';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import VueRouter from 'vue-router';
 import Sidebar from '@/UIKit/Sidebar/Sidebar.component.vue';
+
 import {
   SIDEBAR_CLASS_NAME,
   SIDEBAR_COLLAPSED_CLASS_NAME,
@@ -114,6 +115,18 @@ describe('Sidebar.component.vue', () => {
     expect(wrapper.find(`.${SIDEBAR_MENU_CLASS_NAME}`).exists()).to.equal(true);
     expect(wrapper.findAll(`.${SIDEBAR_MENU_CLASS_NAME} > div`).length).to.equal(MENUS.length);
     expect(wrapper.findAll(`.${SIDEBAR_MENU_CLASS_NAME} .${SIDEBAR_LIST_CLASS_NAME}__sub-item`).length).to.equal(MENUS[3].items.length);
+  });
+
+  it('renders an element in a slot when passed', () => {
+    const wrapper = shallowMount(Sidebar, {
+      slots: {
+        expanded: '<div id="logout-button-expanded"/>',
+        collapsed: '<div id="logout-button-collapsed"/>',
+      },
+    });
+
+    expect(wrapper.find('#logout-button-expanded').exists(), 'an element is in an expanded slot').to.equal(true);
+    expect(wrapper.find('#logout-button-collapsed').exists(), 'an element is in a collapsed slot').to.equal(true);
   });
 
   it('adds sidebar footer', () => {
