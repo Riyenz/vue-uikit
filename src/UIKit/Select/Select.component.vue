@@ -243,6 +243,9 @@ export default {
     removeItem(ev, id) {
       ev.stopImmediatePropagation();
       this.selected = this.selected.filter(option => option.id !== id);
+
+      this.$emit('change', [...this.selected]);
+      this.$emit('input', [...this.selected]);
     },
   },
 };
