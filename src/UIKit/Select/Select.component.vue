@@ -244,13 +244,8 @@ export default {
       ev.stopImmediatePropagation();
       this.selected = this.selected.filter(option => option.id !== id);
 
-      if (this.multiselect) {
-        this.$emit('change', [...this.selected]);
-        this.$emit('input', [...this.selected]);
-      } else {
-        this.$emit('change', { ...this.selected });
-        this.$emit('input', { ...this.selected });
-      }
+      this.$emit('change', [...this.selected]);
+      this.$emit('input', [...this.selected]);
     },
   },
 };
